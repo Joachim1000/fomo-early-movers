@@ -1,0 +1,46 @@
+
+name: Fomo Early Movers Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Local time gate
+        id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          hour = datetime.now(ZoneInfo("Europe/Warsaw")).hour
+          run = os.environ["EVENT_NAME"] == "workflow_dispatch" or hour in (5, 14)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"run={'true' if run else 'false'}\n")
+          PY
+
+      - name: Collect market data
+        if: steps.gate.outputs.run == 'true'
+        run: python scripts/collect.py
+
+      - name: Commit JSON
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update market snapshot"
+            git push
+          fi
