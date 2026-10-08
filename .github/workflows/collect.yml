@@ -30,6 +30,25 @@ jobs:
               f.write(f"run={'true' if run else 'false'}\n")
           PY
       - name: Collect market data
+              - name: Test FOMO API
+        if: steps.gate.outputs.run == 'true'
+        env:
+          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request
+          url = "https://api.fomoapi.io/v2/leaderboard/tokens/trending?limit=15"
+          req = urllib.request.Request(
+              url,
+              headers={"Authorization": "Bearer " + os.environ["FOMO_API_KEY"]}
+          )
+          with urllib.request.urlopen(req, timeout=30) as response:
+              data = json.load(response)
+          print("FOMO API connected")
+          print("Response type:", type(data).__name__)
+          PY
+        
+        
         if: steps.gate.outputs.run == 'true'
         env:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
