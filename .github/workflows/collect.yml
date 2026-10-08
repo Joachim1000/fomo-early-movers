@@ -30,7 +30,7 @@ jobs:
               f.write(f"run={'true' if run else 'false'}\n")
           PY
       - name: Collect market data
-              - name: Test FOMO API
+      - name: Test FOMO API
         if: steps.gate.outputs.run == 'true'
         env:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
