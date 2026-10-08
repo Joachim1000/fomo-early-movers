@@ -55,6 +55,7 @@ payload={"generated_at_utc":datetime.now(timezone.utc).isoformat(),
  "social_media_used":False,"errors":errors,"top_5":candidates[:5],
  "candidates":candidates[:50],
  "warning":"Transactions are NOT unique wallets. No KØB signals without independent safety verification."}
+Path("data").mkdir(parents=True, exist_ok=True)
 Path("data/latest.json").write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\\n")
 print(f"Saved {len(candidates)} candidates; errors={len(errors)}")
 if not addresses: raise SystemExit("No addresses retrieved")
