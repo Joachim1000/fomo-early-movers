@@ -89,6 +89,7 @@ for mint,pair in best.items():
 candidates.sort(key=lambda x:x["momentum_heuristic"],reverse=True)
 payload={"generated_at_utc":datetime.now(timezone.utc).isoformat(),
  "source":"DEX Screener public API; NOT Fomo official Trending",
+ "fomo_trending":fomo,
  "social_media_used":False,"errors":errors,"top_5":candidates[:5],
  "candidates":candidates[:50],
  "warning":"Transactions are NOT unique wallets. No KØB signals without independent safety verification."}
