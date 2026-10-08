@@ -7,6 +7,43 @@ def fetch(path):
     req=urllib.request.Request(BASE+path,headers={"User-Agent":"FomoEarlyMovers/1.0"})
     with urllib.request.urlopen(req,timeout=25) as r: return json.load(r)
 
+import os
+
+fomo = {"status": "not_checked", "tokens": []}
+api_key = os.environ.get("FOMO_API_KEY")
+
+if api_key:
+    try:
+        request = urllib.request.Request(
+            "https://api.fomoapi.io/v2/leaderboard/tokens/trending?limit=15",
+            headers={
+                "Authorization": "Bearer " + api_key,
+                "Accept": "application/json"
+            }
+        )
+        with urllib.request.urlopen(request, timeout=30) as response:
+            result = json.load(response)
+
+        if not isinstance(result, dict) or not isinstance(result.get("tokens"), list):
+            raise ValueError("Unexpected FOMO API response")
+
+        fomo = {
+            "status": "ok",
+            "board": result.get("board"),
+            "source": result.get("source"),
+            "captured_at": result.get("capturedAt"),
+            "stale": result.get("stale"),
+            "age_hours": result.get("ageHours"),
+            "count": result.get("count"),
+            "tokens": result["tokens"][:15]
+        }
+        print("FOMO Trending tokens:", len(fomo["tokens"]))
+    except Exception as exc:
+        fomo = {"status": "error", "tokens": []}
+        print("FOMO API error:", type(exc).__name__, str(exc))
+else:
+    fomo = {"status": "missing_key", "tokens": []}
+
 addresses=set()
 errors=[]
 for endpoint in ("/token-profiles/latest/v1","/token-boosts/latest/v1","/token-boosts/top/v1"):
