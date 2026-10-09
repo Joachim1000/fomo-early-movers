@@ -13,10 +13,6 @@ concurrency:
   group: fomo-data-collection
   cancel-in-progress: false
 
-concurrency:
-  group: fomo-data-collection
-  cancel-in-progress: false
-
 jobs:
   collect:
     runs-on: ubuntu-latest
