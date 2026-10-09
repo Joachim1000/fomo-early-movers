@@ -44,7 +44,34 @@ if api_key:
 else:
     fomo = {"status": "missing_key", "tokens": []}
 
-# Gather broad discovery candidates; only independently observed 12h history qualifies.
+# Expand official FOMO board discovery beyond Trending. These are FOMO API
+# token boards, not speculative DEX-only matches. Missing boards are not fabricated.
+fomo_boards = {}
+for board in ("graduated", "most-held"):
+    if not api_key:
+        fomo_boards[board] = {"status": "missing_key", "tokens": []}
+        continue
+    try:
+        req = urllib.request.Request(
+            "https://api.fomoapi.io/v2/leaderboard/tokens/" + board + "?limit=25",
+            headers={"Authorization": "Bearer " + api_key, "Accept": "application/json"}
+        )
+        with urllib.request.urlopen(req, timeout=30) as response:
+            board_result = json.load(response)
+        if not isinstance(board_result, dict) or not isinstance(board_result.get("tokens"), list):
+            raise ValueError("Board unavailable or invalid payload")
+        fomo_boards[board] = {
+            "status": "ok", "board": board,
+            "source": board_result.get("source"),
+            "captured_at": board_result.get("capturedAt"),
+            "stale": board_result.get("stale"),
+            "tokens": board_result["tokens"][:25]
+        }
+    except Exception as exc:
+        fomo_boards[board] = {"status": "error", "tokens": [], "error": str(exc)[:180]}
+
+# Gather broad DEX discovery for price enrichment; not FOMO verification.
+
 from datetime import timedelta
 from collections import defaultdict
 
@@ -93,15 +120,20 @@ for endpoint in ("/token-profiles/latest/v1", "/token-boosts/latest/v1", "/token
 # The FOMO API returns nested token.address and numeric Solana network 1399811149.
 # Prior versions silently skipped all FOMO mints, leaving their history empty.
 fomo_sol_mints = set()
-for item in fomo.get("tokens", []):
-    token = item.get("token") or {}
-    chain = str(item.get("network", "")).lower()
-    if chain not in ("solana", "1399811149"):
-        continue
-    mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
-    if isinstance(mint, str) and mint:
-        fomo_sol_mints.add(mint)
-        addresses.add(mint)
+fomo_source_by_mint = {}
+for board_name, entries in [("trending", fomo.get("tokens", []))] + [
+    (name, board.get("tokens", [])) for name, board in fomo_boards.items()
+]:
+    for item in entries:
+        token = item.get("token") or {}
+        chain = str(item.get("network", "")).lower()
+        if chain not in ("solana", "1399811149"):
+            continue
+        mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
+        if isinstance(mint, str) and mint:
+            fomo_sol_mints.add(mint)
+            addresses.add(mint)
+            fomo_source_by_mint.setdefault(mint, []).append(board_name)
 
 # Always query FOMO addresses first; a capped alphabetical discovery list
 # previously crowded out the tokens the user actually sees in the FOMO app.
@@ -183,7 +215,10 @@ for mint, pair in best.items():
         "historical_observations": len(historical_prices),
         "history_12h_verified": False,
         "history_4h_verified": eligible,
-        "fomo_trending_verified": mint in fomo_sol_mints,
+        "fomo_trending_verified": "trending" in fomo_source_by_mint.get(mint, []),
+        "fomo_board_verified": mint in fomo_sol_mints,
+        "fomo_boards": fomo_source_by_mint.get(mint, []),
+        "pre_trending_screening": mint in fomo_sol_mints and "trending" not in fomo_source_by_mint.get(mint, []),
         "minimum_history_hours": MIN_AGE_HOURS,
         "history_note": "4h+ observed same-pair snapshots and pair age" if eligible else "4h history not independently established",
         "label": label, "confidence": "LOW",
@@ -203,16 +238,18 @@ for mint in list(history):
         del history[mint]
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
-eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_trending_verified"]]
+eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
     "source": "DEX Screener public API and FOMO Trending when available",
     "fomo_trending": fomo,
+    "fomo_other_boards": fomo_boards,
+    "fomo_verified_mints": [{"mint": mint, "network": "solana", "boards": boards} for mint, boards in fomo_source_by_mint.items()],
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
     "eligible_4h_count": len(eligible_candidates),
-    "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_trending_verified"]),
+    "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_board_verified"]),
     "eligible_12h_count": 0,
     "top_5": eligible_candidates[:5],
     "candidates": candidates[:MAX_CANDIDATES],
