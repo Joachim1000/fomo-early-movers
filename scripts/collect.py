@@ -44,14 +44,14 @@ if api_key:
 else:
     fomo = {"status": "missing_key", "tokens": []}
 
-# Gather broad discovery candidates; only independently observed 48h history qualifies.
+# Gather broad discovery candidates; only independently observed 24h history qualifies.
 from datetime import timedelta
 from collections import defaultdict
 
 NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
-MIN_AGE_HOURS = 48
+MIN_AGE_HOURS = 24
 MAX_DISCOVERY_ADDRESSES = 200
 MAX_CANDIDATES = 200
 
@@ -169,8 +169,8 @@ for mint, pair in best.items():
         "pair_age_hours": pair_age_hours,
         "observed_history_hours": round(span, 2),
         "historical_observations": len(historical_prices),
-        "history_48h_verified": eligible,
-        "history_note": "48h+ observed same-pair snapshots and pair age" if eligible else "48h trading history not independently established",
+        "history_24h_verified": eligible,
+        "history_note": "24h+ observed same-pair snapshots and pair age" if eligible else "24h trading history not independently established",
         "label": label, "confidence": "LOW",
         "verified_unique_buyer_wallets": None,
         "verified_unique_seller_wallets": None,
@@ -188,7 +188,7 @@ for mint in list(history):
         del history[mint]
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
-eligible_candidates = [x for x in candidates if x["history_48h_verified"]]
+eligible_candidates = [x for x in candidates if x["history_24h_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
     "source": "DEX Screener public API and FOMO Trending when available",
@@ -196,15 +196,15 @@ payload = {
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
-    "eligible_48h_count": len(eligible_candidates),
+    "eligible_24h_count": len(eligible_candidates),
     "top_5": eligible_candidates[:5],
     "candidates": candidates[:MAX_CANDIDATES],
-    "eligible_48h_candidates": eligible_candidates[:MAX_CANDIDATES],
-    "warning": "48h verification requires same-pair snapshots spanning >=48h AND pair age >=48h; pair creation alone is insufficient. Transaction counts are not unique wallets. No contract safety or KØB verification."
+    "eligible_24h_candidates": eligible_candidates[:MAX_CANDIDATES],
+    "warning": "24h verification requires same-pair snapshots spanning >=24h AND pair age >=24h; pair creation alone is insufficient. Transaction counts are not unique wallets. No contract safety or KØB verification."
 }
 Path("data").mkdir(parents=True, exist_ok=True)
 HISTORY_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
 Path("data/latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-print(f"Discovered {len(candidates)} candidates; 48h verified: {len(eligible_candidates)}; errors={len(errors)}")
+print(f"Discovered {len(candidates)} candidates; 24h verified: {len(eligible_candidates)}; errors={len(errors)}")
 if not addresses:
     raise SystemExit("No addresses retrieved")
