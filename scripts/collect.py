@@ -44,14 +44,14 @@ if api_key:
 else:
     fomo = {"status": "missing_key", "tokens": []}
 
-# Gather broad discovery candidates; only independently observed 24h history qualifies.
+# Gather broad discovery candidates; only independently observed 12h history qualifies.
 from datetime import timedelta
 from collections import defaultdict
 
 NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
-MIN_AGE_HOURS = 6
+MIN_AGE_HOURS = 12
 MAX_DISCOVERY_ADDRESSES = 200
 MAX_CANDIDATES = 200
 
@@ -167,10 +167,16 @@ for mint, pair in best.items():
         "sell_transactions_5m": sells, "momentum_heuristic": score,
         "pair_created_at_utc": pair_created.isoformat() if pair_created else None,
         "pair_age_hours": pair_age_hours,
+        "token_age_hours_estimate": pair_age_hours,
+        "token_age_source": "DEX Screener pairCreatedAt (pair age, not proven token mint age)",
+        "token_age_verified": False,
         "observed_history_hours": round(span, 2),
+        "observed_history_start_utc": same_pair[0]["timestamp"] if same_pair else None,
+        "observed_history_end_utc": same_pair[-1]["timestamp"] if same_pair else None,
         "historical_observations": len(historical_prices),
-        "history_6h_verified": eligible,
-        "history_note": "6h+ observed same-pair snapshots and pair age" if eligible else "6h trading history not independently established",
+        "history_12h_verified": eligible,
+        "minimum_history_hours": MIN_AGE_HOURS,
+        "history_note": "12h+ observed same-pair snapshots and pair age" if eligible else "12h trading history not independently established",
         "label": label, "confidence": "LOW",
         "verified_unique_buyer_wallets": None,
         "verified_unique_seller_wallets": None,
@@ -188,7 +194,7 @@ for mint in list(history):
         del history[mint]
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
-eligible_candidates = [x for x in candidates if x["history_6h_verified"]]
+eligible_candidates = [x for x in candidates if x["history_12h_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
     "source": "DEX Screener public API and FOMO Trending when available",
@@ -196,15 +202,15 @@ payload = {
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
-    "eligible_6h_count": len(eligible_candidates),
+    "eligible_12h_count": len(eligible_candidates),
     "top_5": eligible_candidates[:5],
     "candidates": candidates[:MAX_CANDIDATES],
-    "eligible_6h_candidates": eligible_candidates[:MAX_CANDIDATES],
-    "warning": "6h verification requires same-pair snapshots spanning >=6h AND pair age >=6h; pair creation alone is insufficient. Transaction counts are not unique wallets. No contract safety or KØB verification."
+    "eligible_12h_candidates": eligible_candidates[:MAX_CANDIDATES],
+    "warning": "12h verification requires same-pair snapshots spanning >=12h AND pair age >=12h; pair creation alone is insufficient. Transaction counts are not unique wallets. No contract safety or KØB verification."
 }
 Path("data").mkdir(parents=True, exist_ok=True)
 HISTORY_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
 Path("data/latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-print(f"Discovered {len(candidates)} candidates; 6h verified: {len(eligible_candidates)}; errors={len(errors)}")
+print(f"Discovered {len(candidates)} candidates; 12h verified: {len(eligible_candidates)}; errors={len(errors)}")
 if not addresses:
     raise SystemExit("No addresses retrieved")
