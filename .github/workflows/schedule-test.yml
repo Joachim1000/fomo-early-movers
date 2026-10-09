@@ -1,0 +1,26 @@
+name: Schedule Diagnostic (5 min)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Print schedule diagnostics
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          echo "Event: $EVENT_NAME"
+          echo "Cron: $SCHEDULE"
+          echo "Run ID: $RUN_ID"
+          echo "UTC time: $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+          echo "Warsaw time: $(TZ=Europe/Warsaw date '+%Y-%m-%dT%H:%M:%S%z')"
