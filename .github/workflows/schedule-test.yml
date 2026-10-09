@@ -3,7 +3,7 @@ name: Schedule Diagnostic (5 min)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '2,17,32,47 * * * *'
 
 permissions:
   contents: read
