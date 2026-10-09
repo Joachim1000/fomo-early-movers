@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: fomo-data-collection
+  cancel-in-progress: false
+
 jobs:
   collect:
     runs-on: ubuntu-latest
@@ -17,28 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check scheduled time
-        id: gate
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          python - <<'PY'
-          import os
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-
-          hour = datetime.now(ZoneInfo("Europe/Warsaw")).hour
-          run = (
-              os.environ["EVENT_NAME"] == "workflow_dispatch"
-              or hour in (5, 14)
-          )
-
-          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write(f"run={'true' if run else 'false'}\n")
-          PY
-
       - name: Test FOMO API
-        if: steps.gate.outputs.run == 'true'
         continue-on-error: true
         env:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
@@ -84,13 +67,11 @@ jobs:
           PY
 
       - name: Collect market data
-        if: steps.gate.outputs.run == 'true'
         env:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
         run: python scripts/collect.py
 
       - name: Commit JSON
-        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
