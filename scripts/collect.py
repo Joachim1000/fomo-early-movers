@@ -51,7 +51,7 @@ from collections import defaultdict
 NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
-MIN_AGE_HOURS = 12
+MIN_AGE_HOURS = 4
 MAX_DISCOVERY_ADDRESSES = 200
 MAX_CANDIDATES = 200
 
@@ -90,20 +90,27 @@ for endpoint in ("/token-profiles/latest/v1", "/token-boosts/latest/v1", "/token
     except Exception as exc:
         errors.append(f"{endpoint}: {exc}")
 
-# Include the official FOMO board's Solana mint addresses when the API supplies them.
-for token in fomo.get("tokens", []):
-    if str(token.get("network", "")).lower() != "solana":
+# The FOMO API returns nested token.address and numeric Solana network 1399811149.
+# Prior versions silently skipped all FOMO mints, leaving their history empty.
+fomo_sol_mints = set()
+for item in fomo.get("tokens", []):
+    token = item.get("token") or {}
+    chain = str(item.get("network", "")).lower()
+    if chain not in ("solana", "1399811149"):
         continue
-    for key in ("mint", "tokenAddress", "address", "contractAddress"):
-        mint = token.get(key)
-        if isinstance(mint, str) and mint:
-            addresses.add(mint)
-            break
+    mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
+    if isinstance(mint, str) and mint:
+        fomo_sol_mints.add(mint)
+        addresses.add(mint)
 
+# Always query FOMO addresses first; a capped alphabetical discovery list
+# previously crowded out the tokens the user actually sees in the FOMO app.
+ordered_addresses = sorted(fomo_sol_mints) + sorted(addresses - fomo_sol_mints)
+ordered_addresses = ordered_addresses[:MAX_DISCOVERY_ADDRESSES]
 pairs = []
-for i in range(0, min(len(addresses), MAX_DISCOVERY_ADDRESSES), 20):
+for i in range(0, len(ordered_addresses), 20):
     try:
-        batch = sorted(addresses)[:MAX_DISCOVERY_ADDRESSES][i:i + 20]
+        batch = ordered_addresses[i:i + 20]
         pairs.extend(fetch("/latest/dex/tokens/" + ",".join(batch)).get("pairs") or [])
     except Exception as exc:
         errors.append(f"DEX batch {i}: {exc}")
@@ -174,9 +181,11 @@ for mint, pair in best.items():
         "observed_history_start_utc": same_pair[0]["timestamp"] if same_pair else None,
         "observed_history_end_utc": same_pair[-1]["timestamp"] if same_pair else None,
         "historical_observations": len(historical_prices),
-        "history_12h_verified": eligible,
+        "history_12h_verified": False,
+        "history_4h_verified": eligible,
+        "fomo_trending_verified": mint in fomo_sol_mints,
         "minimum_history_hours": MIN_AGE_HOURS,
-        "history_note": "12h+ observed same-pair snapshots and pair age" if eligible else "12h trading history not independently established",
+        "history_note": "4h+ observed same-pair snapshots and pair age" if eligible else "4h history not independently established",
         "label": label, "confidence": "LOW",
         "verified_unique_buyer_wallets": None,
         "verified_unique_seller_wallets": None,
@@ -194,7 +203,7 @@ for mint in list(history):
         del history[mint]
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
-eligible_candidates = [x for x in candidates if x["history_12h_verified"]]
+eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_trending_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
     "source": "DEX Screener public API and FOMO Trending when available",
@@ -202,15 +211,18 @@ payload = {
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
-    "eligible_12h_count": len(eligible_candidates),
+    "eligible_4h_count": len(eligible_candidates),
+    "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_trending_verified"]),
+    "eligible_12h_count": 0,
     "top_5": eligible_candidates[:5],
     "candidates": candidates[:MAX_CANDIDATES],
-    "eligible_12h_candidates": eligible_candidates[:MAX_CANDIDATES],
-    "warning": "12h verification requires same-pair snapshots spanning >=12h AND pair age >=12h; pair creation alone is insufficient. Transaction counts are not unique wallets. No contract safety or KØB verification."
+    "eligible_4h_candidates": eligible_candidates[:MAX_CANDIDATES],
+    "eligible_12h_candidates": [],
+    "warning": "4h verification requires timestamped same-pair observations spanning >=4h AND pair age >=4h. FOMO candidates are matched by exact Solana mint. Transaction counts are not unique wallets. No contract safety or KØB verification."
 }
 Path("data").mkdir(parents=True, exist_ok=True)
 HISTORY_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
 Path("data/latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-print(f"Discovered {len(candidates)} candidates; 12h verified: {len(eligible_candidates)}; errors={len(errors)}")
+print(f"Discovered {len(candidates)} candidates; FOMO-matched 4h verified: {len(eligible_candidates)}; errors={len(errors)}")
 if not addresses:
     raise SystemExit("No addresses retrieved")
