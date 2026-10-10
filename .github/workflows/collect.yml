@@ -2,8 +2,6 @@
 name: Fomo Early Movers Data
 
 on:
-  schedule:
-    - cron: '0,30 * * * *'
   workflow_dispatch:
 
 permissions:
