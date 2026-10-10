@@ -66,7 +66,7 @@ def fetch_fomo_board(board):
 
 fomo = fetch_fomo_board("trending")
 print("FOMO Trending tokens:", len(fomo["tokens"]))
-fomo_boards = {"graduated": fetch_fomo_board("graduated")}
+fomo_boards = {board: fetch_fomo_board(board) for board in ("graduated", "most-held")}
 
 # Gather broad DEX discovery for price enrichment; not FOMO verification.
 
