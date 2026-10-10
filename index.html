@@ -26,7 +26,7 @@ const at=Date.parse(x.observed_at_utc),p=Number(x.observation_price_usd);
 if(!Number.isFinite(at)||at>snap||day(at)!==shownDay||!x.mint||!x.pair_address||!(p>0))continue;
 const key=x.mint+'|'+x.pair_address;
 if(!firstSeen.has(x.mint)||at<Date.parse(firstSeen.get(x.mint).observed_at_utc))firstSeen.set(x.mint,x);
-if(String(x.displayed_status).toUpperCase()==='POSITIVE'&&(!first.has(key)||at<Date.parse(first.get(key).observed_at_utc)))first.set(key,x);
+if(String(x.displayed_status).toUpperCase()==='POSITIVE'&&(!first.has(x.mint)||at<Date.parse(first.get(x.mint).observed_at_utc)))first.set(x.mint,x);
 }
 let missing=0;const results=[];
 for(const x of first.values()){
