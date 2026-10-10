@@ -24,10 +24,12 @@ const start=Date.parse(x.observed_at_utc);
 const observations=(h[x.mint]||[]).filter(z=>z.pair_address===x.pair_address&&Number(z.price_usd)>0&&Date.parse(z.timestamp)>start&&Date.parse(z.timestamp)<=snap&&withinPublishedWindow(Date.parse(z.timestamp))).sort((a,b)=>Date.parse(a.timestamp)-Date.parse(b.timestamp));
 const latest=observations.at(-1);
 if(!latest){missing++;continue}
-results.push({x,latest,pct:100*(Number(latest.price_usd)/Number(x.observation_price_usd)-1)});
+const ageMinutes=Math.max(0,Math.round((snap-Date.parse(latest.timestamp))/60000));
+results.push({x,latest,ageMinutes,pct:100*(Number(latest.price_usd)/Number(x.observation_price_usd)-1)});
 }
 results.sort((a,b)=>b.pct-a.pct);
 const up=results.filter(z=>z.pct>0).length;
+const stale=results.filter(z=>z.ageMinutes>60).length;
 const avg=results.length?results.reduce((v,z)=>v+z.pct,0)/results.length:null;
 $('dailySummary').innerHTML='<span><b>'+(preview?'LIVE PREVIEW (partial day)':'DAILY FINAL')+'</b></span><span>Evaluated day: <b>'+esc(shownDay)+'</b></span><span>Scheduled final: <b>23:30 Poland</b></span><span>Positive calls: <b>'+first.size+'</b></span><span>Verified holds: <b>'+results.length+'</b></span><span>Up: <b>'+up+' / '+results.length+'</b></span><span>Average hold: <b>'+(avg===null?'—':change(avg))+'</b></span><span>No later price: <b>'+missing+'</b></span>';
 $('dailyRows').innerHTML=results.length?results.slice(0,10).map((z,i)=>'<tr><td>'+(i+1)+'</td><td><b>'+esc(z.x.symbol||z.x.mint.slice(0,8))+'</b><div class="token-mint">'+esc(z.x.mint)+'</div></td><td>'+esc(fmt(z.x.observed_at_utc))+'</td><td>'+price(z.x.observation_price_usd)+'</td><td>'+esc(fmt(z.latest.timestamp))+'</td><td>'+price(z.latest.price_usd)+'</td><td class="'+(z.pct>=0?'good':'bad')+'"><b>'+change(z.pct)+'</b></td></tr>').join(''):'<tr><td colspan="7">No positive calls with a verified later price for this day.</td></tr>';
