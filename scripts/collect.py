@@ -263,10 +263,26 @@ for mint, pair in best.items():
                 span >= MIN_AGE_HOURS and len(historical_prices) >= 3 and
                 numeric(historical_prices[0].get("price_usd")) > 0 and
                 numeric(historical_prices[-1].get("price_usd")) > 0)
+    # Fast-moving watchlist: separate from the conservative 4h confirmation.
+    # Use only same-pair observations; never infer an unobserved intraperiod peak.
+    recent_15m = [p for p in historical_prices if
+                  0 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 900]
+    baseline = next((p for p in recent_15m
+                     if (NOW - parse_time(p["timestamp"])).total_seconds() >= 240), None)
+    change_15m = (round(100 * (numeric(pair.get("priceUsd")) /
+                    numeric(baseline["price_usd"]) - 1), 2)
+                  if baseline and numeric(baseline["price_usd"]) > 0 else None)
+    fast_alert = (mint in fomo_sol_mints and liquidity >= 5000 and
+                  buys >= 8 and buys >= 1.5 * max(sells, 1) and
+                  volume >= 1500 and change_15m is not None and
+                  change_15m >= 5)
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
         "mint": mint, "network": "solana",
+        "early_alert": fast_alert,
+        "change_15m_pct": change_15m,
+        "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
         "symbol": (pair.get("baseToken") or {}).get("symbol"),
         "pair_url": pair.get("url"), "price_usd": pair.get("priceUsd"),
@@ -310,6 +326,8 @@ for mint in list(history):
         del history[mint]
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
+early_alert_candidates = [x for x in candidates if x["early_alert"]]
+early_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
 eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
@@ -323,6 +341,8 @@ payload = {
     "tracked_recommendation_mints": len(recent_recommendations),
     "refreshed_tracked_mints": len(tracked_pairs),
     "eligible_4h_count": len(eligible_candidates),
+    "early_alert_count": len(early_alert_candidates),
+    "early_alert_candidates": early_alert_candidates[:20],
     "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_board_verified"]),
     "eligible_12h_count": 0,
     "top_5": eligible_candidates[:5],
