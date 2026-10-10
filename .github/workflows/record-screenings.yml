@@ -1,7 +1,10 @@
 name: Record FOMO TOP 10 screenings
 on:
-  schedule:
-    - cron: '12 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'data/latest.json'
+      - 'data/history.json'
   workflow_dispatch:
 permissions:
   contents: write
