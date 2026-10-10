@@ -22,6 +22,7 @@ if date in days:
 recommendations = json.loads(Path("data/recommendations.json").read_text()).get("records", [])
 history = json.loads(Path("data/history.json").read_text())
 first = {}
+first_seen = {}
 for record in recommendations:
     try:
         observed = datetime.fromisoformat(record["observed_at_utc"].replace("Z", "+00:00"))
@@ -31,9 +32,13 @@ for record in recommendations:
         continue
     if observed.astimezone(ZONE).date().isoformat() != date or observed > now:
         continue
-    if record.get("displayed_status") != "POSITIVE" or price <= 0:
+    if price <= 0:
         continue
     key = (mint, pair)
+    if key not in first_seen or observed < first_seen[key]:
+        first_seen[key] = observed
+    if record.get("displayed_status") != "POSITIVE":
+        continue
     if key not in first or observed < first[key][0]:
         first[key] = (observed, record)
 
@@ -58,6 +63,7 @@ for (mint, pair), (start, record) in first.items():
     entry = float(record["observation_price_usd"])
     results.append({
         "mint": mint, "pair_address": pair, "symbol": record.get("symbol"),
+        "first_seen_at_utc": first_seen[(mint, pair)].isoformat(),
         "first_positive_at_utc": start.isoformat(),
         "entry_price_usd": entry, "last_price_at_utc": t.isoformat(),
         "last_price_usd": p, "hold_return_pct": round(100 * (p / entry - 1), 4),
