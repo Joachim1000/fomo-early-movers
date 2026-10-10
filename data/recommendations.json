@@ -1541,6 +1541,116 @@
       "status_color": "green",
       "call_type": "screening_status_not_buy_recommendation",
       "rank": 10
+    },
+    {
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "symbol": "STONK",
+      "pair_address": "zxTpi4BtaWX3mgdAPoezkMD1hxx8CdeCfrqXMWvSCLX",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.1318,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 1
+    },
+    {
+      "mint": "ERkmk5rs8KKD9u2fxoDZUmwwuVc7rT3sSeowGTrQuBit",
+      "symbol": "QUBIT",
+      "pair_address": "9d6fbbtAGjM6eFHo4NpsPrDgnwhZNdetgewHmupZTVjV",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.0005076,
+      "displayed_status": "WAIT",
+      "status_color": "yellow",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 2
+    },
+    {
+      "mint": "8vYJgiQPkpDtbWkDy1wyYDcUq3D9fUXVJUtt6aNEpump",
+      "symbol": "SWITCHED",
+      "pair_address": "BFWTFa7QR4knm3AwpdicA7uNytnw1wi13LHQT9TCWaKt",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.000184,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 3
+    },
+    {
+      "mint": "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump",
+      "symbol": "TM",
+      "pair_address": "ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.0006169,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 4
+    },
+    {
+      "mint": "GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump",
+      "symbol": "JEANPHIL",
+      "pair_address": "4R8CiMnJWDNoes3fQi1ccPFJygPXazaHaWpHrN3rZeNj",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.01104,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 5
+    },
+    {
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "symbol": "baton",
+      "pair_address": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.01204,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 6
+    },
+    {
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "symbol": "SI",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.02252,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 7
+    },
+    {
+      "mint": "4mbPZzDCWXvTCJbscMWeDD7TT1pra9mkZHGaBxc2jupx",
+      "symbol": "JPAD",
+      "pair_address": "8FoQfA6pYc7Mgbab3ijTtWhq692p85enWRSTV6y6VVJW",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.0007625,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 8
+    },
+    {
+      "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+      "symbol": "CARDS",
+      "pair_address": "HnhpJPJgBG2KwniMTNW8cVBHvk1hFog3RC3kjnyc23tD",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.2776,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 9
+    },
+    {
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "symbol": "CATE",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "observed_at_utc": "2026-10-10T11:00:44.921647+00:00",
+      "observation_price_usd": 0.05354,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 10
     }
   ]
 }
