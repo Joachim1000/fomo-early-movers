@@ -34,11 +34,11 @@ jobs:
           if snapshot.tzinfo is None or (datetime.now(timezone.utc)-snapshot).total_seconds()>7200:
               raise ValueError("Snapshot missing timezone or older than 2 hours")
           history_stamps=[z.get("timestamp") for values in history.values() if isinstance(values,list) for z in values if isinstance(z,dict) and z.get("timestamp")]
-          if not history_stamps or max(history_stamps)<stamp:
+          if not history_stamps or max(datetime.fromisoformat(t.replace("Z","+00:00")) for t in history_stamps)<snapshot:
               raise ValueError("History not caught up with latest snapshot")
           seen={(x.get("mint"),x.get("pair_address"),x.get("observed_at_utc")) for x in rows}
           added=0
-          for rank,x in enumerate(latest.get("eligible_4h_candidates",[])[:10],1):
+          for rank,x in enumerate([c for c in latest.get("eligible_4h_candidates",[]) if c.get("mint")!="So11111111111111111111111111111111111111112"][:10],1):
               mint=x.get("mint")
               pair=x.get("pair_address")
               price=x.get("price_usd")
