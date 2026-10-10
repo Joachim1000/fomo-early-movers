@@ -159,6 +159,42 @@ for pair in pairs:
         best[mint] = pair
 
 history = load_history()
+
+# Refresh previously tracked tokens independently of the discovery cap.
+tracked_mints = sorted(mint for mint, records in history.items()
+                       if isinstance(records, list) and records and mint not in best)
+tracked_pairs = {}
+for i in range(0, len(tracked_mints), 20):
+    try:
+        response = fetch("/latest/dex/tokens/" + ",".join(tracked_mints[i:i + 20]))
+        for pair in response.get("pairs") or []:
+            if pair.get("chainId") != "solana":
+                continue
+            mint = (pair.get("baseToken") or {}).get("address")
+            if mint not in history or mint in best:
+                continue
+            prior_pairs = {p.get("pair_address") for p in history[mint] if isinstance(p, dict)}
+            if pair.get("pairAddress") not in prior_pairs or numeric(pair.get("priceUsd")) <= 0:
+                continue
+            previous = tracked_pairs.get(mint)
+            if previous is None or numeric((pair.get("liquidity") or {}).get("usd")) > numeric((previous.get("liquidity") or {}).get("usd")):
+                tracked_pairs[mint] = pair
+    except Exception as exc:
+        errors.append(f"Tracked token batch {i}: {exc}")
+
+# These are price-only observations, not new FOMO discovery candidates.
+for mint, pair in tracked_pairs.items():
+    tx = (pair.get("txns") or {}).get("m5") or {}
+    history[mint].append({
+        "timestamp": NOW.isoformat(),
+        "pair_address": pair.get("pairAddress"),
+        "price_usd": numeric(pair.get("priceUsd")),
+        "liquidity_usd": numeric((pair.get("liquidity") or {}).get("usd")),
+        "volume_5m_usd": numeric((pair.get("volume") or {}).get("m5")),
+        "buys_5m": int(tx.get("buys") or 0),
+        "sells_5m": int(tx.get("sells") or 0),
+    })
+
 candidates = []
 cutoff = NOW - timedelta(hours=HISTORY_HOURS)
 for mint, pair in best.items():
