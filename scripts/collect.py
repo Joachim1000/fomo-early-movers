@@ -190,6 +190,29 @@ for mint, pair in best.items():
     history[mint] = records[-120:]
     span = ((parse_time(same_pair[-1]["timestamp"]) - parse_time(same_pair[0]["timestamp"])).total_seconds() / 3600) if len(same_pair) > 1 else 0
     historical_prices = [r for r in same_pair if numeric(r.get("price_usd")) > 0 and numeric(r.get("liquidity_usd")) > 0]
+    # Rank using both current 5m activity and the full observed 2h same-pair price trend.
+    trend_window = [p for p in historical_prices if
+                    (NOW - parse_time(p["timestamp"])).total_seconds() <= 7200]
+    trend_pct = None
+    trend_r2 = None
+    trend_bonus = 0.0
+    if len(trend_window) >= 2:
+        import math
+        t0 = parse_time(trend_window[0]["timestamp"])
+        xs = [(parse_time(p["timestamp"]) - t0).total_seconds() / 3600 for p in trend_window]
+        ys = [math.log(numeric(p["price_usd"])) for p in trend_window]
+        mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+        denominator = sum((x - mx) ** 2 for x in xs)
+        if denominator > 0:
+            slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / denominator
+            fit = [my + slope * (x - mx) for x in xs]
+            total = sum((y - my) ** 2 for y in ys)
+            residual = sum((y - f) ** 2 for y, f in zip(ys, fit))
+            trend_r2 = max(0.0, 1 - residual / total) if total > 1e-12 else 0.0
+            trend_pct = 100 * math.expm1(slope * (xs[-1] - xs[0]))
+            # Modest, bounded trend influence; weak trends receive reduced credit.
+            trend_bonus = round(max(-10.0, min(10.0, trend_pct * trend_r2 * 0.4)), 2)
+    score = round(score + trend_bonus, 2)
     eligible = (pair_age_hours is not None and pair_age_hours >= MIN_AGE_HOURS and
                 span >= MIN_AGE_HOURS and len(historical_prices) >= 3 and
                 numeric(historical_prices[0].get("price_usd")) > 0 and
@@ -203,7 +226,7 @@ for mint, pair in best.items():
         "pair_url": pair.get("url"), "price_usd": pair.get("priceUsd"),
         "market_cap_usd": pair.get("marketCap"), "liquidity_usd": liquidity,
         "volume_5m_usd": volume, "buy_transactions_5m": buys,
-        "sell_transactions_5m": sells, "momentum_heuristic": score,
+        "sell_transactions_5m": sells, "momentum_heuristic": score,\n        "trend_2h_pct": round(trend_pct, 2) if trend_pct is not None else None,\n        "trend_2h_r2": round(trend_r2, 3) if trend_r2 is not None else None,\n        "trend_2h_score_contribution": trend_bonus,
         "pair_created_at_utc": pair_created.isoformat() if pair_created else None,
         "pair_age_hours": pair_age_hours,
         "token_age_hours_estimate": pair_age_hours,
