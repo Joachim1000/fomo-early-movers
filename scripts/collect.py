@@ -160,9 +160,21 @@ for pair in pairs:
 
 history = load_history()
 
+# Recommendation mints are tracked even when absent from both discovery and retained history.
+try:
+    recommendation_records = json.loads(Path("data/recommendations.json").read_text(encoding="utf-8")).get("records", [])
+except (OSError, ValueError, AttributeError):
+    recommendation_records = []
+recent_recommendations = {}
+for record in recommendation_records:
+    observed = parse_time(record.get("observed_at_utc")) if isinstance(record, dict) else None
+    if observed and 0 <= (NOW - observed).total_seconds() <= HISTORY_HOURS * 3600:
+        mint, pair_address = record.get("mint"), record.get("pair_address")
+        if mint and pair_address:
+            recent_recommendations.setdefault(mint, set()).add(pair_address)
+
 # Refresh previously tracked tokens independently of the discovery cap.
-tracked_mints = sorted(mint for mint, records in history.items()
-                       if isinstance(records, list) and records and mint not in best)
+tracked_mints = sorted((set(history) | set(recent_recommendations)) - set(best))
 tracked_pairs = {}
 for i in range(0, len(tracked_mints), 20):
     try:
@@ -171,9 +183,9 @@ for i in range(0, len(tracked_mints), 20):
             if pair.get("chainId") != "solana":
                 continue
             mint = (pair.get("baseToken") or {}).get("address")
-            if mint not in history or mint in best:
+            if mint not in history and mint not in recent_recommendations or mint in best:
                 continue
-            prior_pairs = {p.get("pair_address") for p in history[mint] if isinstance(p, dict)}
+            prior_pairs = {p.get("pair_address") for p in history.get(mint, []) if isinstance(p, dict)} | recent_recommendations.get(mint, set())
             if pair.get("pairAddress") not in prior_pairs or numeric(pair.get("priceUsd")) <= 0:
                 continue
             previous = tracked_pairs.get(mint)
@@ -185,7 +197,7 @@ for i in range(0, len(tracked_mints), 20):
 # These are price-only observations, not new FOMO discovery candidates.
 for mint, pair in tracked_pairs.items():
     tx = (pair.get("txns") or {}).get("m5") or {}
-    history[mint].append({
+    history.setdefault(mint, []).append({
         "timestamp": NOW.isoformat(),
         "pair_address": pair.get("pairAddress"),
         "price_usd": numeric(pair.get("priceUsd")),
@@ -310,6 +322,8 @@ payload = {
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
+    "tracked_recommendation_mints": len(recent_recommendations),
+    "refreshed_tracked_mints": len(tracked_pairs),
     "eligible_4h_count": len(eligible_candidates),
     "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_board_verified"]),
     "eligible_12h_count": 0,
