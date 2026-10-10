@@ -34,9 +34,9 @@ for record in recommendations:
         continue
     if price <= 0:
         continue
-    key = (mint, pair)
-    if key not in first_seen or observed < first_seen[key]:
-        first_seen[key] = observed
+    key = mint
+    if key not in first_seen or observed < first_seen[key][0]:
+        first_seen[key] = (observed, record)
     if record.get("displayed_status") != "POSITIVE":
         continue
     if key not in first or observed < first[key][0]:
@@ -44,7 +44,8 @@ for record in recommendations:
 
 results = []
 missing = 0
-for (mint, pair), (start, record) in first.items():
+for mint, (start, record) in first.items():
+    pair = record["pair_address"]
     valid = []
     for observation in history.get(mint, []):
         if observation.get("pair_address") != pair:
@@ -63,7 +64,8 @@ for (mint, pair), (start, record) in first.items():
     entry = float(record["observation_price_usd"])
     results.append({
         "mint": mint, "pair_address": pair, "symbol": record.get("symbol"),
-        "first_seen_at_utc": first_seen[(mint, pair)].isoformat(),
+        "first_seen_at_utc": first_seen[mint][0].isoformat(),
+        "first_seen_rank": first_seen[mint][1].get("rank"),
         "first_positive_at_utc": start.isoformat(),
         "entry_price_usd": entry, "last_price_at_utc": t.isoformat(),
         "last_price_usd": p, "hold_return_pct": round(100 * (p / entry - 1), 4),
