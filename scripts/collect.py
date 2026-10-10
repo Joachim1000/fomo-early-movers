@@ -9,6 +9,8 @@ def fetch(path):
 
 import os
 
+api_key = os.environ.get("FOMO_API_KEY")
+
 # Retrieve the maximum distinct tokens the FOMO API exposes. Stop if the API
 # ignores offset, returns an empty page, or repeats a page; never invent entries.
 FOMO_PAGE_LIMIT = 100
