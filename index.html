@@ -25,7 +25,7 @@ for(const x of rec.records||[]){
 const at=Date.parse(x.observed_at_utc),p=Number(x.observation_price_usd);
 if(!Number.isFinite(at)||at>snap||day(at)!==shownDay||!x.mint||!x.pair_address||!(p>0))continue;
 const key=x.mint+'|'+x.pair_address;
-if(!firstSeen.has(key)||at<Date.parse(firstSeen.get(key).observed_at_utc))firstSeen.set(key,x);
+if(!firstSeen.has(x.mint)||at<Date.parse(firstSeen.get(x.mint).observed_at_utc))firstSeen.set(x.mint,x);
 if(String(x.displayed_status).toUpperCase()==='POSITIVE'&&(!first.has(key)||at<Date.parse(first.get(key).observed_at_utc)))first.set(key,x);
 }
 let missing=0;const results=[];
@@ -35,7 +35,7 @@ const observations=(h[x.mint]||[]).filter(z=>z.pair_address===x.pair_address&&Nu
 const latest=observations.at(-1);
 if(!latest){missing++;continue}
 const ageMinutes=Math.max(0,Math.round((snap-Date.parse(latest.timestamp))/60000));
-results.push({x,firstObserved:firstSeen.get(x.mint+'|'+x.pair_address),latest,ageMinutes,pct:100*(Number(latest.price_usd)/Number(x.observation_price_usd)-1)});
+results.push({x,firstObserved:firstSeen.get(x.mint),latest,ageMinutes,pct:100*(Number(latest.price_usd)/Number(x.observation_price_usd)-1)});
 }
 results.sort((a,b)=>b.pct-a.pct);
 const up=results.filter(z=>z.pct>0).length;
