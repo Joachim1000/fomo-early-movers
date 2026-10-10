@@ -9,66 +9,62 @@ def fetch(path):
 
 import os
 
-fomo = {"status": "not_checked", "tokens": []}
-api_key = os.environ.get("FOMO_API_KEY")
+# Retrieve the maximum distinct tokens the FOMO API exposes. Stop if the API
+# ignores offset, returns an empty page, or repeats a page; never invent entries.
+FOMO_PAGE_LIMIT = 100
+FOMO_MAX_PAGES = 20
 
-if api_key:
-    try:
-        request = urllib.request.Request(
-            "https://api.fomoapi.io/v2/leaderboard/tokens/trending?limit=15",
-            headers={
-                "Authorization": "Bearer " + api_key,
-                "Accept": "application/json"
-            }
-        )
-        with urllib.request.urlopen(request, timeout=30) as response:
-            result = json.load(response)
-
-        if not isinstance(result, dict) or not isinstance(result.get("tokens"), list):
-            raise ValueError("Unexpected FOMO API response")
-
-        fomo = {
-            "status": "ok",
-            "board": result.get("board"),
-            "source": result.get("source"),
-            "captured_at": result.get("capturedAt"),
-            "stale": result.get("stale"),
-            "age_hours": result.get("ageHours"),
-            "count": result.get("count"),
-            "tokens": result["tokens"][:15]
-        }
-        print("FOMO Trending tokens:", len(fomo["tokens"]))
-    except Exception as exc:
-        fomo = {"status": "error", "tokens": []}
-        print("FOMO API error:", type(exc).__name__, str(exc))
-else:
-    fomo = {"status": "missing_key", "tokens": []}
-
-# Expand official FOMO board discovery beyond Trending. These are FOMO API
-# token boards, not speculative DEX-only matches. Missing boards are not fabricated.
-fomo_boards = {}
-for board in ("graduated", "most-held"):
+def fetch_fomo_board(board):
     if not api_key:
-        fomo_boards[board] = {"status": "missing_key", "tokens": []}
-        continue
-    try:
-        req = urllib.request.Request(
-            "https://api.fomoapi.io/v2/leaderboard/tokens/" + board + "?limit=25",
-            headers={"Authorization": "Bearer " + api_key, "Accept": "application/json"}
-        )
-        with urllib.request.urlopen(req, timeout=30) as response:
-            board_result = json.load(response)
-        if not isinstance(board_result, dict) or not isinstance(board_result.get("tokens"), list):
-            raise ValueError("Board unavailable or invalid payload")
-        fomo_boards[board] = {
-            "status": "ok", "board": board,
-            "source": board_result.get("source"),
-            "captured_at": board_result.get("capturedAt"),
-            "stale": board_result.get("stale"),
-            "tokens": board_result["tokens"][:25]
-        }
-    except Exception as exc:
-        fomo_boards[board] = {"status": "error", "tokens": [], "error": str(exc)[:180]}
+        return {"status": "missing_key", "tokens": []}
+    tokens, seen = [], set()
+    metadata = {}
+    for page in range(FOMO_MAX_PAGES):
+        offset = page * FOMO_PAGE_LIMIT
+        url = ("https://api.fomoapi.io/v2/leaderboard/tokens/" + board +
+               "?limit=" + str(FOMO_PAGE_LIMIT) + "&offset=" + str(offset))
+        req = urllib.request.Request(url, headers={
+            "Authorization": "Bearer " + api_key,
+            "Accept": "application/json"
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                result = json.load(response)
+        except Exception as exc:
+            if not tokens:
+                return {"status": "error", "tokens": [], "error": str(exc)[:180]}
+            metadata["pagination_warning"] = str(exc)[:180]
+            break
+        if not isinstance(result, dict) or not isinstance(result.get("tokens"), list):
+            if not tokens:
+                return {"status": "error", "tokens": [], "error": "Invalid API payload"}
+            metadata["pagination_warning"] = "Invalid subsequent page"
+            break
+        if page == 0:
+            metadata = {k: result.get(k) for k in ("source", "capturedAt", "stale", "ageHours")}
+        batch = result["tokens"]
+        new = 0
+        for item in batch:
+            token = item.get("token") or {}
+            mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
+            network = str(item.get("network", ""))
+            key = (network, mint) if mint else (network, json.dumps(item, sort_keys=True))
+            if key in seen:
+                continue
+            seen.add(key)
+            tokens.append(item)
+            new += 1
+        if not batch or new == 0 or len(batch) < FOMO_PAGE_LIMIT:
+            break
+    return {
+        "status": "ok", "board": board, "tokens": tokens,
+        "count": len(tokens), "pages_checked": page + 1,
+        **metadata
+    }
+
+fomo = fetch_fomo_board("trending")
+print("FOMO Trending tokens:", len(fomo["tokens"]))
+fomo_boards = {board: fetch_fomo_board(board) for board in ("graduated", "most-held")}
 
 # Gather broad DEX discovery for price enrichment; not FOMO verification.
 
@@ -79,8 +75,8 @@ NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
 MIN_AGE_HOURS = 4
-MAX_DISCOVERY_ADDRESSES = 200
-MAX_CANDIDATES = 200
+MAX_DISCOVERY_ADDRESSES = 3000
+MAX_CANDIDATES = 3000
 
 def numeric(value):
     try:
