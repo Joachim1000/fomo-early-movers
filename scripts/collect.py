@@ -14,7 +14,7 @@ api_key = os.environ.get("FOMO_API_KEY")
 # Retrieve the maximum distinct tokens the FOMO API exposes. Stop if the API
 # ignores offset, returns an empty page, or repeats a page; never invent entries.
 FOMO_PAGE_LIMIT = 100
-FOMO_MAX_PAGES = 20
+FOMO_MAX_PAGES = 1
 
 def fetch_fomo_board(board):
     if not api_key:
@@ -66,7 +66,7 @@ def fetch_fomo_board(board):
 
 fomo = fetch_fomo_board("trending")
 print("FOMO Trending tokens:", len(fomo["tokens"]))
-fomo_boards = {board: fetch_fomo_board(board) for board in ("graduated", "most-held")}
+fomo_boards = {"graduated": fetch_fomo_board("graduated")}
 
 # Gather broad DEX discovery for price enrichment; not FOMO verification.
 
