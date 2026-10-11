@@ -1,4 +1,5 @@
 import json, urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -64,9 +65,11 @@ def fetch_fomo_board(board):
         **metadata
     }
 
-fomo = fetch_fomo_board("trending")
+with ThreadPoolExecutor(max_workers=3) as pool:
+    boards = list(pool.map(fetch_fomo_board, ("trending", "graduated", "most-held")))
+fomo, graduated, most_held = boards
 print("FOMO Trending tokens:", len(fomo["tokens"]))
-fomo_boards = {board: fetch_fomo_board(board) for board in ("graduated", "most-held")}
+fomo_boards = {"graduated": graduated, "most-held": most_held}
 
 # Gather broad DEX discovery for price enrichment; not FOMO verification.
 
@@ -107,13 +110,22 @@ def load_history():
 
 addresses = set()
 errors = []
-for endpoint in ("/token-profiles/latest/v1", "/token-boosts/latest/v1", "/token-boosts/top/v1"):
+def safe_fetch_discovery(endpoint):
     try:
-        for item in fetch(endpoint):
+        return endpoint, fetch(endpoint), None
+    except Exception as exc:
+        return endpoint, [], str(exc)
+
+discovery_endpoints = ("/token-profiles/latest/v1", "/token-boosts/latest/v1", "/token-boosts/top/v1")
+with ThreadPoolExecutor(max_workers=3) as pool:
+    discovery_results = list(pool.map(lambda endpoint: safe_fetch_discovery(endpoint), discovery_endpoints))
+for endpoint, items, error in discovery_results:
+    if error:
+        errors.append(f"{endpoint}: {error}")
+    else:
+        for item in items:
             if item.get("chainId") == "solana" and item.get("tokenAddress"):
                 addresses.add(item["tokenAddress"])
-    except Exception as exc:
-        errors.append(f"{endpoint}: {exc}")
 
 # The FOMO API returns nested token.address and numeric Solana network 1399811149.
 # Prior versions silently skipped all FOMO mints, leaving their history empty.
