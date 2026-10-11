@@ -68,7 +68,23 @@
       "observed_5m_at_utc": "2026-10-11T07:40:21.515643+00:00",
       "return_5m_pct": 2.16,
       "measurement_delay_minutes": 5.09
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "6GGY8GViCR5v4xR4Lxb4nfiAJsEoJua5Gj6YecxbJ4BQ",
+      "pair_address": "F6veTYFBPSYZiQSbNUDQCeMpDuSyR3pxghhfbEU2spfR",
+      "symbol": "CLAWHUNTER",
+      "first_alert_at_utc": "2026-10-11T07:45:23.598062+00:00",
+      "alert_price_usd": 0.001171,
+      "initial_15m_change_pct": 28.43,
+      "buys_5m": 28,
+      "sells_5m": 16,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T07:40:21.515643+00:00"
+  "updated_at_utc": "2026-10-11T07:45:23.598062+00:00"
 }
