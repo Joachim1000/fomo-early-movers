@@ -47,7 +47,7 @@ for item in latest.get("beta_alert_candidates", []):
 for row in rows:
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
-    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
+    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE") and row.get("return_10m_pct") is not None:
         continue
     start = parse(row.get("first_alert_at_utc"))
     if not start or (now - start).total_seconds() < 300:
@@ -59,6 +59,17 @@ for row in rows:
         at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
         if at and price and 300 <= (at - start).total_seconds() <= 86400:
             later.append((at, price))
+    ten = [(at, price) for at, price in later if (at - start).total_seconds() >= 600]
+    if ten and row.get("return_10m_pct") is None:
+        at10, price10 = min(ten, key=lambda p: p[0])
+        row.update(price_10m_usd=price10, observed_10m_at_utc=at10.isoformat(),
+                   measurement_10m_delay_minutes=round((at10-start).total_seconds()/60, 2),
+                   return_10m_pct=round((price10 / row["alert_price_usd"] - 1)*100, 2),
+                   status_10m="MEASURED" if (at10-start).total_seconds() <= 900 else "DELAYED")
+    elif (now-start).total_seconds() > 900 and row.get("return_10m_pct") is None:
+        row["status_10m"] = "NOT_VERIFIABLE"
+    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
+        continue
     if later:
         at, price = min(later, key=lambda p: p[0])
         delay = round((at - start).total_seconds() / 60, 2)
