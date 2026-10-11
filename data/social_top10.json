@@ -1,137 +1,9 @@
 {
-  "updated_at_utc": "2026-10-11T23:30:53.016317+00:00",
+  "updated_at_utc": "2026-10-11T23:35:24.018224+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "55ccad1a-8b7f-58f7-8268-983279ee22ec",
-        "alrt_1791747075000_1048",
-        "norisknorarrii"
-      ],
-      "id": "1bec6b31-54c5-5481-9e40-3a17bb4cf828",
-      "ts": "2026-10-11T19:31:15+00:00",
-      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
-      "chain": "solana",
-      "symbol": "HOTBOT",
-      "side": "buy",
-      "trader": "55ccad1a-8b7f-58f7-8268-983279ee22ec",
-      "usd": 33052.24
-    },
-    {
-      "thesis_text": "realred posted a thesis on $PARE: ~5 hours until chapter 2 goes live (split a stablecoin and its fixed yield)… team already added $38k liquidity from treasury into LP https://x.com/parestocks/status/2109261400153760140",
-      "trader_ids": [
-        "9bba84ff-0f33-54c2-bbfe-efb975a70343",
-        "alrt_1791747080000_1050",
-        "realred"
-      ],
-      "id": "43667f1f-099a-46f7-9729-02b1e0d651f5",
-      "ts": "2026-10-11T19:31:20+00:00",
-      "mint": "0x15d36b6a28d8327abc7afabf0f106ae2c9af5c4d",
-      "chain": "robinhood",
-      "symbol": "PARE",
-      "side": "thesis",
-      "trader": "9bba84ff-0f33-54c2-bbfe-efb975a70343",
-      "usd": 38000.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9df257ff-3fe4-5513-9757-2c5574749995",
-        "alrt_1791747095000_1051",
-        "juiceit"
-      ],
-      "id": "ca9216ca-20ea-5344-9a03-2eca9abb40d9",
-      "ts": "2026-10-11T19:31:35+00:00",
-      "mint": "0xe172e9b6cfbeeb5593bdce3f077356fdb33af904",
-      "chain": "ethereum",
-      "symbol": "FOLD",
-      "side": "buy",
-      "trader": "9df257ff-3fe4-5513-9757-2c5574749995",
-      "usd": 9950.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "445e880d-b488-508f-9ff8-eb284960b890",
-        "alrt_1791747120000_1054",
-        "panduhxprezz"
-      ],
-      "id": "6543b83d-2c8e-5630-9fb8-c73030789cdf",
-      "ts": "2026-10-11T19:32:00+00:00",
-      "mint": "0xedbf91223639800bcd5756815caf908df3b890be",
-      "chain": "robinhood",
-      "symbol": "PRIORS",
-      "side": "buy",
-      "trader": "445e880d-b488-508f-9ff8-eb284960b890",
-      "usd": 2985.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "10e339d3-af50-59cd-9f37-39a2e1940d80",
-        "alrt_1791747125000_1055",
-        "looc"
-      ],
-      "id": "2c0a3d44-dddd-55a3-9b2a-332ba406d600",
-      "ts": "2026-10-11T19:32:05+00:00",
-      "mint": "0x1b54e762aa34cf6e28e9c082f2848e28e45da6b8",
-      "chain": "ethereum",
-      "symbol": "CLAUS",
-      "side": "sell",
-      "trader": "10e339d3-af50-59cd-9f37-39a2e1940d80",
-      "usd": 76461.43
-    },
-    {
-      "thesis_text": "rishi posted a thesis on $HIGGS: We could see all these sellers burn very very soon. You are not prepared for the pump that is going to come",
-      "trader_ids": [
-        "8b2de855-c238-5ddc-b7f1-ce3624cc3259",
-        "alrt_1791747185000_1061",
-        "rishi"
-      ],
-      "id": "81cca9ef-32cd-4f74-81d4-cb1602e85545",
-      "ts": "2026-10-11T19:33:05+00:00",
-      "mint": "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump",
-      "chain": "solana",
-      "symbol": "HIGGS",
-      "side": "thesis",
-      "trader": "8b2de855-c238-5ddc-b7f1-ce3624cc3259",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9df257ff-3fe4-5513-9757-2c5574749995",
-        "alrt_1791747200000_1062",
-        "juiceit"
-      ],
-      "id": "0f9418c9-4acd-588b-ace9-f9820d878ad2",
-      "ts": "2026-10-11T19:33:20+00:00",
-      "mint": "0xe172e9b6cfbeeb5593bdce3f077356fdb33af904",
-      "chain": "ethereum",
-      "symbol": "FOLD",
-      "side": "buy",
-      "trader": "9df257ff-3fe4-5513-9757-2c5574749995",
-      "usd": 19968.13
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "10e339d3-af50-59cd-9f37-39a2e1940d80",
-        "alrt_1791747260000_1063",
-        "looc"
-      ],
-      "id": "f0b323e8-63b1-5aeb-8354-c18a53042fee",
-      "ts": "2026-10-11T19:34:20+00:00",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "chain": "robinhood",
-      "symbol": "ORBIO",
-      "side": "buy",
-      "trader": "10e339d3-af50-59cd-9f37-39a2e1940d80",
-      "usd": 36217.38
-    },
     {
       "thesis_text": "topfrog posted a thesis on $CLAUDIA: Claude make this coin go to 100m make no mistakes",
       "trader_ids": [
@@ -10292,7 +10164,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 8,
+      "recent_mentions": 7,
       "recent_friends": 0,
       "language_analyzed_count": 42,
       "language_positive_count": 6,
@@ -10315,15 +10187,15 @@
       "symbol": "CLAUS",
       "mentions": 14,
       "buys": 25,
-      "sells": 11,
+      "sells": 10,
       "buy_usd": 952117.06,
-      "sell_usd": 196545.83,
+      "sell_usd": 120084.4,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 4,
+      "recent_mentions": 3,
       "recent_friends": 0,
       "language_analyzed_count": 14,
       "language_positive_count": 0,
@@ -10335,8 +10207,8 @@
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 755571.23,
-      "activity_sentiment_score": 65.8,
+      "net_usd": 832032.66,
+      "activity_sentiment_score": 77.6,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -10447,7 +10319,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 7,
       "language_positive_count": 1,
@@ -10478,7 +10350,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 3,
+      "recent_mentions": 2,
       "recent_friends": 0,
       "language_analyzed_count": 3,
       "language_positive_count": 0,
@@ -10604,7 +10476,7 @@
     "buy_usd": 153692.16,
     "sell_usd": 1838618.72
   },
-  "events_count": 642,
+  "events_count": 634,
   "matched_followed_events": 35,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
