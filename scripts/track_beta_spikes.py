@@ -27,7 +27,7 @@ if now is None:
     raise ValueError("Missing latest snapshot timestamp")
 zone = ZoneInfo("Europe/Warsaw")
 day = now.astimezone(zone).date().isoformat()
-existing = {(x["day"], x["mint"], x["pair_address"]) for x in rows}
+# Each distinct alert episode may be recorded again after the signal disappears.\n# Persist the last observed state so repeated collection of the same active alert\n# does not create duplicate trades.\nstate = saved.setdefault("active_alerts", {})\ncurrent = set()
 for item in latest.get("beta_alert_candidates", []):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
@@ -43,7 +43,7 @@ for item in latest.get("beta_alert_candidates", []):
         "measurement_minutes": 5, "status": "PENDING", "price_5m_usd": None,
         "observed_5m_at_utc": None, "return_5m_pct": None
     })
-    existing.add((day, mint, pair))
+    state[key] = True
 for row in rows:
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
