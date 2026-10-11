@@ -101,7 +101,7 @@ jobs:
           # Scripts were loaded from main for execution; never commit them to the data branch.
           git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
 
-          git add data/latest.json data/history.json data/recommendations.json data/early_spike_history.json data/beta_spike_history.json data/beta_live_daily.json
+          git add data/latest.json data/history.json data/fomo_cache.json data/recommendations.json data/early_spike_history.json data/beta_spike_history.json data/beta_live_daily.json
           if [ -f data/daily_snapshots.json ]; then git add data/daily_snapshots.json; fi
 
           if ! git diff --cached --quiet; then
