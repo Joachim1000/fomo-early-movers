@@ -459,8 +459,24 @@
       "observed_5m_at_utc": "2026-10-11T20:10:19.722886+00:00",
       "return_5m_pct": 2.23,
       "measurement_delay_minutes": 5.05
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
+      "pair_address": "6D4EWF22HfQamimKhX47tqiu9DVCkcxDMrmhnSvewKAo",
+      "symbol": "HOTBOT",
+      "first_alert_at_utc": "2026-10-11T20:25:24.264705+00:00",
+      "alert_price_usd": 0.003471,
+      "initial_15m_change_pct": 9.95,
+      "buys_5m": 16,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T20:20:21.338733+00:00"
+  "updated_at_utc": "2026-10-11T20:25:24.264705+00:00"
 }
