@@ -272,7 +272,8 @@ for mint, pair in best.items():
     change_15m = (round(100 * (numeric(pair.get("priceUsd")) /
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
-    fast_alert = (mint in fomo_sol_mints and liquidity >= 5000 and
+    fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
+                   mint in fomo_sol_mints and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1500 and change_15m is not None and
                   change_15m >= 5)
