@@ -119,7 +119,23 @@
       "observed_5m_at_utc": "2026-10-11T08:50:18.916006+00:00",
       "return_5m_pct": 1.31,
       "measurement_delay_minutes": 9.95
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pair_address": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "symbol": "SLOPCORE",
+      "first_alert_at_utc": "2026-10-11T09:00:44.685504+00:00",
+      "alert_price_usd": 0.00108,
+      "initial_15m_change_pct": 6.3,
+      "buys_5m": 65,
+      "sells_5m": 38,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T08:55:13.811195+00:00"
+  "updated_at_utc": "2026-10-11T09:00:44.685504+00:00"
 }
