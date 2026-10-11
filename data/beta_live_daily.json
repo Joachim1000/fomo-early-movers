@@ -1800,8 +1800,108 @@
       "rank": 10,
       "beta_score": -7.901,
       "risk": "HIGH"
+    },
+    {
+      "mint": "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump",
+      "pair_address": "ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK",
+      "symbol": "TM",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.0008354,
+      "rank": 1,
+      "beta_score": 26.48,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "2Dx7XJQp2LGdq14nP98swmtUhfhHz8FVs98bt11Mpump",
+      "pair_address": "3N91PMvHgu6mntZjYZPJ1f7U8vToWxkpp8zNYtUWkjgU",
+      "symbol": "ALOIS",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.001106,
+      "rank": 2,
+      "beta_score": 7.82,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+      "pair_address": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
+      "symbol": "Dacity",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.0002601,
+      "rank": 3,
+      "beta_score": 5.522,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "6iep3EgqksbZwgzMBCyAJtiVtVYkCgL9BnPBEwLR8AGQ",
+      "symbol": "DOPE",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.002126,
+      "rank": 4,
+      "beta_score": 0.122,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump",
+      "pair_address": "DA4pM4xSDY4M9V4CgAKKBVH1pw1yscTQQa5nEkGHuKpt",
+      "symbol": "OTC",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.006627,
+      "rank": 5,
+      "beta_score": -2.978,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
+      "pair_address": "6QyYdc6jgeKnfP1FWhiexMYq3JQ3sidSYoubjWUTo3rm",
+      "symbol": "HeeHaw",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.0006382,
+      "rank": 6,
+      "beta_score": -8.86,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump",
+      "pair_address": "2B8tftZ5ww8TREMr3pgkgERLNjJyJxEAPWMENViGMsL4",
+      "symbol": "CRAWL",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.003043,
+      "rank": 7,
+      "beta_score": -9.86,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+      "pair_address": "HnhpJPJgBG2KwniMTNW8cVBHvk1hFog3RC3kjnyc23tD",
+      "symbol": "CARDS",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.3214,
+      "rank": 8,
+      "beta_score": -10.441,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "symbol": "HOOKED",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.005754,
+      "rank": 9,
+      "beta_score": -11.44,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "7b6dX3nE25xrfNViEKZHL9wVJFcBxQYuWPpmzHUxx28H",
+      "pair_address": "9CDKMMGWEnr6ZyU725fr4jdyyFojPW8gz1KKNrYLekCg",
+      "symbol": "ROSE",
+      "observed_at_utc": "2026-10-11T19:50:20.711597+00:00",
+      "observation_price_usd": 0.000301,
+      "rank": 10,
+      "beta_score": -15.747,
+      "risk": "HIGH"
     }
   ],
   "days": {},
-  "updated_at_utc": "2026-10-11T19:45:24.343220+00:00"
+  "updated_at_utc": "2026-10-11T19:50:20.711597+00:00"
 }
