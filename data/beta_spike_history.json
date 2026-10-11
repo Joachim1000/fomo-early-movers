@@ -56,7 +56,12 @@
       "price_5m_usd": 0.01792,
       "observed_5m_at_utc": "2026-10-11T19:15:23.786112+00:00",
       "return_5m_pct": 2.34,
-      "measurement_delay_minutes": 5.04
+      "measurement_delay_minutes": 5.04,
+      "price_10m_usd": 0.01879,
+      "observed_10m_at_utc": "2026-10-11T19:25:16.748287+00:00",
+      "measurement_10m_delay_minutes": 14.92,
+      "return_10m_pct": 7.31,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-11",
@@ -73,10 +78,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "4mbPZzDCWXvTCJbscMWeDD7TT1pra9mkZHGaBxc2jupx",
+      "pair_address": "8FoQfA6pYc7Mgbab3ijTtWhq692p85enWRSTV6y6VVJW",
+      "symbol": "JPAD",
+      "first_alert_at_utc": "2026-10-11T19:25:16.748287+00:00",
+      "alert_price_usd": 0.0002092,
+      "initial_15m_change_pct": 16.55,
+      "buys_5m": 39,
+      "sells_5m": 9,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true,
+    "4mbPZzDCWXvTCJbscMWeDD7TT1pra9mkZHGaBxc2jupx|8FoQfA6pYc7Mgbab3ijTtWhq692p85enWRSTV6y6VVJW": true
   },
-  "updated_at_utc": "2026-10-11T19:20:21.150872+00:00"
+  "updated_at_utc": "2026-10-11T19:25:16.748287+00:00"
 }
