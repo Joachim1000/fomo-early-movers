@@ -47,7 +47,7 @@ for item in latest.get("early_alert_candidates", []):
 for row in rows:
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
-    if row.get("status") != "PENDING":
+    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
         continue
     start = parse(row.get("first_alert_at_utc"))
     if not start or (now - start).total_seconds() < 300:
@@ -57,15 +57,16 @@ for row in rows:
         if point.get("pair_address") != row["pair_address"]:
             continue
         at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
-        if at and price and at >= start and 300 <= (at - start).total_seconds() <= 600:
+        if at and price and 300 <= (at - start).total_seconds() <= 86400:
             later.append((at, price))
     if later:
         at, price = min(later, key=lambda p: p[0])
-        row.update(status="MEASURED", price_5m_usd=price,
+        delay = round((at - start).total_seconds() / 60, 2)
+        row.update(status="MEASURED" if delay <= 10 else "DELAYED", measurement_delay_minutes=delay, price_5m_usd=price,
                    observed_5m_at_utc=at.isoformat(),
                    return_5m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
     elif (now - start).total_seconds() > 600:
-        row["status"] = "NOT_VERIFIABLE"
+        row["status"] = "NOT_VERIFIABLE"  # Can recover if a verified later price arrives.
 saved["updated_at_utc"] = now.isoformat()
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")
