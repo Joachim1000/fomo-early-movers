@@ -169,7 +169,39 @@
       "observed_5m_at_utc": "2026-10-11T08:10:19.326253+00:00",
       "return_5m_pct": 1.95,
       "measurement_delay_minutes": 9.57
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "59cGHS4QJwosD7j4peZWwRnkmFj1WbpxSXMG6pwhpump",
+      "pair_address": "5nhcdL3KC6zurLSrFANiRJ1nefqb78D9HC9Heqye54bw",
+      "symbol": "ARENA",
+      "first_alert_at_utc": "2026-10-11T08:15:22.293502+00:00",
+      "alert_price_usd": 0.0002347,
+      "initial_15m_change_pct": 144.76,
+      "buys_5m": 62,
+      "sells_5m": 37,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
+      "pair_address": "6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn",
+      "symbol": "SWOLF",
+      "first_alert_at_utc": "2026-10-11T08:15:22.293502+00:00",
+      "alert_price_usd": 0.002256,
+      "initial_15m_change_pct": 12.57,
+      "buys_5m": 61,
+      "sells_5m": 18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T08:10:19.326253+00:00"
+  "updated_at_utc": "2026-10-11T08:15:22.293502+00:00"
 }
