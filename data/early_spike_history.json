@@ -75,7 +75,22 @@
       "price_15m_usd": null,
       "observed_15m_at_utc": null,
       "return_15m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-11T05:25:14.413400+00:00",
+      "alert_price_usd": 0.007403,
+      "initial_15m_change_pct": 12.23,
+      "buys_5m": 10,
+      "sells_5m": 1,
+      "status": "PENDING",
+      "price_15m_usd": null,
+      "observed_15m_at_utc": null,
+      "return_15m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T05:20:19.334888+00:00"
+  "updated_at_utc": "2026-10-11T05:25:14.413400+00:00"
 }
