@@ -118,22 +118,10 @@ jobs:
             git commit -m "Update market snapshot"
             # The market-data branch is written by collectors and occasional manual resets.
             # Preserve a manual reset of beta history instead of rebasing stale JSON over it.
-            for attempt in 1 2 3 4 5; do
-              if git push origin HEAD:market-data; then
-                echo "Market snapshot pushed successfully (attempt $attempt)."
-                exit 0
-              fi
-              echo "Remote advanced; restarting collection against fresh market-data is required."
-              echo "::error::Concurrent market-data update detected. Refusing stale snapshot overwrite."
+            if git push origin HEAD:market-data; then
+              echo "Market snapshot pushed successfully."
+            else
+              echo "::error::Concurrent market-data update detected. Stale snapshot not pushed; next scheduled run will recollect."
               exit 1
-            done
-              if git push origin HEAD:market-data; then
-                echo "Market snapshot pushed successfully (attempt $attempt)."
-                exit 0
-              fi
-              echo "Remote advanced during push; retrying ($attempt/5)..."
-              sleep $((attempt * 2))
-            done
-            echo "::error::Could not push after 5 attempts."
-            exit 1
+            fi
           fi
