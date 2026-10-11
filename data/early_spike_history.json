@@ -1,6 +1,23 @@
 {
   "schema_version": 1,
-  "records": [],
+  "records": [
+    {
+      "day": "2026-10-11",
+      "mint": "BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump",
+      "pair_address": "AJZPEX2nJCdkoXXQ6zExtpZFdbiG2LHGvtjSxV8U8F7u",
+      "symbol": "Incognito",
+      "first_alert_at_utc": "2026-10-11T10:30:33.902919+00:00",
+      "alert_price_usd": 0.0009334,
+      "initial_15m_change_pct": 9.03,
+      "buys_5m": 66,
+      "sells_5m": 42,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    }
+  ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T10:25:14.848740+00:00"
+  "updated_at_utc": "2026-10-11T10:30:33.902919+00:00"
 }
