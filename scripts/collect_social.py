@@ -36,12 +36,12 @@ elif due:
         req=urllib.request.Request("https://api.fomoapi.io/v2/alerts?"+params,headers={"Authorization":"Bearer "+key,"Accept":"application/json"})
         with urllib.request.urlopen(req,timeout=25) as res:
             payload=json.load(res)
-        rows=payload if isinstance(payload,list) else next((payload[k] for k in ("alerts","items","data","results") if isinstance(payload.get(k),list)),[])
+        rows=payload if isinstance(payload,list) else next((payload[k] for k in ("alerts","items","data","results") if isinstance(payload.get(k),list)),[])\n        if isinstance(payload,dict) and isinstance(payload.get("data"),dict):\n            rows=next((payload["data"][k] for k in ("alerts","items","results") if isinstance(payload["data"].get(k),list)),rows)
         for a in rows:
             if not isinstance(a,dict):continue
             t=dt(a.get("ts") or a.get("timestamp") or a.get("createdAt"))
             mint=a.get("tokenAddress") or a.get("token_address") or (a.get("token") or {}).get("address") if isinstance(a.get("token"),dict) else a.get("tokenAddress") or a.get("token_address")
-            side=str(a.get("alertType") or a.get("type") or "").lower()
+            side=str(a.get("alertType") or a.get("type") or "").lower()\n            side={"swap_buy":"buy","swap_sell":"sell","large_buy":"buy","large_sell":"sell","single_user_sell":"sell","multi_user_buy":"buy","multi_user_sell":"sell","thesis_created":"thesis"}.get(side,side)
             if side=="trade":side=str(a.get("side") or "").lower()
             if not (t and cutoff<=t<=now and mint and side in ("buy","sell","thesis")):continue
             eid=str(a.get("eventId") or a.get("id") or (str(mint)+str(t)+side+str(a.get("userId"))))
@@ -49,7 +49,7 @@ elif due:
             symbol=token if isinstance(token,str) else (token or {}).get("symbol","")
             events[eid]={"id":eid,"ts":t.isoformat(),"mint":str(mint),"chain":str(a.get("chain") or ""),"symbol":str(symbol or "")[:30],"side":side,"trader":str(a.get("userId") or a.get("trader") or ""),"usd":float(a.get("usdValue") or 0)}
         state["last_fetch_at_utc"]=now.isoformat()
-        state["status"]="ok"
+        state["status"]="ok" if rows else "empty_response"
     except Exception as e:
         state["status"]="api_error"
         state["error"]=str(e)[:180]
