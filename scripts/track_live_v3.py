@@ -73,6 +73,12 @@ if len(positive)>=3:
     top_keys={(r["mint"],r["pair_address"]) for r in top}
     current=top+[r for r in current if (r["mint"],r["pair_address"]) not in top_keys]
 for rank,x in enumerate(current,1): x["v3_shadow_rank"]=rank
+# Persist actual displayed TOP 10 membership on each recorded observation.
+# Observations outside the published TOP 10 are not daily recommendations.
+top10_keys={(x["mint"],x["pair_address"]) for x in current[:10]}
+for row in rows:
+    if row.get("observed_at_utc")==now.isoformat() and (row.get("mint"),row.get("pair_address")) in top10_keys:
+        row["v3_top10_rank"]=next(x["v3_shadow_rank"] for x in current[:10] if x["mint"]==row["mint"] and x["pair_address"]==row["pair_address"])
 # Only fill outcome when a genuine later same-pair observation falls within a
 # narrow target window. Never use future data in features.
 for row in rows:
