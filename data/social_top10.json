@@ -1,73 +1,9 @@
 {
-  "updated_at_utc": "2026-10-11T23:10:28.541222+00:00",
+  "updated_at_utc": "2026-10-11T23:12:29.703191+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "3fdaaec2-9505-57cf-b5e9-a76ed94ba125",
-        "alrt_1791745875000_965",
-        "halilbasly"
-      ],
-      "id": "c142a750-244c-5d58-aca7-28c4f2fd4fa8",
-      "ts": "2026-10-11T19:11:15+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "sell",
-      "trader": "3fdaaec2-9505-57cf-b5e9-a76ed94ba125",
-      "usd": -104.2
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791745880000_966",
-        "b66e5b32-c043-519f-a0a2-16057b4b6235",
-        "minhxdynasty"
-      ],
-      "id": "c9b5755b-cbb8-51ad-94d2-f5e5fe7ad23f",
-      "ts": "2026-10-11T19:11:20+00:00",
-      "mint": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
-      "chain": "robinhood",
-      "symbol": "STANDARD",
-      "side": "buy",
-      "trader": "b66e5b32-c043-519f-a0a2-16057b4b6235",
-      "usd": 19910.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-        "alrt_1791745890000_967",
-        "gl_aw_at_paragon"
-      ],
-      "id": "eb1ea998-099a-5e02-b6f5-fc271c03b66f",
-      "ts": "2026-10-11T19:11:30+00:00",
-      "mint": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
-      "chain": "robinhood",
-      "symbol": "STANDARD",
-      "side": "buy",
-      "trader": "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-      "usd": 14453.06
-    },
-    {
-      "thesis_text": "ShyZippyApe posted a thesis on $swordcat: We are all SwordCat",
-      "trader_ids": [
-        "alrt_1791745925000_969",
-        "bdea17c4-3106-5432-9af7-a79f89ec26a5",
-        "shyzippyape"
-      ],
-      "id": "d7bdd06e-a7ba-4065-8b63-bcbd18a873ea",
-      "ts": "2026-10-11T19:12:05+00:00",
-      "mint": "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump",
-      "chain": "solana",
-      "symbol": "swordcat",
-      "side": "thesis",
-      "trader": "bdea17c4-3106-5432-9af7-a79f89ec26a5",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -10524,9 +10460,9 @@
       "symbol": "CATE",
       "mentions": 41,
       "buys": 1,
-      "sells": 5,
+      "sells": 4,
       "buy_usd": 20482.0,
-      "sell_usd": 11063.78,
+      "sell_usd": 10959.58,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
@@ -10540,12 +10476,12 @@
       "language_neutral_count": 33,
       "language_sentiment_score": 9.8,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 35,
+      "unique_traders": 34,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 9418.22,
-      "activity_sentiment_score": 29.9,
+      "net_usd": 9522.42,
+      "activity_sentiment_score": 30.3,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -10844,7 +10780,7 @@
     "buy_usd": 153692.16,
     "sell_usd": 1838618.72
   },
-  "events_count": 657,
+  "events_count": 653,
   "matched_followed_events": 35,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
