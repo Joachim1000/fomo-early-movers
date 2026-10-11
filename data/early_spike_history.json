@@ -221,8 +221,24 @@
       "observed_5m_at_utc": "2026-10-11T14:40:24.376072+00:00",
       "return_5m_pct": -2.53,
       "measurement_delay_minutes": 5.15
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump",
+      "pair_address": "BFrSZakeqNzVtM3EFhroo4eRhagmmWN8BRntiQKFH6Ru",
+      "symbol": "HIGGS",
+      "first_alert_at_utc": "2026-10-11T15:05:15.984915+00:00",
+      "alert_price_usd": 0.001292,
+      "initial_15m_change_pct": 9.31,
+      "buys_5m": 82,
+      "sells_5m": 53,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T15:00:44.460269+00:00"
+  "updated_at_utc": "2026-10-11T15:05:15.984915+00:00"
 }
