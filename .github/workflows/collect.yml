@@ -108,7 +108,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Scripts were loaded from main for execution; never commit them to the data branch.
-          git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_spikes_v2.py scripts/track_beta_live_daily.py scripts/lock_daily.py
+          git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
+          rm -f scripts/track_beta_spikes_v2.py
           # collect_social.py was copied from main and may be untracked on market-data.
           rm -f scripts/collect_social.py
 
