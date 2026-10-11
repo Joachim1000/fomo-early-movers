@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-11T17:15:34.328744+00:00",
+  "updated_at_utc": "2026-10-11T17:20:31.121052+00:00",
   "window_minutes": 120,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
@@ -2109,6 +2109,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 17,
+      "friends_unique_traders": 0,
       "net_usd": 0
     },
     {
@@ -2124,6 +2125,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 13,
+      "friends_unique_traders": 0,
       "net_usd": 1581261.66
     },
     {
@@ -2139,6 +2141,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 6,
+      "friends_unique_traders": 0,
       "net_usd": 1486.07
     },
     {
@@ -2154,6 +2157,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 4,
+      "friends_unique_traders": 0,
       "net_usd": 700.92
     },
     {
@@ -2169,6 +2173,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 7,
+      "friends_unique_traders": 0,
       "net_usd": 41321.65
     },
     {
@@ -2184,6 +2189,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 3,
+      "friends_unique_traders": 0,
       "net_usd": 8343.74
     },
     {
@@ -2199,6 +2205,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 2,
+      "friends_unique_traders": 0,
       "net_usd": 0
     },
     {
@@ -2214,6 +2221,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 5,
+      "friends_unique_traders": 0,
       "net_usd": 75088.71
     },
     {
@@ -2229,6 +2237,7 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 7,
+      "friends_unique_traders": 0,
       "net_usd": 27478.84
     },
     {
@@ -2244,13 +2253,16 @@
       "followed_sells": 0,
       "followed_mentions": 0,
       "unique_traders": 5,
+      "friends_unique_traders": 0,
       "net_usd": -92408.57
     }
   ],
   "followed_handle": "joachimtjoernelund",
   "followed_status": "ok",
   "followed_count": 56,
+  "friends_feed_verified": false,
+  "friends_feed_status": "not_verified_personal_feed",
   "last_fetch_at_utc": "2026-10-11T17:15:34.328744+00:00",
   "events_count": 209,
-  "note": "Mentions count thesis feed events, not full FOMO chat. Buy/sell counts are feed alerts, not all on-chain trades."
+  "note": "Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
