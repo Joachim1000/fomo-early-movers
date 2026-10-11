@@ -66,13 +66,10 @@ def fetch_fomo_board(board):
         **metadata
     }
 
-# FOMO requests are limited to weekdays 15:00-23:30 Warsaw time,
-# at most once per five minutes. DEX collection runs every minute.
+# Refresh FOMO boards every five minutes, around the clock (including weekends).
+# The external trigger must also run at least every five minutes.
 FOMO_CACHE_PATH = Path("data/fomo_cache.json")
 fomo_now = datetime.now(timezone.utc)
-fomo_local = fomo_now.astimezone(ZoneInfo("Europe/Warsaw"))
-fomo_window = (fomo_local.weekday() < 5 and
-               time(15, 0) <= fomo_local.time() < time(23, 30))
 try:
     fomo_cache = json.loads(FOMO_CACHE_PATH.read_text(encoding="utf-8"))
 except (OSError, ValueError):
@@ -83,7 +80,7 @@ try:
     cache_age = (fomo_now - datetime.fromisoformat(cached_at.replace("Z", "+00:00"))).total_seconds()
 except (AttributeError, ValueError, TypeError):
     cache_age = float("inf")
-refresh_fomo = fomo_window and (cache_age >= 300 or len(cached_boards) != 3)
+refresh_fomo = cache_age >= 300 or len(cached_boards) != 3
 if refresh_fomo:
     with ThreadPoolExecutor(max_workers=3) as pool:
         boards = list(pool.map(fetch_fomo_board, ("trending", "graduated", "most-held")))
@@ -96,7 +93,7 @@ if refresh_fomo:
         boards = cached_boards
 else:
     boards = cached_boards if len(cached_boards) == 3 else [
-        {"status": "outside_schedule", "tokens": []} for _ in range(3)
+        {"status": "cache_unavailable", "tokens": []} for _ in range(3)
     ]
 fomo, graduated, most_held = boards
 print("FOMO Trending tokens:", len(fomo["tokens"]))
