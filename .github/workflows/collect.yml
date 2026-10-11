@@ -25,7 +25,7 @@ jobs:
       - name: Use current collection scripts from main
         run: |
           git fetch --depth=1 origin main
-          for script in collect.py track_early_spikes.py track_beta_spikes.py track_beta_live_daily.py lock_daily.py; do
+          for script in collect.py track_early_spikes.py track_beta_spikes.py track_beta_live_daily.py lock_daily.py collect_social.py; do
             git show "origin/main:scripts/$script" > "scripts/$script"
           done
           # Keep code updates local to this run; only JSON is committed.
@@ -35,6 +35,12 @@ jobs:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
         run: python scripts/collect.py
 
+
+      - name: Collect FOMO social feed (non-blocking)
+        env:
+          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
+        run: |
+          python scripts/collect_social.py || echo "::warning::Social collector failed; market collection continues"
 
       - name: Record TOP 10 screening observations
         shell: bash
@@ -99,9 +105,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Scripts were loaded from main for execution; never commit them to the data branch.
-          git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
+          git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py scripts/collect_social.py
 
           git add data/latest.json data/history.json data/recommendations.json data/early_spike_history.json data/beta_spike_history.json data/beta_live_daily.json
+          if [ -f data/social_top10.json ]; then git add data/social_top10.json; fi
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
           if [ -f data/daily_snapshots.json ]; then git add data/daily_snapshots.json; fi
 
