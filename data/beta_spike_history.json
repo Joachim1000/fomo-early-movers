@@ -74,10 +74,16 @@
       "buys_5m": 86,
       "sells_5m": 10,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "DELAYED",
+      "price_5m_usd": 0.01838,
+      "observed_5m_at_utc": "2026-10-11T19:30:36.037200+00:00",
+      "return_5m_pct": -0.43,
+      "price_10m_usd": 0.01838,
+      "observed_10m_at_utc": "2026-10-11T19:30:36.037200+00:00",
+      "measurement_10m_delay_minutes": 10.25,
+      "return_10m_pct": -0.43,
+      "status_10m": "MEASURED",
+      "measurement_delay_minutes": 10.25
     },
     {
       "day": "2026-10-11",
@@ -90,6 +96,39 @@
       "buys_5m": 39,
       "sells_5m": 9,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002228,
+      "observed_5m_at_utc": "2026-10-11T19:30:36.037200+00:00",
+      "return_5m_pct": 6.5,
+      "measurement_delay_minutes": 5.32
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-11T19:30:36.037200+00:00",
+      "alert_price_usd": 0.001786,
+      "initial_15m_change_pct": 22.92,
+      "buys_5m": 57,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-11T19:30:36.037200+00:00",
+      "alert_price_usd": 0.009683,
+      "initial_15m_change_pct": 6.7,
+      "buys_5m": 48,
+      "sells_5m": 6,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -97,8 +136,8 @@
     }
   ],
   "active_alerts": {
-    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true,
-    "4mbPZzDCWXvTCJbscMWeDD7TT1pra9mkZHGaBxc2jupx|8FoQfA6pYc7Mgbab3ijTtWhq692p85enWRSTV6y6VVJW": true
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
   },
-  "updated_at_utc": "2026-10-11T19:25:16.748287+00:00"
+  "updated_at_utc": "2026-10-11T19:30:36.037200+00:00"
 }
