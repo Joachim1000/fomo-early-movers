@@ -95,7 +95,7 @@ for e in events.values():
     ids.add(str(e.get("trader","")).lower().lstrip("@"))
     is_followed=bool(ids & followed)
     k=(e["chain"],e["mint"])
-    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set()})
+    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set(),"friends_buy_usd":0,"friends_sell_usd":0})
     if e["symbol"]:g["symbol"]=e["symbol"]
     if e["side"]=="thesis":g["mentions"]+=1
     if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=abs(e["usd"])
@@ -103,18 +103,25 @@ for e in events.values():
     if is_followed:
         g["followed_"+{"buy":"buys","sell":"sells","thesis":"mentions"}[e["side"]]]+=1
         if e["trader"]:g["friends_unique_traders"].add(e["trader"])
+        if e["side"]=="buy":g["friends_buy_usd"]+=abs(e["usd"])
+        if e["side"]=="sell":g["friends_sell_usd"]+=abs(e["usd"])
     if e["trader"]:g["traders"].add(e["trader"])
 top=[]
 for g in groups.values():
     g["unique_traders"]=len(g.pop("traders"))
     g["friends_unique_traders"]=len(g.pop("friends_unique_traders"))
+    g["friends_net_usd"]=round(g["friends_buy_usd"]-g["friends_sell_usd"],2)
+    g["friends_buy_usd"]=round(g["friends_buy_usd"],2)
+    g["friends_sell_usd"]=round(g["friends_sell_usd"],2)
+    g["friends_activity"]=g["followed_buys"]+g["followed_sells"]+g["followed_mentions"]
     g["net_usd"]=round(g["buy_usd"]-g["sell_usd"],2)
     g["buy_usd"]=round(g["buy_usd"],2)
     g["sell_usd"]=round(g["sell_usd"],2)
     top.append(g)
 top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders"]))
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
-state["top10"]=sorted(top,key=lambda g:(-(g["mentions"]+2*g["followed_mentions"]),-(g["buys"]+g["sells"]+g["followed_buys"]+g["followed_sells"])))[:10]
+state["top10"]=sorted(top,key=lambda g:(-g["friends_activity"],-g["friends_unique_traders"],-g["mentions"],-(g["buys"]+g["sells"]),-g["unique_traders"]))[:10]
+state["friends_summary"]={"matched_events":sum(g["friends_activity"] for g in top),"tokens":sum(g["friends_activity"]>0 for g in top),"buys":sum(g["followed_buys"] for g in top),"sells":sum(g["followed_sells"] for g in top),"theses":sum(g["followed_mentions"] for g in top),"buy_usd":round(sum(g["friends_buy_usd"] for g in top),2),"sell_usd":round(sum(g["friends_sell_usd"] for g in top),2)}
 state["events_count"]=len(events)
 state["matched_followed_events"]=sum(bool((set(str(v).lower().lstrip("@") for v in e.get("trader_ids",[])) | {str(e.get("trader","")).lower().lstrip("@")}) & followed) for e in events.values())
 state["note"]="Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
