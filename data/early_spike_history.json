@@ -709,6 +709,23 @@
       "buys_5m": 9,
       "sells_5m": 4,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.001796,
+      "observed_5m_at_utc": "2026-10-11T23:30:36.064201+00:00",
+      "return_5m_pct": -4.47,
+      "measurement_delay_minutes": 5.28
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "EQ46GCkgPctvueFDt2edutfa1hKxsDzo2EZeSMiHpump",
+      "pair_address": "3yvBGUSj2cPmtMJHVBPJCJUVNE1nLB463JZxTwjQKqro",
+      "symbol": "trenchcat",
+      "first_alert_at_utc": "2026-10-11T23:30:36.064201+00:00",
+      "alert_price_usd": 0.0001572,
+      "initial_15m_change_pct": 14.08,
+      "buys_5m": 54,
+      "sells_5m": 30,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -716,5 +733,5 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T23:28:17.550627+00:00"
+  "updated_at_utc": "2026-10-11T23:30:36.064201+00:00"
 }
