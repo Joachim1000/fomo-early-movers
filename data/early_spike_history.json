@@ -492,8 +492,24 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "ALoNmPYp9HxW5Gi4QHGRomXoBuwepwZWcygtvdEXzfBH",
+      "pair_address": "782aJ74HWj1uxMAnf66jyiP46vNUwSHo4gFHoYoK8yoJ",
+      "symbol": "ALON",
+      "first_alert_at_utc": "2026-10-11T21:05:15.659646+00:00",
+      "alert_price_usd": 0.0002021,
+      "initial_15m_change_pct": 56.91,
+      "buys_5m": 47,
+      "sells_5m": 27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T21:00:46.316473+00:00"
+  "updated_at_utc": "2026-10-11T21:05:15.659646+00:00"
 }
