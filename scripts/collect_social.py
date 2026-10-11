@@ -1,5 +1,5 @@
 """Aggregate FOMO feed mentions and buy/sell alerts in a rolling 240-minute window."""
-import json, os, urllib.request, urllib.parse
+import json, os, re, urllib.request, urllib.parse
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -80,7 +80,20 @@ elif due:
                     for field in ("id","userId","user_id","handle","username","walletAddress"):
                         if actor.get(field) is not None:ids.add(str(actor[field]).lower().lstrip("@"))
                 elif isinstance(actor,(str,int)):ids.add(str(actor).lower().lstrip("@"))
-            events[eid]={"trader_ids":sorted(ids),"id":eid,"ts":t.isoformat(),"mint":str(mint),"chain":str(a.get("chain") or ""),"symbol":str(symbol or "")[:30],"side":side,"trader":str(a.get("userId") or a.get("trader") or ""),"usd":float(a.get("usdValue") or 0)}
+            thesis_text=""
+            if side=="thesis":
+                for field in ("thesisText","thesis_text","text","body","content","message","description"):
+                    val=a.get(field)
+                    if isinstance(val,str) and val.strip():
+                        thesis_text=val.strip()[:2000]
+                        break
+                if not thesis_text and isinstance(a.get("thesis"),dict):
+                    for field in ("text","body","content","description"):
+                        val=a["thesis"].get(field)
+                        if isinstance(val,str) and val.strip():
+                            thesis_text=val.strip()[:2000]
+                            break
+            events[eid]={"thesis_text":thesis_text,"trader_ids":sorted(ids),"id":eid,"ts":t.isoformat(),"mint":str(mint),"chain":str(a.get("chain") or ""),"symbol":str(symbol or "")[:30],"side":side,"trader":str(a.get("userId") or a.get("trader") or ""),"usd":float(a.get("usdValue") or 0)}
         state["last_fetch_at_utc"]=now.isoformat()
         state["status"]="ok" if rows else "empty_response"
     except Exception as e:
@@ -110,6 +123,25 @@ for e in events.values():
         if e["side"]=="buy":g["friends_buy_usd"]+=abs(e["usd"])
         if e["side"]=="sell":g["friends_sell_usd"]+=abs(e["usd"])
     if e["trader"]:g["traders"].add(e["trader"])
+# Lexicon-based language classification; no trade direction is used as text sentiment.
+positive_terms={"bullish","buy","buying","accumulate","accumulating","strong","breakout","undervalued","upside","moon","gem","promising","growth","potential","support","long","conviction","positive","reversal","pump","great","good"}
+negative_terms={"bearish","sell","selling","dump","dumping","rug","scam","avoid","overvalued","downside","weak","weakness","risk","risky","short","negative","crash","fraud","fake","warning","bad","dead","exit"}
+def language_label(value):
+    words=set(re.findall(r"[a-z]+",value.lower()))
+    positive=len(words & positive_terms)
+    negative=len(words & negative_terms)
+    if positive>negative:return "POSITIVE"
+    if negative>positive:return "NEGATIVE"
+    return "NEUTRAL"
+for g in groups.values():
+    texts=[e.get("thesis_text","") for e in events.values() if (e["chain"],e["mint"])==(g["chain"],g["mint"]) and e["side"]=="thesis" and e.get("thesis_text","").strip()]
+    labels=[language_label(v) for v in texts]
+    g["language_analyzed_count"]=len(labels)
+    g["language_positive_count"]=labels.count("POSITIVE")
+    g["language_negative_count"]=labels.count("NEGATIVE")
+    g["language_neutral_count"]=labels.count("NEUTRAL")
+    g["language_sentiment_score"]=round(100*(g["language_positive_count"]-g["language_negative_count"])/len(labels),1) if labels else None
+    g["language_sentiment_label"]=("NOT VERIFIED" if not labels else "POSITIVE" if g["language_positive_count"]>g["language_negative_count"] else "NEGATIVE" if g["language_negative_count"]>g["language_positive_count"] else "MIXED" if g["language_positive_count"] and g["language_negative_count"] else "NEUTRAL")
 top=[]
 for g in groups.values():
     g["unique_traders"]=len(g.pop("traders"))
