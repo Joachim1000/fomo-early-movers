@@ -48,6 +48,8 @@ if key:
         state["followed_status"]="api_error"
         state["followed_error"]=str(e)[:160]
 state["followed_count"]=len(followed)
+state["friends_feed_verified"]=False
+state["friends_feed_status"]="not_verified_personal_feed"
 last=dt(old.get("last_fetch_at_utc"))
 due=not last or (now-last).total_seconds()>=300
 if not key:
@@ -85,16 +87,19 @@ groups={}
 for e in events.values():
     is_followed=str(e.get("trader","")).lower().lstrip("@") in followed if followed else False
     k=(e["chain"],e["mint"])
-    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0})
+    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set()})
     if e["symbol"]:g["symbol"]=e["symbol"]
     if e["side"]=="thesis":g["mentions"]+=1
     if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=e["usd"]
     if e["side"]=="sell":g["sells"]+=1;g["sell_usd"]+=e["usd"]
-    if is_followed:g["followed_"+{"buy":"buys","sell":"sells","thesis":"mentions"}[e["side"]]]+=1
+    if is_followed:
+        g["followed_"+{"buy":"buys","sell":"sells","thesis":"mentions"}[e["side"]]]+=1
+        if e["trader"]:g["friends_unique_traders"].add(e["trader"])
     if e["trader"]:g["traders"].add(e["trader"])
 top=[]
 for g in groups.values():
     g["unique_traders"]=len(g.pop("traders"))
+    g["friends_unique_traders"]=len(g.pop("friends_unique_traders"))
     g["net_usd"]=round(g["buy_usd"]-g["sell_usd"],2)
     g["buy_usd"]=round(g["buy_usd"],2)
     g["sell_usd"]=round(g["sell_usd"],2)
@@ -103,6 +108,6 @@ top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
 state["top10"]=sorted(top,key=lambda g:(-(g["mentions"]+2*g["followed_mentions"]),-(g["buys"]+g["sells"]+g["followed_buys"]+g["followed_sells"])))[:10]
 state["events_count"]=len(events)
-state["note"]="Mentions count thesis feed events, not full FOMO chat. Buy/sell counts are feed alerts, not all on-chain trades."
+state["note"]="Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 PATH.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
 print("Social feed:",state["status"],"events",len(events),"tokens",len(top))
