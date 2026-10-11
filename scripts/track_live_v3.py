@@ -47,7 +47,8 @@ for x in latest.get("eligible_4h_candidates",[]):
            +clamp((ratio-1)*10,-15,20)
            +clamp(math.log1p(volume)/math.log(10)-2,0,10)
            +clamp(math.log1p(liquidity)/math.log(10)-3,0,10)
-           -clamp(max(0,(r15 or 0)-20),0,20))
+           -clamp(max(0,(r15 or 0)-20),0,20)
+           -clamp(max(0,-(r15 or 0))*2,0,30))
     item={"mint":mint,"pair_address":pair,"symbol":x.get("symbol"),
           "observed_at_utc":now.isoformat(),"entry_price_usd":price,
           "momentum_heuristic":num(x.get("momentum_heuristic")),
@@ -64,6 +65,13 @@ for x in latest.get("eligible_4h_candidates",[]):
     if key not in seen:
         rows.append(item.copy());seen.add(key)
 current.sort(key=lambda r:r["v3_shadow_score"],reverse=True)
+# Negative 5m momentum cannot enter the top three while >=3 non-negative
+# 5m candidates are available. Keep declining tokens visible further down.
+positive=[r for r in current if r["change_5m_pct"] is not None and r["change_5m_pct"]>=0]
+if len(positive)>=3:
+    top=positive[:3]
+    top_keys={(r["mint"],r["pair_address"]) for r in top}
+    current=top+[r for r in current if (r["mint"],r["pair_address"]) not in top_keys]
 for rank,x in enumerate(current,1): x["v3_shadow_rank"]=rank
 # Only fill outcome when a genuine later same-pair observation falls within a
 # narrow target window. Never use future data in features.
