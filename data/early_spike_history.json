@@ -238,8 +238,24 @@
       "observed_5m_at_utc": "2026-10-11T15:10:19.591347+00:00",
       "return_5m_pct": 5.26,
       "measurement_delay_minutes": 5.06
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-11T15:20:22.081622+00:00",
+      "alert_price_usd": 0.0239,
+      "initial_15m_change_pct": 11.21,
+      "buys_5m": 166,
+      "sells_5m": 17,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T15:15:23.587496+00:00"
+  "updated_at_utc": "2026-10-11T15:20:22.081622+00:00"
 }
