@@ -335,12 +335,13 @@
       "buys_5m": 25,
       "sells_5m": 12,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "DELAYED",
+      "price_5m_usd": 0.0001002,
+      "observed_5m_at_utc": "2026-10-11T18:05:16.639787+00:00",
+      "return_5m_pct": 2.78,
+      "measurement_delay_minutes": 10.02
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T17:55:15.688304+00:00"
+  "updated_at_utc": "2026-10-11T18:05:16.639787+00:00"
 }
