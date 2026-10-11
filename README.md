@@ -1,12 +1,21 @@
-# Fomo Early Movers
-Gratis indsamling af Solana-markedsdata fra DEX Screener.
+# FOMO Early Movers
 
-1. Upload alle filer fra ZIP til roden af dit GitHub-repository (inklusive `.github/workflows/collect.yml`).
-2. Gå til **Actions → Fomo Early Movers Data → Run workflow**.
-3. Find resultaterne i `data/latest.json`.
+Solana market-data dashboard using DEX Screener and FOMO API when available.
 
-Planlagt kl. 05:45 og 14:45 Europe/Warsaw via timebaseret UTC-schedule og lokal-tid-gate. GitHub kan forsinke planlagte kørsler.
+## Collection schedule
 
-**Begrænsninger:** Dette er ikke Fomos officielle Trending-data. Køb/salg er transaktioner, ikke unikke wallets. Ingen sociale medier, ingen sikkerhedsverificering, ingen købssignaler, ingen e-mailafsendelse. Resultaterne er en observationsliste.
+- Target: **every 5 minutes, 24/7, including weekends** (288 runs per day).
+- `scripts/collect.py` refreshes FOMO boards when the cache is at least 300 seconds old or incomplete; DEX market data is fetched on every collector run.
+- `.github/workflows/collect.yml` uses **workflow_dispatch only**. An external scheduler (such as cron-job.org) must trigger this workflow every five minutes. Changing this repository alone does **not** change the external scheduler.
+- Snapshots are written to the `market-data` branch. Dashboard freshness depends on successful workflow runs and publication.
+- FOMO API HTTP 402 or other errors can prevent new FOMO data even when scheduling is correct. The collector retains prior valid cache when available; stale data should not be presented as fresh.
 
-Hvis GitHub ikke tillader commit, vælg **Settings → Actions → General → Workflow permissions → Read and write permissions**.
+## Manual test
+
+1. Open **Actions → Fomo Early Movers Data → Run workflow**.
+2. Check workflow logs and the `market-data` branch's `data/latest.json` and `data/fomo_cache.json` timestamps.
+3. Confirm the external scheduler calls workflow_dispatch every five minutes, all days.
+
+If commits fail, review **Settings → Actions → General → Workflow permissions → Read and write permissions**.
+
+The token screening is observational, not a buy recommendation. DEX transactions are not unique wallets; DEX discovery does not by itself verify FOMO Trending membership.
