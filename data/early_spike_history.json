@@ -306,8 +306,24 @@
       "observed_5m_at_utc": "2026-10-11T17:30:33.521952+00:00",
       "return_5m_pct": 18.43,
       "measurement_delay_minutes": 5.31
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "9XKzy4KahcZaGJPJtz1PtqGPB3CiseoBrx7TcQhEpump",
+      "pair_address": "5a7QurJLARt146JajJYPe5nh6vLyFpN2QrHUSLqbsCZy",
+      "symbol": "GOMO",
+      "first_alert_at_utc": "2026-10-11T17:40:20.891430+00:00",
+      "alert_price_usd": 0.00147,
+      "initial_15m_change_pct": 33.88,
+      "buys_5m": 56,
+      "sells_5m": 36,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T17:35:15.029508+00:00"
+  "updated_at_utc": "2026-10-11T17:40:20.891430+00:00"
 }
