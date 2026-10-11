@@ -743,6 +743,23 @@
       "buys_5m": 30,
       "sells_5m": 20,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001245,
+      "observed_5m_at_utc": "2026-10-11T23:55:21.860332+00:00",
+      "return_5m_pct": -20.24,
+      "measurement_delay_minutes": 9.95
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "9pZL5BtFgYFeSGrGMeMf8sKyNX1Mg4R7LjfbpLkJAYT",
+      "pair_address": "3atxWPUUTYW9P1pTmkW55EErdYYervnjqobKanz5T48j",
+      "symbol": "Jarvis",
+      "first_alert_at_utc": "2026-10-11T23:55:21.860332+00:00",
+      "alert_price_usd": 0.000374,
+      "initial_15m_change_pct": 8.03,
+      "buys_5m": 20,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -750,5 +767,5 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T23:50:21.292501+00:00"
+  "updated_at_utc": "2026-10-11T23:55:21.860332+00:00"
 }
