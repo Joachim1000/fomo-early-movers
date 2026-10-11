@@ -21,14 +21,21 @@ latest = json.loads(Path("data/latest.json").read_text())
 history = json.loads(Path("data/history.json").read_text())
 path = Path("data/beta_spike_history.json")
 saved = json.loads(path.read_text()) if path.exists() else {"schema_version": 1, "records": []}
-rows = saved.setdefault("records", [])
+if not isinstance(saved, dict):
+    saved = {"schema_version": 1, "records": []}
+if not isinstance(saved.get("records"), list):
+    saved["records"] = []
+rows = saved["records"]
 now = parse(latest.get("generated_at_utc"))
 if now is None:
     raise ValueError("Missing latest snapshot timestamp")
 zone = ZoneInfo("Europe/Warsaw")
 day = now.astimezone(zone).date().isoformat()
 # Record a new episode only after a previously active signal disappears.
-state = saved.setdefault("active_alerts", {})
+state = saved.get("active_alerts")
+if not isinstance(state, dict):
+    state = {}
+    saved["active_alerts"] = state
 current = set()
 for item in latest.get("beta_alert_candidates", []):
     mint, pair = item.get("mint"), item.get("pair_address")
