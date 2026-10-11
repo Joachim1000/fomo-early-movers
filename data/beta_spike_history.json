@@ -18,8 +18,26 @@
       "return_5m_pct": 10.43,
       "measurement_delay_minutes": 5.36,
       "status_10m": "NOT_VERIFIABLE"
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump",
+      "pair_address": "AJZPEX2nJCdkoXXQ6zExtpZFdbiG2LHGvtjSxV8U8F7u",
+      "symbol": "Incognito",
+      "first_alert_at_utc": "2026-10-11T18:55:16.092678+00:00",
+      "alert_price_usd": 0.0002153,
+      "initial_15m_change_pct": 19.41,
+      "buys_5m": 33,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-11T18:50:18.362784+00:00"
+  "active_alerts": {
+    "BBZ3sgY66QVsxcXXBVpuQfDzH2b5Ub8qmfKNQJjBpump|AJZPEX2nJCdkoXXQ6zExtpZFdbiG2LHGvtjSxV8U8F7u": true
+  },
+  "updated_at_utc": "2026-10-11T18:55:16.092678+00:00"
 }
