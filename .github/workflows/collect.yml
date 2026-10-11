@@ -16,8 +16,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout market data branch
         uses: actions/checkout@v4
+        with:
+          ref: market-data
+          persist-credentials: true
+
+      - name: Use current collection scripts from main
+        run: |
+          git fetch --depth=1 origin main
+          for script in collect.py track_early_spikes.py track_beta_spikes.py track_beta_live_daily.py lock_daily.py; do
+            git show "origin/main:scripts/$script" > "scripts/$script"
+          done
+          # Keep code updates local to this run; only JSON is committed.
 
       - name: Collect market data
         env:
@@ -92,17 +103,17 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Update market snapshot"
-            # A concurrent dashboard edit or collection may have advanced main.
-            # Replay this snapshot commit on the latest main before pushing.
+            # A concurrent dashboard edit or collection may have advanced market-data.
+            # Replay this snapshot commit on the latest market-data before pushing.
             # Never force-push or silently overwrite conflicting JSON.
             for attempt in 1 2 3 4 5; do
-              git fetch origin main
-              if ! git rebase origin/main; then
+              git fetch origin market-data
+              if ! git rebase origin/market-data; then
                 git rebase --abort || true
                 echo "::error::Snapshot conflicts with newer remote data. Refusing to overwrite."
                 exit 1
               fi
-              if git push origin HEAD:main; then
+              if git push origin HEAD:market-data; then
                 echo "Market snapshot pushed successfully (attempt $attempt)."
                 exit 0
               fi
