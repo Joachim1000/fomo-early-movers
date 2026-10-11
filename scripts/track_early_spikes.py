@@ -1,4 +1,4 @@
-"""Record each day's first early-spike alert and its first verified price >=15m later."""
+"""Record each day's first early-spike alert and its first verified price >=5m later."""
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -40,29 +40,31 @@ for item in latest.get("early_alert_candidates", []):
         "initial_15m_change_pct": item.get("change_15m_pct"),
         "buys_5m": item.get("buy_transactions_5m"),
         "sells_5m": item.get("sell_transactions_5m"),
-        "status": "PENDING", "price_15m_usd": None,
-        "observed_15m_at_utc": None, "return_15m_pct": None
+        "measurement_minutes": 5, "status": "PENDING", "price_5m_usd": None,
+        "observed_5m_at_utc": None, "return_5m_pct": None
     })
     existing.add((day, mint, pair))
 for row in rows:
+    if "measurement_minutes" not in row:
+        row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
     if row.get("status") != "PENDING":
         continue
     start = parse(row.get("first_alert_at_utc"))
-    if not start or (now - start).total_seconds() < 900:
+    if not start or (now - start).total_seconds() < 300:
         continue
     later = []
     for point in history.get(row["mint"], []):
         if point.get("pair_address") != row["pair_address"]:
             continue
         at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
-        if at and price and at >= start and 900 <= (at - start).total_seconds() <= 1500:
+        if at and price and at >= start and 300 <= (at - start).total_seconds() <= 600:
             later.append((at, price))
     if later:
         at, price = min(later, key=lambda p: p[0])
-        row.update(status="MEASURED", price_15m_usd=price,
-                   observed_15m_at_utc=at.isoformat(),
-                   return_15m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
-    elif (now - start).total_seconds() > 1500:
+        row.update(status="MEASURED", price_5m_usd=price,
+                   observed_5m_at_utc=at.isoformat(),
+                   return_5m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
+    elif (now - start).total_seconds() > 600:
         row["status"] = "NOT_VERIFIABLE"
 saved["updated_at_utc"] = now.isoformat()
 path.parent.mkdir(parents=True, exist_ok=True)
