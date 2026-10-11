@@ -121,6 +121,13 @@ for g in groups.values():
     g["net_usd"]=round(g["buy_usd"]-g["sell_usd"],2)
     g["buy_usd"]=round(g["buy_usd"],2)
     g["sell_usd"]=round(g["sell_usd"],2)
+    # Directional activity proxy, NOT linguistic sentiment of thesis text.
+    buy_weight=g["buy_usd"]+2*g["friends_buy_usd"]
+    sell_weight=g["sell_usd"]+2*g["friends_sell_usd"]
+    total_weight=buy_weight+sell_weight
+    g["activity_sentiment_score"]=round(100*(buy_weight-sell_weight)/total_weight,1) if total_weight>0 else None
+    g["activity_sentiment_label"]=("POSITIVE" if g["activity_sentiment_score"]>=20 else "NEGATIVE" if g["activity_sentiment_score"]<=-20 else "MIXED") if g["activity_sentiment_score"] is not None else "UNKNOWN"
+    g["activity_sentiment_basis"]="trade_flow_proxy_not_text_sentiment"
     top.append(g)
 top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders"]))
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
