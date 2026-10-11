@@ -276,11 +276,16 @@ for mint, pair in best.items():
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1500 and change_15m is not None and
                   change_15m >= 5)
+    # Experimental BETA; retain the original fast alert unchanged.
+    beta_alert = (fast_alert and buys >= 20 and
+                  change_15m <= 30 and
+                  buys >= 1.6 * max(sells, 1) and liquidity >= 10000)
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
         "mint": mint, "network": "solana",
         "early_alert": fast_alert,
+        "beta_alert": beta_alert,
         "change_15m_pct": change_15m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
@@ -327,6 +332,8 @@ for mint in list(history):
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
 early_alert_candidates = [x for x in candidates if x["early_alert"]]
+beta_alert_candidates = [x for x in candidates if x["beta_alert"]]
+beta_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
 early_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
 eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
@@ -341,6 +348,8 @@ payload = {
     "tracked_recommendation_mints": len(recent_recommendations),
     "refreshed_tracked_mints": len(tracked_pairs),
     "eligible_4h_count": len(eligible_candidates),
+    "beta_alert_count": len(beta_alert_candidates),
+    "beta_alert_candidates": beta_alert_candidates[:20],
     "early_alert_count": len(early_alert_candidates),
     "early_alert_candidates": early_alert_candidates[:20],
     "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_board_verified"]),
