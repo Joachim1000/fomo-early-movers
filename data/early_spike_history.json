@@ -182,6 +182,23 @@
       "buys_5m": 22,
       "sells_5m": 1,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.00198,
+      "observed_5m_at_utc": "2026-10-11T14:30:34.069483+00:00",
+      "return_5m_pct": -5.22,
+      "measurement_delay_minutes": 5.27
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "QUALaRd6ZvZkt9NqJjVVN3MP23RtFNwDbJc3VDHcHwN",
+      "pair_address": "AHczEsNUu4DMuKJQV6pwGBGbwzW7YK4jqcrNF8ug5hTC",
+      "symbol": "BYTE",
+      "first_alert_at_utc": "2026-10-11T14:30:34.069483+00:00",
+      "alert_price_usd": 4.562e-05,
+      "initial_15m_change_pct": 66.8,
+      "buys_5m": 29,
+      "sells_5m": 15,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -189,5 +206,5 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-11T14:25:17.676655+00:00"
+  "updated_at_utc": "2026-10-11T14:30:34.069483+00:00"
 }
