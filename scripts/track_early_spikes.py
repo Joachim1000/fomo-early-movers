@@ -1,0 +1,70 @@
+"""Record each day's first early-spike alert and its first verified price >=15m later."""
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+def parse(value):
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
+    except (ValueError, TypeError):
+        return None
+
+def number(value):
+    try:
+        v = float(value)
+        return v if v > 0 else None
+    except (ValueError, TypeError):
+        return None
+
+latest = json.loads(Path("data/latest.json").read_text())
+history = json.loads(Path("data/history.json").read_text())
+path = Path("data/early_spike_history.json")
+saved = json.loads(path.read_text()) if path.exists() else {"schema_version": 1, "records": []}
+rows = saved.setdefault("records", [])
+now = parse(latest.get("generated_at_utc"))
+if now is None:
+    raise ValueError("Missing latest snapshot timestamp")
+zone = ZoneInfo("Europe/Warsaw")
+day = now.astimezone(zone).date().isoformat()
+existing = {(x["day"], x["mint"], x["pair_address"]) for x in rows}
+for item in latest.get("early_alert_candidates", []):
+    mint, pair = item.get("mint"), item.get("pair_address")
+    price = number(item.get("price_usd"))
+    if not mint or not pair or not price or (day, mint, pair) in existing:
+        continue
+    rows.append({
+        "day": day, "mint": mint, "pair_address": pair,
+        "symbol": item.get("symbol") or mint[:8],
+        "first_alert_at_utc": now.isoformat(), "alert_price_usd": price,
+        "initial_15m_change_pct": item.get("change_15m_pct"),
+        "buys_5m": item.get("buy_transactions_5m"),
+        "sells_5m": item.get("sell_transactions_5m"),
+        "status": "PENDING", "price_15m_usd": None,
+        "observed_15m_at_utc": None, "return_15m_pct": None
+    })
+    existing.add((day, mint, pair))
+for row in rows:
+    if row.get("status") != "PENDING":
+        continue
+    start = parse(row.get("first_alert_at_utc"))
+    if not start or (now - start).total_seconds() < 900:
+        continue
+    later = []
+    for point in history.get(row["mint"], []):
+        if point.get("pair_address") != row["pair_address"]:
+            continue
+        at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
+        if at and price and at >= start and 900 <= (at - start).total_seconds() <= 1500:
+            later.append((at, price))
+    if later:
+        at, price = min(later, key=lambda p: p[0])
+        row.update(status="MEASURED", price_15m_usd=price,
+                   observed_15m_at_utc=at.isoformat(),
+                   return_15m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
+    elif (now - start).total_seconds() > 1500:
+        row["status"] = "NOT_VERIFIABLE"
+saved["updated_at_utc"] = now.isoformat()
+path.parent.mkdir(parents=True, exist_ok=True)
+path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")
+print("Early spike records:", len(rows), "today:", sum(x["day"] == day for x in rows))
