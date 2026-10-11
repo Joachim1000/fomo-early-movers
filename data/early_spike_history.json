@@ -118,7 +118,23 @@
       "observed_5m_at_utc": "2026-10-11T07:15:23.332787+00:00",
       "return_5m_pct": 1.04,
       "measurement_delay_minutes": 10.14
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump",
+      "pair_address": "4s2bzyM1CStvWCUC1r1q8Maoj6UmkqnBqnwBEFtDtpko",
+      "symbol": "CRAWL",
+      "first_alert_at_utc": "2026-10-11T07:35:16.137003+00:00",
+      "alert_price_usd": 0.003603,
+      "initial_15m_change_pct": 5.57,
+      "buys_5m": 20,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T07:30:35.824166+00:00"
+  "updated_at_utc": "2026-10-11T07:35:16.137003+00:00"
 }
