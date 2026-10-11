@@ -137,5 +137,23 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Update market snapshot"
-            git push
+            # A concurrent dashboard edit or collection may have advanced main.
+            # Replay this snapshot commit on the latest main before pushing.
+            # Never force-push or silently overwrite conflicting JSON.
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                echo "::error::Snapshot conflicts with newer remote data. Refusing to overwrite."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                echo "Market snapshot pushed successfully (attempt $attempt)."
+                exit 0
+              fi
+              echo "Remote advanced during push; retrying ($attempt/5)..."
+              sleep $((attempt * 2))
+            done
+            echo "::error::Could not push after 5 attempts."
+            exit 1
           fi
