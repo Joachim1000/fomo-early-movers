@@ -1,4 +1,4 @@
-"""Aggregate FOMO feed mentions and buy/sell alerts in a rolling 120-minute window."""
+"""Aggregate FOMO feed mentions and buy/sell alerts in a rolling 240-minute window."""
 import json, os, urllib.request, urllib.parse
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
@@ -7,8 +7,8 @@ ROOT=Path("data")
 ROOT.mkdir(exist_ok=True)
 PATH=ROOT/"social_top10.json"
 now=datetime.now(timezone.utc)
-cutoff=now-timedelta(minutes=120)
-state={"updated_at_utc":now.isoformat(),"window_minutes":120,"source":"FOMO API /v2/alerts","status":"no_data","events":[],"top10":[]}
+cutoff=now-timedelta(minutes=240)
+state={"updated_at_utc":now.isoformat(),"window_minutes":240,"source":"FOMO API /v2/alerts","status":"no_data","events":[],"top10":[]}
 try:
     old=json.loads(PATH.read_text()) if PATH.exists() else {}
 except (ValueError,OSError):
@@ -95,9 +95,13 @@ for e in events.values():
     ids.add(str(e.get("trader","")).lower().lstrip("@"))
     is_followed=bool(ids & followed)
     k=(e["chain"],e["mint"])
-    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set(),"friends_buy_usd":0,"friends_sell_usd":0})
+    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set(),"friends_buy_usd":0,"friends_sell_usd":0,"recent_mentions":0,"recent_friends":0})
     if e["symbol"]:g["symbol"]=e["symbol"]
-    if e["side"]=="thesis":g["mentions"]+=1
+    is_recent=dt(e["ts"])>=now-timedelta(minutes=60)
+    if e["side"]=="thesis":
+        g["mentions"]+=1
+        if is_recent:g["recent_mentions"]+=1
+    if is_followed and is_recent:g["recent_friends"]+=1
     if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=abs(e["usd"])
     if e["side"]=="sell":g["sells"]+=1;g["sell_usd"]+=abs(e["usd"])
     if is_followed:
@@ -120,10 +124,10 @@ for g in groups.values():
     top.append(g)
 top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders"]))
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
-state["top10"]=sorted(top,key=lambda g:(-g["friends_activity"],-g["friends_unique_traders"],-g["mentions"],-(g["buys"]+g["sells"]),-g["unique_traders"]))[:10]
+state["top10"]=sorted(top,key=lambda g:(-(g["mentions"]*3+g["recent_mentions"]*2+g["friends_activity"]*3+g["recent_friends"]*2+g["unique_traders"]*0.5+max(g["buys"]-g["sells"],0)*0.5),-g["mentions"],-g["unique_traders"]))[:10]
 state["friends_summary"]={"matched_events":sum(g["friends_activity"] for g in top),"tokens":sum(g["friends_activity"]>0 for g in top),"buys":sum(g["followed_buys"] for g in top),"sells":sum(g["followed_sells"] for g in top),"theses":sum(g["followed_mentions"] for g in top),"buy_usd":round(sum(g["friends_buy_usd"] for g in top),2),"sell_usd":round(sum(g["friends_sell_usd"] for g in top),2)}
 state["events_count"]=len(events)
 state["matched_followed_events"]=sum(bool((set(str(v).lower().lstrip("@") for v in e.get("trader_ids",[])) | {str(e.get("trader","")).lower().lstrip("@")}) & followed) for e in events.values())
-state["note"]="Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
+state["note"]="4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 PATH.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
 print("Social feed:",state["status"],"events",len(events),"tokens",len(top))
