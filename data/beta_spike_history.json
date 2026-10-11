@@ -303,8 +303,26 @@
       "return_10m_pct": 1.14,
       "status_10m": "MEASURED",
       "measurement_delay_minutes": 10.23
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+      "pair_address": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
+      "symbol": "Dacity",
+      "first_alert_at_utc": "2026-10-11T21:35:15.601439+00:00",
+      "alert_price_usd": 0.0002515,
+      "initial_15m_change_pct": 19.42,
+      "buys_5m": 20,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-11T21:30:35.915618+00:00"
+  "active_alerts": {
+    "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump|G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b": true
+  },
+  "updated_at_utc": "2026-10-11T21:35:15.601439+00:00"
 }
