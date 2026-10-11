@@ -1,6 +1,25 @@
 {
   "schema_version": 1,
-  "records": [],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-11T23:40:51.163Z"
+  "records": [
+    {
+      "day": "2026-10-12",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-11T23:42:53.828844+00:00",
+      "alert_price_usd": 0.0006954,
+      "initial_15m_change_pct": 29.18,
+      "buys_5m": 37,
+      "sells_5m": 21,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    }
+  ],
+  "active_alerts": {
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh": true
+  },
+  "updated_at_utc": "2026-10-11T23:42:53.828844+00:00"
 }
