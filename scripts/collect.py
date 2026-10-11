@@ -1,6 +1,7 @@
 import json, urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timezone, time, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 BASE="https://api.dexscreener.com"
@@ -73,15 +74,20 @@ fomo_boards = {"graduated": graduated, "most-held": most_held}
 
 # Gather broad DEX discovery for price enrichment; not FOMO verification.
 
-from datetime import timedelta
 from collections import defaultdict
 
 NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
 MIN_AGE_HOURS = 4
-# Preserve >=4h of minute-level observations, with room for bursts and retries.
-MAX_HISTORY_POINTS_PER_MINT = 480
+# Retain every observation during the trading day. At the 23:30 Warsaw
+# rollover, keep the last four hours as a bridge for 4h-qualified signals.
+# This avoids a midnight blind spot in LIVE/BETA and removes the 120/480 cap.
+WARSAW = ZoneInfo("Europe/Warsaw")
+local_now = NOW.astimezone(WARSAW)
+last_rollover_date = local_now.date() if local_now.time() >= time(23, 30) else local_now.date() - timedelta(days=1)
+last_rollover = datetime.combine(last_rollover_date, time(23, 30), tzinfo=WARSAW).astimezone(timezone.utc)
+HISTORY_KEEP_FROM = last_rollover - timedelta(hours=MIN_AGE_HOURS)
 MAX_DISCOVERY_ADDRESSES = 3000
 MAX_CANDIDATES = 3000
 
@@ -220,7 +226,7 @@ for mint, pair in tracked_pairs.items():
     })
 
 candidates = []
-cutoff = NOW - timedelta(hours=HISTORY_HOURS)
+cutoff = HISTORY_KEEP_FROM
 for mint, pair in best.items():
     tx = (pair.get("txns") or {}).get("m5") or {}
     buys = int(tx.get("buys") or 0)
@@ -247,7 +253,7 @@ for mint, pair in best.items():
     records.sort(key=lambda r: r["timestamp"])
     # History must belong to the same exact pair, not a different pair for the same mint.
     same_pair = [r for r in records if r.get("pair_address") == pair.get("pairAddress")]
-    history[mint] = records[-MAX_HISTORY_POINTS_PER_MINT:]
+    history[mint] = records
     span = ((parse_time(same_pair[-1]["timestamp"]) - parse_time(same_pair[0]["timestamp"])).total_seconds() / 3600) if len(same_pair) > 1 else 0
     historical_prices = [r for r in same_pair if numeric(r.get("price_usd")) > 0 and numeric(r.get("liquidity_usd")) > 0]
     # Rank using both current 5m activity and the full observed 2h same-pair price trend.
@@ -341,7 +347,7 @@ for mint in list(history):
             (parse_time(r.get("timestamp")) is not None) and
             cutoff <= parse_time(r.get("timestamp")) <= NOW]
     if kept:
-        history[mint] = kept[-MAX_HISTORY_POINTS_PER_MINT:]
+        history[mint] = kept
     else:
         del history[mint]
 
