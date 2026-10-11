@@ -1,89 +1,9 @@
 {
-  "updated_at_utc": "2026-10-11T23:25:28.520421+00:00",
+  "updated_at_utc": "2026-10-11T23:28:25.986651+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "91bb08ef-5abe-5a2a-b1de-b8f82fd3dae0",
-        "alrt_1791746735000_1012",
-        "manycoldtuna"
-      ],
-      "id": "dd72c562-914d-58d9-b911-83579588ca22",
-      "ts": "2026-10-11T19:25:35+00:00",
-      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
-      "chain": "solana",
-      "symbol": "baton",
-      "side": "buy",
-      "trader": "91bb08ef-5abe-5a2a-b1de-b8f82fd3dae0",
-      "usd": 3277.52
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "10e339d3-af50-59cd-9f37-39a2e1940d80",
-        "alrt_1791746790000_1014",
-        "looc"
-      ],
-      "id": "16d69ea6-157c-57d8-b0c6-c6d76a049f73",
-      "ts": "2026-10-11T19:26:30+00:00",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "chain": "robinhood",
-      "symbol": "ORBIO",
-      "side": "buy",
-      "trader": "10e339d3-af50-59cd-9f37-39a2e1940d80",
-      "usd": 32141.47
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "75cf9a31-19ab-5d9c-889a-bca575b0307d",
-        "alrt_1791746795000_1015",
-        "sellingalpha"
-      ],
-      "id": "639bfe38-9378-5177-ad3b-828c0207c744",
-      "ts": "2026-10-11T19:26:35+00:00",
-      "mint": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
-      "chain": "robinhood",
-      "symbol": "DELTA",
-      "side": "buy",
-      "trader": "75cf9a31-19ab-5d9c-889a-bca575b0307d",
-      "usd": 13462.5
-    },
-    {
-      "thesis_text": "BarBarrBinks posted a thesis on $CATE: The Doge will be flipped by yours truly (CATE)",
-      "trader_ids": [
-        "afa9b8ff-a5fb-589f-be46-66c439ada0d8",
-        "alrt_1791746810000_1017",
-        "barbarrbinks"
-      ],
-      "id": "4d115276-364c-485f-9951-19256b8196fb",
-      "ts": "2026-10-11T19:26:50+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "afa9b8ff-a5fb-589f-be46-66c439ada0d8",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "10e339d3-af50-59cd-9f37-39a2e1940d80",
-        "alrt_1791746810000_1016",
-        "looc"
-      ],
-      "id": "434df82a-0152-50eb-b6b3-2a07d76e5c22",
-      "ts": "2026-10-11T19:26:50+00:00",
-      "mint": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
-      "chain": "robinhood",
-      "symbol": "AI",
-      "side": "sell",
-      "trader": "10e339d3-af50-59cd-9f37-39a2e1940d80",
-      "usd": 1775.77
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -10330,7 +10250,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 42,
+      "mentions": 41,
       "buys": 1,
       "sells": 4,
       "buy_usd": 20482.0,
@@ -10342,13 +10262,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 8,
       "recent_friends": 0,
-      "language_analyzed_count": 42,
+      "language_analyzed_count": 41,
       "language_positive_count": 6,
       "language_negative_count": 2,
-      "language_neutral_count": 34,
-      "language_sentiment_score": 9.5,
+      "language_neutral_count": 33,
+      "language_sentiment_score": 9.8,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 35,
+      "unique_traders": 34,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -10652,7 +10572,7 @@
     "buy_usd": 153692.16,
     "sell_usd": 1838618.72
   },
-  "events_count": 645,
+  "events_count": 640,
   "matched_followed_events": 35,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
