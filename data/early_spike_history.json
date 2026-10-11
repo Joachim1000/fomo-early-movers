@@ -168,11 +168,11 @@
       "buys_5m": 67,
       "sells_5m": 39,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001168,
+      "observed_5m_at_utc": "2026-10-11T05:55:15.488165+00:00",
+      "return_5m_pct": 6.28
     }
   ],
-  "updated_at_utc": "2026-10-11T05:50:19.427504+00:00"
+  "updated_at_utc": "2026-10-11T05:55:15.488165+00:00"
 }
