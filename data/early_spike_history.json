@@ -101,7 +101,23 @@
       "observed_5m_at_utc": "2026-10-11T06:55:15.447429+00:00",
       "return_5m_pct": 0.91,
       "measurement_delay_minutes": 9.89
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "7VertkgF9KLhxxJXHX6uaWuoYZTP9LdGj2bWmVXVpump",
+      "pair_address": "GDoenRAGQCdaa1o9rV5wjSNqM41HmmcKL5LkEKfvBiuW",
+      "symbol": "Agency",
+      "first_alert_at_utc": "2026-10-11T07:05:15.088196+00:00",
+      "alert_price_usd": 0.003762,
+      "initial_15m_change_pct": 6.3,
+      "buys_5m": 9,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T07:00:46.355383+00:00"
+  "updated_at_utc": "2026-10-11T07:05:15.088196+00:00"
 }
