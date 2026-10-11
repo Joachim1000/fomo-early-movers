@@ -38,9 +38,9 @@ if key:
         users=payload if isinstance(payload,list) else next((payload[k] for k in ("following","users","items","data") if isinstance(payload.get(k),list)),[])
         for user in users:
             if isinstance(user,dict):
-                for profile in (user,user.get("user"),user.get("profile")):
+                for profile in (user,user.get("user"),user.get("profile"),user.get("followedUser"),user.get("followingUser")):
                     if isinstance(profile,dict):
-                        for field in ("id","userId","handle","username"):
+                        for field in ("id","userId","user_id","handle","username","walletAddress"):
                             if profile.get(field) is not None:
                                 followed.add(str(profile[field]).lower().lstrip("@"))
         state["followed_status"]="ok" if users else "empty"
@@ -74,7 +74,13 @@ elif due:
             eid=str(a.get("eventId") or a.get("id") or (str(mint)+str(t)+side+str(a.get("userId"))))
             token=a.get("token")
             symbol=token if isinstance(token,str) else (token or {}).get("symbol","")
-            events[eid]={"id":eid,"ts":t.isoformat(),"mint":str(mint),"chain":str(a.get("chain") or ""),"symbol":str(symbol or "")[:30],"side":side,"trader":str(a.get("userId") or a.get("trader") or ""),"usd":float(a.get("usdValue") or 0)}
+            ids=set()
+            for actor in (a,a.get("user"),a.get("actor"),a.get("author"),a.get("profile"),a.get("trader")):
+                if isinstance(actor,dict):
+                    for field in ("id","userId","user_id","handle","username","walletAddress"):
+                        if actor.get(field) is not None:ids.add(str(actor[field]).lower().lstrip("@"))
+                elif isinstance(actor,(str,int)):ids.add(str(actor).lower().lstrip("@"))
+            events[eid]={"trader_ids":sorted(ids),"id":eid,"ts":t.isoformat(),"mint":str(mint),"chain":str(a.get("chain") or ""),"symbol":str(symbol or "")[:30],"side":side,"trader":str(a.get("userId") or a.get("trader") or ""),"usd":float(a.get("usdValue") or 0)}
         state["last_fetch_at_utc"]=now.isoformat()
         state["status"]="ok" if rows else "empty_response"
     except Exception as e:
@@ -85,13 +91,15 @@ else:
     state["status"]=old.get("status","no_data")
 groups={}
 for e in events.values():
-    is_followed=str(e.get("trader","")).lower().lstrip("@") in followed if followed else False
+    ids=set(str(v).lower().lstrip("@") for v in e.get("trader_ids",[]) if v)
+    ids.add(str(e.get("trader","")).lower().lstrip("@"))
+    is_followed=bool(ids & followed)
     k=(e["chain"],e["mint"])
     g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0,"friends_unique_traders":set()})
     if e["symbol"]:g["symbol"]=e["symbol"]
     if e["side"]=="thesis":g["mentions"]+=1
-    if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=e["usd"]
-    if e["side"]=="sell":g["sells"]+=1;g["sell_usd"]+=e["usd"]
+    if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=abs(e["usd"])
+    if e["side"]=="sell":g["sells"]+=1;g["sell_usd"]+=abs(e["usd"])
     if is_followed:
         g["followed_"+{"buy":"buys","sell":"sells","thesis":"mentions"}[e["side"]]]+=1
         if e["trader"]:g["friends_unique_traders"].add(e["trader"])
@@ -108,6 +116,7 @@ top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
 state["top10"]=sorted(top,key=lambda g:(-(g["mentions"]+2*g["followed_mentions"]),-(g["buys"]+g["sells"]+g["followed_buys"]+g["followed_sells"])))[:10]
 state["events_count"]=len(events)
+state["matched_followed_events"]=sum(bool((set(str(v).lower().lstrip("@") for v in e.get("trader_ids",[])) | {str(e.get("trader","")).lower().lstrip("@")}) & followed) for e in events.values())
 state["note"]="Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 PATH.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
 print("Social feed:",state["status"],"events",len(events),"tokens",len(top))
