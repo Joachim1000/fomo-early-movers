@@ -80,6 +80,8 @@ NOW = datetime.now(timezone.utc)
 HISTORY_PATH = Path("data/history.json")
 HISTORY_HOURS = 96
 MIN_AGE_HOURS = 4
+# Preserve >=4h of minute-level observations, with room for bursts and retries.
+MAX_HISTORY_POINTS_PER_MINT = 480
 MAX_DISCOVERY_ADDRESSES = 3000
 MAX_CANDIDATES = 3000
 
@@ -245,7 +247,7 @@ for mint, pair in best.items():
     records.sort(key=lambda r: r["timestamp"])
     # History must belong to the same exact pair, not a different pair for the same mint.
     same_pair = [r for r in records if r.get("pair_address") == pair.get("pairAddress")]
-    history[mint] = records[-120:]
+    history[mint] = records[-MAX_HISTORY_POINTS_PER_MINT:]
     span = ((parse_time(same_pair[-1]["timestamp"]) - parse_time(same_pair[0]["timestamp"])).total_seconds() / 3600) if len(same_pair) > 1 else 0
     historical_prices = [r for r in same_pair if numeric(r.get("price_usd")) > 0 and numeric(r.get("liquidity_usd")) > 0]
     # Rank using both current 5m activity and the full observed 2h same-pair price trend.
@@ -339,7 +341,7 @@ for mint in list(history):
             (parse_time(r.get("timestamp")) is not None) and
             cutoff <= parse_time(r.get("timestamp")) <= NOW]
     if kept:
-        history[mint] = kept[-120:]
+        history[mint] = kept[-MAX_HISTORY_POINTS_PER_MINT:]
     else:
         del history[mint]
 
