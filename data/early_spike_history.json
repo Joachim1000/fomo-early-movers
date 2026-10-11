@@ -30,7 +30,52 @@
       "price_15m_usd": null,
       "observed_15m_at_utc": null,
       "return_15m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
+      "pair_address": "7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy",
+      "symbol": "SECRETFROG",
+      "first_alert_at_utc": "2026-10-11T05:10:19.321023+00:00",
+      "alert_price_usd": 0.0006011,
+      "initial_15m_change_pct": 25.26,
+      "buys_5m": 62,
+      "sells_5m": 33,
+      "status": "PENDING",
+      "price_15m_usd": null,
+      "observed_15m_at_utc": null,
+      "return_15m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "9pZL5BtFgYFeSGrGMeMf8sKyNX1Mg4R7LjfbpLkJAYT",
+      "pair_address": "3atxWPUUTYW9P1pTmkW55EErdYYervnjqobKanz5T48j",
+      "symbol": "Jarvis",
+      "first_alert_at_utc": "2026-10-11T05:10:19.321023+00:00",
+      "alert_price_usd": 0.0003249,
+      "initial_15m_change_pct": 17.42,
+      "buys_5m": 22,
+      "sells_5m": 11,
+      "status": "PENDING",
+      "price_15m_usd": null,
+      "observed_15m_at_utc": null,
+      "return_15m_pct": null
+    },
+    {
+      "day": "2026-10-11",
+      "mint": "FzPujTgKNJVim7YYa5HYHngGtf19QwV6ACJ1zDLWpump",
+      "pair_address": "5fAjXZGX3eMkyzGmuKTSEM4CRjVQXdj1R7ge4s4TPyd8",
+      "symbol": "UP",
+      "first_alert_at_utc": "2026-10-11T05:10:19.321023+00:00",
+      "alert_price_usd": 0.0004794,
+      "initial_15m_change_pct": 13.57,
+      "buys_5m": 9,
+      "sells_5m": 4,
+      "status": "PENDING",
+      "price_15m_usd": null,
+      "observed_15m_at_utc": null,
+      "return_15m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-11T05:05:16.094561+00:00"
+  "updated_at_utc": "2026-10-11T05:10:19.321023+00:00"
 }
