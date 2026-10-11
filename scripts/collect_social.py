@@ -26,6 +26,28 @@ for e in old.get("events",[]):
     if t and cutoff<=t<=now:
         events[str(e.get("id"))]=e
 key=os.environ.get("FOMO_API_KEY","")
+handle="joachimtjoernelund"
+state["followed_handle"]=handle
+followed=set()
+state["followed_status"]="unavailable"
+if key:
+    try:
+        req=urllib.request.Request("https://api.fomoapi.io/v2/users/"+handle+"/following",headers={"Authorization":"Bearer "+key,"Accept":"application/json"})
+        with urllib.request.urlopen(req,timeout=15) as res:
+            payload=json.load(res)
+        users=payload if isinstance(payload,list) else next((payload[k] for k in ("following","users","items","data") if isinstance(payload.get(k),list)),[])
+        for user in users:
+            if isinstance(user,dict):
+                for profile in (user,user.get("user"),user.get("profile")):
+                    if isinstance(profile,dict):
+                        for field in ("id","userId","handle","username"):
+                            if profile.get(field) is not None:
+                                followed.add(str(profile[field]).lower().lstrip("@"))
+        state["followed_status"]="ok" if users else "empty"
+    except Exception as e:
+        state["followed_status"]="api_error"
+        state["followed_error"]=str(e)[:160]
+state["followed_count"]=len(followed)
 last=dt(old.get("last_fetch_at_utc"))
 due=not last or (now-last).total_seconds()>=300
 if not key:
@@ -61,12 +83,14 @@ else:
     state["status"]=old.get("status","no_data")
 groups={}
 for e in events.values():
+    is_followed=str(e.get("trader","")).lower().lstrip("@") in followed if followed else False
     k=(e["chain"],e["mint"])
-    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set()})
+    g=groups.setdefault(k,{"chain":e["chain"],"mint":e["mint"],"symbol":e["symbol"],"mentions":0,"buys":0,"sells":0,"buy_usd":0,"sell_usd":0,"traders":set(),"followed_buys":0,"followed_sells":0,"followed_mentions":0})
     if e["symbol"]:g["symbol"]=e["symbol"]
     if e["side"]=="thesis":g["mentions"]+=1
     if e["side"]=="buy":g["buys"]+=1;g["buy_usd"]+=e["usd"]
     if e["side"]=="sell":g["sells"]+=1;g["sell_usd"]+=e["usd"]
+    if is_followed:g["followed_"+{"buy":"buys","sell":"sells","thesis":"mentions"}[e["side"]]]+=1
     if e["trader"]:g["traders"].add(e["trader"])
 top=[]
 for g in groups.values():
@@ -77,7 +101,7 @@ for g in groups.values():
     top.append(g)
 top.sort(key=lambda x:(-x["mentions"],-(x["buys"]+x["sells"]),-x["unique_traders"]))
 state["events"]=sorted(events.values(),key=lambda x:x["ts"])[-2500:]
-state["top10"]=top[:10]
+state["top10"]=sorted(top,key=lambda g:(-(g["mentions"]+2*g["followed_mentions"]),-(g["buys"]+g["sells"]+g["followed_buys"]+g["followed_sells"])))[:10]
 state["events_count"]=len(events)
 state["note"]="Mentions count thesis feed events, not full FOMO chat. Buy/sell counts are feed alerts, not all on-chain trades."
 PATH.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n")
