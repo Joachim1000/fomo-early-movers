@@ -25,7 +25,7 @@ jobs:
       - name: Use current collection scripts from main
         run: |
           git fetch --depth=1 origin main
-          for script in collect.py track_early_spikes.py track_beta_spikes.py track_beta_spikes_v2.py track_beta_live_daily.py track_live_v3.py track_live_v31.py lock_daily.py collect_social.py; do
+          for script in collect.py track_early_spikes.py track_beta_spikes.py track_beta_spikes_v2.py track_beta_live_daily.py track_live_v3.py track_live_v31.py lock_daily.py; do
             git show "origin/main:scripts/$script" > "scripts/$script"
           done
           # Keep code updates local to this run; only JSON is committed.
@@ -102,12 +102,6 @@ jobs:
       - name: Lock daily 23:30 Poland snapshot (once per day)
         run: python scripts/lock_daily.py
 
-      - name: Collect FOMO social feed (non-blocking)
-        env:
-          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
-        run: |
-          python scripts/collect_social.py || echo "::warning::Social collector failed; market collection continues"
-
       - name: Commit JSON
         run: |
           git config user.name "github-actions[bot]"
@@ -116,11 +110,8 @@ jobs:
           # Scripts were loaded from main for execution; never commit them to the data branch.
           git restore -- scripts/collect.py scripts/track_early_spikes.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
           rm -f scripts/track_beta_spikes_v2.py scripts/track_live_v3.py scripts/track_live_v31.py
-          # collect_social.py was copied from main and may be untracked on market-data.
-          rm -f scripts/collect_social.py
 
           git add data/latest.json data/history.json data/recommendations.json data/early_spike_history.json data/beta_spike_history.json data/beta_spike_v2_history.json data/beta_live_daily.json data/live_v3.json data/live_v31.json
-          if [ -f data/social_top10.json ]; then git add data/social_top10.json; fi
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
           if [ -f data/daily_snapshots.json ]; then git add data/daily_snapshots.json; fi
 
