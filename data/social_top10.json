@@ -1,105 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T05:20:46.741203+00:00",
+  "updated_at_utc": "2026-10-12T05:25:27.085000+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791768050000_163",
-        "ekcp",
-        "fd591714-e2e4-5298-a9dd-bc2dc1d7fb91"
-      ],
-      "id": "09210ac1-be96-5d65-8a73-4a371aef9009",
-      "ts": "2026-10-12T01:20:50+00:00",
-      "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
-      "chain": "solana",
-      "symbol": "DARK",
-      "side": "buy",
-      "trader": "fd591714-e2e4-5298-a9dd-bc2dc1d7fb91",
-      "usd": 5393.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "659544b1-3380-5c28-bf43-7a73651c8467",
-        "alrt_1791768075000_164",
-        "chudzinski"
-      ],
-      "id": "09927514-b3ad-539d-952e-e988f06e9b8d",
-      "ts": "2026-10-12T01:21:15+00:00",
-      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
-      "chain": "solana",
-      "symbol": "ZCAT",
-      "side": "buy",
-      "trader": "659544b1-3380-5c28-bf43-7a73651c8467",
-      "usd": 10595.34
-    },
-    {
-      "thesis_text": "oAlleinn posted a thesis on $CATE: CATE COIN IMO",
-      "trader_ids": [
-        "11e376ba-25da-5738-9c6a-1294eab1e5d4",
-        "alrt_1791768185000_165",
-        "oalleinn"
-      ],
-      "id": "f86da088-93d6-4360-bfec-6fafd7f9013d",
-      "ts": "2026-10-12T01:23:05+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "11e376ba-25da-5738-9c6a-1294eab1e5d4",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "InfiniteAbundanceProtocol posted a thesis on $MONITOR: I bullposted under 1M I bullposted at ATHs and I bullpost now for the simple reason  the job is not done and this is not valued nearly close to what it should be. Higher.",
-      "trader_ids": [
-        "alrt_1791768230000_166",
-        "c240f65e-bcb2-588e-9e0d-05bc5f2d2a8d",
-        "infiniteabundanceprotocol"
-      ],
-      "id": "d30721ce-dcfa-4c5d-b7a3-d27798b160f9",
-      "ts": "2026-10-12T01:23:50+00:00",
-      "mint": "0x1a911bb954daa9cb38513423075be74450351e18",
-      "chain": "robinhood",
-      "symbol": "MONITOR",
-      "side": "thesis",
-      "trader": "c240f65e-bcb2-588e-9e0d-05bc5f2d2a8d",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "301feb48-d25f-5b0a-a4e6-8e904529e77a",
-        "alrt_1791768285000_168",
-        "gutterpalace"
-      ],
-      "id": "16873de5-a9fa-5165-a870-4975cac07cd2",
-      "ts": "2026-10-12T01:24:45+00:00",
-      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
-      "chain": "solana",
-      "symbol": "BORDR",
-      "side": "buy",
-      "trader": "301feb48-d25f-5b0a-a4e6-8e904529e77a",
-      "usd": 4501.66
-    },
-    {
-      "thesis_text": "surfcastin_ posted a thesis on $SAPLING: Sapling + Seedling 🌱   👀",
-      "trader_ids": [
-        "4a8bc8a1-271d-509b-b888-be187c3dd10f",
-        "alrt_1791768300000_169",
-        "surfcastin_"
-      ],
-      "id": "ddda8ab8-c724-4aae-9777-caa4bc829ba3",
-      "ts": "2026-10-12T01:25:00+00:00",
-      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
-      "chain": "solana",
-      "symbol": "SAPLING",
-      "side": "thesis",
-      "trader": "4a8bc8a1-271d-509b-b888-be187c3dd10f",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -8442,7 +8346,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 30,
+      "mentions": 29,
       "buys": 1,
       "sells": 1,
       "buy_usd": 10044.7,
@@ -8454,11 +8358,11 @@
       "friends_sell_usd": 0,
       "recent_mentions": 9,
       "recent_friends": 0,
-      "language_analyzed_count": 30,
+      "language_analyzed_count": 29,
       "language_positive_count": 3,
       "language_negative_count": 0,
-      "language_neutral_count": 27,
-      "language_sentiment_score": 10.0,
+      "language_neutral_count": 26,
+      "language_sentiment_score": 10.3,
       "language_sentiment_label": "POSITIVE",
       "unique_traders": 24,
       "friends_unique_traders": 0,
@@ -8567,9 +8471,9 @@
       "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
       "symbol": "BORDR",
       "mentions": 5,
-      "buys": 12,
+      "buys": 11,
       "sells": 10,
-      "buy_usd": 133252.93,
+      "buy_usd": 128751.27,
       "sell_usd": 66670.64,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -8588,8 +8492,8 @@
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 66582.29,
-      "activity_sentiment_score": 33.3,
+      "net_usd": 62080.63,
+      "activity_sentiment_score": 31.8,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -8719,8 +8623,8 @@
     },
     {
       "chain": "solana",
-      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
-      "symbol": "SAPLING",
+      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
+      "symbol": "HOTBOT",
       "mentions": 3,
       "buys": 0,
       "sells": 0,
@@ -8734,11 +8638,11 @@
       "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 3,
-      "language_positive_count": 0,
+      "language_positive_count": 1,
       "language_negative_count": 0,
-      "language_neutral_count": 3,
-      "language_sentiment_score": 0.0,
-      "language_sentiment_label": "NEUTRAL",
+      "language_neutral_count": 2,
+      "language_sentiment_score": 33.3,
+      "language_sentiment_label": "POSITIVE",
       "unique_traders": 3,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
@@ -8764,7 +8668,7 @@
     "buy_usd": 215342.23,
     "sell_usd": 6783.45
   },
-  "events_count": 527,
+  "events_count": 521,
   "matched_followed_events": 7,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
