@@ -1,105 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T04:31:00.330987+00:00",
+  "updated_at_utc": "2026-10-12T04:35:25.533389+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "splunk_ posted a thesis on $SI: Just one guy selling, buy the dip or miss it, you choose",
-      "trader_ids": [
-        "10987ce1-8f35-5864-9c2e-884d277ce0a5",
-        "alrt_1791765095000_39",
-        "splunk_"
-      ],
-      "id": "5c7a6ae4-df3c-4400-9765-d0550394c32e",
-      "ts": "2026-10-12T00:31:35+00:00",
-      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-      "chain": "solana",
-      "symbol": "SI",
-      "side": "thesis",
-      "trader": "10987ce1-8f35-5864-9c2e-884d277ce0a5",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "DopamineFeenFr1 posted a thesis on $PARE: $PARE keeps giving me reasons to stay bullish.\n\nSplit a tokenized stock into its principal and dividend stream. Trade either side. Recombine them anytime. That opens up an entirely new way to use stocks onchain—and gives the “Pendle for stocks” thesis real substance.\n\nThe team is backing that vision with execution: verified contracts, a Pashov security review, and a second review covering the liquidity helper, with every reported issue in that review fixed.\n\nMy thesis: as tokenized stocks grow, demand for tools that unlock their yield and capital efficiency could grow alongside them. Pare is positioning itself right in that lane.\n\nAdoption is the next test. The product gives me a reason to believe.\n\nSleeping giant energy. $PARE 🔥",
-      "trader_ids": [
-        "a3d6096e-59eb-5684-a9fe-0048e07a0eb4",
-        "alrt_1791765170000_40",
-        "dopaminefeenfr1"
-      ],
-      "id": "0bf2e854-2fc6-4578-bcbe-e7cd9fd33492",
-      "ts": "2026-10-12T00:32:50+00:00",
-      "mint": "0x15d36b6a28d8327abc7afabf0f106ae2c9af5c4d",
-      "chain": "robinhood",
-      "symbol": "PARE",
-      "side": "thesis",
-      "trader": "a3d6096e-59eb-5684-a9fe-0048e07a0eb4",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "risktakr_ posted a thesis on $CATE: 50M is the floor, do what you will with that",
-      "trader_ids": [
-        "1b518c5b-5399-58c3-b570-e1854d00e2a0",
-        "alrt_1791765175000_41",
-        "risktakr_"
-      ],
-      "id": "b4ca0b43-aef0-4f6d-83c6-bc470e4e94a0",
-      "ts": "2026-10-12T00:32:55+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "1b518c5b-5399-58c3-b570-e1854d00e2a0",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "ConcreteLover posted a thesis on $CATE: Im oiled down and ready for this cate",
-      "trader_ids": [
-        "828d4f45-8781-5339-8b35-8ea0a2214854",
-        "alrt_1791765185000_42",
-        "concretelover"
-      ],
-      "id": "ea130356-4862-47a4-ab02-852d842db167",
-      "ts": "2026-10-12T00:33:05+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "828d4f45-8781-5339-8b35-8ea0a2214854",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791765250000_44",
-        "b3605b26-911f-589c-9af5-e49854e17a97",
-        "ctrlvolk"
-      ],
-      "id": "dbfaf2cc-0e7f-5ac9-bad6-edfcaacc3a66",
-      "ts": "2026-10-12T00:34:10+00:00",
-      "mint": "0x020bfc650a365f8bb26819deaabf3e21291018b4",
-      "chain": "robinhood",
-      "symbol": "CASHCAT",
-      "side": "buy",
-      "trader": "b3605b26-911f-589c-9af5-e49854e17a97",
-      "usd": 5997.0
-    },
-    {
-      "thesis_text": "Iri0o posted a thesis on $HYDX: Ok 10x this https://x.com/Hyperdex_app/status/2109440003327791387?s=20",
-      "trader_ids": [
-        "5e0899f7-db16-5f6e-81e5-075b82110012",
-        "alrt_1791765315000_46",
-        "iri0o"
-      ],
-      "id": "b93c87b2-0d1f-4e77-bacb-fbbdd8cc62b2",
-      "ts": "2026-10-12T00:35:15+00:00",
-      "mint": "0xaa5751ff3fb61e613993b2eb4eab1fce017081fc",
-      "chain": "robinhood",
-      "symbol": "HYDX",
-      "side": "thesis",
-      "trader": "5e0899f7-db16-5f6e-81e5-075b82110012",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -8090,7 +7994,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 28,
+      "mentions": 26,
       "buys": 1,
       "sells": 1,
       "buy_usd": 10044.7,
@@ -8100,15 +8004,15 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 9,
+      "recent_mentions": 7,
       "recent_friends": 0,
-      "language_analyzed_count": 28,
+      "language_analyzed_count": 26,
       "language_positive_count": 4,
       "language_negative_count": 0,
-      "language_neutral_count": 24,
-      "language_sentiment_score": 14.3,
+      "language_neutral_count": 22,
+      "language_sentiment_score": 15.4,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 23,
+      "unique_traders": 22,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -8146,37 +8050,6 @@
       "net_usd": 74490.17,
       "activity_sentiment_score": 40.0,
       "activity_sentiment_label": "POSITIVE",
-      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
-    },
-    {
-      "chain": "solana",
-      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-      "symbol": "SI",
-      "mentions": 7,
-      "buys": 6,
-      "sells": 7,
-      "buy_usd": 35567.51,
-      "sell_usd": 29992.82,
-      "followed_buys": 0,
-      "followed_sells": 0,
-      "followed_mentions": 0,
-      "friends_buy_usd": 0,
-      "friends_sell_usd": 0,
-      "recent_mentions": 2,
-      "recent_friends": 0,
-      "language_analyzed_count": 7,
-      "language_positive_count": 1,
-      "language_negative_count": 0,
-      "language_neutral_count": 6,
-      "language_sentiment_score": 14.3,
-      "language_sentiment_label": "POSITIVE",
-      "unique_traders": 13,
-      "friends_unique_traders": 0,
-      "friends_net_usd": 0,
-      "friends_activity": 0,
-      "net_usd": 5574.69,
-      "activity_sentiment_score": 8.5,
-      "activity_sentiment_label": "MIXED",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
     {
@@ -8239,6 +8112,37 @@
       "net_usd": 62278.75,
       "activity_sentiment_score": 39.6,
       "activity_sentiment_label": "POSITIVE",
+      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
+    },
+    {
+      "chain": "solana",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "symbol": "SI",
+      "mentions": 6,
+      "buys": 6,
+      "sells": 7,
+      "buy_usd": 35567.51,
+      "sell_usd": 29992.82,
+      "followed_buys": 0,
+      "followed_sells": 0,
+      "followed_mentions": 0,
+      "friends_buy_usd": 0,
+      "friends_sell_usd": 0,
+      "recent_mentions": 2,
+      "recent_friends": 0,
+      "language_analyzed_count": 6,
+      "language_positive_count": 1,
+      "language_negative_count": 0,
+      "language_neutral_count": 5,
+      "language_sentiment_score": 16.7,
+      "language_sentiment_label": "POSITIVE",
+      "unique_traders": 13,
+      "friends_unique_traders": 0,
+      "friends_net_usd": 0,
+      "friends_activity": 0,
+      "net_usd": 5574.69,
+      "activity_sentiment_score": 8.5,
+      "activity_sentiment_label": "MIXED",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
     {
@@ -8412,7 +8316,7 @@
     "buy_usd": 23820.3,
     "sell_usd": 6553.12
   },
-  "events_count": 505,
+  "events_count": 499,
   "matched_followed_events": 6,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
