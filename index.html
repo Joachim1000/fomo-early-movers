@@ -449,7 +449,7 @@ const save=a=>localStorage.setItem(storage,JSON.stringify(a));
 const safe=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const day=t=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));
 const clock=t=>t?new Date(t).toLocaleString('en-GB',{timeZone:'Europe/Warsaw',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';
-const money=v=>v>0?'
+const money=v=>v>0?'$'+Number(v).toLocaleString('en-US',{maximumSignificantDigits:5}):'—';
 const ret=v=>v==null?'MISSING':(v>0?'+':'')+v.toFixed(2)+'%';
 async function fetchData(name){const r=await fetch(root+name+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(name+' unavailable');return r.json()}
 function decorate(){const saved=new Set(getList().map(x=>x.mint));document.querySelectorAll('button[data-mint]').forEach(b=>{if(b.classList.contains('watch-add')||b.classList.contains('watch-remove')||b.dataset.watchDecorated)return;b.dataset.watchDecorated='yes';const plus=document.createElement('button');plus.type='button';plus.className='watch-add'+(saved.has(b.dataset.mint)?' is-added':'');plus.textContent=saved.has(b.dataset.mint)?'✓':'+';plus.setAttribute('aria-label','Add to MY TOKENS');plus.title='Add token to MY TOKENS';plus.dataset.mint=b.dataset.mint;plus.onclick=()=>window.addMyToken(plus);b.insertAdjacentElement('afterend',plus)})}
