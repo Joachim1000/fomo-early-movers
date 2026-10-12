@@ -390,8 +390,13 @@
       "price_5m_usd": 0.0002192,
       "observed_5m_at_utc": "2026-10-12T10:40:28.294205+00:00",
       "return_5m_pct": 17.41,
-      "measurement_delay_minutes": 8.17
+      "measurement_delay_minutes": 8.17,
+      "price_10m_usd": 0.0002353,
+      "observed_10m_at_utc": "2026-10-12T10:45:59.325602+00:00",
+      "measurement_10m_delay_minutes": 13.69,
+      "return_10m_pct": 26.03,
+      "status_10m": "MEASURED"
     }
   ],
-  "updated_at_utc": "2026-10-12T10:40:28.294205+00:00"
+  "updated_at_utc": "2026-10-12T10:45:59.325602+00:00"
 }
