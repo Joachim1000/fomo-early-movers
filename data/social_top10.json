@@ -1,73 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T00:01:09.324228+00:00",
+  "updated_at_utc": "2026-10-12T00:05:25.553395+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "ProudSilkyAnt posted a thesis on $SI: To the clown trenchenry saying chart looks goood, you ever do TA before chart looks like manuaer.",
-      "trader_ids": [
-        "31b4a39e-84b7-54ce-98fc-1cb85b8e9d50",
-        "alrt_1791748945000_1190",
-        "proudsilkyant"
-      ],
-      "id": "ae0604bb-294a-4808-98cd-ef9acd6a80f0",
-      "ts": "2026-10-11T20:02:25+00:00",
-      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-      "chain": "solana",
-      "symbol": "SI",
-      "side": "thesis",
-      "trader": "31b4a39e-84b7-54ce-98fc-1cb85b8e9d50",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "96d58c61-17ab-5d23-a525-6401c3f54b9c",
-        "alrt_1791748970000_1191",
-        "tonycrypto2424"
-      ],
-      "id": "dd080b9d-ad21-5965-a496-08b5859adcf6",
-      "ts": "2026-10-11T20:02:50+00:00",
-      "mint": "5dvXTZ5qwgafnHtwu3Ls3QrWx1U4LQsFeCuJgkk4QEC6",
-      "chain": "solana",
-      "symbol": "EMBER",
-      "side": "buy",
-      "trader": "96d58c61-17ab-5d23-a525-6401c3f54b9c",
-      "usd": 4978.61
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791749015000_1193",
-        "benzetti",
-        "d6ee067b-940a-5fbf-8986-3394fcdf21e0"
-      ],
-      "id": "1f241563-4cf8-57b5-87b9-9c4a20e7c88f",
-      "ts": "2026-10-11T20:03:35+00:00",
-      "mint": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
-      "chain": "ethereum",
-      "symbol": "STRK",
-      "side": "buy",
-      "trader": "d6ee067b-940a-5fbf-8986-3394fcdf21e0",
-      "usd": 4975.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "5692f9fa-80fb-5c9d-968d-7d35d64fad84",
-        "alrt_1791749030000_1194",
-        "in2deep"
-      ],
-      "id": "2ba812ec-4971-55d3-beea-21f5b045cdae",
-      "ts": "2026-10-11T20:03:50+00:00",
-      "mint": "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump",
-      "chain": "solana",
-      "symbol": "TM",
-      "side": "sell",
-      "trader": "5692f9fa-80fb-5c9d-968d-7d35d64fad84",
-      "usd": 1518.57
-    },
     {
       "thesis_text": "Len_Wambo posted a thesis on $swordcat: 🔥⚔️😽⚔️🔥",
       "trader_ids": [
@@ -10271,37 +10207,6 @@
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
     {
-      "chain": "ethereum",
-      "mint": "0x39772d019ed525f667a7cbbf8e64b07120378402",
-      "symbol": "DNA",
-      "mentions": 4,
-      "buys": 3,
-      "sells": 1,
-      "buy_usd": 77461.5,
-      "sell_usd": 1091.88,
-      "followed_buys": 0,
-      "followed_sells": 0,
-      "followed_mentions": 0,
-      "friends_buy_usd": 0,
-      "friends_sell_usd": 0,
-      "recent_mentions": 3,
-      "recent_friends": 0,
-      "language_analyzed_count": 4,
-      "language_positive_count": 1,
-      "language_negative_count": 0,
-      "language_neutral_count": 3,
-      "language_sentiment_score": 25.0,
-      "language_sentiment_label": "POSITIVE",
-      "unique_traders": 8,
-      "friends_unique_traders": 0,
-      "friends_net_usd": 0,
-      "friends_activity": 0,
-      "net_usd": 76369.62,
-      "activity_sentiment_score": 97.2,
-      "activity_sentiment_label": "POSITIVE",
-      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
-    },
-    {
       "chain": "solana",
       "mint": "5GefefPX1mDs6ZJB1apYmz6fCTCiNJpHturZ9bvFpump",
       "symbol": "Pumpoween",
@@ -10331,6 +10236,37 @@
       "activity_sentiment_score": null,
       "activity_sentiment_label": "UNKNOWN",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
+    },
+    {
+      "chain": "ethereum",
+      "mint": "0x39772d019ed525f667a7cbbf8e64b07120378402",
+      "symbol": "DNA",
+      "mentions": 4,
+      "buys": 3,
+      "sells": 1,
+      "buy_usd": 77461.5,
+      "sell_usd": 1091.88,
+      "followed_buys": 0,
+      "followed_sells": 0,
+      "followed_mentions": 0,
+      "friends_buy_usd": 0,
+      "friends_sell_usd": 0,
+      "recent_mentions": 2,
+      "recent_friends": 0,
+      "language_analyzed_count": 4,
+      "language_positive_count": 1,
+      "language_negative_count": 0,
+      "language_neutral_count": 3,
+      "language_sentiment_score": 25.0,
+      "language_sentiment_label": "POSITIVE",
+      "unique_traders": 8,
+      "friends_unique_traders": 0,
+      "friends_net_usd": 0,
+      "friends_activity": 0,
+      "net_usd": 76369.62,
+      "activity_sentiment_score": 97.2,
+      "activity_sentiment_label": "POSITIVE",
+      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     }
   ],
   "followed_handle": "joachimtjoernelund",
@@ -10348,7 +10284,7 @@
     "buy_usd": 153692.16,
     "sell_usd": 11958.97
   },
-  "events_count": 626,
+  "events_count": 622,
   "matched_followed_events": 13,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
