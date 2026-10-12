@@ -1248,9 +1248,32 @@
       "price_5m_usd": 0.005155,
       "observed_5m_at_utc": "2026-10-12T17:10:25.659199+00:00",
       "return_5m_pct": 2.28,
-      "measurement_delay_minutes": 6.13
+      "measurement_delay_minutes": 6.13,
+      "price_10m_usd": 0.005162,
+      "observed_10m_at_utc": "2026-10-12T17:16:19.993856+00:00",
+      "measurement_10m_delay_minutes": 12.03,
+      "return_10m_pct": 2.42,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "HT1hPomeMjNM81XebDHLgiBr3upQCHSgWLmeoyU7pump",
+      "pair_address": "9jJ5LkSMz1kQYdGtfpwtfkB7nJY5TwEaRgwhBHX7fNgp",
+      "symbol": "OVERDRIVE",
+      "first_alert_at_utc": "2026-10-12T17:16:19.993856+00:00",
+      "alert_price_usd": 0.0001648,
+      "initial_15m_change_pct": 20.47,
+      "buys_5m": 57,
+      "sells_5m": 17,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T17:14:16.399425+00:00"
+  "active_alerts": {
+    "HT1hPomeMjNM81XebDHLgiBr3upQCHSgWLmeoyU7pump|9jJ5LkSMz1kQYdGtfpwtfkB7nJY5TwEaRgwhBHX7fNgp": true
+  },
+  "updated_at_utc": "2026-10-12T17:16:19.993856+00:00"
 }
