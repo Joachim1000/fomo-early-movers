@@ -434,8 +434,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "9Y8CL6shxYH9XcoqWUoP62Fw1gtX4jsvv9xst1bTpump",
+      "pair_address": "Ag1hr5ynB9geYJpR2o1oLtnSUy788kAtdKeCWGUmgzfk",
+      "symbol": "Gem",
+      "first_alert_at_utc": "2026-10-12T11:40:28.902185+00:00",
+      "alert_price_usd": 0.000111,
+      "initial_15m_change_pct": 27.6,
+      "buys_5m": 49,
+      "sells_5m": 24,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T11:38:18.867321+00:00"
+  "active_alerts": {
+    "9Y8CL6shxYH9XcoqWUoP62Fw1gtX4jsvv9xst1bTpump|Ag1hr5ynB9geYJpR2o1oLtnSUy788kAtdKeCWGUmgzfk": true
+  },
+  "updated_at_utc": "2026-10-12T11:40:28.902185+00:00"
 }
