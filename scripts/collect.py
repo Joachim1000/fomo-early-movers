@@ -211,6 +211,17 @@ try:
 except (OSError, ValueError, AttributeError):
     recommendation_records = []
 recent_recommendations = {}
+# Keep V3.1 exact mint+pair prices refreshed for performance verification.
+try:
+    v31_records = json.loads(Path("data/live_v31.json").read_text(encoding="utf-8")).get("observations", [])
+except (OSError, ValueError, AttributeError):
+    v31_records = []
+for record in v31_records:
+    observed = parse_time(record.get("observed_at_utc")) if isinstance(record, dict) else None
+    if observed and 0 <= (NOW - observed).total_seconds() <= HISTORY_HOURS * 3600:
+        mint, pair_address = record.get("mint"), record.get("pair_address")
+        if mint and pair_address:
+            recent_recommendations.setdefault(mint, set()).add(pair_address)
 for record in recommendation_records:
     observed = parse_time(record.get("observed_at_utc")) if isinstance(record, dict) else None
     if observed and 0 <= (NOW - observed).total_seconds() <= HISTORY_HOURS * 3600:
@@ -233,14 +244,13 @@ for i in range(0, len(tracked_mints), 20):
             prior_pairs = {p.get("pair_address") for p in history.get(mint, []) if isinstance(p, dict)} | recent_recommendations.get(mint, set())
             if pair.get("pairAddress") not in prior_pairs or numeric(pair.get("priceUsd")) <= 0:
                 continue
-            previous = tracked_pairs.get(mint)
-            if previous is None or numeric((pair.get("liquidity") or {}).get("usd")) > numeric((previous.get("liquidity") or {}).get("usd")):
-                tracked_pairs[mint] = pair
+            # Preserve every exact tracked pair, not just the highest-liquidity pair per mint.
+            tracked_pairs[(mint, pair.get("pairAddress"))] = pair
     except Exception as exc:
         errors.append(f"Tracked token batch {i}: {exc}")
 
 # These are price-only observations, not new FOMO discovery candidates.
-for mint, pair in tracked_pairs.items():
+for (mint, pair_address), pair in tracked_pairs.items():
     tx = (pair.get("txns") or {}).get("m5") or {}
     history.setdefault(mint, []).append({
         "timestamp": NOW.isoformat(),
