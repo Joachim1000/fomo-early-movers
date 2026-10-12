@@ -47,10 +47,11 @@ for item in latest.get("early_alert_candidates", []):
 for row in rows:
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
-    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
-        continue
     start = parse(row.get("first_alert_at_utc"))
-    if not start or (now - start).total_seconds() < 300:
+    if not start:
+        continue
+    age = (now - start).total_seconds()
+    if age < 300:
         continue
     later = []
     for point in history.get(row["mint"], []):
@@ -59,14 +60,27 @@ for row in rows:
         at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
         if at and price and 300 <= (at - start).total_seconds() <= 86400:
             later.append((at, price))
+    if row.get("return_10m_pct") is None and age >= 600:
+        ten = [(at, price) for at, price in later if (at - start).total_seconds() >= 600]
+        if ten:
+            at10, price10 = min(ten, key=lambda p: p[0])
+            delay10 = round((at10-start).total_seconds()/60, 2)
+            row.update(price_10m_usd=price10, observed_10m_at_utc=at10.isoformat(),
+                       measurement_10m_delay_minutes=delay10,
+                       return_10m_pct=round((price10/row["alert_price_usd"]-1)*100, 2),
+                       status_10m="MEASURED" if delay10 <= 15 else "DELAYED")
+        elif age > 900:
+            row["status_10m"] = "NOT_VERIFIABLE"
+    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
+        continue
     if later:
         at, price = min(later, key=lambda p: p[0])
         delay = round((at - start).total_seconds() / 60, 2)
-        row.update(status="MEASURED" if delay <= 10 else "DELAYED", measurement_delay_minutes=delay, price_5m_usd=price,
-                   observed_5m_at_utc=at.isoformat(),
+        row.update(status="MEASURED" if delay <= 10 else "DELAYED", measurement_delay_minutes=delay,
+                   price_5m_usd=price, observed_5m_at_utc=at.isoformat(),
                    return_5m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
-    elif (now - start).total_seconds() > 600:
-        row["status"] = "NOT_VERIFIABLE"  # Can recover if a verified later price arrives.
+    elif age > 600:
+        row["status"] = "NOT_VERIFIABLE"
 saved["updated_at_utc"] = now.isoformat()
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")
