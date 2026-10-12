@@ -11500,6 +11500,106 @@
       "rank": 10,
       "beta_score": -5.362,
       "risk": "ELEVATED"
+    },
+    {
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "symbol": "HOOKED",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.005576,
+      "rank": 1,
+      "beta_score": -0.665,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "7b6dX3nE25xrfNViEKZHL9wVJFcBxQYuWPpmzHUxx28H",
+      "pair_address": "9CDKMMGWEnr6ZyU725fr4jdyyFojPW8gz1KKNrYLekCg",
+      "symbol": "ROSE",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0002499,
+      "rank": 2,
+      "beta_score": -9.387,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "pair_address": "zxTpi4BtaWX3mgdAPoezkMD1hxx8CdeCfrqXMWvSCLX",
+      "symbol": "STONK",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.149,
+      "rank": 3,
+      "beta_score": -10.02,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump",
+      "pair_address": "DA4pM4xSDY4M9V4CgAKKBVH1pw1yscTQQa5nEkGHuKpt",
+      "symbol": "OTC",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.006101,
+      "rank": 4,
+      "beta_score": -10.119,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "ALoNmPYp9HxW5Gi4QHGRomXoBuwepwZWcygtvdEXzfBH",
+      "pair_address": "782aJ74HWj1uxMAnf66jyiP46vNUwSHo4gFHoYoK8yoJ",
+      "symbol": "ALON",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0001094,
+      "rank": 5,
+      "beta_score": -10.32,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "DMEUT8UV5JX8G7jB7TP9XyfBUrP5z7p6VPLSE2WbbRHt",
+      "symbol": "Altai",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0002447,
+      "rank": 6,
+      "beta_score": -11.036,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump",
+      "pair_address": "ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK",
+      "symbol": "TM",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0005847,
+      "rank": 7,
+      "beta_score": -11.2,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "3qMx2ZFFxFBjYPrwCyngGXNizeAFnNBrimhPQZcjpump",
+      "pair_address": "2DEXa5cXRkWPVd91TBKZLwxiX52NWNqwLGvvH58zds3A",
+      "symbol": "WEDNESDAY",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 7.087e-05,
+      "rank": 8,
+      "beta_score": -12.358,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga",
+      "pair_address": "6wXTJaLNN3GCUJajJ9Vj2te51zsNgPVXV37EbFGRAjLz",
+      "symbol": "Malfoid",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0009248,
+      "rank": 9,
+      "beta_score": -12.736,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh",
+      "symbol": "Normie",
+      "observed_at_utc": "2026-10-12T03:40:23.427912+00:00",
+      "observation_price_usd": 0.0007694,
+      "rank": 10,
+      "beta_score": -12.85,
+      "risk": "HIGH"
     }
   ],
   "days": {
@@ -11655,5 +11755,5 @@
       ]
     }
   },
-  "updated_at_utc": "2026-10-12T03:35:17.846013+00:00"
+  "updated_at_utc": "2026-10-12T03:40:23.427912+00:00"
 }

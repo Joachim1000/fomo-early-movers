@@ -1,489 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T03:35:26.202916+00:00",
+  "updated_at_utc": "2026-10-12T03:40:32.031544+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "54bcdb49-6370-554f-a84c-35d95a664c1c",
-        "alrt_1791761745000_1798",
-        "effortcapital"
-      ],
-      "id": "8df78861-9ecf-5b43-99be-ca5b02c6044f",
-      "ts": "2026-10-11T23:35:45+00:00",
-      "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
-      "chain": "solana",
-      "symbol": "KMNO",
-      "side": "buy",
-      "trader": "54bcdb49-6370-554f-a84c-35d95a664c1c",
-      "usd": 26659.91
-    },
-    {
-      "thesis_text": "GlizStacks posted a thesis on $CATE: agrreed",
-      "trader_ids": [
-        "3cb1e3d2-26d5-54d8-8432-31314971fb1e",
-        "alrt_1791761745000_1797",
-        "glizstacks"
-      ],
-      "id": "0c0dee42-7f2b-4cee-a500-49139c0c1784",
-      "ts": "2026-10-11T23:35:45+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "3cb1e3d2-26d5-54d8-8432-31314971fb1e",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-        "alrt_1791761750000_1800",
-        "gl_aw_at_paragon"
-      ],
-      "id": "02311e66-dbc1-5766-8395-1215c7934e77",
-      "ts": "2026-10-11T23:35:50+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "buy",
-      "trader": "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-      "usd": 4975.0
-    },
-    {
-      "thesis_text": "skydawg posted a thesis on $CATE: If you aren’t in the cate army I don’t wanna hear it 💯💯💯💯💯",
-      "trader_ids": [
-        "alrt_1791761750000_1799",
-        "e2ea0597-fc1a-5100-be9d-51df5f34ffad",
-        "skydawg"
-      ],
-      "id": "f1da1df1-c697-4585-ba79-46d2a2af1b9a",
-      "ts": "2026-10-11T23:35:50+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "e2ea0597-fc1a-5100-be9d-51df5f34ffad",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761760000_1804",
-        "d8d86b70-108f-5a2a-8acf-0b8e7297bf04",
-        "tartpalecat"
-      ],
-      "id": "bf6fe292-4ec6-5bfe-abb5-3d747fc1e270",
-      "ts": "2026-10-11T23:36:00+00:00",
-      "mint": "0xbeea1d618e533a387d941f58a7d4c9b7bd377777",
-      "chain": "bsc",
-      "symbol": "牛来",
-      "side": "buy",
-      "trader": "d8d86b70-108f-5a2a-8acf-0b8e7297bf04",
-      "usd": 4613.71
-    },
-    {
-      "thesis_text": "nastycashy posted a thesis on $CATE: YOU TELL THEM TJR",
-      "trader_ids": [
-        "a6087a26-3af4-5b4a-9fac-eba04063680a",
-        "alrt_1791761760000_1803",
-        "nastycashy"
-      ],
-      "id": "79b96fe2-4ae2-400e-a8d7-25147a49ae39",
-      "ts": "2026-10-11T23:36:00+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "a6087a26-3af4-5b4a-9fac-eba04063680a",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "41380509-55e1-51cb-b87e-388d7ae42350",
-        "alrt_1791761760000_1802",
-        "shootingguard"
-      ],
-      "id": "ab05094c-2577-599a-8790-47525097a0e0",
-      "ts": "2026-10-11T23:36:00+00:00",
-      "mint": "0xbeea1d618e533a387d941f58a7d4c9b7bd377777",
-      "chain": "bsc",
-      "symbol": "牛来",
-      "side": "buy",
-      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
-      "usd": 9955.0
-    },
-    {
-      "thesis_text": "NickVeds posted a thesis on $CATE: No army like the cate army",
-      "trader_ids": [
-        "a013ae59-75d1-5d9c-9dce-b1826acce5dc",
-        "alrt_1791761765000_1805",
-        "nickveds"
-      ],
-      "id": "1bc12dc4-c773-4e53-ae2c-e3a103bd3baa",
-      "ts": "2026-10-11T23:36:05+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "a013ae59-75d1-5d9c-9dce-b1826acce5dc",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "TheRealJTrades posted a thesis on $CATE: Price decreasing and holders increasing, I’ve seen this before…",
-      "trader_ids": [
-        "6e4a250a-a41e-5329-acff-3f03bc0d3822",
-        "alrt_1791761775000_1806",
-        "therealjtrades"
-      ],
-      "id": "9b080b0b-d945-4e64-abf2-e86ed8dd2fdf",
-      "ts": "2026-10-11T23:36:15+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "6e4a250a-a41e-5329-acff-3f03bc0d3822",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "BarBarrBinks posted a thesis on $CATE: tjr, band for band?",
-      "trader_ids": [
-        "afa9b8ff-a5fb-589f-be46-66c439ada0d8",
-        "alrt_1791761780000_1807",
-        "barbarrbinks"
-      ],
-      "id": "4f3c5cde-c385-4113-8095-433ae2755a5e",
-      "ts": "2026-10-11T23:36:20+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "afa9b8ff-a5fb-589f-be46-66c439ada0d8",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-        "alrt_1791761790000_1808",
-        "gl_aw_at_paragon"
-      ],
-      "id": "e3991e63-19be-5a56-bc40-ca1d8c4af371",
-      "ts": "2026-10-11T23:36:30+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "buy",
-      "trader": "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-      "usd": 10125.18
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9dbb102e-7d47-5321-a511-36d5327c21f7",
-        "alrt_1791761800000_1810",
-        "foreveryoung"
-      ],
-      "id": "6430758c-66a5-5d32-98e3-c85cdd2b8c9c",
-      "ts": "2026-10-11T23:36:40+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "sell",
-      "trader": "9dbb102e-7d47-5321-a511-36d5327c21f7",
-      "usd": 2210.3
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "a2733b46-52e1-5fd0-b2af-0a23a020a14a",
-        "alrt_1791761800000_1809",
-        "cryptozen"
-      ],
-      "id": "437a7a0e-d876-5130-a178-ec4b79f9e7be",
-      "ts": "2026-10-11T23:36:40+00:00",
-      "mint": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
-      "chain": "ethereum",
-      "symbol": "IMD",
-      "side": "buy",
-      "trader": "a2733b46-52e1-5fd0-b2af-0a23a020a14a",
-      "usd": 47283.04
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761820000_1811",
-        "e789b17a-2104-527d-aa7b-aa098ba97233",
-        "lefttinyhare"
-      ],
-      "id": "c77f7185-8c9f-5ab3-8570-7f46bbec8abc",
-      "ts": "2026-10-11T23:37:00+00:00",
-      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
-      "chain": "solana",
-      "symbol": "QI",
-      "side": "sell",
-      "trader": "e789b17a-2104-527d-aa7b-aa098ba97233",
-      "usd": -710.185
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761825000_1812",
-        "e789b17a-2104-527d-aa7b-aa098ba97233",
-        "lefttinyhare"
-      ],
-      "id": "80fa0c5c-3c43-5567-9e95-c8a3c092958f",
-      "ts": "2026-10-11T23:37:05+00:00",
-      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-      "chain": "solana",
-      "symbol": "DOPE",
-      "side": "buy",
-      "trader": "e789b17a-2104-527d-aa7b-aa098ba97233",
-      "usd": 22635.31
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "2d83dde5-9787-548e-8bec-16dd130bc5eb",
-        "alrt_1791761830000_1813",
-        "shhiunow"
-      ],
-      "id": "4f408498-c829-50a8-8534-9c9a0fc4f4ff",
-      "ts": "2026-10-11T23:37:10+00:00",
-      "mint": "0xaa5751ff3fb61e613993b2eb4eab1fce017081fc",
-      "chain": "robinhood",
-      "symbol": "HYDX",
-      "side": "sell",
-      "trader": "2d83dde5-9787-548e-8bec-16dd130bc5eb",
-      "usd": 542.464
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761855000_1814",
-        "e789b17a-2104-527d-aa7b-aa098ba97233",
-        "lefttinyhare"
-      ],
-      "id": "5309dd04-c9fa-5b9c-a202-aab2140aad73",
-      "ts": "2026-10-11T23:37:35+00:00",
-      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
-      "chain": "solana",
-      "symbol": "QI",
-      "side": "sell",
-      "trader": "e789b17a-2104-527d-aa7b-aa098ba97233",
-      "usd": -1066.38
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761860000_1815",
-        "e789b17a-2104-527d-aa7b-aa098ba97233",
-        "lefttinyhare"
-      ],
-      "id": "3f82ec43-faa5-5a45-849d-9396cc66eac0",
-      "ts": "2026-10-11T23:37:40+00:00",
-      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-      "chain": "solana",
-      "symbol": "DOPE",
-      "side": "buy",
-      "trader": "e789b17a-2104-527d-aa7b-aa098ba97233",
-      "usd": 26386.41
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761875000_1818",
-        "b556354f-8278-566f-b348-0c7b58df5699",
-        "thankg0d"
-      ],
-      "id": "6bd1d5cc-e934-5e2a-b132-410e2ddc7187",
-      "ts": "2026-10-11T23:37:55+00:00",
-      "mint": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
-      "chain": "robinhood",
-      "symbol": "STANDARD",
-      "side": "sell",
-      "trader": "b556354f-8278-566f-b348-0c7b58df5699",
-      "usd": -159.738
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "2d83dde5-9787-548e-8bec-16dd130bc5eb",
-        "alrt_1791761875000_1817",
-        "shhiunow"
-      ],
-      "id": "c50da437-181e-56b4-a2b0-0829a8a1d4db",
-      "ts": "2026-10-11T23:37:55+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "buy",
-      "trader": "2d83dde5-9787-548e-8bec-16dd130bc5eb",
-      "usd": 5814.55
-    },
-    {
-      "thesis_text": "pglpiguet posted a thesis on $CATE: Imagine how every fumble card has ever made you feel. Now picture the 6 figure one CATE will print this month, next, or one after. Not if, but when. Stay convicted and believe the upside. HIGHER.",
-      "trader_ids": [
-        "19624525-133d-5f1e-9660-3a89f7cc0b9f",
-        "alrt_1791761890000_1819",
-        "pglpiguet"
-      ],
-      "id": "c23301b8-318f-4992-b6eb-29ee074a2878",
-      "ts": "2026-10-11T23:38:10+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "19624525-133d-5f1e-9660-3a89f7cc0b9f",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "babycakez posted a thesis on $ZC: Still seeing some high-cost basis Dolphins tap out although the sellers are starting to run dry. \n\nIt’s funny chasing anything in this environment right now. Very little liquidity and relative strength anywhere else to make up for any realized losses. Easier to sit on your hands for a little bit and wait for blue skies. It’s a three-day holiday weekend with a drought of liquidity almost anywhere you try to revenge trade into. Almost anywhere you go, there are other anxious holders ready to dump on you the minute you buy something else. \n\nJust a reminder, this coin is literally the manifestation from Vitalik’s book Snow Moon, essentially a quasi white paper conveniently wrapped in a story. One tweet from a multitude of different parties on X can send this thing to 100 million in one candle. We already saw that happen last time when Trent formally from the EF foundation reached out to the ZIP coin team. That literally sent it to 40 million in 24 hours and it was still arguably low liquidity in that environment during that time, which was just last week. \n\nMeanwhile, the dev team which is suspiciously highly competent is shipping on a roadmap and delivering ahead of schedule. On top of it, they are handling everything egalitarian and not bullposting in some sort of circus. You only hear from them when they ship, and they ship often. This isn’t a pump and dump. There’s a mission going on. That’s the way I like it, and if you’re long this coin, that’s the way you should like it also.\n\nThis project is one of those gems that only comes around once every cycle. This is the second coin to emerge from Vitalik’s mind as far as we know it. \n\nYou literally cannot pack any more of the hottest metas that are defining this cycle into this coin, not to mention there is an entire book of lore injected into this coin. The only thing missing is a reflection reward, and you can get that with $dzhamster which is a stupid low market cap right now. sitting",
-      "trader_ids": [
-        "2a4f1054-b9b8-5829-9c80-9bf3961ff342",
-        "alrt_1791761915000_1820",
-        "babycakez"
-      ],
-      "id": "ebba39d2-19f8-40c8-b58c-b895da3b9ade",
-      "ts": "2026-10-11T23:38:35+00:00",
-      "mint": "0x4e67db19044549ff420860834c91b45bad298722",
-      "chain": "ethereum",
-      "symbol": "ZC",
-      "side": "thesis",
-      "trader": "2a4f1054-b9b8-5829-9c80-9bf3961ff342",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-        "alrt_1791761940000_1823",
-        "gl_aw_at_paragon"
-      ],
-      "id": "d8122e55-14a4-5ac8-90ca-529402a69ecc",
-      "ts": "2026-10-11T23:39:00+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "buy",
-      "trader": "85fb7b04-fdb3-5e2c-8725-a6f8f026cc76",
-      "usd": 12150.57
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791761940000_1822",
-        "c05f5725-0195-5d10-abb3-9ceea78769a0",
-        "doegrags25"
-      ],
-      "id": "2290319c-11cb-5c4d-96ff-e02254cfbc8a",
-      "ts": "2026-10-11T23:39:00+00:00",
-      "mint": "Grass7B4RdKfBCjTKgSqnXkqjwiGvQyFbuSCUJr3XXjs",
-      "chain": "solana",
-      "symbol": "GRASS",
-      "side": "buy",
-      "trader": "c05f5725-0195-5d10-abb3-9ceea78769a0",
-      "usd": 4977.89
-    },
-    {
-      "thesis_text": "daionb20 posted a thesis on $baton: They left us for dead when this coin dipped 90%. Baton will retire a lot of people.",
-      "trader_ids": [
-        "2386bcca-38a9-5f59-aec0-eca69d69b17e",
-        "alrt_1791761940000_1821",
-        "daionb20"
-      ],
-      "id": "a7fa7ec9-543f-4ae4-b62f-156cab32c8b9",
-      "ts": "2026-10-11T23:39:00+00:00",
-      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
-      "chain": "solana",
-      "symbol": "baton",
-      "side": "thesis",
-      "trader": "2386bcca-38a9-5f59-aec0-eca69d69b17e",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "horsekok posted a thesis on $CATE: Cate will hit 1 billion this winter and yall ain’t even ready for it !! It will come when you least expect it. Don’t get sidelined now",
-      "trader_ids": [
-        "5e3be0a3-3594-5dca-8d89-805a4245067b",
-        "alrt_1791761970000_1824",
-        "horsekok"
-      ],
-      "id": "06487528-1dcd-4a71-88f7-f09b07398133",
-      "ts": "2026-10-11T23:39:30+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "5e3be0a3-3594-5dca-8d89-805a4245067b",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "Skyygawd posted a thesis on $QI: Relax. Lets get some new holders in. With size.",
-      "trader_ids": [
-        "4952ce4d-d8f3-5fb2-a8c1-4c8f8d54d62b",
-        "alrt_1791761985000_1825",
-        "skyygawd"
-      ],
-      "id": "3262d0e5-745c-4c55-8445-30d208dc8ba1",
-      "ts": "2026-10-11T23:39:45+00:00",
-      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
-      "chain": "solana",
-      "symbol": "QI",
-      "side": "thesis",
-      "trader": "4952ce4d-d8f3-5fb2-a8c1-4c8f8d54d62b",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "holehighGC posted a thesis on $PRIORS: The calm before the storm.\n\n🌿🌿🍃🍃🌿🌿",
-      "trader_ids": [
-        "alrt_1791761990000_1826",
-        "e4c36edd-7904-5123-bc9d-e08b20f8c1c8",
-        "holehighgc"
-      ],
-      "id": "4057d8c6-887c-49ce-8f07-7f87d77a1b2c",
-      "ts": "2026-10-11T23:39:50+00:00",
-      "mint": "0xedbf91223639800bcd5756815caf908df3b890be",
-      "chain": "robinhood",
-      "symbol": "PRIORS",
-      "side": "thesis",
-      "trader": "e4c36edd-7904-5123-bc9d-e08b20f8c1c8",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xscottiechefflr",
-        "alrt_1791762005000_1827",
-        "b49a7a36-fa2f-592d-9abc-8410e77aebc1"
-      ],
-      "id": "648845d9-e962-512d-9ca1-0b85e9e13360",
-      "ts": "2026-10-11T23:40:05+00:00",
-      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-      "chain": "solana",
-      "symbol": "CLAUDIA",
-      "side": "buy",
-      "trader": "b49a7a36-fa2f-592d-9abc-8410e77aebc1",
-      "usd": 8000.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "27e9831d-a746-5566-9e33-a8eaf702872f",
-        "alrt_1791762030000_1828",
-        "wrld_sol"
-      ],
-      "id": "3fe5bfa4-8d98-5772-b260-0223ac937c43",
-      "ts": "2026-10-11T23:40:30+00:00",
-      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
-      "chain": "solana",
-      "symbol": "QI",
-      "side": "sell",
-      "trader": "27e9831d-a746-5566-9e33-a8eaf702872f",
-      "usd": -4277.01
-    },
     {
       "thesis_text": "0xNoshy posted a thesis on $ZC: zip this bottom and bound for new heights",
       "trader_ids": [
@@ -8691,6 +8211,230 @@
       "side": "buy",
       "trader": "72460ae6-1ddc-5a56-b155-f8e187a4f388",
       "usd": 15307.74
+    },
+    {
+      "thesis_text": "NFTGLO posted a thesis on $CATE: I still feel like I don’t have enough cate.",
+      "trader_ids": [
+        "2169ba17-4aff-5196-930e-2635c0588c78",
+        "alrt_1791775885000_512",
+        "nftglo"
+      ],
+      "id": "be6d6adb-9d43-421e-b11e-075d78400656",
+      "ts": "2026-10-12T03:31:25+00:00",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "chain": "solana",
+      "symbol": "CATE",
+      "side": "thesis",
+      "trader": "2169ba17-4aff-5196-930e-2635c0588c78",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "risktakr_ posted a thesis on $CATE: Prime time",
+      "trader_ids": [
+        "1b518c5b-5399-58c3-b570-e1854d00e2a0",
+        "alrt_1791775910000_513",
+        "risktakr_"
+      ],
+      "id": "a6e02f8f-497e-4e7e-b0d4-76c932099c4a",
+      "ts": "2026-10-12T03:31:50+00:00",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "chain": "solana",
+      "symbol": "CATE",
+      "side": "thesis",
+      "trader": "1b518c5b-5399-58c3-b570-e1854d00e2a0",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "9837911a-1b4e-5566-bd65-adf705487a06",
+        "alrt_1791775985000_514",
+        "emotionaltrador"
+      ],
+      "id": "43283683-7624-5826-a239-7cd20ec3b61b",
+      "ts": "2026-10-12T03:33:05+00:00",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "chain": "solana",
+      "symbol": "STONK",
+      "side": "buy",
+      "trader": "9837911a-1b4e-5566-bd65-adf705487a06",
+      "usd": 22415.73
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "41380509-55e1-51cb-b87e-388d7ae42350",
+        "alrt_1791776065000_515",
+        "shootingguard"
+      ],
+      "id": "a4d7bb72-a92b-58a1-a86b-c161f2539f95",
+      "ts": "2026-10-12T03:34:25+00:00",
+      "mint": "0x4c067de26475e1cefee8b8d1f6e2266b33a2372e",
+      "chain": "bsc",
+      "symbol": "RHEA",
+      "side": "sell",
+      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
+      "usd": 1662.75
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "41380509-55e1-51cb-b87e-388d7ae42350",
+        "alrt_1791776085000_516",
+        "shootingguard"
+      ],
+      "id": "9feafd06-fd26-5458-8236-bee4d045d43f",
+      "ts": "2026-10-12T03:34:45+00:00",
+      "mint": "0x4c067de26475e1cefee8b8d1f6e2266b33a2372e",
+      "chain": "bsc",
+      "symbol": "RHEA",
+      "side": "sell",
+      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
+      "usd": 1611.99
+    },
+    {
+      "thesis_text": "blockchainz555 posted a thesis on $CATE: Kingmaker",
+      "trader_ids": [
+        "alrt_1791776200000_517",
+        "blockchainz555",
+        "f5a224e2-8025-51dc-b7e0-b8c8a226bdbb"
+      ],
+      "id": "23fca5dc-dc54-4828-90ee-c4989ba174cc",
+      "ts": "2026-10-12T03:36:40+00:00",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "chain": "solana",
+      "symbol": "CATE",
+      "side": "thesis",
+      "trader": "f5a224e2-8025-51dc-b7e0-b8c8a226bdbb",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "6c6676a8-58b0-50a6-b96a-bff916ea4372",
+        "alrt_1791776205000_518",
+        "traderansoze"
+      ],
+      "id": "0d7626e2-eee5-594a-9467-14ac8269ac43",
+      "ts": "2026-10-12T03:36:45+00:00",
+      "mint": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+      "chain": "robinhood",
+      "symbol": "STANDARD",
+      "side": "sell",
+      "trader": "6c6676a8-58b0-50a6-b96a-bff916ea4372",
+      "usd": 1153.5
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "6c6676a8-58b0-50a6-b96a-bff916ea4372",
+        "alrt_1791776220000_519",
+        "traderansoze"
+      ],
+      "id": "a64b8f86-20e9-5d53-86ec-5c5e35b856f7",
+      "ts": "2026-10-12T03:37:00+00:00",
+      "mint": "0x88ad8ddf1e3898412146a534538d418c6f8a9062",
+      "chain": "robinhood",
+      "symbol": "STANDARD",
+      "side": "sell",
+      "trader": "6c6676a8-58b0-50a6-b96a-bff916ea4372",
+      "usd": 2231.94
+    },
+    {
+      "thesis_text": "DopamineFeenFr1 posted a thesis on $SAPLING: Saplined?",
+      "trader_ids": [
+        "a3d6096e-59eb-5684-a9fe-0048e07a0eb4",
+        "alrt_1791776235000_520",
+        "dopaminefeenfr1"
+      ],
+      "id": "60f52bfe-f565-4552-a8a5-123b3daadff5",
+      "ts": "2026-10-12T03:37:15+00:00",
+      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "chain": "solana",
+      "symbol": "SAPLING",
+      "side": "thesis",
+      "trader": "a3d6096e-59eb-5684-a9fe-0048e07a0eb4",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "Boreinnovations posted a thesis on $BORDR: We going to 10 million tonight",
+      "trader_ids": [
+        "2277fad0-9b95-57b8-b754-41570955508a",
+        "alrt_1791776325000_523",
+        "boreinnovations"
+      ],
+      "id": "c48e688d-b41c-43d5-a3e9-d5209a1c59ef",
+      "ts": "2026-10-12T03:38:45+00:00",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "chain": "solana",
+      "symbol": "BORDR",
+      "side": "thesis",
+      "trader": "2277fad0-9b95-57b8-b754-41570955508a",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "Skyygawd posted a thesis on $QI: $QI. Have a good rest of yalls weekend. Going to eat some tacos and chill. Back to work tomorrow, I’m sure like most of you. Let’s try to keep the chart going in the right direction. 🐶",
+      "trader_ids": [
+        "4952ce4d-d8f3-5fb2-a8c1-4c8f8d54d62b",
+        "alrt_1791776390000_525",
+        "skyygawd"
+      ],
+      "id": "28e195af-fbcb-4c65-8e5c-2cb57b3e4821",
+      "ts": "2026-10-12T03:39:50+00:00",
+      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
+      "chain": "solana",
+      "symbol": "QI",
+      "side": "thesis",
+      "trader": "4952ce4d-d8f3-5fb2-a8c1-4c8f8d54d62b",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "0c34f196-5c6a-5ed9-9e98-971a88eac32b",
+        "alrt_1791776400000_526",
+        "cryptofi_18"
+      ],
+      "id": "c2fd80bb-504f-5e13-8609-881cd2959292",
+      "ts": "2026-10-12T03:40:00+00:00",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "chain": "solana",
+      "symbol": "STONK",
+      "side": "buy",
+      "trader": "0c34f196-5c6a-5ed9-9e98-971a88eac32b",
+      "usd": 3285.41
+    },
+    {
+      "thesis_text": "skydawg posted a thesis on $CATE: Come join the space https://x.com/thebankcalledtd/status/2109480319921373610?s=46",
+      "trader_ids": [
+        "alrt_1791776405000_527",
+        "e2ea0597-fc1a-5100-be9d-51df5f34ffad",
+        "skydawg"
+      ],
+      "id": "daecef12-fa04-4865-bd51-7a68cbe23abf",
+      "ts": "2026-10-12T03:40:05+00:00",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "chain": "solana",
+      "symbol": "CATE",
+      "side": "thesis",
+      "trader": "e2ea0597-fc1a-5100-be9d-51df5f34ffad",
+      "usd": 0.0
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "9837911a-1b4e-5566-bd65-adf705487a06",
+        "alrt_1791776425000_528",
+        "emotionaltrador"
+      ],
+      "id": "de991a4f-9a19-54f1-82e9-3699a58ccb9c",
+      "ts": "2026-10-12T03:40:25+00:00",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "chain": "solana",
+      "symbol": "STONK",
+      "side": "sell",
+      "trader": "9837911a-1b4e-5566-bd65-adf705487a06",
+      "usd": 174.436
     }
   ],
   "top10": [
@@ -8698,7 +8442,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 31,
+      "mentions": 27,
       "buys": 1,
       "sells": 1,
       "buy_usd": 10044.7,
@@ -8708,15 +8452,15 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 3,
+      "recent_mentions": 6,
       "recent_friends": 0,
-      "language_analyzed_count": 31,
-      "language_positive_count": 5,
+      "language_analyzed_count": 27,
+      "language_positive_count": 4,
       "language_negative_count": 1,
-      "language_neutral_count": 25,
-      "language_sentiment_score": 12.9,
+      "language_neutral_count": 22,
+      "language_sentiment_score": 11.1,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 26,
+      "unique_traders": 23,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -8731,28 +8475,28 @@
       "symbol": "QI",
       "mentions": 7,
       "buys": 18,
-      "sells": 10,
+      "sells": 7,
       "buy_usd": 730727.61,
-      "sell_usd": 20081.82,
+      "sell_usd": 14028.24,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 3,
       "recent_friends": 0,
       "language_analyzed_count": 7,
-      "language_positive_count": 2,
+      "language_positive_count": 3,
       "language_negative_count": 0,
-      "language_neutral_count": 5,
-      "language_sentiment_score": 28.6,
+      "language_neutral_count": 4,
+      "language_sentiment_score": 42.9,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 13,
+      "unique_traders": 12,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 710645.79,
-      "activity_sentiment_score": 94.7,
+      "net_usd": 716699.37,
+      "activity_sentiment_score": 96.2,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -8789,13 +8533,44 @@
     },
     {
       "chain": "solana",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "symbol": "BORDR",
+      "mentions": 5,
+      "buys": 13,
+      "sells": 15,
+      "buy_usd": 94864.55,
+      "sell_usd": 82431.56,
+      "followed_buys": 1,
+      "followed_sells": 0,
+      "followed_mentions": 0,
+      "friends_buy_usd": 8512.56,
+      "friends_sell_usd": 0,
+      "recent_mentions": 1,
+      "recent_friends": 0,
+      "language_analyzed_count": 5,
+      "language_positive_count": 0,
+      "language_negative_count": 0,
+      "language_neutral_count": 5,
+      "language_sentiment_score": 0.0,
+      "language_sentiment_label": "NEUTRAL",
+      "unique_traders": 23,
+      "friends_unique_traders": 1,
+      "friends_net_usd": 8512.56,
+      "friends_activity": 1,
+      "net_usd": 12432.99,
+      "activity_sentiment_score": 15.2,
+      "activity_sentiment_label": "MIXED",
+      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
+    },
+    {
+      "chain": "solana",
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
       "symbol": "STONK",
       "mentions": 8,
-      "buys": 5,
-      "sells": 5,
-      "buy_usd": 2064496.44,
-      "sell_usd": 1507.5,
+      "buys": 7,
+      "sells": 6,
+      "buy_usd": 2090197.58,
+      "sell_usd": 1681.93,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
@@ -8809,12 +8584,12 @@
       "language_neutral_count": 7,
       "language_sentiment_score": 12.5,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 11,
+      "unique_traders": 13,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 2062988.94,
-      "activity_sentiment_score": 99.9,
+      "net_usd": 2088515.65,
+      "activity_sentiment_score": 99.8,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -8832,7 +8607,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 4,
+      "recent_mentions": 3,
       "recent_friends": 0,
       "language_analyzed_count": 5,
       "language_positive_count": 0,
@@ -8851,43 +8626,12 @@
     },
     {
       "chain": "solana",
-      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
-      "symbol": "BORDR",
-      "mentions": 4,
-      "buys": 13,
-      "sells": 15,
-      "buy_usd": 94864.55,
-      "sell_usd": 82431.56,
-      "followed_buys": 1,
-      "followed_sells": 0,
-      "followed_mentions": 0,
-      "friends_buy_usd": 8512.56,
-      "friends_sell_usd": 0,
-      "recent_mentions": 0,
-      "recent_friends": 0,
-      "language_analyzed_count": 4,
-      "language_positive_count": 0,
-      "language_negative_count": 0,
-      "language_neutral_count": 4,
-      "language_sentiment_score": 0.0,
-      "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 23,
-      "friends_unique_traders": 1,
-      "friends_net_usd": 8512.56,
-      "friends_activity": 1,
-      "net_usd": 12432.99,
-      "activity_sentiment_score": 15.2,
-      "activity_sentiment_label": "MIXED",
-      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
-    },
-    {
-      "chain": "solana",
       "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
       "symbol": "DOPE",
       "mentions": 4,
-      "buys": 9,
+      "buys": 7,
       "sells": 8,
-      "buy_usd": 132406.27,
+      "buy_usd": 83384.55,
       "sell_usd": 20663.36,
       "followed_buys": 0,
       "followed_sells": 2,
@@ -8906,8 +8650,8 @@
       "friends_unique_traders": 1,
       "friends_net_usd": -2887.88,
       "friends_activity": 2,
-      "net_usd": 111742.91,
-      "activity_sentiment_score": 66.7,
+      "net_usd": 62721.19,
+      "activity_sentiment_score": 51.9,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -9010,7 +8754,7 @@
   "followed_count": 70,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
-  "last_fetch_at_utc": "2026-10-12T03:30:54.336900+00:00",
+  "last_fetch_at_utc": "2026-10-12T03:40:32.031544+00:00",
   "friends_summary": {
     "matched_events": 5,
     "tokens": 4,
@@ -9020,7 +8764,7 @@
     "buy_usd": 23820.3,
     "sell_usd": 2887.88
   },
-  "events_count": 543,
+  "events_count": 527,
   "matched_followed_events": 5,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
