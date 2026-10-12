@@ -1,57 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:48:25.649010+00:00",
+  "updated_at_utc": "2026-10-12T08:50:50.082912+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "rapp01 posted a thesis on $DARK: 1D looking tough!!! 💪",
-      "trader_ids": [
-        "abfa30f0-9495-5946-9ef4-8abf9670970b",
-        "alrt_1791780580000_718",
-        "rapp01"
-      ],
-      "id": "095f418c-b560-4706-82b0-247de8380130",
-      "ts": "2026-10-12T04:49:40+00:00",
-      "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
-      "chain": "solana",
-      "symbol": "DARK",
-      "side": "thesis",
-      "trader": "abfa30f0-9495-5946-9ef4-8abf9670970b",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791780625000_719",
-        "kv4rl"
-      ],
-      "id": "a4344077-9210-514c-a436-cf8e93430fca",
-      "ts": "2026-10-12T04:50:25+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 14378.78
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791780650000_720",
-        "kv4rl"
-      ],
-      "id": "b4493ba3-b386-5e13-8a9b-759c67cb63d7",
-      "ts": "2026-10-12T04:50:50+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 19284.75
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -6252,7 +6204,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 370,
+  "events_count": 367,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
