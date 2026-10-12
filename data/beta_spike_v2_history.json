@@ -50,15 +50,29 @@
       "price_5m_usd": 0.00182,
       "observed_5m_at_utc": "2026-10-12T10:24:16.963008+00:00",
       "measurement_delay_minutes": 5.98
+    },
+    {
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_qualified_at_utc": "2026-10-12T19:36:16.801441+00:00",
+      "first_alert_at_utc": "2026-10-12T19:40:26.055178+00:00",
+      "alert_price_usd": 0.004578,
+      "change_15m_pct": 9.92,
+      "buys_5m": 31,
+      "sells_5m": 0,
+      "liquidity_usd": 556188.5,
+      "status": "PENDING",
+      "return_5m_pct": null,
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null
     }
   ],
-  "pending_confirmation": {
-    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": {
-      "timestamp": "2026-10-12T19:36:16.801441+00:00"
-    }
+  "pending_confirmation": {},
+  "active_alerts": {
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
   },
-  "active_alerts": {},
   "schema_version": 1,
-  "updated_at_utc": "2026-10-12T19:38:16.770679+00:00",
+  "updated_at_utc": "2026-10-12T19:40:26.055178+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, two 4–12m-spaced qualifying snapshots"
 }
