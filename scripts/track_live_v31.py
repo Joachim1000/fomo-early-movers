@@ -63,7 +63,7 @@ for x in latest.get("eligible_4h_candidates",[]):
           "acceleration_pct_points":round(acceleration,3) if acceleration is not None else None,
           "buys_5m":buys,"sells_5m":sells,"buy_sell_ratio":round(ratio,3),
           "liquidity_usd":liquidity,"volume_5m_usd":volume,
-          "v3_shadow_score":round(score,3),
+          "v31_heuristic_score":round(score,3),
           "return_15m_pct":None,"return_30m_pct":None,"return_60m_pct":None}
     current.append(item)
 
@@ -129,12 +129,11 @@ for x in current:
         score=round(100/(1+math.exp(-logit)),2)
     ranking.append({"mint":x["mint"],"pair_address":x["pair_address"],"symbol":x.get("symbol"),
                     "observed_at_utc":stamp,"entry_price_usd":x.get("entry_price_usd"),
-                    "predicted_10m_gain_probability_pct":score,"candidate_source":"DIRECT_MARKET_SNAPSHOT","v31_heuristic_score":x.get("v3_shadow_score"),"change_15m_pct":x.get("change_15m_pct"),"buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
+                    "predicted_10m_gain_probability_pct":score,"candidate_source":"DIRECT_MARKET_SNAPSHOT","v31_heuristic_score":x.get("v31_heuristic_score"),"change_15m_pct":x.get("change_15m_pct"),"buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
 if trained:ranking.sort(key=lambda x:x["predicted_10m_gain_probability_pct"],reverse=True)
 else:ranking.sort(key=lambda x:x["v31_heuristic_score"],reverse=True)
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
-    x["v3_top10_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
 # Store one observation per mint/pair/timestamp. Only TOP 10 entries carry
 # v31_rank; all other candidates remain eligible for independent ML training.
@@ -152,7 +151,6 @@ for x in ranking[:10]:
     row=existing.get(key)
     if row is not None:
         row["v31_rank"]=x["v31_rank"]
-        row["v3_top10_rank"]=x["v31_rank"] # compatibility with existing display
         row["predicted_10m_gain_probability_pct"]=x["predicted_10m_gain_probability_pct"]
 prior["observations"]=sorted(existing.values(),key=lambda x:x.get("observed_at_utc") or "")[-10000:]
 prior.update({"generated_at_utc":stamp,"model":"L2_LOGISTIC_REGRESSION","trained":trained,
