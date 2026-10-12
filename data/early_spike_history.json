@@ -242,7 +242,23 @@
       "measurement_10m_delay_minutes": 10.03,
       "return_10m_pct": -7.0,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "HbXn9Lcug7KrXxLr6TrKFe1pymCmqbVb3kbP9N1Kpump",
+      "pair_address": "8Nm7gTnDvSom7C7uGmZ8FGgjRaW6ydHMCLLmw8JpUZsn",
+      "symbol": "PUMPATAR",
+      "first_alert_at_utc": "2026-10-12T09:16:16.102782+00:00",
+      "alert_price_usd": 9.584e-05,
+      "initial_15m_change_pct": 8.82,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-12T09:14:16.500905+00:00"
+  "updated_at_utc": "2026-10-12T09:16:16.102782+00:00"
 }
