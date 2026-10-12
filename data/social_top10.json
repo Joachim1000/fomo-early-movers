@@ -1,73 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:01:06.774243+00:00",
+  "updated_at_utc": "2026-10-12T09:02:30.975485+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "388f5e1b-908e-557b-b4c2-0c4bf98822df",
-        "alrt_1791781275000_739",
-        "steepsaltybison"
-      ],
-      "id": "5ef73ff9-f5df-57a8-8440-402b405d0892",
-      "ts": "2026-10-12T05:01:15+00:00",
-      "mint": "0xca14007eff0db1f8135f4c25b34de49ab0d42766",
-      "chain": "ethereum",
-      "symbol": "STRK",
-      "side": "sell",
-      "trader": "388f5e1b-908e-557b-b4c2-0c4bf98822df",
-      "usd": 1125.64
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791781275000_738",
-        "b60ff208-fab3-5af2-92e7-71f14edc423d",
-        "wormfood"
-      ],
-      "id": "16572e01-4967-5c85-8d71-dc1b11124a55",
-      "ts": "2026-10-12T05:01:15+00:00",
-      "mint": "0xdd806e436dda5588bf54061c11590c77ddc87777",
-      "chain": "bsc",
-      "symbol": "SAFU",
-      "side": "sell",
-      "trader": "b60ff208-fab3-5af2-92e7-71f14edc423d",
-      "usd": 21508.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "388f5e1b-908e-557b-b4c2-0c4bf98822df",
-        "alrt_1791781280000_740",
-        "steepsaltybison"
-      ],
-      "id": "27063e49-c2b5-5435-89b8-8197650c2443",
-      "ts": "2026-10-12T05:01:20+00:00",
-      "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "chain": "solana",
-      "symbol": "W",
-      "side": "buy",
-      "trader": "388f5e1b-908e-557b-b4c2-0c4bf98822df",
-      "usd": 5159.2
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791781285000_741",
-        "czizzy",
-        "e57fa8d1-087a-5877-8c3c-1ded70678552"
-      ],
-      "id": "7cfc72b0-51f4-5bbf-9db6-5805912cd8ef",
-      "ts": "2026-10-12T05:01:25+00:00",
-      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-      "chain": "solana",
-      "symbol": "CLAUDIA",
-      "side": "sell",
-      "trader": "e57fa8d1-087a-5877-8c3c-1ded70678552",
-      "usd": -576.569
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -5674,9 +5610,9 @@
       "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "symbol": "W",
       "mentions": 0,
-      "buys": 23,
+      "buys": 22,
       "sells": 2,
-      "buy_usd": 821526.22,
+      "buy_usd": 816367.02,
       "sell_usd": 84.12,
       "followed_buys": 12,
       "followed_sells": 0,
@@ -5691,11 +5627,11 @@
       "language_neutral_count": 0,
       "language_sentiment_score": null,
       "language_sentiment_label": "NOT VERIFIED",
-      "unique_traders": 11,
+      "unique_traders": 10,
       "friends_unique_traders": 1,
       "friends_net_usd": 720129.93,
       "friends_activity": 12,
-      "net_usd": 821442.1,
+      "net_usd": 816282.9,
       "activity_sentiment_score": 100.0,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
@@ -5768,9 +5704,9 @@
       "symbol": "CLAUDIA",
       "mentions": 1,
       "buys": 4,
-      "sells": 20,
+      "sells": 19,
       "buy_usd": 41266.98,
-      "sell_usd": 352079.41,
+      "sell_usd": 351502.84,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
@@ -5784,11 +5720,11 @@
       "language_neutral_count": 1,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 18,
+      "unique_traders": 17,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": -310812.43,
+      "net_usd": -310235.86,
       "activity_sentiment_score": -79.0,
       "activity_sentiment_label": "NEGATIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
@@ -5964,7 +5900,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 352,
+  "events_count": 348,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
