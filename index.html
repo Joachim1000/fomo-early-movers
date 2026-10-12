@@ -405,16 +405,17 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
 }</script><script>
 /* Independent navigation recovery: works even if market-data scripts fail. */
 (function(){
- const tabs={'betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','socialTab':'social','spikeTab':'spike','betaTab':'beta','performanceTab':'performance'};
+ const tabs={'betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','socialTab':'social','spikeTab':'spike','betaTab':'beta','performanceTab':'performance','myTokensTab':'my-tokens'};
  function navigate(tab){
   const b=document.body;if(!b)return;
-  for(const mode of ['performance','daily','social','spike','beta','beta-live','v3','v3-daily','beta-daily'])b.classList.toggle(mode+'-mode',mode===tab);
+  for(const mode of ['performance','daily','social','spike','beta','beta-live','v3','v3-daily','beta-daily','my-tokens'])b.classList.toggle(mode+'-mode',mode===tab);
   for(const [id,value] of Object.entries(tabs)){const n=document.getElementById(id);if(n)n.classList.toggle('active',value===tab)}
-  for(const [id,visible] of [['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily'],['socialView',tab==='social']]){const n=document.getElementById(id);if(n)n.style.display=visible?(id==='socialView'?'block':'flex'):'none'}
+  for(const [id,visible] of [['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily'],['socialView',tab==='social'],['myTokensView',tab==='my-tokens']]){const n=document.getElementById(id);if(n)n.style.display=visible?(id==='socialView'?'block':'flex'):'none'}
   const p=document.getElementById('performanceView');if(p)p.style.display=tab==='performance'?'block':'none';
   const layout=document.querySelector('.layout');if(layout)layout.style.display=tab==='performance'?'none':'';
   if(tab==='performance'&&typeof window.loadLiveExtended==='function')Promise.resolve().then(()=>window.loadLiveExtended()).catch(console.error);
   if(tab==='v3'&&typeof window.refreshV3Beta==='function')Promise.resolve().then(()=>window.refreshV3Beta()).catch(console.error);
+  if(tab==='my-tokens'&&typeof window.loadMyTokens==='function')Promise.resolve().then(()=>window.loadMyTokens()).catch(console.error);
   if(tab==='v3-daily'&&typeof window.loadV3Daily==='function')Promise.resolve().then(()=>window.loadV3Daily()).catch(console.error);
   try{sessionStorage.setItem('fomo-active-tab',tab)}catch(e){}
   window.scrollTo(0,0);
