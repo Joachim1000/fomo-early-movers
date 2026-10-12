@@ -632,10 +632,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+      "pair_address": "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+      "symbol": "PQC",
+      "first_alert_at_utc": "2026-10-12T12:33:20.688183+00:00",
+      "alert_price_usd": 0.0005492,
+      "initial_15m_change_pct": 13.64,
+      "buys_5m": 22,
+      "sells_5m": 13,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "HbXn9Lcug7KrXxLr6TrKFe1pymCmqbVb3kbP9N1Kpump|8Nm7gTnDvSom7C7uGmZ8FGgjRaW6ydHMCLLmw8JpUZsn": true
+    "HbXn9Lcug7KrXxLr6TrKFe1pymCmqbVb3kbP9N1Kpump|8Nm7gTnDvSom7C7uGmZ8FGgjRaW6ydHMCLLmw8JpUZsn": true,
+    "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh|6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS": true
   },
-  "updated_at_utc": "2026-10-12T12:32:20.860996+00:00"
+  "updated_at_utc": "2026-10-12T12:33:20.688183+00:00"
 }
