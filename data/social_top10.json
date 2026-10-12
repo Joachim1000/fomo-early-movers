@@ -1,73 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T04:15:43.237356+00:00",
+  "updated_at_utc": "2026-10-12T04:20:31.662993+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9283cf7d-34cb-5e40-934e-c105ed6fe963",
-        "alrt_1791764145000_1933",
-        "nirha"
-      ],
-      "id": "d852eaa3-757b-582d-b25c-ade09c141894",
-      "ts": "2026-10-12T00:15:45+00:00",
-      "mint": "0xedbf91223639800bcd5756815caf908df3b890be",
-      "chain": "robinhood",
-      "symbol": "PRIORS",
-      "side": "sell",
-      "trader": "9283cf7d-34cb-5e40-934e-c105ed6fe963",
-      "usd": -875.997
-    },
-    {
-      "thesis_text": "ContrarianLibrarian posted a thesis on $DARK: $DARK update: 644 wNEAR airdropped. System upgrade paused airdrop worker.\n\nZEC-DARK LP TVL: $5.9K to $48.5K (Oct 5-10). Protocol-compounding (2.23 ZEC added)\n\nRewards paid: 7,102.61 wNEAR\n~$50.3K at current prices, excluding LP liquidity.\n\nhttps://x.com/darkswapapp/status/2109119167387619774?s=46",
-      "trader_ids": [
-        "05b484c1-cf28-51d8-bbb9-073c8feebc8c",
-        "alrt_1791764150000_1",
-        "contrarianlibrarian"
-      ],
-      "id": "0c3fc118-34ff-4c6f-996e-7820dd1df9e5",
-      "ts": "2026-10-12T00:15:50+00:00",
-      "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
-      "chain": "solana",
-      "symbol": "DARK",
-      "side": "thesis",
-      "trader": "05b484c1-cf28-51d8-bbb9-073c8feebc8c",
-      "usd": 50300.0
-    },
-    {
-      "thesis_text": "Sohrab posted a thesis on $CLAUDIA: Love that all songs are on SXSI.com",
-      "trader_ids": [
-        "a334454b-fc41-5cb5-a090-45bf22747fe6",
-        "alrt_1791764315000_2",
-        "sohrab"
-      ],
-      "id": "0fc5cdb5-6e30-47ff-8a47-d7ef5e348457",
-      "ts": "2026-10-12T00:18:35+00:00",
-      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-      "chain": "solana",
-      "symbol": "CLAUDIA",
-      "side": "thesis",
-      "trader": "a334454b-fc41-5cb5-a090-45bf22747fe6",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "rarris posted a thesis on $Basecat: You know the cat is destined when the price goes up and you’re like damn I shoulda bought more…",
-      "trader_ids": [
-        "54e61a65-7d31-52b2-82d4-98d20e6877be",
-        "alrt_1791764390000_3",
-        "rarris"
-      ],
-      "id": "e8270508-d6ab-4dc7-9a8a-8fd90281c812",
-      "ts": "2026-10-12T00:19:50+00:00",
-      "mint": "0xb2000000000000000000004c27f6523082f41d01",
-      "chain": "base",
-      "symbol": "Basecat",
-      "side": "thesis",
-      "trader": "54e61a65-7d31-52b2-82d4-98d20e6877be",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -8228,7 +8164,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 9,
+      "recent_mentions": 8,
       "recent_friends": 0,
       "language_analyzed_count": 29,
       "language_positive_count": 4,
@@ -8259,7 +8195,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 4,
+      "recent_mentions": 3,
       "recent_friends": 0,
       "language_analyzed_count": 8,
       "language_positive_count": 1,
@@ -8540,7 +8476,7 @@
     "buy_usd": 23820.3,
     "sell_usd": 6553.12
   },
-  "events_count": 513,
+  "events_count": 509,
   "matched_followed_events": 6,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
