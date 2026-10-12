@@ -148,11 +148,28 @@
       "buys_5m": 135,
       "sells_5m": 67,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0004694,
+      "observed_5m_at_utc": "2026-10-12T08:25:27.411853+00:00",
+      "return_5m_pct": -15.58,
+      "measurement_delay_minutes": 9.92
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump",
+      "pair_address": "4dviwKE48543C5CAwBxoE4aeTv5go1wq3gD5UViFguRa",
+      "symbol": "Solamians",
+      "first_alert_at_utc": "2026-10-12T08:25:27.411853+00:00",
+      "alert_price_usd": 0.0004527,
+      "initial_15m_change_pct": 10.47,
+      "buys_5m": 10,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-12T08:20:24.857492+00:00"
+  "updated_at_utc": "2026-10-12T08:25:27.411853+00:00"
 }

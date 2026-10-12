@@ -1,57 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:20:50.838634+00:00",
+  "updated_at_utc": "2026-10-12T08:25:36.350423+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xace_eth",
-        "alrt_1791778960000_638",
-        "d5b46f2d-53e9-540a-b006-4237867413dc"
-      ],
-      "id": "d3f3af87-c73c-5d39-a79d-4a91413f0636",
-      "ts": "2026-10-12T04:22:40+00:00",
-      "mint": "0xcafdbce93477261db8250e42bdae6e66733f9e20",
-      "chain": "bsc",
-      "symbol": "GSTOCK",
-      "side": "sell",
-      "trader": "d5b46f2d-53e9-540a-b006-4237867413dc",
-      "usd": 23034.62
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "6de07abb-f16f-5307-a1bb-801b084cec2e",
-        "alrt_1791779035000_639",
-        "prometheusx91"
-      ],
-      "id": "2627a8fe-625e-58a9-9b1d-32375cbd7c85",
-      "ts": "2026-10-12T04:23:55+00:00",
-      "mint": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
-      "chain": "robinhood",
-      "symbol": "AI",
-      "side": "sell",
-      "trader": "6de07abb-f16f-5307-a1bb-801b084cec2e",
-      "usd": -921.406
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "7uego",
-        "alrt_1791779055000_640",
-        "efa0109a-f77b-5ed0-a591-8a954368a93f"
-      ],
-      "id": "eef48216-ecc3-536e-bca9-0aa16551b8c9",
-      "ts": "2026-10-12T04:24:15+00:00",
-      "mint": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
-      "chain": "robinhood",
-      "symbol": "AI",
-      "side": "sell",
-      "trader": "efa0109a-f77b-5ed0-a591-8a954368a93f",
-      "usd": -710.204
-    },
     {
       "thesis_text": "3572875304857 posted a thesis on $HOTBOT: Hotbot $444m 👀",
       "trader_ids": [
@@ -6580,7 +6532,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 7,
+      "recent_mentions": 6,
       "recent_friends": 0,
       "language_analyzed_count": 39,
       "language_positive_count": 2,
@@ -6892,7 +6844,7 @@
     "buy_usd": 251661.0,
     "sell_usd": 9830.09
   },
-  "events_count": 410,
+  "events_count": 407,
   "matched_followed_events": 10,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
