@@ -420,7 +420,7 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
 }</script><script>
 /* Independent navigation recovery: works even if market-data scripts fail. */
 (function(){
- const tabs={'betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','socialTab':'spikeTab':'spike','betaTab':'beta','performanceTab':'performance','myTokensTab':'my-tokens'};
+ const tabs={'betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','spikeTab':'spike','betaTab':'beta','performanceTab':'performance','myTokensTab':'my-tokens'};
  function navigate(tab){
   const b=document.body;if(!b)return;window.activeDashboardTab=tab;if(typeof window.updateDataAge==='function')window.updateDataAge();
   for(const mode of ['performance','daily','spike','beta','beta-live','v3','v3-daily','beta-daily','my-tokens'])b.classList.toggle(mode+'-mode',mode===tab);
