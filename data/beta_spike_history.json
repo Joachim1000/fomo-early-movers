@@ -550,8 +550,26 @@
       "measurement_10m_delay_minutes": 14.99,
       "return_10m_pct": -10.57,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
+      "pair_address": "G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh",
+      "symbol": "CYBERLEEK",
+      "first_alert_at_utc": "2026-10-12T06:40:22.630143+00:00",
+      "alert_price_usd": 0.004312,
+      "initial_15m_change_pct": 7.99,
+      "buys_5m": 59,
+      "sells_5m": 33,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T06:35:17.426829+00:00"
+  "active_alerts": {
+    "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg|G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh": true
+  },
+  "updated_at_utc": "2026-10-12T06:40:22.630143+00:00"
 }
