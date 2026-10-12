@@ -1,25 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:08:25.591307+00:00",
+  "updated_at_utc": "2026-10-12T09:10:34.776309+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791781755000_760",
-        "b6de500d-d872-5f32-873d-bad4bd0eb4c5",
-        "cryptoaj_eth"
-      ],
-      "id": "ccd33417-0107-5ca1-9039-1d92c9ea659f",
-      "ts": "2026-10-12T05:09:15+00:00",
-      "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
-      "chain": "solana",
-      "symbol": "ZCAT",
-      "side": "sell",
-      "trader": "b6de500d-d872-5f32-873d-bad4bd0eb4c5",
-      "usd": 2752.81
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -5332,7 +5316,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 3,
+      "recent_mentions": 2,
       "recent_friends": 0,
       "language_analyzed_count": 37,
       "language_positive_count": 2,
@@ -5644,7 +5628,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 332,
+  "events_count": 331,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
