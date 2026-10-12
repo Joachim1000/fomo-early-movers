@@ -1,41 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:36:32.566068+00:00",
+  "updated_at_utc": "2026-10-12T09:38:27.447080+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9ae0846e-02cd-5a4d-a604-4ee72c7ab5c9",
-        "alrt_1791783430000_817",
-        "noriega"
-      ],
-      "id": "3f48a171-b703-5e02-940c-e1c83b21b139",
-      "ts": "2026-10-12T05:37:10+00:00",
-      "mint": "GTBxUiw6wJdmmkCGZgRHLyYxqu1vG4KtRpeox6yDpump",
-      "chain": "solana",
-      "symbol": "JEANPHIL",
-      "side": "buy",
-      "trader": "9ae0846e-02cd-5a4d-a604-4ee72c7ab5c9",
-      "usd": 35226.03
-    },
-    {
-      "thesis_text": "_jaky_ posted a thesis on $CATE: Cate to trillions",
-      "trader_ids": [
-        "_jaky_",
-        "alrt_1791783480000_819",
-        "e8f2b38b-6b58-572b-a760-4efd96e3b706"
-      ],
-      "id": "3429def3-8743-41b3-a0a7-27e86d3d207c",
-      "ts": "2026-10-12T05:38:00+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "e8f2b38b-6b58-572b-a760-4efd96e3b706",
-      "usd": 0.0
-    },
     {
       "thesis_text": "Yusufff posted a thesis on $CATE: The last time volume like this came into CATE and we started moving we went in ahead to break ATH, because people thinking they were gonna wait for an entry  are gonna fomo in, but let’s see where this takes us",
       "trader_ids": [
@@ -5002,7 +4970,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 26,
+      "mentions": 25,
       "buys": 1,
       "sells": 2,
       "buy_usd": 5257.8,
@@ -5014,13 +4982,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 0,
       "recent_friends": 0,
-      "language_analyzed_count": 26,
+      "language_analyzed_count": 25,
       "language_positive_count": 1,
       "language_negative_count": 1,
-      "language_neutral_count": 24,
+      "language_neutral_count": 23,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
-      "unique_traders": 25,
+      "unique_traders": 24,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -5324,7 +5292,7 @@
     "buy_usd": 741905.76,
     "sell_usd": 9080.69
   },
-  "events_count": 312,
+  "events_count": 310,
   "matched_followed_events": 17,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
