@@ -52,9 +52,13 @@
       "measurement_delay_minutes": 5.98
     }
   ],
-  "pending_confirmation": {},
+  "pending_confirmation": {
+    "2ikMciSZ1nK1X9E8X7U5trw3Tc9jW1Ud7FjrhAxPpump|GFDHU8mUjXDVx98pBvhfpzEJQNYp8VZFy21R5sxXe2Ad": {
+      "timestamp": "2026-10-12T13:30:54.338922+00:00"
+    }
+  },
   "active_alerts": {},
   "schema_version": 1,
-  "updated_at_utc": "2026-10-12T13:26:23.571751+00:00",
+  "updated_at_utc": "2026-10-12T13:30:54.338922+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, two 4–12m-spaced qualifying snapshots"
 }
