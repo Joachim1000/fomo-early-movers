@@ -425,10 +425,10 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
  window.fomoNavigate=navigate;
 })();
 </script><script>
-/* Opt-in alerts for new EARLY SPIKE and BETA SPIKE candidates. */
+/* Opt-in alerts for new BETA SPIKE candidates only. */
 (function(){
 const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
-const sources=[['EARLY SPIKE','early_spike_history.json'],['BETA SPIKE','beta_spike_history.json']];
+const sources=[['BETA SPIKE','beta_spike_history.json']];
 const key='fomo-spike-notify-seen-v2',enabledKey='fomo-beta-notify-enabled-v1';
 let seen=new Set(),busy=false,ready=false;
 try{seen=new Set(JSON.parse(localStorage.getItem(key)||'[]'))}catch(e){}
