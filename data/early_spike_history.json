@@ -816,8 +816,24 @@
       "observed_5m_at_utc": "2026-10-12T00:55:20.400453+00:00",
       "return_5m_pct": -2.88,
       "measurement_delay_minutes": 9.86
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga",
+      "pair_address": "6wXTJaLNN3GCUJajJ9Vj2te51zsNgPVXV37EbFGRAjLz",
+      "symbol": "Malfoid",
+      "first_alert_at_utc": "2026-10-12T02:20:20.747689+00:00",
+      "alert_price_usd": 0.0008963,
+      "initial_15m_change_pct": 8.55,
+      "buys_5m": 19,
+      "sells_5m": 11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-12T02:15:24.431422+00:00"
+  "updated_at_utc": "2026-10-12T02:20:20.747689+00:00"
 }
