@@ -380,4 +380,26 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
  const table='<div class="tablewrap"><table class="perf-table"><thead><tr><th>Horizon</th><th>Model</th><th>Verified / eligible</th><th>Hit rate</th><th>Avg</th><th>Median</th><th>Best / worst</th><th>$100 ending</th><th>Max drawdown*</th><th>Trades / skipped</th></tr></thead><tbody>'+horizons.flatMap(mins=>names.map(name=>{const x=results[name][mins];return '<tr><td>'+(mins===60?'1h':mins===180?'3h':mins===360?'6h':'30m')+'</td><td>'+name+'</td><td>'+x.n+' / '+x.eligible+'</td><td>'+pct(x.hit)+'</td><td>'+pct(x.avg)+'</td><td>'+pct(x.median)+'</td><td>'+pct(x.best)+' / '+pct(x.worst)+'</td><td>'+(x.cash==null?'PENDING':'$'+x.cash.toFixed(2))+'</td><td>'+pct(x.drawdown)+'</td><td>'+x.count+' / '+x.skipped+'</td></tr>'})).join('')+'</tbody></table></div>';
  const comparison='<h3>MODEL COMPARISON · SAME HORIZON</h3><div style="display:flex;flex-wrap:wrap;gap:8px">'+horizons.map(mins=>{const a=results[names[0]][mins],b=results[names[1]][mins];return '<div class="perf-visual-card" style="flex:1;min-width:140px"><b>'+(mins===60?'1h':mins===180?'3h':mins===360?'6h':'30m')+'</b><p>V1 '+pct(a.hit)+'</p><p>V3 '+pct(b.hit)+'</p><small>Verified '+a.n+' / '+b.n+'</small></div>'}).join('')+'</div>';
  el.innerHTML='<div style="display:flex;flex-wrap:wrap;gap:10px">'+cards+'</div>'+comparison+'<h3>VERIFIED RETURNS & $100 PROFIT SIMULATION</h3>'+table+'<p class="perf-note">Exact mint + pair only. First observed entry per pair; exit at first available price within 10m after horizon. PENDING if no verified exit. $100 starting capital per model/horizon, sequential non-overlapping trades, reinvested, assumed 1% round-trip costs. *Max drawdown is calculated on closed simulated trades, not intratrade price lows. Missing samples and selection differences limit comparability; this is not realized P/L.</p>';
-}</script></body></html>
+}</script><script>
+/* Independent navigation recovery: works even if market-data scripts fail. */
+(function(){
+ const tabs={'betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','socialTab':'social','spikeTab':'spike','betaTab':'beta','performanceTab':'performance'};
+ function navigate(tab){
+  const b=document.body;if(!b)return;
+  for(const mode of ['performance','daily','social','spike','beta','beta-live','v3','v3-daily','beta-daily'])b.classList.toggle(mode+'-mode',mode===tab);
+  for(const [id,value] of Object.entries(tabs)){const n=document.getElementById(id);if(n)n.classList.toggle('active',value===tab)}
+  for(const [id,visible] of [['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily'],['socialView',tab==='social']]){const n=document.getElementById(id);if(n)n.style.display=visible?(id==='socialView'?'block':'flex'):'none'}
+  const p=document.getElementById('performanceView');if(p)p.style.display=tab==='performance'?'block':'none';
+  const layout=document.querySelector('.layout');if(layout)layout.style.display=tab==='performance'?'none':'';
+  if(tab==='performance'&&typeof window.loadLiveExtended==='function')Promise.resolve().then(()=>window.loadLiveExtended()).catch(console.error);
+  if(tab==='v3'&&typeof window.refreshV3Beta==='function')Promise.resolve().then(()=>window.refreshV3Beta()).catch(console.error);
+  if(tab==='v3-daily'&&typeof window.loadV3Daily==='function')Promise.resolve().then(()=>window.loadV3Daily()).catch(console.error);
+  try{sessionStorage.setItem('fomo-active-tab',tab)}catch(e){}
+  window.scrollTo(0,0);
+ }
+ document.addEventListener('click',function(e){const btn=e.target.closest&&e.target.closest('nav.dashboard-nav button');if(!btn||!tabs[btn.id])return;e.preventDefault();e.stopImmediatePropagation();navigate(tabs[btn.id]);},true);
+ function init(){navigate('beta-live');try{history.scrollRestoration='manual'}catch(e){}}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+ window.fomoNavigate=navigate;
+})();
+</script></body></html>
