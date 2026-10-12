@@ -604,7 +604,7 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
   const b=document.body;if(!b)return;window.activeDashboardTab=tab;if(typeof window.updateDataAge==='function')window.updateDataAge();
   for(const mode of ['home','performance','daily','spike','beta','spike-beta','beta-live','v3','v3-daily','beta-daily','my-tokens'])b.classList.toggle(mode+'-mode',mode===tab);
   for(const [id,value] of Object.entries(tabs)){const n=document.getElementById(id);if(n)n.classList.toggle('active',value===tab)}
-  for(const [id,visible] of [['homeView',tab==='home'],['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily'],['myTokensView',tab==='my-tokens']]){const n=document.getElementById(id);if(n)n.style.display=visible?('flex'):'none'}
+  for(const [id,visible] of [['spikeBetaView',tab==='spike-beta'],['homeView',tab==='home'],['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily'],['myTokensView',tab==='my-tokens']]){const n=document.getElementById(id);if(n)n.style.display=visible?('flex'):'none'}
   const p=document.getElementById('performanceView');if(p)p.style.display=tab==='performance'?'block':'none';
   const layout=document.querySelector('.layout');if(layout)layout.style.display=(tab==='performance'||tab==='home')?'none':'';
   if(tab==='home'&&typeof window.loadHomeTradingHours==='function')window.loadHomeTradingHours();
