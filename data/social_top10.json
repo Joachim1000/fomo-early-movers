@@ -1,185 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:10:35.456120+00:00",
+  "updated_at_utc": "2026-10-12T08:15:42.195629+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778320000_618"
-      ],
-      "id": "cbe1335c-1483-5c57-a93f-00fdab8cbee9",
-      "ts": "2026-10-12T04:12:00+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 21179.92
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778335000_619"
-      ],
-      "id": "b331c0c8-d97e-5a87-bbe3-3cc004d1bf00",
-      "ts": "2026-10-12T04:12:15+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 19015.1
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778350000_621"
-      ],
-      "id": "0b42b13e-79c9-5478-bd50-655ff7fe195b",
-      "ts": "2026-10-12T04:12:30+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 16816.15
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "acivx01",
-        "alrt_1791778350000_620",
-        "fbb1b387-0c43-5484-9ce0-0379c18bcde9"
-      ],
-      "id": "8b3d5375-431c-5a13-9ce1-c0aabf79f8a3",
-      "ts": "2026-10-12T04:12:30+00:00",
-      "mint": "739dnZEG4yaBWFsY8L8ZwrfhGG6dhtCSercW8Umspump",
-      "chain": "solana",
-      "symbol": "CLAW",
-      "side": "sell",
-      "trader": "fbb1b387-0c43-5484-9ce0-0379c18bcde9",
-      "usd": 434.656
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "acivx01",
-        "alrt_1791778355000_622",
-        "fbb1b387-0c43-5484-9ce0-0379c18bcde9"
-      ],
-      "id": "b81fc8b3-aebb-5dbd-9ebb-6cd3d055c655",
-      "ts": "2026-10-12T04:12:35+00:00",
-      "mint": "739dnZEG4yaBWFsY8L8ZwrfhGG6dhtCSercW8Umspump",
-      "chain": "solana",
-      "symbol": "CLAW",
-      "side": "sell",
-      "trader": "fbb1b387-0c43-5484-9ce0-0379c18bcde9",
-      "usd": 860.36
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778365000_623"
-      ],
-      "id": "de0f067b-c8ba-5432-8c3b-d19d3fd5aa1b",
-      "ts": "2026-10-12T04:12:45+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 14593.01
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778380000_624"
-      ],
-      "id": "f5cb3f09-d5df-571b-ba2e-eb190e13b63b",
-      "ts": "2026-10-12T04:13:00+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 12318.71
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "8066c03d-b278-50d5-b233-06cb7dc7a54d",
-        "alrt_1791778430000_626",
-        "lightning"
-      ],
-      "id": "f123e009-ca3a-5e8c-9e6f-4eaed2d4847e",
-      "ts": "2026-10-12T04:13:50+00:00",
-      "mint": "0x39dbed3a2bd333467115de45665cc57f813c4571",
-      "chain": "robinhood",
-      "symbol": "PONS",
-      "side": "sell",
-      "trader": "8066c03d-b278-50d5-b233-06cb7dc7a54d",
-      "usd": -227.319
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "8066c03d-b278-50d5-b233-06cb7dc7a54d",
-        "alrt_1791778430000_625",
-        "lightning"
-      ],
-      "id": "4d0a10c0-bebc-5098-b257-6e73e8a2c38e",
-      "ts": "2026-10-12T04:13:50+00:00",
-      "mint": "0x39dbed3a2bd333467115de45665cc57f813c4571",
-      "chain": "robinhood",
-      "symbol": "PONS",
-      "side": "sell",
-      "trader": "8066c03d-b278-50d5-b233-06cb7dc7a54d",
-      "usd": -127.364
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xmk123",
-        "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-        "alrt_1791778440000_627"
-      ],
-      "id": "76ba05bc-9e5e-5973-a509-7d614a95db01",
-      "ts": "2026-10-12T04:14:00+00:00",
-      "mint": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-      "chain": "ethereum",
-      "symbol": "UNI",
-      "side": "buy",
-      "trader": "abd0ff1e-afb2-5020-a361-e61c2d864f45",
-      "usd": 50473.69
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "5046740c-90f8-5ee4-ab0b-fdf112170b31",
-        "alrt_1791778540000_628",
-        "omarsaleh66"
-      ],
-      "id": "d64f5688-790a-56a4-b25a-2d338c0a9fe7",
-      "ts": "2026-10-12T04:15:40+00:00",
-      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
-      "chain": "solana",
-      "symbol": "CYBERLEEK",
-      "side": "sell",
-      "trader": "5046740c-90f8-5ee4-ab0b-fdf112170b31",
-      "usd": -6028.38
-    },
     {
       "thesis_text": "notHim191919 posted a thesis on $CATE: Damn that was a drop",
       "trader_ids": [
@@ -6771,6 +6595,22 @@
       "side": "sell",
       "trader": "ce155fd9-af71-5199-b14e-eea42df4d21d",
       "usd": -2436.94
+    },
+    {
+      "thesis_text": "CryptoKaleo posted a thesis on $HMM: Hmm… ETH looks ready to send out of this range soon.\n\nThinking the cat makes a run to all time highs with it.\n\nBullieve in billions 🤔🐈",
+      "trader_ids": [
+        "1f08e6ab-5c73-5443-9225-bfc496cde51f",
+        "alrt_1791792900000_1112",
+        "cryptokaleo"
+      ],
+      "id": "af1a6cef-7639-4625-a932-0c6910ebaec0",
+      "ts": "2026-10-12T08:15:00+00:00",
+      "mint": "0x7fe995a80075df3dc8ae11a9b82c7fe4202cd87f",
+      "chain": "robinhood",
+      "symbol": "HMM",
+      "side": "thesis",
+      "trader": "1f08e6ab-5c73-5443-9225-bfc496cde51f",
+      "usd": 0.0
     }
   ],
   "top10": [
@@ -6842,9 +6682,9 @@
       "symbol": "STONK",
       "mentions": 3,
       "buys": 10,
-      "sells": 11,
+      "sells": 6,
       "buy_usd": 380665.89,
-      "sell_usd": 114464.66,
+      "sell_usd": 30541.77,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
@@ -6862,8 +6702,8 @@
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 266201.23,
-      "activity_sentiment_score": 53.8,
+      "net_usd": 350124.12,
+      "activity_sentiment_score": 85.1,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -7090,7 +6930,7 @@
   "followed_count": 70,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
-  "last_fetch_at_utc": "2026-10-12T08:10:35.456120+00:00",
+  "last_fetch_at_utc": "2026-10-12T08:15:42.195629+00:00",
   "friends_summary": {
     "matched_events": 8,
     "tokens": 6,
@@ -7100,7 +6940,7 @@
     "buy_usd": 221810.32,
     "sell_usd": 9830.09
   },
-  "events_count": 423,
+  "events_count": 413,
   "matched_followed_events": 8,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }

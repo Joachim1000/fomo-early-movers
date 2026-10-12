@@ -136,7 +136,23 @@
       "observed_5m_at_utc": "2026-10-12T08:10:25.786371+00:00",
       "return_5m_pct": 7.97,
       "measurement_delay_minutes": 5.09
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "5JCM2Vyp6xxEYqc6Jeot6KS2PhicsWLkhK9yDCBwhNcS",
+      "pair_address": "4q3AJu1u7BiXSft7uX6czjWJssbqtXtkCPxidAtJnGHV",
+      "symbol": "DOGEOLO",
+      "first_alert_at_utc": "2026-10-12T08:15:32.212538+00:00",
+      "alert_price_usd": 0.000556,
+      "initial_15m_change_pct": 23.89,
+      "buys_5m": 135,
+      "sells_5m": 67,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-12T08:10:25.786371+00:00"
+  "updated_at_utc": "2026-10-12T08:15:32.212538+00:00"
 }
