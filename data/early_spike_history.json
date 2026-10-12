@@ -34,7 +34,23 @@
       "observed_5m_at_utc": "2026-10-12T07:00:57.158923+00:00",
       "return_5m_pct": -7.57,
       "measurement_delay_minutes": 5.63
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "CNXcCGfENqGwQV6hV64M9mBSGfWxC8p3jBjtJ5sPpump",
+      "pair_address": "784rHUsvzoq9at8AVLi9bdFiszb1NW3c5mXvu7rCJHtR",
+      "symbol": "HW2",
+      "first_alert_at_utc": "2026-10-12T07:25:20.786815+00:00",
+      "alert_price_usd": 0.0001693,
+      "initial_15m_change_pct": 8.66,
+      "buys_5m": 14,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "updated_at_utc": "2026-10-12T07:20:22.874591+00:00"
+  "updated_at_utc": "2026-10-12T07:25:20.786815+00:00"
 }
