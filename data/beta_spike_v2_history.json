@@ -1,8 +1,12 @@
 {
   "records": [],
-  "pending_confirmation": {},
+  "pending_confirmation": {
+    "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump|4dviwKE48543C5CAwBxoE4aeTv5go1wq3gD5UViFguRa": {
+      "timestamp": "2026-10-12T06:10:22.858747+00:00"
+    }
+  },
   "active_alerts": {},
   "schema_version": 1,
-  "updated_at_utc": "2026-10-12T06:05:19.345465+00:00",
+  "updated_at_utc": "2026-10-12T06:10:22.858747+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, two 4–12m-spaced qualifying snapshots"
 }
