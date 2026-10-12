@@ -476,4 +476,27 @@ const same=samples.filter(p=>p.pair_address===pair),latest=same.filter(p=>Date.p
 function init(){setInterval(()=>{if(!document.hidden&&document.body.classList.contains('my-tokens-mode'))loadMyTokens()},60000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+</script><script>
+/* Independent bootstrap watchdog: remains active if the main dashboard script fails to parse. */
+(function(){
+window.addEventListener('error',function(e){var u=document.getElementById('updated');if(u&&/Loading|Fetching/.test(u.textContent))u.textContent='Dashboard JavaScript error: '+(e.message||'unknown');});
+setTimeout(async function(){
+ var rows=document.getElementById('betaLiveRows'),info=document.getElementById('tabUpdateInfo');
+ if(!rows||!/Loading/i.test(rows.textContent))return;
+ if(info)info.textContent='Main dashboard did not initialize. Checking live snapshot independently…';
+ var controller=new AbortController(),timer=setTimeout(function(){controller.abort()},6500);
+ try{
+  var response=await fetch('https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/latest.json?watchdog='+Date.now(),{cache:'no-store',signal:controller.signal});
+  if(!response.ok)throw new Error('Snapshot HTTP '+response.status);
+  var data=await response.json(),candidates=Array.isArray(data.candidates)?data.candidates:[];
+  if(!/Loading/i.test(rows.textContent))return;
+  var esc=function(v){return String(v==null?'—':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  rows.innerHTML='<tr><td colspan="9"><strong>Live snapshot available · Dashboard ranking unavailable</strong> · '+esc(candidates.length)+' candidates in source. Main dashboard JavaScript needs repair; no substitute beta ranking is being presented.</td></tr>';
+  if(info)info.textContent='Data source OK · Snapshot '+esc(data.generated_at_utc||'unknown')+' · '+candidates.length+' candidates · Dashboard renderer failed';
+  var u=document.getElementById('updated');if(u)u.textContent='Data connected · Dashboard renderer error';
+ }catch(e){if(info)info.textContent='Dashboard load error: '+e.message;if(rows&&/Loading/i.test(rows.textContent))rows.innerHTML='<tr><td colspan="9">Dashboard could not initialize: '+escError(e.message)+'</td></tr>'}
+ finally{clearTimeout(timer)}
+ function escError(v){return String(v).replace(/[&<>]/g,'')}
+},4000);
+})();
 </script></body></html>
