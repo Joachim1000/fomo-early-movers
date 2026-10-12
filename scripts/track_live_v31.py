@@ -9,8 +9,11 @@ from collections import defaultdict
 DATA=Path("data")
 latest=json.loads((DATA/"latest.json").read_text())
 path=DATA/"live_v31.json"
-prior=json.loads(path.read_text()) if path.exists() else {"schema_version":1,"observations":[]}
-rows=prior.get("observations",[])
+try:
+    prior=json.loads(path.read_text()) if path.exists() and path.stat().st_size else {"schema_version":1,"observations":[]}
+except (ValueError, OSError):
+    prior={"schema_version":1,"observations":[]}
+rows=prior.get("observations",[]) if isinstance(prior.get("observations"),list) else []
 now=datetime.fromisoformat(latest["generated_at_utc"].replace("Z","+00:00"))
 history=json.loads((DATA/"history.json").read_text())
 def dt(v):
@@ -133,19 +136,27 @@ for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
     x["v3_top10_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
-seen={(x["mint"],x["pair_address"],x["observed_at_utc"]) for x in prior["observations"]}
-# Persist full V3.1 feature observations for future training; not dependent on retired V3.
-existing={(x.get("mint"),x.get("pair_address"),x.get("observed_at_utc")) for x in prior["observations"]}
+# Store one observation per mint/pair/timestamp. Only TOP 10 entries carry
+# v31_rank; all other candidates remain eligible for independent ML training.
+existing={}
+for x in rows:
+    key=(x.get("mint"),x.get("pair_address"),x.get("observed_at_utc"))
+    if all(key) and key not in existing:
+        existing[key]=x
 for x in current:
     key=(x["mint"],x["pair_address"],stamp)
     if key not in existing:
-        prior["observations"].append(x.copy());existing.add(key)
+        existing[key]=x.copy()
 for x in ranking[:10]:
-    key=x["mint"],x["pair_address"],x["observed_at_utc"]
-    if key not in seen:prior["observations"].append(x)
-prior["observations"]=prior["observations"][-10000:]
+    key=(x["mint"],x["pair_address"],stamp)
+    row=existing.get(key)
+    if row is not None:
+        row["v31_rank"]=x["v31_rank"]
+        row["v3_top10_rank"]=x["v31_rank"] # compatibility with existing display
+        row["predicted_10m_gain_probability_pct"]=x["predicted_10m_gain_probability_pct"]
+prior["observations"]=sorted(existing.values(),key=lambda x:x.get("observed_at_utc") or "")[-10000:]
 prior.update({"generated_at_utc":stamp,"model":"L2_LOGISTIC_REGRESSION","trained":trained,
-              "status":"TRAINED_SHADOW" if trained else "INDEPENDENT_HEURISTIC_WAITING_FOR_VERIFIED_10M_TRAINING_DATA",
+              "status":"TRAINED_INDEPENDENT" if trained else "INDEPENDENT_HEURISTIC_WAITING_FOR_VERIFIED_10M_TRAINING_DATA",
               "training_examples":len(train),"positive_examples":pos,"negative_examples":neg,
               "target":"verified 10m return >= +3% (before trading costs)",
               "ranking":ranking[:10]})
