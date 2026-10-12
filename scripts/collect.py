@@ -419,7 +419,28 @@ payload = {
     "warning": "4h verification requires timestamped same-pair observations spanning >=4h AND pair age >=4h. FOMO candidates are matched by exact Solana mint. Transaction counts are not unique wallets. No contract safety or KØB verification."
 }
 Path("data").mkdir(parents=True, exist_ok=True)
-HISTORY_PATH.write_text(json.dumps(history, ensure_ascii=False, indent=2), encoding="utf-8")
+# GitHub rejects any individual file above 100 MiB. Use compact JSON and
+# prune oldest observations only when needed, preserving newest price history.
+# Leave substantial headroom so the next scheduled collector can still publish.
+MAX_HISTORY_BYTES = 75 * 1024 * 1024
+history_json = json.dumps(history, ensure_ascii=False, separators=(",", ":"))
+if len(history_json.encode("utf-8")) > MAX_HISTORY_BYTES:
+    print("History exceeds 75 MiB; trimming oldest observations in 1h increments")
+    trim_from = HISTORY_KEEP_FROM
+    for _ in range(36):
+        trim_from += timedelta(hours=1)
+        for mint in list(history):
+            kept = [row for row in history[mint] if (parse_time(row.get("timestamp")) or NOW) >= trim_from]
+            if kept:
+                history[mint] = kept
+            else:
+                del history[mint]
+        history_json = json.dumps(history, ensure_ascii=False, separators=(",", ":"))
+        if len(history_json.encode("utf-8")) <= MAX_HISTORY_BYTES:
+            break
+    if len(history_json.encode("utf-8")) > MAX_HISTORY_BYTES:
+        raise RuntimeError("History remains above GitHub safe size after time pruning; refusing oversized push")
+HISTORY_PATH.write_text(history_json, encoding="utf-8")
 Path("data/latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 print(f"Discovered {len(candidates)} candidates; FOMO-matched 4h verified: {len(eligible_candidates)}; errors={len(errors)}")
 if not addresses:
