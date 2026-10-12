@@ -1,6 +1,6 @@
 """Independently track experimental beta early spikes and verified 5m outcomes."""
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -94,6 +94,10 @@ for row in rows:
                    return_5m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
     elif (now - start).total_seconds() > 600:
         row["status"] = "NOT_VERIFIABLE"  # Retry if a later verified same-pair observation becomes available
+# Performance retention: rolling seven days, independent of the 23:30 daily reset.
+cutoff = now - timedelta(days=7)
+saved["records"] = [row for row in rows if (parse(row.get("first_alert_at_utc")) or now) >= cutoff]
+rows = saved["records"]
 saved["updated_at_utc"] = now.isoformat()
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")
