@@ -1,73 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:38:27.447080+00:00",
+  "updated_at_utc": "2026-10-12T09:40:34.997834+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "Yusufff posted a thesis on $CATE: The last time volume like this came into CATE and we started moving we went in ahead to break ATH, because people thinking they were gonna wait for an entry  are gonna fomo in, but let’s see where this takes us",
-      "trader_ids": [
-        "alrt_1791783545000_820",
-        "e7006c22-1adf-5b01-b033-4b530f03e8b4",
-        "yusufff"
-      ],
-      "id": "3f4c9fc1-48cc-4894-8d33-502500ceb57b",
-      "ts": "2026-10-12T05:39:05+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "e7006c22-1adf-5b01-b033-4b530f03e8b4",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "CeruleanRange posted a thesis on $ZC: \"We will win.\" -Zipcoin Team\n\nRode from 700s to 150s. Conviction hasn't changed. Narrative served up on silver platter... Maybe it was just too easy for all the brainiacs you all borrow conviction from to believe. Billions is staring us in the face & I ain't flinching.",
-      "trader_ids": [
-        "09d7299f-545f-5ee2-a8d7-51bc31b63c50",
-        "alrt_1791783595000_822",
-        "ceruleanrange"
-      ],
-      "id": "cebc077c-ab4e-4112-9baf-fb403f6c2285",
-      "ts": "2026-10-12T05:39:55+00:00",
-      "mint": "0x4e67db19044549ff420860834c91b45bad298722",
-      "chain": "ethereum",
-      "symbol": "ZC",
-      "side": "thesis",
-      "trader": "09d7299f-545f-5ee2-a8d7-51bc31b63c50",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "deltaliquidity posted a thesis on $DELTA: A new Delta is coming.\n\nhttps://x.com/deltaliquidity/status/2109344745369817430",
-      "trader_ids": [
-        "alrt_1791783595000_821",
-        "d335f272-e70b-50df-b46a-6db106007615",
-        "deltaliquidity"
-      ],
-      "id": "6f138e3a-3899-45a4-b745-14040c792c3d",
-      "ts": "2026-10-12T05:39:55+00:00",
-      "mint": "0xe8ffd7e24187f72afb08d75b1bb13088a989a791",
-      "chain": "robinhood",
-      "symbol": "DELTA",
-      "side": "thesis",
-      "trader": "d335f272-e70b-50df-b46a-6db106007615",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791783605000_823",
-        "d8ac5d11-fada-5600-8f62-1364493dba90",
-        "whoami"
-      ],
-      "id": "7ac920fb-39d4-560b-a314-62a6f4150b6d",
-      "ts": "2026-10-12T05:40:05+00:00",
-      "mint": "0xaa5751ff3fb61e613993b2eb4eab1fce017081fc",
-      "chain": "robinhood",
-      "symbol": "HYDX",
-      "side": "buy",
-      "trader": "d8ac5d11-fada-5600-8f62-1364493dba90",
-      "usd": 7964.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -4970,7 +4906,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 25,
+      "mentions": 24,
       "buys": 1,
       "sells": 2,
       "buy_usd": 5257.8,
@@ -4982,13 +4918,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 0,
       "recent_friends": 0,
-      "language_analyzed_count": 25,
+      "language_analyzed_count": 24,
       "language_positive_count": 1,
       "language_negative_count": 1,
-      "language_neutral_count": 23,
+      "language_neutral_count": 22,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
-      "unique_traders": 24,
+      "unique_traders": 23,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -5292,7 +5228,7 @@
     "buy_usd": 741905.76,
     "sell_usd": 9080.69
   },
-  "events_count": 310,
+  "events_count": 306,
   "matched_followed_events": 17,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
