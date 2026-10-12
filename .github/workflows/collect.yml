@@ -36,12 +36,6 @@ jobs:
         run: python scripts/collect.py
 
 
-      - name: Collect FOMO social feed (non-blocking)
-        env:
-          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
-        run: |
-          python scripts/collect_social.py || echo "::warning::Social collector failed; market collection continues"
-
       - name: Record TOP 10 screening observations
         shell: bash
         run: |
@@ -107,6 +101,12 @@ jobs:
 
       - name: Lock daily 23:30 Poland snapshot (once per day)
         run: python scripts/lock_daily.py
+
+      - name: Collect FOMO social feed (non-blocking)
+        env:
+          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
+        run: |
+          python scripts/collect_social.py || echo "::warning::Social collector failed; market collection continues"
 
       - name: Commit JSON
         run: |
