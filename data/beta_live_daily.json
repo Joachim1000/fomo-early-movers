@@ -19300,6 +19300,106 @@
       "rank": 10,
       "beta_score": -4.0,
       "risk": "ELEVATED"
+    },
+    {
+      "mint": "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump",
+      "pair_address": "89DxSaK1YZx8TbPapMSSEgkEdhYuhYBo26BytgELrJBd",
+      "symbol": "Solamians",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.0003568,
+      "rank": 1,
+      "beta_score": 4.447,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
+      "pair_address": "6D4EWF22HfQamimKhX47tqiu9DVCkcxDMrmhnSvewKAo",
+      "symbol": "HOTBOT",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.004022,
+      "rank": 2,
+      "beta_score": 1.001,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.007554,
+      "rank": 3,
+      "beta_score": 0.92,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.003644,
+      "rank": 4,
+      "beta_score": -0.012,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
+      "pair_address": "AeQAcZb73pUe7BF7NyZEDKV9xnS78ckrhpbYu8uLDHds",
+      "symbol": "DARK",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.003946,
+      "rank": 5,
+      "beta_score": -0.402,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+      "pair_address": "Q2sPHPdUWFMg7M7wwrQKLrn619cAucfRsmhVJffodSp",
+      "symbol": "USELESS",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.1981,
+      "rank": 6,
+      "beta_score": -0.53,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pair_address": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "symbol": "SLOPCORE",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.0006814,
+      "rank": 7,
+      "beta_score": -1.22,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+      "pair_address": "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+      "symbol": "PQC",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.0003358,
+      "rank": 8,
+      "beta_score": -4.058,
+      "risk": "LOW RELATIVE"
+    },
+    {
+      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
+      "pair_address": "6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn",
+      "symbol": "SWOLF",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.001457,
+      "rank": 9,
+      "beta_score": -4.247,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "symbol": "SI",
+      "observed_at_utc": "2026-10-12T09:20:27.989490+00:00",
+      "observation_price_usd": 0.02484,
+      "rank": 10,
+      "beta_score": -4.703,
+      "risk": "ELEVATED"
     }
   ],
   "days": {
@@ -19455,5 +19555,5 @@
       ]
     }
   },
-  "updated_at_utc": "2026-10-12T09:18:15.091228+00:00"
+  "updated_at_utc": "2026-10-12T09:20:27.989490+00:00"
 }
