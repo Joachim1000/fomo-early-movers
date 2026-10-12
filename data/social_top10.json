@@ -1,105 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:12:26.867705+00:00",
+  "updated_at_utc": "2026-10-12T09:14:31.448481+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "00903129-2c44-5803-9b25-cb0bfdfd6878",
-        "alrt_1791781955000_766",
-        "salem1299534"
-      ],
-      "id": "c010db80-b5ee-5564-b32b-401b72d02eb5",
-      "ts": "2026-10-12T05:12:35+00:00",
-      "mint": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
-      "chain": "solana",
-      "symbol": "DBR",
-      "side": "buy",
-      "trader": "00903129-2c44-5803-9b25-cb0bfdfd6878",
-      "usd": 176289.18
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "10e339d3-af50-59cd-9f37-39a2e1940d80",
-        "alrt_1791782000000_767",
-        "looc"
-      ],
-      "id": "f1962569-ac20-5a09-9cc6-9ac5c1b39162",
-      "ts": "2026-10-12T05:13:20+00:00",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "chain": "robinhood",
-      "symbol": "ORBIO",
-      "side": "buy",
-      "trader": "10e339d3-af50-59cd-9f37-39a2e1940d80",
-      "usd": 34755.5
-    },
-    {
-      "thesis_text": "nastycashy posted a thesis on $CATE: RAID PLS AND REPOST‼️ https://x.com/debackereowen/status/2109512459190960546?s=46",
-      "trader_ids": [
-        "a6087a26-3af4-5b4a-9fac-eba04063680a",
-        "alrt_1791782010000_769",
-        "nastycashy"
-      ],
-      "id": "0aa97495-64d9-45fd-a749-3f8d2192bdf7",
-      "ts": "2026-10-12T05:13:30+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "a6087a26-3af4-5b4a-9fac-eba04063680a",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "85895909-8c6d-517f-99dd-3cade5974ec0",
-        "alrt_1791782010000_768",
-        "rtdgambler"
-      ],
-      "id": "43828ef3-0eff-53ea-8383-e6a441460684",
-      "ts": "2026-10-12T05:13:30+00:00",
-      "mint": "0xdd806e436dda5588bf54061c11590c77ddc87777",
-      "chain": "bsc",
-      "symbol": "SAFU",
-      "side": "sell",
-      "trader": "85895909-8c6d-517f-99dd-3cade5974ec0",
-      "usd": 1179.22
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791782015000_770",
-        "bcdfe54f-3472-5e66-9f9f-22eb90164d36",
-        "trenchgod1000x"
-      ],
-      "id": "7dce4572-1cce-544b-8da0-6d065e428cad",
-      "ts": "2026-10-12T05:13:35+00:00",
-      "mint": "HgcxVs6kJhPAaGqnPNGaa7zYgNT49hJrLufiqcNMuYZT",
-      "chain": "solana",
-      "symbol": "FEELSGOOD",
-      "side": "sell",
-      "trader": "bcdfe54f-3472-5e66-9f9f-22eb90164d36",
-      "usd": 1516.57
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791782035000_771",
-        "bcdfe54f-3472-5e66-9f9f-22eb90164d36",
-        "trenchgod1000x"
-      ],
-      "id": "bca5da2d-7c21-5173-bef2-8c697f8e4f0a",
-      "ts": "2026-10-12T05:13:55+00:00",
-      "mint": "CbyTNf7UPzvewHh4Zp6umogM2RWahhmGRJWLJnPwpump",
-      "chain": "solana",
-      "symbol": "biketyson",
-      "side": "buy",
-      "trader": "bcdfe54f-3472-5e66-9f9f-22eb90164d36",
-      "usd": 5720.96
-    },
     {
       "thesis_text": "pglpiguet posted a thesis on $CATE: Have a feeling Binance listing coming today\n\nBalls tingling n shit",
       "trader_ids": [
@@ -5370,7 +5274,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 37,
+      "mentions": 36,
       "buys": 1,
       "sells": 2,
       "buy_usd": 5257.8,
@@ -5382,13 +5286,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 2,
       "recent_friends": 0,
-      "language_analyzed_count": 37,
+      "language_analyzed_count": 36,
       "language_positive_count": 2,
       "language_negative_count": 2,
-      "language_neutral_count": 33,
+      "language_neutral_count": 32,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
-      "unique_traders": 34,
+      "unique_traders": 33,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -5684,15 +5588,15 @@
   "friends_feed_status": "not_verified_personal_feed",
   "last_fetch_at_utc": "2026-10-12T09:12:26.867705+00:00",
   "friends_summary": {
-    "matched_events": 18,
-    "tokens": 5,
-    "buys": 15,
+    "matched_events": 17,
+    "tokens": 4,
+    "buys": 14,
     "sells": 2,
     "theses": 1,
-    "buy_usd": 918194.94,
+    "buy_usd": 741905.76,
     "sell_usd": 9080.69
   },
-  "events_count": 335,
-  "matched_followed_events": 18,
+  "events_count": 329,
+  "matched_followed_events": 17,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
