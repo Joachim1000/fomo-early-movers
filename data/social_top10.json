@@ -1,89 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:52:34.883334+00:00",
+  "updated_at_utc": "2026-10-12T08:54:30.071851+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791780785000_723",
-        "kv4rl"
-      ],
-      "id": "475a5090-3862-59e7-939d-9685f45dfc49",
-      "ts": "2026-10-12T04:53:05+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 28256.91
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791780800000_724",
-        "deb52c81-24c3-5768-b1dd-847cfb875180",
-        "itchyfreshfrog"
-      ],
-      "id": "240861ce-9274-56b5-903d-7a0ac07b1b83",
-      "ts": "2026-10-12T04:53:20+00:00",
-      "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "chain": "solana",
-      "symbol": "W",
-      "side": "sell",
-      "trader": "deb52c81-24c3-5768-b1dd-847cfb875180",
-      "usd": 1853.33
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791780835000_726",
-        "bitvpr",
-        "f4883964-9a5e-56f4-83de-e26370adc849"
-      ],
-      "id": "b8b13227-84b8-5c9b-bc36-d3256b75a638",
-      "ts": "2026-10-12T04:53:55+00:00",
-      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
-      "chain": "solana",
-      "symbol": "BORDR",
-      "side": "buy",
-      "trader": "f4883964-9a5e-56f4-83de-e26370adc849",
-      "usd": 7470.1
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791780840000_727",
-        "cd3b7943-81c7-516b-b5ee-9d63af018074",
-        "cornball"
-      ],
-      "id": "6808e495-7b1d-5549-a55b-c3beb382c12e",
-      "ts": "2026-10-12T04:54:00+00:00",
-      "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "chain": "solana",
-      "symbol": "W",
-      "side": "buy",
-      "trader": "cd3b7943-81c7-516b-b5ee-9d63af018074",
-      "usd": 4975.03
-    },
-    {
-      "thesis_text": "jul3ss posted a thesis on $CATE: Run it up",
-      "trader_ids": [
-        "4ea2aa34-c5f9-5198-9159-cfcaf1cd3151",
-        "alrt_1791780855000_728",
-        "jul3ss"
-      ],
-      "id": "277e9b05-f9bb-4384-8cb7-9f5de3ead869",
-      "ts": "2026-10-12T04:54:15+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "4ea2aa34-c5f9-5198-9159-cfcaf1cd3151",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -5850,7 +5770,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 41,
+      "mentions": 40,
       "buys": 1,
       "sells": 2,
       "buy_usd": 5257.8,
@@ -5862,10 +5782,10 @@
       "friends_sell_usd": 0,
       "recent_mentions": 3,
       "recent_friends": 0,
-      "language_analyzed_count": 41,
+      "language_analyzed_count": 40,
       "language_positive_count": 2,
       "language_negative_count": 2,
-      "language_neutral_count": 37,
+      "language_neutral_count": 36,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
       "unique_traders": 35,
@@ -5882,10 +5802,10 @@
       "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "symbol": "W",
       "mentions": 0,
-      "buys": 24,
-      "sells": 3,
-      "buy_usd": 826501.25,
-      "sell_usd": 1937.45,
+      "buys": 23,
+      "sells": 2,
+      "buy_usd": 821526.22,
+      "sell_usd": 84.12,
       "followed_buys": 12,
       "followed_sells": 0,
       "followed_mentions": 0,
@@ -5899,12 +5819,12 @@
       "language_neutral_count": 0,
       "language_sentiment_score": null,
       "language_sentiment_label": "NOT VERIFIED",
-      "unique_traders": 13,
+      "unique_traders": 11,
       "friends_unique_traders": 1,
       "friends_net_usd": 720129.93,
       "friends_activity": 12,
-      "net_usd": 824563.8,
-      "activity_sentiment_score": 99.8,
+      "net_usd": 821442.1,
+      "activity_sentiment_score": 100.0,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -6037,9 +5957,9 @@
       "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
       "symbol": "BORDR",
       "mentions": 0,
-      "buys": 3,
+      "buys": 2,
       "sells": 9,
-      "buy_usd": 30086.43,
+      "buy_usd": 22616.33,
       "sell_usd": 27610.68,
       "followed_buys": 0,
       "followed_sells": 2,
@@ -6054,12 +5974,12 @@
       "language_neutral_count": 0,
       "language_sentiment_score": null,
       "language_sentiment_label": "NOT VERIFIED",
-      "unique_traders": 10,
+      "unique_traders": 9,
       "friends_unique_traders": 1,
       "friends_net_usd": -9080.69,
       "friends_activity": 2,
-      "net_usd": 2475.75,
-      "activity_sentiment_score": -20.7,
+      "net_usd": -4994.35,
+      "activity_sentiment_score": -33.9,
       "activity_sentiment_label": "NEGATIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -6162,7 +6082,7 @@
   "followed_count": 70,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
-  "last_fetch_at_utc": "2026-10-12T08:48:25.649010+00:00",
+  "last_fetch_at_utc": "2026-10-12T08:54:30.071851+00:00",
   "friends_summary": {
     "matched_events": 18,
     "tokens": 5,
@@ -6172,7 +6092,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 365,
+  "events_count": 360,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }

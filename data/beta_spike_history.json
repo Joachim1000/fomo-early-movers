@@ -154,8 +154,26 @@
       "measurement_10m_delay_minutes": 10.11,
       "return_10m_pct": 0.99,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "FdZRSoq4MfUPkqAi8mipJ9UaFYu8gfDCwCfw76YZpump",
+      "pair_address": "EdV32pDiDmuFSsEbA9DB97VziSfSRXDdUQ7WCPRJwzEP",
+      "symbol": "Glorp",
+      "first_alert_at_utc": "2026-10-12T08:54:16.711986+00:00",
+      "alert_price_usd": 0.0001071,
+      "initial_15m_change_pct": 17.22,
+      "buys_5m": 24,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T08:52:17.407671+00:00"
+  "active_alerts": {
+    "FdZRSoq4MfUPkqAi8mipJ9UaFYu8gfDCwCfw76YZpump|EdV32pDiDmuFSsEbA9DB97VziSfSRXDdUQ7WCPRJwzEP": true
+  },
+  "updated_at_utc": "2026-10-12T08:54:16.711986+00:00"
 }
