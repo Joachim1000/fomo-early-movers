@@ -101,15 +101,29 @@
       "price_5m_usd": 0.0007409,
       "observed_5m_at_utc": "2026-10-12T21:34:14.955172+00:00",
       "measurement_delay_minutes": 5.83
+    },
+    {
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw",
+      "symbol": "Normie",
+      "first_qualified_at_utc": "2026-10-12T23:44:14.180352+00:00",
+      "first_alert_at_utc": "2026-10-12T23:48:14.881050+00:00",
+      "alert_price_usd": 0.0005823,
+      "change_15m_pct": 8.56,
+      "buys_5m": 40,
+      "sells_5m": 4,
+      "liquidity_usd": 102746.89,
+      "status": "PENDING",
+      "return_5m_pct": null,
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null
     }
   ],
-  "pending_confirmation": {
-    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": {
-      "timestamp": "2026-10-12T23:44:14.180352+00:00"
-    }
+  "pending_confirmation": {},
+  "active_alerts": {
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": true
   },
-  "active_alerts": {},
   "schema_version": 1,
-  "updated_at_utc": "2026-10-12T23:46:24.321818+00:00",
+  "updated_at_utc": "2026-10-12T23:48:14.881050+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, two 4–12m-spaced qualifying snapshots"
 }
