@@ -1,89 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T07:30:54.722864+00:00",
+  "updated_at_utc": "2026-10-12T07:35:29.780007+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "NFTGLO posted a thesis on $CATE: I still feel like I don’t have enough cate.",
-      "trader_ids": [
-        "2169ba17-4aff-5196-930e-2635c0588c78",
-        "alrt_1791775885000_512",
-        "nftglo"
-      ],
-      "id": "be6d6adb-9d43-421e-b11e-075d78400656",
-      "ts": "2026-10-12T03:31:25+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "2169ba17-4aff-5196-930e-2635c0588c78",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "risktakr_ posted a thesis on $CATE: Prime time",
-      "trader_ids": [
-        "1b518c5b-5399-58c3-b570-e1854d00e2a0",
-        "alrt_1791775910000_513",
-        "risktakr_"
-      ],
-      "id": "a6e02f8f-497e-4e7e-b0d4-76c932099c4a",
-      "ts": "2026-10-12T03:31:50+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "1b518c5b-5399-58c3-b570-e1854d00e2a0",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "9837911a-1b4e-5566-bd65-adf705487a06",
-        "alrt_1791775985000_514",
-        "emotionaltrador"
-      ],
-      "id": "43283683-7624-5826-a239-7cd20ec3b61b",
-      "ts": "2026-10-12T03:33:05+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "buy",
-      "trader": "9837911a-1b4e-5566-bd65-adf705487a06",
-      "usd": 22415.73
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "41380509-55e1-51cb-b87e-388d7ae42350",
-        "alrt_1791776065000_515",
-        "shootingguard"
-      ],
-      "id": "a4d7bb72-a92b-58a1-a86b-c161f2539f95",
-      "ts": "2026-10-12T03:34:25+00:00",
-      "mint": "0x4c067de26475e1cefee8b8d1f6e2266b33a2372e",
-      "chain": "bsc",
-      "symbol": "RHEA",
-      "side": "sell",
-      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
-      "usd": 1662.75
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "41380509-55e1-51cb-b87e-388d7ae42350",
-        "alrt_1791776085000_516",
-        "shootingguard"
-      ],
-      "id": "9feafd06-fd26-5458-8236-bee4d045d43f",
-      "ts": "2026-10-12T03:34:45+00:00",
-      "mint": "0x4c067de26475e1cefee8b8d1f6e2266b33a2372e",
-      "chain": "bsc",
-      "symbol": "RHEA",
-      "side": "sell",
-      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
-      "usd": 1611.99
-    },
     {
       "thesis_text": "blockchainz555 posted a thesis on $CATE: Kingmaker",
       "trader_ids": [
@@ -7002,7 +6922,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 44,
+      "mentions": 42,
       "buys": 1,
       "sells": 1,
       "buy_usd": 5257.8,
@@ -7014,13 +6934,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 6,
       "recent_friends": 0,
-      "language_analyzed_count": 44,
+      "language_analyzed_count": 42,
       "language_positive_count": 3,
       "language_negative_count": 2,
-      "language_neutral_count": 39,
-      "language_sentiment_score": 2.3,
+      "language_neutral_count": 37,
+      "language_sentiment_score": 2.4,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 33,
+      "unique_traders": 32,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -7096,9 +7016,9 @@
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
       "symbol": "STONK",
       "mentions": 2,
-      "buys": 15,
+      "buys": 14,
       "sells": 12,
-      "buy_usd": 480452.02,
+      "buy_usd": 458036.29,
       "sell_usd": 114115.61,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -7117,8 +7037,8 @@
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 366336.41,
-      "activity_sentiment_score": 61.6,
+      "net_usd": 343920.68,
+      "activity_sentiment_score": 60.1,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -7324,7 +7244,7 @@
     "buy_usd": 208903.2,
     "sell_usd": 4414.64
   },
-  "events_count": 437,
+  "events_count": 432,
   "matched_followed_events": 6,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
