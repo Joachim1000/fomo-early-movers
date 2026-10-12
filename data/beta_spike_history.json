@@ -775,10 +775,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "NTRNDMqQSiwEC2jJs3wJiZS6bpGYQJtMNQJgiX3WyV6",
+      "pair_address": "7r3ZPwVD966dZfZ5xifEQyAfME7xSTA5bbmztctQhDG3",
+      "symbol": "NTRNDM",
+      "first_alert_at_utc": "2026-10-12T13:01:02.317117+00:00",
+      "alert_price_usd": 0.0001624,
+      "initial_15m_change_pct": 16.5,
+      "buys_5m": 32,
+      "sells_5m": 19,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3|Cprsvqk2riV3WmTewKK9m6cm62zaAqLDArAbBmN3pe4f": true
+    "NTRNDMqQSiwEC2jJs3wJiZS6bpGYQJtMNQJgiX3WyV6|7r3ZPwVD966dZfZ5xifEQyAfME7xSTA5bbmztctQhDG3": true
   },
-  "updated_at_utc": "2026-10-12T12:59:19.409616+00:00"
+  "updated_at_utc": "2026-10-12T13:01:02.317117+00:00"
 }
