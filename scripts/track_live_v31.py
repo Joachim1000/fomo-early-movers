@@ -83,9 +83,9 @@ for x in src.get("ranking",[]):
         score=round(100/(1+math.exp(-logit)),2)
     current.append({"mint":x["mint"],"pair_address":x["pair_address"],"symbol":x.get("symbol"),
                     "observed_at_utc":stamp,"entry_price_usd":x.get("entry_price_usd"),
-                    "predicted_10m_gain_probability_pct":score,"baseline_v3_rank":x.get("v3_shadow_rank")})
+                    "predicted_10m_gain_probability_pct":score,"baseline_v3_rank":x.get("v3_shadow_rank"),"v3_shadow_score":x.get("v3_shadow_score"),"change_15m_pct":x.get("change_15m_pct"),"buy_sell_ratio":x.get("buy_sell_ratio")})
 if trained:current.sort(key=lambda x:x["predicted_10m_gain_probability_pct"],reverse=True)
-for rank,x in enumerate(current,1):x["v31_rank"]=rank
+for rank,x in enumerate(current,1):\n    x["v31_rank"]=rank\n    x["v3_top10_rank"]=rank\n    x["v3_shadow_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
 seen={(x["mint"],x["pair_address"],x["observed_at_utc"]) for x in prior["observations"]}
 for x in current[:10]:
