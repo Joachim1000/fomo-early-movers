@@ -1402,8 +1402,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "FgJReZeYfmKZeWrCaGYL8gLnUixwBhjdHuRknC6ypump",
+      "pair_address": "DBqbqUehE6kr9c4oGvoESs9JJWJJRoVLgCcSPEePD5qT",
+      "symbol": "Doggo",
+      "first_alert_at_utc": "2026-10-12T19:08:17.544700+00:00",
+      "alert_price_usd": 0.0004901,
+      "initial_15m_change_pct": 28.16,
+      "buys_5m": 140,
+      "sells_5m": 42,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T19:06:16.323766+00:00"
+  "active_alerts": {
+    "FgJReZeYfmKZeWrCaGYL8gLnUixwBhjdHuRknC6ypump|DBqbqUehE6kr9c4oGvoESs9JJWJJRoVLgCcSPEePD5qT": true
+  },
+  "updated_at_utc": "2026-10-12T19:08:17.544700+00:00"
 }
