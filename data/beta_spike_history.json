@@ -2190,10 +2190,11 @@
       "buys_5m": 66,
       "sells_5m": 25,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0003306,
+      "observed_5m_at_utc": "2026-10-12T23:30:37.467802+00:00",
+      "return_5m_pct": 3.18,
+      "measurement_delay_minutes": 6.39
     },
     {
       "day": "2026-10-13",
@@ -2206,10 +2207,11 @@
       "buys_5m": 132,
       "sells_5m": 44,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.002365,
+      "observed_5m_at_utc": "2026-10-12T23:30:37.467802+00:00",
+      "return_5m_pct": -5.4,
+      "measurement_delay_minutes": 6.39
     },
     {
       "day": "2026-10-13",
@@ -2222,12 +2224,31 @@
       "buys_5m": 22,
       "sells_5m": 13,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 8.46e-05,
+      "observed_5m_at_utc": "2026-10-12T23:30:37.467802+00:00",
+      "return_5m_pct": -1.64,
+      "measurement_delay_minutes": 6.39
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-12T23:30:37.467802+00:00",
+      "alert_price_usd": 0.003891,
+      "initial_15m_change_pct": 5.62,
+      "buys_5m": 37,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T23:28:22.720177+00:00"
+  "active_alerts": {
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+  },
+  "updated_at_utc": "2026-10-12T23:30:37.467802+00:00"
 }
