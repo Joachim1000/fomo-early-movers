@@ -284,6 +284,148 @@
           "price_age_minutes_at_lock": 4.7
         }
       ]
+    },
+    "2026-10-12": {
+      "evaluated_day": "2026-10-12",
+      "locked_at_utc": "2026-10-12T21:30:59.129004+00:00",
+      "evaluation_cutoff_utc": "2026-10-12T21:30:00+00:00",
+      "positive_calls": 90,
+      "verified_holds": 86,
+      "missing_later_prices": 4,
+      "up": 16,
+      "average_hold_return_pct": -24.169,
+      "top_10": [
+        {
+          "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+          "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+          "symbol": "BORDR",
+          "first_seen_at_utc": "2026-10-11T22:40:21.243775+00:00",
+          "first_seen_rank": 5,
+          "first_positive_at_utc": "2026-10-11T22:40:21.243775+00:00",
+          "entry_price_usd": 0.001868,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.003288,
+          "hold_return_pct": 76.0171,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "EH4cP8K1qDYZZH5ezVJFCnTQmsXXPjhF6Tbx8w6Kpump",
+          "pair_address": "3S7fiSZpCRKfevwqmXaK5twHAQxGsPvV3gWcskkx6h48",
+          "symbol": "Dogcoin",
+          "first_seen_at_utc": "2026-10-12T10:30:42.432960+00:00",
+          "first_seen_rank": 1,
+          "first_positive_at_utc": "2026-10-12T10:30:42.432960+00:00",
+          "entry_price_usd": 0.0001825,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0002885,
+          "hold_return_pct": 58.0822,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "4VScHuqZ13uma3S34iNkiSAQvZDEeGebjbM5bPcapump",
+          "pair_address": "3jdLS49hdpQK4wVR9c6PFoZHRVfKHn2PURVUJnjaasWa",
+          "symbol": "VSWAP",
+          "first_seen_at_utc": "2026-10-12T20:04:25.520923+00:00",
+          "first_seen_rank": 2,
+          "first_positive_at_utc": "2026-10-12T20:04:25.520923+00:00",
+          "entry_price_usd": 0.0002399,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.000371,
+          "hold_return_pct": 54.6478,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "EuHFvtK6Y1N1GyP7XNMJMsjuiS4SawDfaU9sKkUkHsXW",
+          "pair_address": "Gm8CBhkkPyquKDoiuVx4wrn7NAic5VfwAotRuPrRzGXa",
+          "symbol": "Onwards",
+          "first_seen_at_utc": "2026-10-12T01:45:23.793941+00:00",
+          "first_seen_rank": 4,
+          "first_positive_at_utc": "2026-10-12T01:45:23.793941+00:00",
+          "entry_price_usd": 0.0002107,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.000319,
+          "hold_return_pct": 51.4001,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "HbXn9Lcug7KrXxLr6TrKFe1pymCmqbVb3kbP9N1Kpump",
+          "pair_address": "8Nm7gTnDvSom7C7uGmZ8FGgjRaW6ydHMCLLmw8JpUZsn",
+          "symbol": "PUMPATAR",
+          "first_seen_at_utc": "2026-10-12T05:20:23.522905+00:00",
+          "first_seen_rank": 2,
+          "first_positive_at_utc": "2026-10-12T05:25:17.805970+00:00",
+          "entry_price_usd": 8.387e-05,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0001246,
+          "hold_return_pct": 48.5633,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "EUDhQF4VPg9R1hDR8Kebj11dRTcvUkpNs9pUxyhApump",
+          "pair_address": "EUVcPyuZKDfXzu8cH5pQepWAcEBHTxRqrjwfBbFsNdaj",
+          "symbol": "TOPCAT",
+          "first_seen_at_utc": "2026-10-12T09:08:14.983028+00:00",
+          "first_seen_rank": 9,
+          "first_positive_at_utc": "2026-10-12T09:08:14.983028+00:00",
+          "entry_price_usd": 8.693e-05,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.000122,
+          "hold_return_pct": 40.3428,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+          "pair_address": "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+          "symbol": "PQC",
+          "first_seen_at_utc": "2026-10-11T22:45:26.618811+00:00",
+          "first_seen_rank": 5,
+          "first_positive_at_utc": "2026-10-11T22:45:26.618811+00:00",
+          "entry_price_usd": 0.0002814,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0003699,
+          "hold_return_pct": 31.4499,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "WJJkGmNB6zZB71rHboMzZV9mWsgNBCDrmkPDpbbpump",
+          "pair_address": "AwTgceQya64voHu2Twec7hoNcNNi9dtKXRCHZBG5i2x9",
+          "symbol": "Kairo",
+          "first_seen_at_utc": "2026-10-11T22:15:33.833530+00:00",
+          "first_seen_rank": 4,
+          "first_positive_at_utc": "2026-10-11T23:10:21.376290+00:00",
+          "entry_price_usd": 0.0001107,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0001313,
+          "hold_return_pct": 18.6089,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "apiANKWvjcSFhavFEXvuE5wX8n312sVFtRpLQpX1api",
+          "pair_address": "4AYdMCxwpeu6L5HCy8xa6maquchFLMWY6XtuXqYfhB6z",
+          "symbol": "API",
+          "first_seen_at_utc": "2026-10-12T12:44:20.330461+00:00",
+          "first_seen_rank": 3,
+          "first_positive_at_utc": "2026-10-12T15:06:16.807724+00:00",
+          "entry_price_usd": 0.0003775,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0004454,
+          "hold_return_pct": 17.9868,
+          "price_age_minutes_at_lock": 1.6
+        },
+        {
+          "mint": "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump",
+          "pair_address": "GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi",
+          "symbol": "Pepper",
+          "first_seen_at_utc": "2026-10-12T04:05:17.808952+00:00",
+          "first_seen_rank": 7,
+          "first_positive_at_utc": "2026-10-12T04:05:17.808952+00:00",
+          "entry_price_usd": 0.0003364,
+          "last_price_at_utc": "2026-10-12T21:28:25.209631+00:00",
+          "last_price_usd": 0.0003942,
+          "hold_return_pct": 17.1819,
+          "price_age_minutes_at_lock": 1.6
+        }
+      ]
     }
   }
 }
