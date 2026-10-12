@@ -598,6 +598,8 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
 (function(){
  const tabs={'homeTab':'home','betaLiveTab':'beta-live','v3Tab':'v3','betaDailyTab':'beta-daily','v3DailyTab':'v3-daily','spikeTab':'spike','betaTab':'beta','performanceTab':'performance','myTokensTab':'my-tokens'};
  function navigate(tab){
+  if(!Object.values(tabs).includes(tab))tab='home';
+  try{sessionStorage.setItem('fomo-active-tab',tab)}catch(e){}
   const b=document.body;if(!b)return;window.activeDashboardTab=tab;if(typeof window.updateDataAge==='function')window.updateDataAge();
   for(const mode of ['home','performance','daily','spike','beta','beta-live','v3','v3-daily','beta-daily','my-tokens'])b.classList.toggle(mode+'-mode',mode===tab);
   for(const [id,value] of Object.entries(tabs)){const n=document.getElementById(id);if(n)n.classList.toggle('active',value===tab)}
@@ -613,7 +615,7 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
   window.scrollTo(0,0);
  }
  document.addEventListener('click',function(e){const btn=e.target.closest&&e.target.closest('nav.dashboard-nav button');if(!btn||!tabs[btn.id])return;e.preventDefault();e.stopImmediatePropagation();navigate(tabs[btn.id]);},true);
- function init(){navigate('home');try{history.scrollRestoration='manual'}catch(e){}}
+ function init(){let tab='home';try{tab=sessionStorage.getItem('fomo-active-tab')||'home'}catch(e){}navigate(tab);try{history.scrollRestoration='manual'}catch(e){}}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
  window.fomoNavigate=navigate;
 })();
