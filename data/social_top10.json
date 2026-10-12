@@ -1,41 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:50:50.082912+00:00",
+  "updated_at_utc": "2026-10-12T08:52:34.883334+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791780680000_721",
-        "kv4rl"
-      ],
-      "id": "343cd069-cc6b-5339-9474-595345c3cf53",
-      "ts": "2026-10-12T04:51:20+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 23834.61
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791780750000_722",
-        "c9acf329-07fe-58eb-830b-09ec48103730",
-        "m330"
-      ],
-      "id": "34bbdb78-858e-4965-89ea-b468b06c6e0f",
-      "ts": "2026-10-12T04:52:30+00:00",
-      "mint": "0xb095274743941e953c746f9c228da9c18bb6ec29",
-      "chain": "base",
-      "symbol": "LAPTOP",
-      "side": "sell",
-      "trader": "c9acf329-07fe-58eb-830b-09ec48103730",
-      "usd": -10084.83
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -6204,7 +6172,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 367,
+  "events_count": 365,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
