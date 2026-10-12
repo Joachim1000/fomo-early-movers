@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-12T09:22:34.436646+00:00",
+  "updated_at_utc": "2026-10-12T09:24:25.010718+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
@@ -4963,6 +4963,70 @@
       "side": "thesis",
       "trader": "4c953767-eeff-50d7-bb6c-570fe8f1f4dd",
       "usd": 0.0
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "alrt_1791796805000_1154",
+        "d6b49690-484b-500f-a639-c6b1be1ceb75",
+        "evilpanda"
+      ],
+      "id": "94083887-29a1-592c-88ff-e347ebb47236",
+      "ts": "2026-10-12T09:20:05+00:00",
+      "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
+      "chain": "solana",
+      "symbol": "DARK",
+      "side": "sell",
+      "trader": "d6b49690-484b-500f-a639-c6b1be1ceb75",
+      "usd": 174.706
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "79513370-6087-5989-bcba-5c23f235a862",
+        "alrt_1791796820000_1155",
+        "donbags"
+      ],
+      "id": "b25af775-dbd7-5b00-b9fd-827a5a5581ec",
+      "ts": "2026-10-12T09:20:20+00:00",
+      "mint": "0x14f6a94909c407854390aa2d2462a3095d317777",
+      "chain": "bsc",
+      "symbol": "旺柴",
+      "side": "buy",
+      "trader": "79513370-6087-5989-bcba-5c23f235a862",
+      "usd": 67602.01
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "alrt_1791796825000_1156",
+        "d6b49690-484b-500f-a639-c6b1be1ceb75",
+        "evilpanda"
+      ],
+      "id": "48e634c4-9cc2-5e20-ba72-3321e5514134",
+      "ts": "2026-10-12T09:20:25+00:00",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "chain": "solana",
+      "symbol": "STONK",
+      "side": "buy",
+      "trader": "d6b49690-484b-500f-a639-c6b1be1ceb75",
+      "usd": 3033.75
+    },
+    {
+      "thesis_text": "",
+      "trader_ids": [
+        "79513370-6087-5989-bcba-5c23f235a862",
+        "alrt_1791797055000_1157",
+        "donbags"
+      ],
+      "id": "9f6d7fc4-363b-50ef-b950-e83acd9c72cc",
+      "ts": "2026-10-12T09:24:15+00:00",
+      "mint": "0x14f6a94909c407854390aa2d2462a3095d317777",
+      "chain": "bsc",
+      "symbol": "旺柴",
+      "side": "buy",
+      "trader": "79513370-6087-5989-bcba-5c23f235a862",
+      "usd": 74049.19
     }
   ],
   "top10": [
@@ -4980,7 +5044,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 31,
       "language_positive_count": 2,
@@ -5012,7 +5076,7 @@
       "friends_buy_usd": 720129.93,
       "friends_sell_usd": 0,
       "recent_mentions": 0,
-      "recent_friends": 2,
+      "recent_friends": 0,
       "language_analyzed_count": 0,
       "language_positive_count": 0,
       "language_negative_count": 0,
@@ -5033,9 +5097,9 @@
       "mint": "0x14f6a94909c407854390aa2d2462a3095d317777",
       "symbol": "旺柴",
       "mentions": 4,
-      "buys": 9,
+      "buys": 11,
       "sells": 2,
-      "buy_usd": 399176.83,
+      "buy_usd": 540828.03,
       "sell_usd": 12680.16,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -5054,8 +5118,8 @@
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 386496.67,
-      "activity_sentiment_score": 93.8,
+      "net_usd": 528147.87,
+      "activity_sentiment_score": 95.4,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -5064,9 +5128,9 @@
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
       "symbol": "STONK",
       "mentions": 2,
-      "buys": 11,
+      "buys": 12,
       "sells": 2,
-      "buy_usd": 383833.98,
+      "buy_usd": 386867.73,
       "sell_usd": 802.43,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -5081,11 +5145,11 @@
       "language_neutral_count": 2,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 10,
+      "unique_traders": 11,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 383031.55,
+      "net_usd": 386065.3,
       "activity_sentiment_score": 99.6,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
@@ -5282,7 +5346,7 @@
   "followed_count": 70,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
-  "last_fetch_at_utc": "2026-10-12T09:18:25.108529+00:00",
+  "last_fetch_at_utc": "2026-10-12T09:24:25.010718+00:00",
   "friends_summary": {
     "matched_events": 17,
     "tokens": 4,
@@ -5292,7 +5356,7 @@
     "buy_usd": 741905.76,
     "sell_usd": 9080.69
   },
-  "events_count": 310,
+  "events_count": 314,
   "matched_followed_events": 17,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
