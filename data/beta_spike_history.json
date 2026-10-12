@@ -946,8 +946,26 @@
       "measurement_10m_delay_minutes": 12.11,
       "return_10m_pct": -5.79,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "HT1hPomeMjNM81XebDHLgiBr3upQCHSgWLmeoyU7pump",
+      "pair_address": "9jJ5LkSMz1kQYdGtfpwtfkB7nJY5TwEaRgwhBHX7fNgp",
+      "symbol": "OVERDRIVE",
+      "first_alert_at_utc": "2026-10-12T14:48:17.301498+00:00",
+      "alert_price_usd": 0.0002676,
+      "initial_15m_change_pct": 26.76,
+      "buys_5m": 103,
+      "sells_5m": 61,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T14:46:21.304933+00:00"
+  "active_alerts": {
+    "HT1hPomeMjNM81XebDHLgiBr3upQCHSgWLmeoyU7pump|9jJ5LkSMz1kQYdGtfpwtfkB7nJY5TwEaRgwhBHX7fNgp": true
+  },
+  "updated_at_utc": "2026-10-12T14:48:17.301498+00:00"
 }
