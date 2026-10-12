@@ -1,121 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T09:02:30.975485+00:00",
+  "updated_at_utc": "2026-10-12T09:04:25.951878+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "991048a3-d556-5020-8895-8e9603f81f1c",
-        "alrt_1791781355000_742",
-        "pedrigavifrenki"
-      ],
-      "id": "d01f6e45-8502-5745-acad-c9e6872c694c",
-      "ts": "2026-10-12T05:02:35+00:00",
-      "mint": "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump",
-      "chain": "solana",
-      "symbol": "Solamians",
-      "side": "buy",
-      "trader": "991048a3-d556-5020-8895-8e9603f81f1c",
-      "usd": 4997.5
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "5df7a15e-4c2d-51bc-942c-11c065e94a7a",
-        "aix_888",
-        "alrt_1791781370000_744"
-      ],
-      "id": "cf1abb28-4e0b-5633-8f40-a1641ec4c47a",
-      "ts": "2026-10-12T05:02:50+00:00",
-      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
-      "chain": "solana",
-      "symbol": "BORDR",
-      "side": "sell",
-      "trader": "5df7a15e-4c2d-51bc-942c-11c065e94a7a",
-      "usd": 4839.2
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "a8acfb38-142c-503e-a584-79c7341a671d",
-        "alrt_1791781370000_743",
-        "killer666"
-      ],
-      "id": "dfbb08ac-9f00-59ff-a570-308d4256792c",
-      "ts": "2026-10-12T05:02:50+00:00",
-      "mint": "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump",
-      "chain": "solana",
-      "symbol": "Solamians",
-      "side": "sell",
-      "trader": "a8acfb38-142c-503e-a584-79c7341a671d",
-      "usd": 2778.58
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791781380000_745",
-        "bbdffbd6-a4b1-5623-b366-a6dde08ba7d9",
-        "vyper00"
-      ],
-      "id": "89dd6b10-af00-5eac-97d9-ba9fcf1d89c0",
-      "ts": "2026-10-12T05:03:00+00:00",
-      "mint": "0x39dbed3a2bd333467115de45665cc57f813c4571",
-      "chain": "robinhood",
-      "symbol": "PONS",
-      "side": "buy",
-      "trader": "bbdffbd6-a4b1-5623-b366-a6dde08ba7d9",
-      "usd": 5184.85
-    },
-    {
-      "thesis_text": "cult posted a thesis on $CATE: Holy fuck FrankDeGods just aped into FrankOWeen",
-      "trader_ids": [
-        "alrt_1791781390000_746",
-        "cult",
-        "e4ef2135-d2a0-5f7a-b805-06b0359b0b96"
-      ],
-      "id": "4311ae50-2acf-4e54-aa50-f0d1f8e67ce1",
-      "ts": "2026-10-12T05:03:10+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "e4ef2135-d2a0-5f7a-b805-06b0359b0b96",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "2abeb384-64ef-5108-bcc9-60446d941631",
-        "alrt_1791781455000_749",
-        "vvoahsol"
-      ],
-      "id": "e61c6f4a-6914-505d-a462-ef13a6cb4850",
-      "ts": "2026-10-12T05:04:15+00:00",
-      "mint": "8ZP5CzbPL1fmP8dn1GEmLd8xw1JdudUF5Dk7EpLxpump",
-      "chain": "solana",
-      "symbol": "Solamians",
-      "side": "buy",
-      "trader": "2abeb384-64ef-5108-bcc9-60446d941631",
-      "usd": 3980.0
-    },
-    {
-      "thesis_text": "bngrrzzz posted a thesis on $CATE: 💛🐱",
-      "trader_ids": [
-        "98fa7853-a9ea-5765-8828-91b1e6046659",
-        "alrt_1791781455000_748",
-        "bngrrzzz"
-      ],
-      "id": "9f53ccff-c43b-4b8d-be4f-c79a01d2b476",
-      "ts": "2026-10-12T05:04:15+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "98fa7853-a9ea-5765-8828-91b1e6046659",
-      "usd": 0.0
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -5578,7 +5466,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 39,
+      "mentions": 37,
       "buys": 1,
       "sells": 2,
       "buy_usd": 5257.8,
@@ -5590,13 +5478,13 @@
       "friends_sell_usd": 0,
       "recent_mentions": 3,
       "recent_friends": 0,
-      "language_analyzed_count": 39,
+      "language_analyzed_count": 37,
       "language_positive_count": 2,
       "language_negative_count": 2,
-      "language_neutral_count": 35,
+      "language_neutral_count": 33,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
-      "unique_traders": 35,
+      "unique_traders": 34,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
@@ -5766,9 +5654,9 @@
       "symbol": "BORDR",
       "mentions": 0,
       "buys": 2,
-      "sells": 9,
+      "sells": 8,
       "buy_usd": 22616.33,
-      "sell_usd": 27610.68,
+      "sell_usd": 22771.48,
       "followed_buys": 0,
       "followed_sells": 2,
       "followed_mentions": 0,
@@ -5782,12 +5670,12 @@
       "language_neutral_count": 0,
       "language_sentiment_score": null,
       "language_sentiment_label": "NOT VERIFIED",
-      "unique_traders": 9,
+      "unique_traders": 8,
       "friends_unique_traders": 1,
       "friends_net_usd": -9080.69,
       "friends_activity": 2,
-      "net_usd": -4994.35,
-      "activity_sentiment_score": -33.9,
+      "net_usd": -155.15,
+      "activity_sentiment_score": -28.8,
       "activity_sentiment_label": "NEGATIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -5900,7 +5788,7 @@
     "buy_usd": 918194.94,
     "sell_usd": 9080.69
   },
-  "events_count": 348,
+  "events_count": 341,
   "matched_followed_events": 18,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
