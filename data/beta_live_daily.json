@@ -38500,6 +38500,106 @@
       "rank": 10,
       "beta_score": -9.999,
       "risk": "ELEVATED"
+    },
+    {
+      "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+      "pair_address": "HnhpJPJgBG2KwniMTNW8cVBHvk1hFog3RC3kjnyc23tD",
+      "symbol": "CARDS",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.2973,
+      "rank": 1,
+      "beta_score": 6.363,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "CbcyNo7m1amFWqEQm2m4PLv1UNvpcL3C1Ujm6AkzpKoU",
+      "pair_address": "4JAnKFddd5fFTk5PxDj3PpTWJuTEfSWQEjZJcgKQ9KwW",
+      "symbol": "e/acc",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.00162,
+      "rank": 2,
+      "beta_score": 2.507,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "9aqmJjCnnMQv42TXLk921ceUkN35nea2QP969n1caqjj",
+      "pair_address": "7Nj7mBE7iVmjvnBHNvjgaz6G3ZktTHFNbf7aQDfZ7iNR",
+      "symbol": "SI",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.001856,
+      "rank": 3,
+      "beta_score": -2.235,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+      "pair_address": "Q2sPHPdUWFMg7M7wwrQKLrn619cAucfRsmhVJffodSp",
+      "symbol": "USELESS",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.1815,
+      "rank": 4,
+      "beta_score": -4.328,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
+      "pair_address": "G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh",
+      "symbol": "CYBERLEEK",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.003292,
+      "rank": 5,
+      "beta_score": -4.535,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "HT1hPomeMjNM81XebDHLgiBr3upQCHSgWLmeoyU7pump",
+      "pair_address": "9jJ5LkSMz1kQYdGtfpwtfkB7nJY5TwEaRgwhBHX7fNgp",
+      "symbol": "OVERDRIVE",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.0003314,
+      "rank": 6,
+      "beta_score": -4.56,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "FdZRSoq4MfUPkqAi8mipJ9UaFYu8gfDCwCfw76YZpump",
+      "pair_address": "EdV32pDiDmuFSsEbA9DB97VziSfSRXDdUQ7WCPRJwzEP",
+      "symbol": "Glorp",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.0001135,
+      "rank": 7,
+      "beta_score": -5.778,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "C5jwdmzeZ9bD57q71BvUrDTyxou4A83m4w2JnEdbpump",
+      "pair_address": "3MwRQxhRDqa8C5yK6w1SQQYC4BsHYAWjTN2HKb29hvRs",
+      "symbol": "BATONA",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 8.617e-05,
+      "rank": 8,
+      "beta_score": -7.422,
+      "risk": "ELEVATED"
+    },
+    {
+      "mint": "CNXcCGfENqGwQV6hV64M9mBSGfWxC8p3jBjtJ5sPpump",
+      "pair_address": "784rHUsvzoq9at8AVLi9bdFiszb1NW3c5mXvu7rCJHtR",
+      "symbol": "HW2",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.0001644,
+      "rank": 9,
+      "beta_score": -9.178,
+      "risk": "HIGH"
+    },
+    {
+      "mint": "7K52aYQW9rWGjwZmQ7o2d1P6E7bji6hSMsqaLy5EcxLh",
+      "pair_address": "6qUUCwD9fyRafora8XVmdApQBxCkbUiZTMkcYD47rWsS",
+      "symbol": "PQC",
+      "observed_at_utc": "2026-10-12T15:00:57.313700+00:00",
+      "observation_price_usd": 0.0005448,
+      "rank": 10,
+      "beta_score": -9.309,
+      "risk": "ELEVATED"
     }
   ],
   "days": {
@@ -38655,5 +38755,5 @@
       ]
     }
   },
-  "updated_at_utc": "2026-10-12T14:58:17.260942+00:00"
+  "updated_at_utc": "2026-10-12T15:00:57.313700+00:00"
 }
