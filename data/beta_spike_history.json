@@ -236,10 +236,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "EH4cP8K1qDYZZH5ezVJFCnTQmsXXPjhF6Tbx8w6Kpump",
+      "pair_address": "3S7fiSZpCRKfevwqmXaK5twHAQxGsPvV3gWcskkx6h48",
+      "symbol": "Dogcoin",
+      "first_alert_at_utc": "2026-10-12T10:16:17.177074+00:00",
+      "alert_price_usd": 0.0001643,
+      "initial_15m_change_pct": 6.9,
+      "buys_5m": 114,
+      "sells_5m": 42,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ|57JmG2uos4wGFtBuerGS2azHEPBBnp8FJRgeLmnx8uXV": true
+    "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ|57JmG2uos4wGFtBuerGS2azHEPBBnp8FJRgeLmnx8uXV": true,
+    "EH4cP8K1qDYZZH5ezVJFCnTQmsXXPjhF6Tbx8w6Kpump|3S7fiSZpCRKfevwqmXaK5twHAQxGsPvV3gWcskkx6h48": true
   },
-  "updated_at_utc": "2026-10-12T10:14:17.698749+00:00"
+  "updated_at_utc": "2026-10-12T10:16:17.177074+00:00"
 }
