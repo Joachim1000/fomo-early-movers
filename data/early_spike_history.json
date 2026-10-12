@@ -850,8 +850,24 @@
       "observed_5m_at_utc": "2026-10-12T02:40:22.830662+00:00",
       "return_5m_pct": 17.85,
       "measurement_delay_minutes": 5.07
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "WJJkGmNB6zZB71rHboMzZV9mWsgNBCDrmkPDpbbpump",
+      "pair_address": "AwTgceQya64voHu2Twec7hoNcNNi9dtKXRCHZBG5i2x9",
+      "symbol": "Kairo",
+      "first_alert_at_utc": "2026-10-12T03:55:17.262484+00:00",
+      "alert_price_usd": 0.0001655,
+      "initial_15m_change_pct": 25.28,
+      "buys_5m": 10,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-12T03:50:22.378096+00:00"
+  "updated_at_utc": "2026-10-12T03:55:17.262484+00:00"
 }
