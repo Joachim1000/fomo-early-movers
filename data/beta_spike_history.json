@@ -1160,7 +1160,12 @@
       "price_5m_usd": 0.005176,
       "observed_5m_at_utc": "2026-10-12T16:30:39.759551+00:00",
       "return_5m_pct": -6.72,
-      "measurement_delay_minutes": 6.37
+      "measurement_delay_minutes": 6.37,
+      "price_10m_usd": 0.005108,
+      "observed_10m_at_utc": "2026-10-12T16:34:19.580891+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": -7.95,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-12",
@@ -1173,10 +1178,11 @@
       "buys_5m": 68,
       "sells_5m": 33,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 9.094e-05,
+      "observed_5m_at_utc": "2026-10-12T16:34:19.580891+00:00",
+      "return_5m_pct": 5.68,
+      "measurement_delay_minutes": 5.86
     },
     {
       "day": "2026-10-12",
@@ -1193,10 +1199,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
+      "pair_address": "7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy",
+      "symbol": "SECRETFROG",
+      "first_alert_at_utc": "2026-10-12T16:34:19.580891+00:00",
+      "alert_price_usd": 0.0008281,
+      "initial_15m_change_pct": 15.16,
+      "buys_5m": 41,
+      "sells_5m": 13,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|J2XBZkpC7ygBQiPw2MWWCqiVJn9i44b8GwtTRoFV1ijj": true
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|J2XBZkpC7ygBQiPw2MWWCqiVJn9i44b8GwtTRoFV1ijj": true,
+    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
   },
-  "updated_at_utc": "2026-10-12T16:32:16.662215+00:00"
+  "updated_at_utc": "2026-10-12T16:34:19.580891+00:00"
 }
