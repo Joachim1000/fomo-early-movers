@@ -3,7 +3,7 @@ Chronological logistic regression, with explicit heuristic fallback until enough
 """
 import json, math
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from collections import defaultdict
 
 DATA=Path("data")
@@ -152,7 +152,10 @@ for x in ranking[:10]:
     if row is not None:
         row["v31_rank"]=x["v31_rank"]
         row["predicted_10m_gain_probability_pct"]=x["predicted_10m_gain_probability_pct"]
-prior["observations"]=sorted(existing.values(),key=lambda x:x.get("observed_at_utc") or "")[-10000:]
+# Preserve the seven-day window, rather than an arbitrary 10,000-row cap.
+# Only keep recent full feature observations; exact rank and entry remain stored.
+cutoff=now-timedelta(days=7)
+prior["observations"]=sorted((x for x in existing.values() if (dt(x.get("observed_at_utc")) or now)>=cutoff),key=lambda x:x.get("observed_at_utc") or "")
 prior.update({"generated_at_utc":stamp,"model":"L2_LOGISTIC_REGRESSION","trained":trained,
               "status":"TRAINED_INDEPENDENT" if trained else "INDEPENDENT_HEURISTIC_WAITING_FOR_VERIFIED_10M_TRAINING_DATA",
               "training_examples":len(train),"positive_examples":pos,"negative_examples":neg,
