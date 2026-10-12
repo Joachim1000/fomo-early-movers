@@ -381,7 +381,7 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
  if(!hist){el.textContent='PENDING · Exact-pair price history unavailable';return}
  const specs=[{name:'LIVE TOP 10 · V1',source:rec?.records||[],v3:false},{name:'LIVE V3.1 BETA AI',source:(v3?.observations||[]).filter(x=>Number(x.v3_top10_rank)>=1&&Number(x.v3_top10_rank)<=10),v3:true}];
  const horizons=[30,60,180,360],results={};const now=Date.now();
- const resetAt=Date.parse('2026-10-12T00:00:00Z'); // Start a fresh performance cohort, preserve raw market data
+ const resetAt=Date.parse('2026-10-12T00:00:00Z'); // Performance reset: show only observations from this new cohort; raw data preserved
  const pct=v=>v==null?'<span class="model-pending">PENDING</span>':'<span class="'+(v>0?'model-positive':v<0?'model-negative':'')+'">'+(v>0?'+':'')+v.toFixed(1)+'%</span>';
  for(const model of specs){
   const entries=new Map();
