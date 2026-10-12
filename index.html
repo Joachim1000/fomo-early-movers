@@ -259,11 +259,11 @@ body.home-mode .layout,body.home-mode #performanceView{display:none!important}
 .mx-home-grid article,.mx-home-chart{background:#101b2a;border:1px solid #29394d;border-radius:10px;padding:15px}
 .mx-home-grid h3,.mx-home-chart h3{font-size:13px;letter-spacing:.5px;margin:0 0 7px;color:#d7eaff}.mx-home-grid p{font-size:12px;line-height:1.55;color:#aabed1;margin:0}
 .mx-home-chart-head{margin-bottom:15px}.mx-home-chart-head button{padding:8px 12px}
-.mx-home-best{font-size:13px;margin-bottom:14px;color:#bcd4ec}.mx-hour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:5px}
+.mx-home-best{font-size:13px;margin-bottom:14px;color:#bcd4ec}.mx-hour-grid{display:grid;grid-template-rows:repeat(12,auto);grid-auto-flow:column;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:5px}
 .mx-hour-row{display:grid;grid-template-columns:44px minmax(0,1fr) 65px 68px;gap:8px;align-items:center;font-size:11px;color:#afc3d7}
 .mx-hour-track{height:9px;background:#223247;border-radius:6px;overflow:hidden}.mx-hour-track>div{height:100%;border-radius:6px}.mx-hour-row strong{text-align:right}.mx-hour-count{text-align:right;color:#8199af}
 .mx-home-footnote{font-size:11px;color:#92a8be;margin:13px 0 0}
-@media(max-width:750px){.mx-home{padding:12px;margin:8px}.mx-hour-grid{grid-template-columns:1fr}.mx-home-grid{grid-template-columns:1fr}}
+@media(max-width:750px){.mx-home{padding:12px;margin:8px}.mx-hour-grid{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}.mx-home-grid{grid-template-columns:1fr}}
 </style><style>
 /* HOME is a standalone landing page: never show market or beta panels underneath. */
 body.home-mode main.layout,
