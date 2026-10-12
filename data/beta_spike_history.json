@@ -990,8 +990,26 @@
       "measurement_10m_delay_minutes": 10.75,
       "return_10m_pct": 27.57,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-12",
+      "mint": "39fzweMMY4DRAgBQN61jbMGRoa2RBFTjAY3Vg95Epump",
+      "pair_address": "7X1nomASzsx8f9uYArTyiKyhsxb1VJob7EjX7UbwBHJY",
+      "symbol": "Ploy",
+      "first_alert_at_utc": "2026-10-12T15:10:26.955518+00:00",
+      "alert_price_usd": 9e-05,
+      "initial_15m_change_pct": 24.93,
+      "buys_5m": 24,
+      "sells_5m": 13,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-12T15:08:19.497951+00:00"
+  "active_alerts": {
+    "39fzweMMY4DRAgBQN61jbMGRoa2RBFTjAY3Vg95Epump|7X1nomASzsx8f9uYArTyiKyhsxb1VJob7EjX7UbwBHJY": true
+  },
+  "updated_at_utc": "2026-10-12T15:10:26.955518+00:00"
 }
