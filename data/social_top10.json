@@ -1,249 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T06:50:38.731403+00:00",
+  "updated_at_utc": "2026-10-12T06:55:32.675233+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "4a045be4-94fd-59d0-bcf2-4296d1aa2dcf",
-        "alrt_1791773455000_389",
-        "bddoescrypto"
-      ],
-      "id": "f2d4976d-ee07-50e5-bb1e-72ef888c66c4",
-      "ts": "2026-10-12T02:50:55+00:00",
-      "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
-      "chain": "solana",
-      "symbol": "ANSEM",
-      "side": "buy",
-      "trader": "4a045be4-94fd-59d0-bcf2-4296d1aa2dcf",
-      "usd": 328332.58
-    },
-    {
-      "thesis_text": "lips posted a thesis on $NORMIE: Onboarded a a couple normies today\n\nProper chads, the mission continues \n\nLet’s onboard the world",
-      "trader_ids": [
-        "6bf2c766-bd05-5237-a219-d9fc141af2b1",
-        "alrt_1791773455000_388",
-        "lips"
-      ],
-      "id": "248713e0-d51a-4328-9c61-9ee0c81ea960",
-      "ts": "2026-10-12T02:50:55+00:00",
-      "mint": "0x92ef7caa35f85f50311fa5ed7ade2d9786c61612",
-      "chain": "robinhood",
-      "symbol": "NORMIE",
-      "side": "thesis",
-      "trader": "6bf2c766-bd05-5237-a219-d9fc141af2b1",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "20c05a13-c7af-541e-acd9-722fd1141953",
-        "alrt_1791773485000_390",
-        "waynesg"
-      ],
-      "id": "d44997c7-9482-43da-94df-6ee9e0e61362",
-      "ts": "2026-10-12T02:51:25+00:00",
-      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-      "chain": "solana",
-      "symbol": "DOPE",
-      "side": "sell",
-      "trader": "20c05a13-c7af-541e-acd9-722fd1141953",
-      "usd": 5856.67
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xscottiechefflr",
-        "alrt_1791773490000_391",
-        "b49a7a36-fa2f-592d-9abc-8410e77aebc1"
-      ],
-      "id": "46bd6b83-a901-5bbd-9924-88c03ee1e016",
-      "ts": "2026-10-12T02:51:30+00:00",
-      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-      "chain": "solana",
-      "symbol": "CLAUDIA",
-      "side": "buy",
-      "trader": "b49a7a36-fa2f-592d-9abc-8410e77aebc1",
-      "usd": 4975.03
-    },
-    {
-      "thesis_text": "Yusufff posted a thesis on $CATE: Can we break from 53, please and thank you.",
-      "trader_ids": [
-        "alrt_1791773525000_392",
-        "e7006c22-1adf-5b01-b033-4b530f03e8b4",
-        "yusufff"
-      ],
-      "id": "3bdb8f28-923a-4b08-9d73-39b5a8d29ff7",
-      "ts": "2026-10-12T02:52:05+00:00",
-      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
-      "chain": "solana",
-      "symbol": "CATE",
-      "side": "thesis",
-      "trader": "e7006c22-1adf-5b01-b033-4b530f03e8b4",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773575000_393",
-        "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-        "fullpinkyak"
-      ],
-      "id": "591aef8e-c093-5195-b368-81b6441fd69d",
-      "ts": "2026-10-12T02:52:55+00:00",
-      "mint": "0x14f6a94909c407854390aa2d2462a3095d317777",
-      "chain": "bsc",
-      "symbol": "旺柴",
-      "side": "buy",
-      "trader": "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-      "usd": 43287.39
-    },
-    {
-      "thesis_text": "444glocks posted a thesis on $urmom: Ur mom will save pons",
-      "trader_ids": [
-        "444glocks",
-        "alrt_1791773590000_394",
-        "c408fd25-8c22-5b0e-a7ab-e2182c425db4"
-      ],
-      "id": "da212841-95cf-44e7-9932-7793d49088c8",
-      "ts": "2026-10-12T02:53:10+00:00",
-      "mint": "0x4874845b0d4acffd896dde1e42828a543717af7f",
-      "chain": "robinhood",
-      "symbol": "urmom",
-      "side": "thesis",
-      "trader": "c408fd25-8c22-5b0e-a7ab-e2182c425db4",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "86702fa2-b7ef-51f1-ae4f-e37fe080c598",
-        "alrt_1791773595000_395",
-        "jbar"
-      ],
-      "id": "7eddc14d-77dd-5274-a56b-7eab72627235",
-      "ts": "2026-10-12T02:53:15+00:00",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "chain": "robinhood",
-      "symbol": "ORBIO",
-      "side": "sell",
-      "trader": "86702fa2-b7ef-51f1-ae4f-e37fe080c598",
-      "usd": -104.054
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "86702fa2-b7ef-51f1-ae4f-e37fe080c598",
-        "alrt_1791773600000_397",
-        "jbar"
-      ],
-      "id": "0d6dd494-0615-5779-8ad2-632f2a218514",
-      "ts": "2026-10-12T02:53:20+00:00",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "chain": "robinhood",
-      "symbol": "ORBIO",
-      "side": "sell",
-      "trader": "86702fa2-b7ef-51f1-ae4f-e37fe080c598",
-      "usd": -205.954
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773655000_398",
-        "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-        "fullpinkyak"
-      ],
-      "id": "a7f30d1c-ece2-5c7e-939b-c64a5e3d0c0f",
-      "ts": "2026-10-12T02:54:15+00:00",
-      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
-      "chain": "solana",
-      "symbol": "SWOLF",
-      "side": "buy",
-      "trader": "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-      "usd": 12462.61
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773660000_399",
-        "d47559fc-02c3-5165-b94f-1316fdd19560",
-        "notarandomuser"
-      ],
-      "id": "62001268-d388-5723-be65-2fb9babc97d4",
-      "ts": "2026-10-12T02:54:20+00:00",
-      "mint": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
-      "chain": "ethereum",
-      "symbol": "IMD",
-      "side": "buy",
-      "trader": "d47559fc-02c3-5165-b94f-1316fdd19560",
-      "usd": 81186.81
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773675000_400",
-        "d47559fc-02c3-5165-b94f-1316fdd19560",
-        "notarandomuser"
-      ],
-      "id": "755d3ec7-9247-5f21-9e96-aa15b63c680f",
-      "ts": "2026-10-12T02:54:35+00:00",
-      "mint": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
-      "chain": "ethereum",
-      "symbol": "IMD",
-      "side": "buy",
-      "trader": "d47559fc-02c3-5165-b94f-1316fdd19560",
-      "usd": 103568.49
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773695000_401",
-        "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-        "fullpinkyak"
-      ],
-      "id": "68848641-1983-5147-9887-3dd1b3903872",
-      "ts": "2026-10-12T02:54:55+00:00",
-      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
-      "chain": "solana",
-      "symbol": "SWOLF",
-      "side": "buy",
-      "trader": "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-      "usd": 17941.01
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791773710000_402",
-        "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-        "fullpinkyak"
-      ],
-      "id": "500deadb-a7e9-5d8d-8a35-71d43fc58858",
-      "ts": "2026-10-12T02:55:10+00:00",
-      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
-      "chain": "solana",
-      "symbol": "SWOLF",
-      "side": "buy",
-      "trader": "f47dc8da-7846-510f-9609-e4545b2ceb5b",
-      "usd": 23632.0
-    },
-    {
-      "thesis_text": "facxts posted a thesis on $BINF: 50x to orbio mc btw",
-      "trader_ids": [
-        "1d025760-4e85-50c4-b7f5-aeab26641998",
-        "alrt_1791773715000_403",
-        "facxts"
-      ],
-      "id": "11566945-a3f9-4901-8431-30ce7b809fe0",
-      "ts": "2026-10-12T02:55:15+00:00",
-      "mint": "0x9862d6478cb8098645815ff27f91efbc659f7777",
-      "chain": "bsc",
-      "symbol": "BINF",
-      "side": "thesis",
-      "trader": "1d025760-4e85-50c4-b7f5-aeab26641998",
-      "usd": 0.0
-    },
     {
       "thesis_text": "GL_AW_AT_PARAGON posted a thesis on $尤栗: CHINA JUST GAVE ITS MOST VIRAL AI AGENT CITIZENSHIP and power to trade crypto\n\n Yuri is the most popular agent in China with a CULT behind her and even got permission to vote and trade crypto as a AI AGENT.\n\nYuri is the first digital human in China to receive digital artist certification!\n\nhttps://www.youtube.com/watch?v=fsK5g7WuAxw",
       "trader_ids": [
@@ -7754,7 +7514,7 @@
       "chain": "solana",
       "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
       "symbol": "CATE",
-      "mentions": 41,
+      "mentions": 40,
       "buys": 1,
       "sells": 0,
       "buy_usd": 5257.8,
@@ -7764,13 +7524,13 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 9,
+      "recent_mentions": 7,
       "recent_friends": 0,
-      "language_analyzed_count": 41,
+      "language_analyzed_count": 40,
       "language_positive_count": 3,
       "language_negative_count": 2,
-      "language_neutral_count": 36,
-      "language_sentiment_score": 2.4,
+      "language_neutral_count": 35,
+      "language_sentiment_score": 2.5,
       "language_sentiment_label": "POSITIVE",
       "unique_traders": 31,
       "friends_unique_traders": 0,
@@ -7817,9 +7577,9 @@
       "mint": "0x14f6a94909c407854390aa2d2462a3095d317777",
       "symbol": "旺柴",
       "mentions": 4,
-      "buys": 5,
+      "buys": 4,
       "sells": 0,
-      "buy_usd": 133830.48,
+      "buy_usd": 90543.09,
       "sell_usd": 0,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -7834,11 +7594,11 @@
       "language_neutral_count": 4,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 7,
+      "unique_traders": 6,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 133830.48,
+      "net_usd": 90543.09,
       "activity_sentiment_score": 100.0,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
@@ -7968,13 +7728,44 @@
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
     {
+      "chain": "robinhood",
+      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
+      "symbol": "ORBIO",
+      "mentions": 2,
+      "buys": 6,
+      "sells": 8,
+      "buy_usd": 138208.37,
+      "sell_usd": 18532.31,
+      "followed_buys": 0,
+      "followed_sells": 0,
+      "followed_mentions": 0,
+      "friends_buy_usd": 0,
+      "friends_sell_usd": 0,
+      "recent_mentions": 0,
+      "recent_friends": 0,
+      "language_analyzed_count": 2,
+      "language_positive_count": 0,
+      "language_negative_count": 0,
+      "language_neutral_count": 2,
+      "language_sentiment_score": 0.0,
+      "language_sentiment_label": "NEUTRAL",
+      "unique_traders": 9,
+      "friends_unique_traders": 0,
+      "friends_net_usd": 0,
+      "friends_activity": 0,
+      "net_usd": 119676.07,
+      "activity_sentiment_score": 76.4,
+      "activity_sentiment_label": "POSITIVE",
+      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
+    },
+    {
       "chain": "solana",
       "mint": "9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump",
       "symbol": "ANSEM",
       "mentions": 2,
-      "buys": 8,
+      "buys": 7,
       "sells": 1,
-      "buy_usd": 1796264.95,
+      "buy_usd": 1467932.37,
       "sell_usd": 3500.39,
       "followed_buys": 0,
       "followed_sells": 0,
@@ -7989,12 +7780,12 @@
       "language_neutral_count": 2,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 4,
+      "unique_traders": 3,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 1792764.56,
-      "activity_sentiment_score": 99.6,
+      "net_usd": 1464431.98,
+      "activity_sentiment_score": 99.5,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -8012,7 +7803,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 1,
+      "recent_mentions": 0,
       "recent_friends": 0,
       "language_analyzed_count": 1,
       "language_positive_count": 0,
@@ -8028,37 +7819,6 @@
       "activity_sentiment_score": 95.5,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
-    },
-    {
-      "chain": "robinhood",
-      "mint": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
-      "symbol": "ORBIO",
-      "mentions": 2,
-      "buys": 6,
-      "sells": 10,
-      "buy_usd": 138208.37,
-      "sell_usd": 18842.31,
-      "followed_buys": 0,
-      "followed_sells": 0,
-      "followed_mentions": 0,
-      "friends_buy_usd": 0,
-      "friends_sell_usd": 0,
-      "recent_mentions": 0,
-      "recent_friends": 0,
-      "language_analyzed_count": 2,
-      "language_positive_count": 0,
-      "language_negative_count": 0,
-      "language_neutral_count": 2,
-      "language_sentiment_score": 0.0,
-      "language_sentiment_label": "NEUTRAL",
-      "unique_traders": 10,
-      "friends_unique_traders": 0,
-      "friends_net_usd": 0,
-      "friends_activity": 0,
-      "net_usd": 119366.06,
-      "activity_sentiment_score": 76.0,
-      "activity_sentiment_label": "POSITIVE",
-      "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     }
   ],
   "followed_handle": "joachimtjoernelund",
@@ -8068,15 +7828,15 @@
   "friends_feed_status": "not_verified_personal_feed",
   "last_fetch_at_utc": "2026-10-12T06:50:38.731403+00:00",
   "friends_summary": {
-    "matched_events": 7,
-    "tokens": 6,
+    "matched_events": 6,
+    "tokens": 5,
     "buys": 4,
     "sells": 2,
-    "theses": 1,
+    "theses": 0,
     "buy_usd": 224210.94,
     "sell_usd": 4414.64
   },
-  "events_count": 484,
-  "matched_followed_events": 7,
+  "events_count": 469,
+  "matched_followed_events": 6,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
