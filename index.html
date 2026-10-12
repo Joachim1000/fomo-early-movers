@@ -748,7 +748,9 @@ async function loadHomeTradingHours(force=false){
 /* Shadow-only SPIKE RADAR BETA: do not modify original alerts or trades. */
 async function loadSpikeRadarBeta(){
  const body=document.getElementById('spikeBetaRows'),status=document.getElementById('spikeBetaStatus');
- if(!document.getElementById('spikeBetaHistoryRows'))return;
+ const historyTarget=document.getElementById('spikeBetaHistoryRows');
+ if(!historyTarget)return;
+ historyTarget.innerHTML='<tr><td colspan="7">Updating BETA signals…</td></tr>';
  try{
   const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'beta_spike_history.json?t='+Date.now(),{cache:'no-store'});
@@ -784,8 +786,7 @@ async function loadSpikeRadarBeta(){
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sorted=selected.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
   if(body)body.innerHTML=sorted.slice(0,60).map(x=>'<tr><td>'+escape(x.symbol)+'</td><td>'+escape(x.initial_15m_change_pct)+'%</td><td>'+escape(x.buys_5m)+' / '+escape(x.sells_5m)+'</td><td>'+escape(x.volume_5m_usd==null?'—':x.volume_5m_usd)+'</td><td>'+escape(x.liquidity_usd==null?'—':x.liquidity_usd)+'</td></tr>').join('')||'<tr><td colspan="5">No signals meet the BETA filter yet.</td></tr>';
-  const history=document.getElementById('spikeBetaHistoryRows');
-  if(history)history.innerHTML=sorted.slice(0,60).map(x=>{
+  if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
    const ret=x.status==='MEASURED'&&x.return_5m_pct!=null?Number(x.return_5m_pct):null;
    const ret10=x.return_10m_pct!=null?Number(x.return_10m_pct):null;
    const when=x.first_alert_at_utc?new Date(x.first_alert_at_utc).toLocaleString('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit'}):'—';
@@ -795,6 +796,13 @@ async function loadSpikeRadarBeta(){
    const result=v=>v==null?'PENDING':v>0?'POSITIVE':v<0?'NEGATIVE':'FLAT';
    return '<tr><td>'+escape(x.symbol)+'</td><td>'+escape(when)+'</td><td>'+money(x.alert_price_usd)+'</td><td>'+money(x.price_5m_usd)+'</td><td class="'+tone(ret)+'">'+signed(ret)+'</td><td>'+money(x.price_10m_usd)+'</td><td class="'+tone(ret10)+'">'+signed(ret10)+'</td></tr>';
   }).join('')||'<tr><td colspan="7">No BETA history yet.</td></tr>';
- }catch(e){if(status)status.textContent='BETA analysis unavailable: '+e.message;if(body)body.innerHTML='<tr><td colspan="5">Unable to load verified data.</td></tr>';const history=document.getElementById('spikeBetaHistoryRows');if(history)history.innerHTML='<tr><td colspan="7">Unable to load verified data.</td></tr>'}
+ }catch(e){console.error('SPIKE RADAR BETA loading error',e);if(status)status.textContent='BETA analysis unavailable: '+e.message;if(body)body.innerHTML='<tr><td colspan="5">Unable to load verified data.</td></tr>';if(historyTarget)historyTarget.innerHTML='<tr><td colspan="7">BETA data error: '+String(e.message).replace(/[<>&]/g,'')+'</td></tr>'}
 }
+</script><script>
+/* Ensure BETA loads when its panel is actually opened, including restored tabs. */
+(function(){
+ const btn=document.getElementById('spikeBetaTab');
+ if(btn)btn.addEventListener('click',()=>{if(typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta()});
+ if(document.body.classList.contains('spike-beta-mode')&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta();
+})();
 </script></body></html>
