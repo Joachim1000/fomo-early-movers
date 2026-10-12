@@ -373,10 +373,11 @@ async function loadV3Daily(){const body=document.getElementById('v3DailyRows'),s
  if(!hist){el.textContent='PENDING · Exact-pair price history unavailable';return}
  const specs=[{name:'LIVE TOP 10 · V1',source:rec?.records||[],v3:false},{name:'LIVE V3 BETA AI',source:(v3?.observations||[]).filter(x=>Number(x.v3_top10_rank)>=1&&Number(x.v3_top10_rank)<=10),v3:true}];
  const horizons=[30,60,180,360],results={};const now=Date.now();
+ const resetAt=Date.parse('2026-10-12T00:00:00Z'); // Start a fresh performance cohort, preserve raw market data
  const pct=v=>v==null?'<span class="model-pending">PENDING</span>':'<span class="'+(v>0?'model-positive':v<0?'model-negative':'')+'">'+(v>0?'+':'')+v.toFixed(1)+'%</span>';
  for(const model of specs){
   const entries=new Map();
-  for(const x of model.source){const t=Date.parse(x.observed_at_utc||''),price=Number(model.v3?x.entry_price_usd:x.observation_price_usd);if(!x.mint||!x.pair_address||!Number.isFinite(t)||!(price>0))continue;const key=x.mint+'|'+x.pair_address;if(!entries.has(key)||t<entries.get(key).t)entries.set(key,{mint:x.mint,pair:x.pair_address,t,price})}
+  for(const x of model.source){const t=Date.parse(x.observed_at_utc||''),price=Number(model.v3?x.entry_price_usd:x.observation_price_usd);if(!x.mint||!x.pair_address||!Number.isFinite(t)||t<resetAt||!(price>0))continue;const key=x.mint+'|'+x.pair_address;if(!entries.has(key)||t<entries.get(key).t)entries.set(key,{mint:x.mint,pair:x.pair_address,t,price})}
   results[model.name]={};
   for(const mins of horizons){
    const eligible=[...entries.values()].filter(x=>now>=x.t+mins*60000),trades=[];
