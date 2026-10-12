@@ -1,105 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T01:50:29.637247+00:00",
+  "updated_at_utc": "2026-10-12T01:55:26.633955+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "7497412a-046a-5ca2-a21a-91367183cd0e",
-        "alrt_1791755465000_1487",
-        "jmmmm"
-      ],
-      "id": "a816649a-6c21-590a-9547-b6d6db6b0bed",
-      "ts": "2026-10-11T21:51:05+00:00",
-      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "chain": "solana",
-      "symbol": "STONK",
-      "side": "sell",
-      "trader": "7497412a-046a-5ca2-a21a-91367183cd0e",
-      "usd": -1478.4
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "7497412a-046a-5ca2-a21a-91367183cd0e",
-        "alrt_1791755480000_1488",
-        "jmmmm"
-      ],
-      "id": "16646697-5125-5980-9e55-1af5f95ffd24",
-      "ts": "2026-10-11T21:51:20+00:00",
-      "mint": "0xbeea1d618e533a387d941f58a7d4c9b7bd377777",
-      "chain": "bsc",
-      "symbol": "牛来",
-      "side": "sell",
-      "trader": "7497412a-046a-5ca2-a21a-91367183cd0e",
-      "usd": -591.523
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791755510000_1489",
-        "df5462a8-f1af-5781-a647-6e4bf44afac6",
-        "excesscapital"
-      ],
-      "id": "08356900-89b3-562f-87de-58017e5f637d",
-      "ts": "2026-10-11T21:51:50+00:00",
-      "mint": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
-      "chain": "robinhood",
-      "symbol": "AI",
-      "side": "sell",
-      "trader": "df5462a8-f1af-5781-a647-6e4bf44afac6",
-      "usd": -3009.94
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "56f8886d-4a92-5e95-bb3d-8c8b42d057e8",
-        "alrt_1791755530000_1490",
-        "carrotz"
-      ],
-      "id": "0763db9f-8c93-5175-a5b2-bf609a5c9546",
-      "ts": "2026-10-11T21:52:10+00:00",
-      "mint": "0xe9bc5c6a86caa44fd7b469bf3cc7c563e4f77777",
-      "chain": "bsc",
-      "symbol": "Max",
-      "side": "sell",
-      "trader": "56f8886d-4a92-5e95-bb3d-8c8b42d057e8",
-      "usd": 4166.47
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791755570000_1491",
-        "e5b3a269-010a-511c-913a-1036fd1840b5",
-        "rasmr"
-      ],
-      "id": "9fff358f-1d1b-5366-87b4-6e61bb3d842c",
-      "ts": "2026-10-11T21:52:50+00:00",
-      "mint": "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga",
-      "chain": "solana",
-      "symbol": "Malfoid",
-      "side": "buy",
-      "trader": "e5b3a269-010a-511c-913a-1036fd1840b5",
-      "usd": 7996.4
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "adamhodl",
-        "alrt_1791755660000_1492",
-        "c3945187-6a07-59e0-8b39-9ad0eac1f194"
-      ],
-      "id": "002d29b8-7df2-59ca-a6db-d08b199d4e92",
-      "ts": "2026-10-11T21:54:20+00:00",
-      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-      "chain": "solana",
-      "symbol": "SI",
-      "side": "buy",
-      "trader": "c3945187-6a07-59e0-8b39-9ad0eac1f194",
-      "usd": 4975.03
-    },
     {
       "thesis_text": "trenttraded posted a thesis on $AI: Wishing I had more capital to add.",
       "trader_ids": [
@@ -8922,15 +8826,15 @@
       "symbol": "STONK",
       "mentions": 9,
       "buys": 6,
-      "sells": 6,
+      "sells": 5,
       "buy_usd": 2084525.95,
-      "sell_usd": 2985.9,
+      "sell_usd": 1507.5,
       "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 9,
       "language_positive_count": 1,
@@ -8938,12 +8842,12 @@
       "language_neutral_count": 8,
       "language_sentiment_score": 11.1,
       "language_sentiment_label": "POSITIVE",
-      "unique_traders": 11,
+      "unique_traders": 10,
       "friends_unique_traders": 0,
       "friends_net_usd": 0,
       "friends_activity": 0,
-      "net_usd": 2081540.05,
-      "activity_sentiment_score": 99.7,
+      "net_usd": 2083018.45,
+      "activity_sentiment_score": 99.9,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -9014,9 +8918,9 @@
       "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
       "symbol": "SI",
       "mentions": 6,
-      "buys": 10,
+      "buys": 9,
       "sells": 7,
-      "buy_usd": 154302.44,
+      "buy_usd": 149327.41,
       "sell_usd": 743711.52,
       "followed_buys": 1,
       "followed_sells": 0,
@@ -9031,12 +8935,12 @@
       "language_neutral_count": 4,
       "language_sentiment_score": 0.0,
       "language_sentiment_label": "MIXED",
-      "unique_traders": 14,
+      "unique_traders": 13,
       "friends_unique_traders": 1,
       "friends_net_usd": 90648.71,
       "friends_activity": 1,
-      "net_usd": -589409.08,
-      "activity_sentiment_score": -37.8,
+      "net_usd": -594384.11,
+      "activity_sentiment_score": -38.5,
       "activity_sentiment_label": "NEGATIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     },
@@ -9147,7 +9051,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 5,
       "language_positive_count": 2,
@@ -9180,7 +9084,7 @@
     "buy_usd": 123041.41,
     "sell_usd": 14846.85
   },
-  "events_count": 553,
+  "events_count": 547,
   "matched_followed_events": 13,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
