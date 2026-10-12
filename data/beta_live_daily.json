@@ -13300,6 +13300,106 @@
       "rank": 10,
       "beta_score": -8.121,
       "risk": "ELEVATED"
+    },
+    {
+      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
+      "pair_address": "7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy",
+      "symbol": "SECRETFROG",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.001073,
+      "rank": 1,
+      "beta_score": -4.695,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "symbol": "HOOKED",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.006055,
+      "rank": 2,
+      "beta_score": -8.49,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "symbol": "CATE",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.05664,
+      "rank": 3,
+      "beta_score": -10.748,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "pair_address": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+      "symbol": "baton",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.01719,
+      "rank": 4,
+      "beta_score": -11.48,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
+      "pair_address": "HnhpJPJgBG2KwniMTNW8cVBHvk1hFog3RC3kjnyc23tD",
+      "symbol": "CARDS",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.3343,
+      "rank": 5,
+      "beta_score": -11.549,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "pair_address": "6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G",
+      "symbol": "SAPLING",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.002622,
+      "rank": 6,
+      "beta_score": -14.86,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "7VertkgF9KLhxxJXHX6uaWuoYZTP9LdGj2bWmVXVpump",
+      "pair_address": "CyJwKnLiiY4fmiwqMCSWFSHxo7T9Ubshgs2uRAuJCrk5",
+      "symbol": "Agency",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.002394,
+      "rank": 7,
+      "beta_score": -15.331,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "DMEUT8UV5JX8G7jB7TP9XyfBUrP5z7p6VPLSE2WbbRHt",
+      "symbol": "Altai",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.0002235,
+      "rank": 8,
+      "beta_score": -17.031,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "BXuuLQQsHsAjweVvTXHAgJSnTj9MLKpiK5cLP7c3wLxB",
+      "pair_address": "5Q4H88BRnBLtrqcB6s7yeoXb5SKjaMaRZ4emATKCHpf5",
+      "symbol": "Nuts",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.0001132,
+      "rank": 9,
+      "beta_score": -17.998,
+      "risk": "ELEVATED · LIMITED"
+    },
+    {
+      "mint": "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump",
+      "pair_address": "GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi",
+      "symbol": "Pepper",
+      "observed_at_utc": "2026-10-12T05:10:24.571483+00:00",
+      "observation_price_usd": 0.0003573,
+      "rank": 10,
+      "beta_score": -18.268,
+      "risk": "HIGH"
     }
   ],
   "days": {
@@ -13455,5 +13555,5 @@
       ]
     }
   },
-  "updated_at_utc": "2026-10-12T05:05:19.527430+00:00"
+  "updated_at_utc": "2026-10-12T05:10:24.571483+00:00"
 }
