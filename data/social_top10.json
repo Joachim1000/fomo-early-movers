@@ -1,201 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T08:35:31.730057+00:00",
+  "updated_at_utc": "2026-10-12T08:40:44.934373+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "Lvndon_exe posted a thesis on $MarsCoin: Do not lose conviction this coin is doing just fine I’d lean to say it’s a little bit more than fine everything’s still bad and essentially the market is frozen nothing has been moving or had really any motion whatsoever zoom out look at the bigger picture and DCA MORE",
-      "trader_ids": [
-        "44667306-31ab-54c2-b0bd-5a4f97b4019f",
-        "alrt_1791779805000_678",
-        "lvndon_exe"
-      ],
-      "id": "e6197cc4-491e-40f0-8874-317d28c7dd7f",
-      "ts": "2026-10-12T04:36:45+00:00",
-      "mint": "0xfe189e97832da1573e4e4ff034f4ffc3a15c7777",
-      "chain": "bsc",
-      "symbol": "MarsCoin",
-      "side": "thesis",
-      "trader": "44667306-31ab-54c2-b0bd-5a4f97b4019f",
-      "usd": 0.0
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0verxposd",
-        "54732470-7087-587f-857d-3d1eac22141c",
-        "alrt_1791779835000_680"
-      ],
-      "id": "a1f22fb4-7928-5406-a7ab-7ba29aea32c5",
-      "ts": "2026-10-12T04:37:15+00:00",
-      "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
-      "chain": "solana",
-      "symbol": "W",
-      "side": "buy",
-      "trader": "54732470-7087-587f-857d-3d1eac22141c",
-      "usd": 3482.52
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791779855000_681",
-        "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-        "goodboynakub"
-      ],
-      "id": "716a749c-2954-4169-acde-308931f7cb59",
-      "ts": "2026-10-12T04:37:35+00:00",
-      "mint": "0x385f4f8ae47651ce5f58f5265395a669f8281e18",
-      "chain": "robinhood",
-      "symbol": "MEME",
-      "side": "sell",
-      "trader": "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-      "usd": -6254.68
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791779875000_682",
-        "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-        "goodboynakub"
-      ],
-      "id": "a696fb10-a911-5ed1-aa17-dbf38330c157",
-      "ts": "2026-10-12T04:37:55+00:00",
-      "mint": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
-      "chain": "robinhood",
-      "symbol": "PAIR",
-      "side": "sell",
-      "trader": "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-      "usd": -13381.51
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791779895000_683",
-        "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-        "goodboynakub"
-      ],
-      "id": "4d3a9944-cc56-576c-bf9a-7081b869bff2",
-      "ts": "2026-10-12T04:38:15+00:00",
-      "mint": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
-      "chain": "robinhood",
-      "symbol": "PAIR",
-      "side": "sell",
-      "trader": "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-      "usd": -37666.71
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791779905000_684",
-        "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-        "goodboynakub"
-      ],
-      "id": "acfdd429-9399-4e38-a73b-52ad6987df25",
-      "ts": "2026-10-12T04:38:25+00:00",
-      "mint": "0x6b1d42927b1a84ec28fa88d4fc6fa7af404966be",
-      "chain": "robinhood",
-      "symbol": "PAIR",
-      "side": "sell",
-      "trader": "b0755c42-fbb6-5219-8e2b-e34e7cf4a4ac",
-      "usd": -52404.73
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "0xdetweiler",
-        "72460ae6-1ddc-5a56-b155-f8e187a4f388",
-        "alrt_1791779915000_685"
-      ],
-      "id": "394927c3-0960-53d1-a738-9fe68ca44438",
-      "ts": "2026-10-12T04:38:35+00:00",
-      "mint": "0x63ee90921eac3c3f87961c17556bb3ebdf2490a9",
-      "chain": "robinhood",
-      "symbol": "COPY",
-      "side": "buy",
-      "trader": "72460ae6-1ddc-5a56-b155-f8e187a4f388",
-      "usd": 23745.31
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791779945000_687",
-        "kv4rl"
-      ],
-      "id": "799b4346-9a3b-54a7-b468-d7d1a953c3a3",
-      "ts": "2026-10-12T04:39:05+00:00",
-      "mint": "0x9d0e8f5b25384c7310cb8c6ae32c8fbeb645d083",
-      "chain": "base",
-      "symbol": "DRV",
-      "side": "sell",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 4626.4
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791779965000_688",
-        "kv4rl"
-      ],
-      "id": "17df9a17-330f-5e7d-ae77-48a80201b5a6",
-      "ts": "2026-10-12T04:39:25+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 7024.37
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791779995000_689",
-        "kv4rl"
-      ],
-      "id": "def857d8-15de-4cdb-96b4-8618f16c93e5",
-      "ts": "2026-10-12T04:39:55+00:00",
-      "mint": "0x9d0e8f5b25384c7310cb8c6ae32c8fbeb645d083",
-      "chain": "base",
-      "symbol": "DRV",
-      "side": "sell",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 6199.72
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "69abe9cd-aae4-5208-9869-294d2b88e44b",
-        "alrt_1791780015000_690",
-        "kv4rl"
-      ],
-      "id": "74dc7091-aa2b-5fcf-b181-fe1802219a9e",
-      "ts": "2026-10-12T04:40:15+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "69abe9cd-aae4-5208-9869-294d2b88e44b",
-      "usd": 9169.18
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "41380509-55e1-51cb-b87e-388d7ae42350",
-        "alrt_1791780025000_691",
-        "shootingguard"
-      ],
-      "id": "a54171a4-db16-5a1a-82bb-3a3990eb89ee",
-      "ts": "2026-10-12T04:40:25+00:00",
-      "mint": "0x07696dcab55e62cfef953666b29fe1970518cb00",
-      "chain": "ethereum",
-      "symbol": "WPRL",
-      "side": "buy",
-      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
-      "usd": 24261.84
-    },
     {
       "thesis_text": "pingucharts posted a thesis on $SAPLING: 7 fig pnl pending",
       "trader_ids": [
@@ -6452,7 +6260,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 5,
+      "recent_mentions": 4,
       "recent_friends": 0,
       "language_analyzed_count": 41,
       "language_positive_count": 2,
@@ -6474,9 +6282,9 @@
       "mint": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
       "symbol": "W",
       "mentions": 0,
-      "buys": 25,
+      "buys": 24,
       "sells": 3,
-      "buy_usd": 829983.77,
+      "buy_usd": 826501.25,
       "sell_usd": 1937.45,
       "followed_buys": 12,
       "followed_sells": 0,
@@ -6491,11 +6299,11 @@
       "language_neutral_count": 0,
       "language_sentiment_score": null,
       "language_sentiment_label": "NOT VERIFIED",
-      "unique_traders": 14,
+      "unique_traders": 13,
       "friends_unique_traders": 1,
       "friends_net_usd": 720129.93,
       "friends_activity": 12,
-      "net_usd": 828046.32,
+      "net_usd": 824563.8,
       "activity_sentiment_score": 99.8,
       "activity_sentiment_label": "POSITIVE",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
@@ -6719,33 +6527,33 @@
     },
     {
       "chain": "solana",
-      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
-      "symbol": "SWOLF",
-      "mentions": 0,
-      "buys": 2,
+      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "symbol": "SAPLING",
+      "mentions": 2,
+      "buys": 0,
       "sells": 0,
-      "buy_usd": 21775.83,
+      "buy_usd": 0,
       "sell_usd": 0,
-      "followed_buys": 2,
+      "followed_buys": 0,
       "followed_sells": 0,
       "followed_mentions": 0,
-      "friends_buy_usd": 21775.83,
+      "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 0,
-      "recent_friends": 1,
-      "language_analyzed_count": 0,
+      "recent_mentions": 1,
+      "recent_friends": 0,
+      "language_analyzed_count": 2,
       "language_positive_count": 0,
       "language_negative_count": 0,
-      "language_neutral_count": 0,
-      "language_sentiment_score": null,
-      "language_sentiment_label": "NOT VERIFIED",
+      "language_neutral_count": 2,
+      "language_sentiment_score": 0.0,
+      "language_sentiment_label": "NEUTRAL",
       "unique_traders": 1,
-      "friends_unique_traders": 1,
-      "friends_net_usd": 21775.83,
-      "friends_activity": 2,
-      "net_usd": 21775.83,
-      "activity_sentiment_score": 100.0,
-      "activity_sentiment_label": "POSITIVE",
+      "friends_unique_traders": 0,
+      "friends_net_usd": 0,
+      "friends_activity": 0,
+      "net_usd": 0,
+      "activity_sentiment_score": null,
+      "activity_sentiment_label": "UNKNOWN",
       "activity_sentiment_basis": "trade_flow_proxy_not_text_sentiment"
     }
   ],
@@ -6754,17 +6562,17 @@
   "followed_count": 70,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
-  "last_fetch_at_utc": "2026-10-12T08:31:03.543016+00:00",
+  "last_fetch_at_utc": "2026-10-12T08:40:44.934373+00:00",
   "friends_summary": {
-    "matched_events": 20,
-    "tokens": 7,
-    "buys": 16,
+    "matched_events": 19,
+    "tokens": 6,
+    "buys": 15,
     "sells": 3,
     "theses": 1,
-    "buy_usd": 941940.25,
+    "buy_usd": 918194.94,
     "sell_usd": 9830.09
   },
-  "events_count": 402,
-  "matched_followed_events": 20,
+  "events_count": 390,
+  "matched_followed_events": 19,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
