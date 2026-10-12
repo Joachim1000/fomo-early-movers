@@ -1,105 +1,9 @@
 {
-  "updated_at_utc": "2026-10-12T04:01:02.442801+00:00",
+  "updated_at_utc": "2026-10-12T04:05:27.507575+00:00",
   "window_minutes": 240,
   "source": "FOMO API /v2/alerts",
   "status": "ok",
   "events": [
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "8e4f207f-5542-5ffe-9d68-4c12e51345f1",
-        "alrt_1791763310000_1897",
-        "pikachuuu"
-      ],
-      "id": "c1e47efa-b28a-5953-8af9-2e4cfb80f3da",
-      "ts": "2026-10-12T00:01:50+00:00",
-      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
-      "chain": "solana",
-      "symbol": "HOTBOT",
-      "side": "buy",
-      "trader": "8e4f207f-5542-5ffe-9d68-4c12e51345f1",
-      "usd": 70685.32
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "2dce94f6-7809-5b6b-be30-8698da7b799d",
-        "alrt_1791763335000_1898",
-        "bmud"
-      ],
-      "id": "6dfcb3da-42ab-439e-84fd-8e0e6ab06ffa",
-      "ts": "2026-10-12T00:02:15+00:00",
-      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
-      "chain": "solana",
-      "symbol": "SECRETFROG",
-      "side": "sell",
-      "trader": "2dce94f6-7809-5b6b-be30-8698da7b799d",
-      "usd": 6763.22
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "37501716-c07a-59dd-a63b-cbadd6403c21",
-        "alrt_1791763430000_1901",
-        "fdgooner"
-      ],
-      "id": "56c83484-e4a7-4863-ac49-643d866e6366",
-      "ts": "2026-10-12T00:03:50+00:00",
-      "mint": "0x4e67db19044549ff420860834c91b45bad298722",
-      "chain": "ethereum",
-      "symbol": "ZC",
-      "side": "sell",
-      "trader": "37501716-c07a-59dd-a63b-cbadd6403c21",
-      "usd": -10252.03
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "00cce45d-0e39-55ca-b8c0-9c6478340184",
-        "alrt_1791763445000_1902",
-        "plaingreatsmelt"
-      ],
-      "id": "65d4bb3e-cc3c-5465-a8e6-104e6c5b7e26",
-      "ts": "2026-10-12T00:04:05+00:00",
-      "mint": "0x315c0c76ffe4593d7b81168035a2b80f68e97777",
-      "chain": "bsc",
-      "symbol": "尤栗",
-      "side": "buy",
-      "trader": "00cce45d-0e39-55ca-b8c0-9c6478340184",
-      "usd": 3683.35
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "41380509-55e1-51cb-b87e-388d7ae42350",
-        "alrt_1791763475000_1903",
-        "shootingguard"
-      ],
-      "id": "d91d509a-fe50-57dc-8446-aa47b5f78d11",
-      "ts": "2026-10-12T00:04:35+00:00",
-      "mint": "0xbeea1d618e533a387d941f58a7d4c9b7bd377777",
-      "chain": "bsc",
-      "symbol": "牛来",
-      "side": "sell",
-      "trader": "41380509-55e1-51cb-b87e-388d7ae42350",
-      "usd": -65.0206
-    },
-    {
-      "thesis_text": "",
-      "trader_ids": [
-        "alrt_1791763515000_1905",
-        "fe64cb97-0f1c-5174-a789-31a7e688f6c1",
-        "slurptoshi_"
-      ],
-      "id": "9f86bedc-7339-526c-9670-2112713ff1c0",
-      "ts": "2026-10-12T00:05:15+00:00",
-      "mint": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
-      "chain": "robinhood",
-      "symbol": "AI",
-      "side": "buy",
-      "trader": "fe64cb97-0f1c-5174-a789-31a7e688f6c1",
-      "usd": 30597.39
-    },
     {
       "thesis_text": "",
       "trader_ids": [
@@ -8226,7 +8130,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 2,
+      "recent_mentions": 1,
       "recent_friends": 0,
       "language_analyzed_count": 7,
       "language_positive_count": 3,
@@ -8319,7 +8223,7 @@
       "followed_mentions": 0,
       "friends_buy_usd": 0,
       "friends_sell_usd": 0,
-      "recent_mentions": 1,
+      "recent_mentions": 0,
       "recent_friends": 0,
       "language_analyzed_count": 5,
       "language_positive_count": 0,
@@ -8463,7 +8367,7 @@
   ],
   "followed_handle": "joachimtjoernelund",
   "followed_status": "api_error",
-  "followed_error": "The read operation timed out",
+  "followed_error": "HTTP Error 503: Service Unavailable",
   "followed_count": 0,
   "friends_feed_verified": false,
   "friends_feed_status": "not_verified_personal_feed",
@@ -8477,7 +8381,7 @@
     "buy_usd": 0,
     "sell_usd": 0
   },
-  "events_count": 509,
+  "events_count": 503,
   "matched_followed_events": 0,
   "note": "4-hour rolling window, ranking favors theses, unique traders, matched Friends, buy balance, and last-hour activity. Global alerts are not a verified copy of the personal Friends feed. Followed counts only reflect matched trader IDs in retrieved alerts; $1K filter is not guaranteed. Repeated trades count separately; unique traders count once."
 }
