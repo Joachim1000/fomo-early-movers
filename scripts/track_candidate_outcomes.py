@@ -64,7 +64,7 @@ for r in records:
             observations.append((t, price))
     for minutes in (5, 10, 15):
         label = str(minutes)
-        if label in r["outcomes"]:
+        if label in r["outcomes"] and r["outcomes"][label].get("status") != "NOT_VERIFIABLE":
             continue
         target = start + timedelta(minutes=minutes)
         # Only forward observations within three minutes: never use pre-signal prices.
