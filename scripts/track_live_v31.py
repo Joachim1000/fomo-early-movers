@@ -3,7 +3,7 @@ Chronological logistic regression, with explicit heuristic fallback until enough
 """
 import json, math
 from pathlib import Path
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone, timedelta, time
 from zoneinfo import ZoneInfo
 from collections import defaultdict
 
@@ -33,7 +33,7 @@ for x in latest.get("eligible_4h_candidates",[]):
     price=num(x.get("price_usd"))
     if not mint or not pair or not price or price<=0: continue
     series=sorted(((when(p.get("timestamp")),num(p.get("price_usd"))) for p in history.get(mint,[]) if p.get("pair_address")==pair),key=lambda z:z[0] or now)
-    series=[(t,p) for t,p in series if t and p and p>0 and t<=now]
+    series=[(t,p) for t,p in series if t and p and p>0 and t<=min(now,cutoff_utc)]
     def lag(minutes):
         eligible=[(t,p) for t,p in series if minutes-3 <= (now-t).total_seconds()/60 <= minutes+3]
         return min(eligible,key=lambda z:abs((now-z[0]).total_seconds()/60-minutes))[1] if eligible else None
@@ -199,16 +199,20 @@ if day not in daily and local.hour>=8:
 # Daily portfolios freeze after 23:30 Warsaw, with the latest exact-pair observed price.
 for date,portfolio in daily.items():
     if portfolio.get("status")=="LOCKED":continue
-    if date!=day or (local.hour,local.minute)>=(23,30):
+    cutoff_local=datetime.combine(datetime.fromisoformat(date).date(),time(23,30),tzinfo=zone)
+    cutoff_utc=cutoff_local.astimezone(timezone.utc)
+    locking=now>=cutoff_utc
+    if locking:
         portfolio["status"]="LOCKED"
         portfolio["locked_at_utc"]=now.isoformat()
+        portfolio["evaluation_cutoff_utc"]=cutoff_utc.isoformat()
     for item in portfolio.get("candidates",[]):
         # Refresh market-derived columns without replacing the fixed selection.
         live=next((x for x in current if x["mint"]==item["mint"] and x["pair_address"]==item["pair_address"]),None)
-        if live:
+        if live and not locking:
             for field in ("buy_sell_ratio","buys_5m","sells_5m","change_15m_pct"):
                 item[field]=live.get(field)
-        item["observed_at_utc"]=now.isoformat()
+        item["observed_at_utc"]=min(now,cutoff_utc).isoformat()
         prices=[(dt(p.get("timestamp")),num(p.get("price_usd")))
                 for p in history.get(item["mint"],[])
                 if p.get("pair_address")==item["pair_address"]]
