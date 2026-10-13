@@ -5744,11 +5744,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "pair_address": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+      "symbol": "baton",
+      "first_alert_at_utc": "2026-10-13T23:52:16.987286+00:00",
+      "alert_price_usd": 0.01253,
+      "initial_15m_change_pct": 4.07,
+      "buys_5m": 16,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6x4Z2dr5DgHUBCKvta8T8GNsFTxJhsBZxNrycWQ8pump|GLN7Dr7AsP9GRxAjxiVBk9Rnwyn74ar2R3BuGk8ZxQn1": true,
-    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
+    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true,
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true
   },
-  "updated_at_utc": "2026-10-13T23:50:24.248533+00:00"
+  "updated_at_utc": "2026-10-13T23:52:16.987286+00:00"
 }
