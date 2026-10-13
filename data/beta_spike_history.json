@@ -3404,7 +3404,12 @@
       "price_5m_usd": 0.006258,
       "observed_5m_at_utc": "2026-10-13T14:56:18.923615+00:00",
       "return_5m_pct": 38.7,
-      "measurement_delay_minutes": 5.84
+      "measurement_delay_minutes": 5.84,
+      "price_10m_usd": 0.006238,
+      "observed_10m_at_utc": "2026-10-13T15:00:55.588416+00:00",
+      "measurement_10m_delay_minutes": 10.45,
+      "return_10m_pct": 38.25,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3421,7 +3426,12 @@
       "price_5m_usd": 0.001788,
       "observed_5m_at_utc": "2026-10-13T14:56:18.923615+00:00",
       "return_5m_pct": -5.45,
-      "measurement_delay_minutes": 5.84
+      "measurement_delay_minutes": 5.84,
+      "price_10m_usd": 0.001719,
+      "observed_10m_at_utc": "2026-10-13T15:00:55.588416+00:00",
+      "measurement_10m_delay_minutes": 10.45,
+      "return_10m_pct": -9.1,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3438,8 +3448,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xaBFfa443547b34ab6C3B3173d26e233900527777",
+      "pair_address": "0xD05AdB810Fe61b441808a54137E410BBcCd9d03a",
+      "symbol": "TRUMAN",
+      "first_alert_at_utc": "2026-10-13T15:00:55.588416+00:00",
+      "alert_price_usd": 0.0007576,
+      "initial_15m_change_pct": 8.54,
+      "buys_5m": 26,
+      "sells_5m": 11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T14:58:17.600997+00:00"
+  "active_alerts": {
+    "0xaBFfa443547b34ab6C3B3173d26e233900527777|0xD05AdB810Fe61b441808a54137E410BBcCd9d03a": true
+  },
+  "updated_at_utc": "2026-10-13T15:00:55.588416+00:00"
 }
