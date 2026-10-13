@@ -142,8 +142,25 @@ for x in current:
     ranking.append({"mint":x["mint"],"pair_address":x["pair_address"],"symbol":x.get("symbol"),
                     "observed_at_utc":stamp,"entry_price_usd":x.get("entry_price_usd"),
                     "predicted_10m_gain_probability_pct":score,"candidate_source":"DIRECT_MARKET_SNAPSHOT","v31_heuristic_score":x.get("v31_heuristic_score"),"change_15m_pct":x.get("change_15m_pct"),"buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
-if trained:ranking.sort(key=lambda x:x["predicted_10m_gain_probability_pct"],reverse=True)
-else:ranking.sort(key=lambda x:x["v31_heuristic_score"],reverse=True)
+# Fill remaining display slots with independently scored, lower-confidence candidates.
+# Keep the strict qualification flag and mark these explicitly as WATCHLIST,
+# never as model-qualified signals or verified predictions.
+if len(ranking)<10:
+    already={(x["mint"],x["pair_address"]) for x in ranking}
+    extras=sorted((x for x in current if (x["mint"],x["pair_address"]) not in already
+                   and x["liquidity_usd"]>=5000 and x["volume_5m_usd"]>=500
+                   and x["buys_5m"]>=3 and x["buy_sell_ratio"]>=1),
+                  key=lambda x:x["v31_heuristic_score"],reverse=True)
+    for x in extras[:10-len(ranking)]:
+        ranking.append({"mint":x["mint"],"pair_address":x["pair_address"],"symbol":x.get("symbol"),
+                        "observed_at_utc":stamp,"entry_price_usd":x.get("entry_price_usd"),
+                        "predicted_10m_gain_probability_pct":None,
+                        "candidate_source":"V31_PROVISIONAL_WATCHLIST",
+                        "v31_heuristic_score":x.get("v31_heuristic_score"),
+                        "change_15m_pct":x.get("change_15m_pct"),
+                        "buy_sell_ratio":x.get("buy_sell_ratio"),
+                        "buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
+ranking.sort(key=lambda x:(x["candidate_source"]=="V31_PROVISIONAL_WATCHLIST", -(x["predicted_10m_gain_probability_pct"] if trained and x["predicted_10m_gain_probability_pct"] is not None else x["v31_heuristic_score"])))
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
