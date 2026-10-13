@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "day": "2026-10-13",
+      "mint": "0x8175810D00F9356A8F87A4A7b8FF7660087C7777",
+      "pair_address": "0x8eE2680a452b5a0d845F25776D7AA921Bb0F1B69",
+      "symbol": "파랭이",
+      "first_alert_at_utc": "2026-10-13T11:16:18.649046+00:00",
+      "alert_price_usd": 0.0004819,
+      "initial_15m_change_pct": 3.52,
+      "buys_5m": 11,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    }
+  ],
+  "active_alerts": {
+    "0x8175810D00F9356A8F87A4A7b8FF7660087C7777|0x8eE2680a452b5a0d845F25776D7AA921Bb0F1B69": true
+  },
+  "updated_at_utc": "2026-10-13T11:16:18.649046+00:00"
+}
