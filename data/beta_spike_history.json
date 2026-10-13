@@ -3114,6 +3114,23 @@
       "buys_5m": 63,
       "sells_5m": 33,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.001705,
+      "observed_5m_at_utc": "2026-10-13T12:52:18.453975+00:00",
+      "return_5m_pct": -0.99,
+      "measurement_delay_minutes": 6.0
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0x8175810D00F9356A8F87A4A7b8FF7660087C7777",
+      "pair_address": "0x8eE2680a452b5a0d845F25776D7AA921Bb0F1B69",
+      "symbol": "파랭이",
+      "first_alert_at_utc": "2026-10-13T12:52:18.453975+00:00",
+      "alert_price_usd": 0.0003792,
+      "initial_15m_change_pct": 5.83,
+      "buys_5m": 22,
+      "sells_5m": 13,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -3121,7 +3138,8 @@
     }
   ],
   "active_alerts": {
-    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true
+    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true,
+    "0x8175810D00F9356A8F87A4A7b8FF7660087C7777|0x8eE2680a452b5a0d845F25776D7AA921Bb0F1B69": true
   },
-  "updated_at_utc": "2026-10-13T12:50:33.651452+00:00"
+  "updated_at_utc": "2026-10-13T12:52:18.453975+00:00"
 }
