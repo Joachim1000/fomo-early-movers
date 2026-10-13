@@ -2310,8 +2310,43 @@
       "measurement_10m_delay_minutes": 11.98,
       "return_10m_pct": -18.3,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "8Tq4hpxkc4Syv9p2dWb7yqn4idciSJhpZQMFNnE6pump",
+      "pair_address": "6Cnxe1VhUzSmcdhzU9aWTyjQ2RzerKYFzkwXr1qDWBMR",
+      "symbol": "FEED",
+      "first_alert_at_utc": "2026-10-13T00:16:24.458649+00:00",
+      "alert_price_usd": 0.000114,
+      "initial_15m_change_pct": 23.94,
+      "buys_5m": 1123,
+      "sells_5m": 545,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-13T00:16:24.458649+00:00",
+      "alert_price_usd": 0.0006404,
+      "initial_15m_change_pct": 7.11,
+      "buys_5m": 34,
+      "sells_5m": 21,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T00:14:14.569081+00:00"
+  "active_alerts": {
+    "8Tq4hpxkc4Syv9p2dWb7yqn4idciSJhpZQMFNnE6pump|6Cnxe1VhUzSmcdhzU9aWTyjQ2RzerKYFzkwXr1qDWBMR": true,
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": true
+  },
+  "updated_at_utc": "2026-10-13T00:16:24.458649+00:00"
 }
