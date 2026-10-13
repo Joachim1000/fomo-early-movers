@@ -196,21 +196,37 @@ if day not in daily and local.hour>=8:
         if key not in candidates or (score,t)>(candidates[key][0],candidates[key][1]):
             candidates[key]=(score,t,obs)
     picks=sorted(candidates.values(),key=lambda z:(z[0],z[1]),reverse=True)[:10]
+    first_seen={}
+    for obs in rows+current:
+        k=(obs.get("mint"),obs.get("pair_address"))
+        t=dt(obs.get("observed_at_utc"))
+        if all(k) and t and (k not in first_seen or t<first_seen[k][0]):
+            first_seen[k]=(t,obs)
+    def original_call(x):
+        return first_seen.get((x["mint"],x["pair_address"]),(dt(x["observed_at_utc"]),x))
+
     daily[day]={"selected_at_utc":now.isoformat(),"selection_target_local":"08:00",
                 "status":"ACTIVE","selection_basis":"previous_24h_observations",
                 "candidates":[{"mint":x["mint"],"pair_address":x["pair_address"],
                   "symbol":x.get("symbol"),"entry_price_usd":x["entry_price_usd"],
                   "selected_observation_at_utc":t.isoformat(),
+                  "first_seen_at_utc":original_call(x)[0].isoformat(),
                   "v31_heuristic_score":score,"v31_rank":i,
                   "buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),
                   "sells_5m":x.get("sells_5m"),"change_15m_pct":x.get("change_15m_pct"),
-                  "candidate_source":"DAILY_FIXED_SELECTION","first_call_risk":first_call_risk(x)} for i,(score,t,x) in enumerate(picks,1)]}
+                  "candidate_source":"DAILY_FIXED_SELECTION","first_call_risk":first_call_risk(original_call(x)[1])} for i,(score,t,x) in enumerate(picks,1)]}
 # Backfill older daily picks once using their fixed selection snapshot fields.
 # Existing saved values are immutable and never overwritten.
 for portfolio in daily.values():
     for item in portfolio.get("candidates",[]):
         if "first_call_risk" not in item:
-            item["first_call_risk"]=first_call_risk(item)
+            original=sorted((o for o in rows if o.get("mint")==item.get("mint") and o.get("pair_address")==item.get("pair_address") and dt(o.get("observed_at_utc"))),key=lambda o:dt(o["observed_at_utc"]))
+            if original:
+                item["first_seen_at_utc"]=original[0]["observed_at_utc"]
+                item["first_call_risk"]=first_call_risk(original[0])
+            else:
+                item["first_call_risk"]="UNKNOWN"
+                item["first_call_risk_source"]="HISTORICAL_FIRST_OBSERVATION_UNAVAILABLE"
 
 # Daily portfolios freeze after 23:30 Warsaw, with the latest exact-pair observed price.
 for date,portfolio in daily.items():
