@@ -3444,10 +3444,11 @@
       "buys_5m": 12,
       "sells_5m": 7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.002352,
+      "observed_5m_at_utc": "2026-10-13T18:26:18.720979+00:00",
+      "return_5m_pct": -5.24,
+      "measurement_delay_minutes": 5.81
     },
     {
       "day": "2026-10-13",
@@ -3460,10 +3461,11 @@
       "buys_5m": 12,
       "sells_5m": 6,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000299,
+      "observed_5m_at_utc": "2026-10-13T18:26:18.720979+00:00",
+      "return_5m_pct": 8.49,
+      "measurement_delay_minutes": 5.81
     },
     {
       "day": "2026-10-13",
@@ -3480,10 +3482,61 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump",
+      "pair_address": "HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN",
+      "symbol": "Chonk",
+      "first_alert_at_utc": "2026-10-13T18:26:18.720979+00:00",
+      "alert_price_usd": 0.0001853,
+      "initial_15m_change_pct": 29.58,
+      "buys_5m": 24,
+      "sells_5m": 10,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "6MBf1XdZNSAaDKcxxbnCAngRUxBmwbHS5Ybe2rLRpump",
+      "pair_address": "6QvFMaucJmuAuHz1zbqQN2tP41L2XT3aGdQiSvcKdt6N",
+      "symbol": "XTV",
+      "first_alert_at_utc": "2026-10-13T18:26:18.720979+00:00",
+      "alert_price_usd": 0.0002268,
+      "initial_15m_change_pct": 18.68,
+      "buys_5m": 38,
+      "sells_5m": 17,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
+      "pair_address": "G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh",
+      "symbol": "CYBERLEEK",
+      "first_alert_at_utc": "2026-10-13T18:26:18.720979+00:00",
+      "alert_price_usd": 0.002816,
+      "initial_15m_change_pct": 12.06,
+      "buys_5m": 263,
+      "sells_5m": 169,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
+    "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump|HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN": true,
+    "6MBf1XdZNSAaDKcxxbnCAngRUxBmwbHS5Ybe2rLRpump|6QvFMaucJmuAuHz1zbqQN2tP41L2XT3aGdQiSvcKdt6N": true,
+    "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg|G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh": true
   },
-  "updated_at_utc": "2026-10-13T18:24:18.429453+00:00"
+  "updated_at_utc": "2026-10-13T18:26:18.720979+00:00"
 }
