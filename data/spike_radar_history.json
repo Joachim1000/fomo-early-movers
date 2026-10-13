@@ -5577,7 +5577,12 @@
       "price_5m_usd": 0.001957,
       "observed_5m_at_utc": "2026-10-13T23:36:17.963203+00:00",
       "return_5m_pct": -1.76,
-      "measurement_delay_minutes": 5.69
+      "measurement_delay_minutes": 5.69,
+      "price_10m_usd": 0.001939,
+      "observed_10m_at_utc": "2026-10-13T23:42:18.356218+00:00",
+      "measurement_10m_delay_minutes": 11.7,
+      "return_10m_pct": -2.66,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5607,6 +5612,23 @@
       "buys_5m": 24,
       "sells_5m": 16,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001058,
+      "observed_5m_at_utc": "2026-10-13T23:42:18.356218+00:00",
+      "return_5m_pct": -8.32,
+      "measurement_delay_minutes": 6.01
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump",
+      "pair_address": "BFrSZakeqNzVtM3EFhroo4eRhagmmWN8BRntiQKFH6Ru",
+      "symbol": "HIGGS",
+      "first_alert_at_utc": "2026-10-13T23:42:18.356218+00:00",
+      "alert_price_usd": 0.0004962,
+      "initial_15m_change_pct": 3.89,
+      "buys_5m": 10,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -5614,7 +5636,7 @@
     }
   ],
   "active_alerts": {
-    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
+    "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump|BFrSZakeqNzVtM3EFhroo4eRhagmmWN8BRntiQKFH6Ru": true
   },
-  "updated_at_utc": "2026-10-13T23:40:24.705629+00:00"
+  "updated_at_utc": "2026-10-13T23:42:18.356218+00:00"
 }
