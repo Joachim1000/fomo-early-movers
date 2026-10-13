@@ -1,4 +1,4 @@
-"""Independent BETA SPIKE V2 experiment; original BETA remains untouched."""
+"""Independent BETA SPIKE V2 experiment with immediate qualifying alerts."""
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,7 +21,7 @@ history = json.loads(Path("data/history.json").read_text())
 path = Path("data/beta_spike_v2_history.json")
 saved = json.loads(path.read_text()) if path.exists() else {}
 rows = saved.setdefault("records", [])
-pending = saved.setdefault("pending_confirmation", {})
+pending = saved.setdefault("pending_confirmation", {})  # Legacy state, no longer required
 active = saved.setdefault("active_alerts", {})
 now = dt(latest.get("generated_at_utc"))
 if now is None:
@@ -45,40 +45,29 @@ for x in latest.get("candidates", []):
         continue
     qualifying[mint + "|" + pair] = x
 
-# Consecutive confirmation uses two independently collected 5-minute snapshots.
-for key in list(pending):
-    if key not in qualifying:
-        pending.pop(key, None)
+# Alert immediately on the first qualifying snapshot; no 4–12 minute wait.
+# Existing active episode state prevents duplicate alerts until qualification disappears.
+pending.clear()
 for key in list(active):
     if key not in qualifying:
         active.pop(key, None)
 for key, x in qualifying.items():
     if key in active:
         continue
-    prev = pending.get(key)
-    if prev:
-        first = dt(prev.get("timestamp"))
-        gap = (now - first).total_seconds() / 60 if first else -1
-        if 4 <= gap <= 12:
-            rows.append({
-                "mint": x["mint"], "pair_address": x["pair_address"],
-                "symbol": x.get("symbol") or x["mint"][:8],
-                "first_qualified_at_utc": prev["timestamp"],
-                "first_alert_at_utc": now.isoformat(),
-                "alert_price_usd": float(x["price_usd"]),
-                "change_15m_pct": x.get("change_15m_pct"),
-                "buys_5m": x.get("buy_transactions_5m"),
-                "sells_5m": x.get("sell_transactions_5m"),
-                "liquidity_usd": x.get("liquidity_usd"),
-                "status": "PENDING", "return_5m_pct": None,
-                "price_5m_usd": None, "observed_5m_at_utc": None
-            })
-            active[key] = True
-            pending.pop(key, None)
-        elif gap > 12 or gap < 0:
-            pending[key] = {"timestamp": now.isoformat()}
-    else:
-        pending[key] = {"timestamp": now.isoformat()}
+    rows.append({
+        "mint": x["mint"], "pair_address": x["pair_address"],
+        "symbol": x.get("symbol") or x["mint"][:8],
+        "first_qualified_at_utc": now.isoformat(),
+        "first_alert_at_utc": now.isoformat(),
+        "alert_price_usd": float(x["price_usd"]),
+        "change_15m_pct": x.get("change_15m_pct"),
+        "buys_5m": x.get("buy_transactions_5m"),
+        "sells_5m": x.get("sell_transactions_5m"),
+        "liquidity_usd": x.get("liquidity_usd"),
+        "status": "PENDING", "return_5m_pct": None,
+        "price_5m_usd": None, "observed_5m_at_utc": None
+    })
+    active[key] = True
 
 for row in rows:
     if row.get("status") == "MEASURED":
@@ -104,7 +93,7 @@ for row in rows:
 
 saved["schema_version"] = 1
 saved["updated_at_utc"] = now.isoformat()
-saved["strategy"] = "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, two 4–12m-spaced qualifying snapshots"
+saved["strategy"] = "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, immediate first qualifying snapshot"
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps(saved, ensure_ascii=False, indent=2)+"\n")
 print("BETA V2 observations:", len(rows), "awaiting confirmation:", len(pending))
