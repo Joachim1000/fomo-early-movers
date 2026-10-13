@@ -53,7 +53,7 @@ jobs:
         if: steps.collection_window.outputs.enabled == 'true'
         run: |
           git fetch --depth=1 origin main
-          for script in collect.py track_beta_spikes.py track_spike_radar.py track_beta_live_daily.py track_live_v31.py lock_daily.py prune_history.py track_candidate_outcomes.py; do
+          for script in collect.py track_beta_spikes.py track_spike_radar.py track_beta_live_daily.py track_live_v31.py lock_daily.py prune_history.py track_candidate_outcomes.py track_paper_trades.py; do
             git show "origin/main:scripts/$script" > "scripts/$script"
           done
           # Keep code updates local to this run; only JSON is committed.
@@ -115,7 +115,7 @@ jobs:
         if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_spike_radar.py
 
-      - name: Track experimental beta spikes and five-minute outcomes
+      - name: Simulate Spike Radar paper trades\n        if: steps.collection_window.outputs.enabled == 'true'\n        run: python scripts/track_paper_trades.py\n\n      - name: Track experimental beta spikes and five-minute outcomes
         if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_beta_spikes.py
 
@@ -147,9 +147,9 @@ jobs:
 
           # Scripts were loaded from main for execution; never commit them to the data branch.
           git restore -- scripts/collect.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
-          rm -f scripts/track_spike_radar.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py
+          rm -f scripts/track_spike_radar.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py scripts/track_paper_trades.py
 
-          git add data/spike_radar_history.json data/candidate_outcomes.json data/latest.json data/history.json data/recommendations.json data/beta_spike_history.json data/beta_live_daily.json data/live_v31.json
+          git add data/paper_trades.json data/spike_radar_history.json data/candidate_outcomes.json data/latest.json data/history.json data/recommendations.json data/beta_spike_history.json data/beta_live_daily.json data/live_v31.json
           if [ -f data/early_spike_history.json ]; then git add data/early_spike_history.json; fi
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
           if [ -f data/daily_snapshots.json ]; then git add data/daily_snapshots.json; fi
