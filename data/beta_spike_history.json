@@ -3558,10 +3558,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
+      "pair_address": "6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn",
+      "symbol": "SWOLF",
+      "first_alert_at_utc": "2026-10-13T15:46:18.803373+00:00",
+      "alert_price_usd": 0.0007167,
+      "initial_15m_change_pct": 10.67,
+      "buys_5m": 24,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump|ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK": true
+    "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump|ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK": true,
+    "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK|6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn": true
   },
-  "updated_at_utc": "2026-10-13T15:44:19.854695+00:00"
+  "updated_at_utc": "2026-10-13T15:46:18.803373+00:00"
 }
