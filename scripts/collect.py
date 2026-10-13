@@ -339,7 +339,7 @@ for mint, pair in best.items():
     fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
                    mint in fomo_mints and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
-                  volume >= 1500 and change_15m is not None and
+                  volume >= 1000 and change_15m is not None and
                   change_15m >= 3)
     # Experimental BETA; retain the original fast alert unchanged.
     # Beta-only early breakout path; production fast_alert is unchanged.
