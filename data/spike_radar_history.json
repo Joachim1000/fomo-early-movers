@@ -1578,7 +1578,12 @@
       "price_5m_usd": 0.00155,
       "observed_5m_at_utc": "2026-10-13T15:24:17.162546+00:00",
       "return_5m_pct": -1.15,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.001532,
+      "observed_10m_at_utc": "2026-10-13T15:30:46.331362+00:00",
+      "measurement_10m_delay_minutes": 12.48,
+      "return_10m_pct": -2.3,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -1595,10 +1600,44 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-13T15:30:46.331362+00:00",
+      "alert_price_usd": 0.0008764,
+      "initial_15m_change_pct": 22.97,
+      "buys_5m": 78,
+      "sells_5m": 50,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "DTBkv3GrfmUGtBHy5guQm2FmbYuWgtaDkW7XfJokpump",
+      "pair_address": "BW2xVjhKr3LhFdcm4mS1pNdfthzSvJB5rMsKz2Lt4he2",
+      "symbol": "COWE",
+      "first_alert_at_utc": "2026-10-13T15:30:46.331362+00:00",
+      "alert_price_usd": 9.31e-05,
+      "initial_15m_change_pct": 4.59,
+      "buys_5m": 17,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "B4rXJv2pRQvTfEsgtYfxqAsA6sUC8iVGEN1pN865pump|35rs66RzVj7kUKMGE6TUuHU9zpwD7KKkbP84YkcAi14c": true
+    "B4rXJv2pRQvTfEsgtYfxqAsA6sUC8iVGEN1pN865pump|35rs66RzVj7kUKMGE6TUuHU9zpwD7KKkbP84YkcAi14c": true,
+    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
+    "DTBkv3GrfmUGtBHy5guQm2FmbYuWgtaDkW7XfJokpump|BW2xVjhKr3LhFdcm4mS1pNdfthzSvJB5rMsKz2Lt4he2": true
   },
-  "updated_at_utc": "2026-10-13T15:28:17.120088+00:00"
+  "updated_at_utc": "2026-10-13T15:30:46.331362+00:00"
 }
