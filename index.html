@@ -677,7 +677,6 @@ async function loadV3Daily(){
   summary.textContent='Poland day: '+key+' · '+entries.length+' fixed candidates · '+(portfolio.status==='LOCKED'?'LOCKED at 23:30 Warsaw':'ACTIVE until 23:30 Warsaw')+' · Selection 08:00 Warsaw · Verified returns use exact mint and pair';
   body.innerHTML=entries.map((x,i)=>{
    const value=x.return_pct;
-   const value=x.return_pct;
    const rating=value==null?'UNKNOWN':value<=-12?'HIGH':value<0?'ELEVATED':'LOW RELATIVE';
    const cls=rating==='HIGH'?'beta-risk-high':rating==='ELEVATED'?'beta-risk-medium':rating==='UNKNOWN'?'beta-risk-unknown':'beta-risk-low';
    return '<tr><td>'+(i+1)+'</td><td><b>'+escape(x.symbol||x.mint?.slice(0,8))+'</b> <button class="copy-mint" type="button" data-mint="'+escape(x.mint)+'" onclick="copyMint(this)">Copy</button></td><td>'+clock(x.selected_observation_at_utc||portfolio.selected_at_utc)+'</td><td>'+escape(x.v31_rank||i+1)+'</td><td><span class="beta-risk '+cls+'">'+rating+'</span></td><td>'+money(x.entry_price_usd)+'</td><td>'+clock(x.last_price_at_utc)+'</td><td>'+money(x.last_price_usd)+'</td><td>—</td><td>—</td><td>—</td><td>'+ret(value)+'</td></tr>';
