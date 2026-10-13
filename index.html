@@ -644,7 +644,7 @@ async function loadV3Daily(){
   if(profitEl){
    const recent=Array.from({length:7},(_,i)=>{const d=new Date(key+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-(6-i));return d.toISOString().slice(0,10)});
    const stats=recent.map(day=>{const p=portfolios[day],all=p?.candidates||[],valid=all.filter(x=>x.return_pct!=null&&Number.isFinite(Number(x.return_pct))&&Number(x.entry_price_usd)>0&&Number(x.last_price_usd)>0),pnl=valid.reduce((n,x)=>n+Number(x.return_pct),0);return {day,locked:p?.status==='LOCKED',count:all.length,verified:valid.length,pnl,complete:all.length>0&&valid.length===all.length}});
-   const latest=stats.at(-1),closed=stats.filter(x=>x.locked&&x.verified),total=closed.reduce((n,x)=>n+x.pnl,0);
+   
    const daily=stats.map(x=>({...x,pct:x.verified?x.pnl/x.verified:null}));
    const max=Math.max(1,...daily.filter(x=>x.pct!=null).map(x=>Math.abs(x.pct)));
    const cells=daily.map(x=>{const color=x.pct==null?'#8294a9':x.pct>=0?'#42dfa9':'#ff718a';const value=x.pct==null?'—':(x.pct>0?'+':'')+x.pct.toFixed(1)+'%';const bar=x.pct==null?0:Math.max(3,Math.abs(x.pct)/max*82);return '<div class="v31p-day"><div class="v31p-amount" style="color:'+color+'">'+value+'</div><div class="v31p-track"><div class="v31p-bar '+(x.locked?'':'v31p-provisional')+'" style="height:'+bar+'%;background:'+color+'"></div></div><div class="v31p-date">'+x.day.slice(5)+'</div><div class="v31p-state">'+(x.locked?'CLOSED':x.count?'LIVE':'—')+'</div></div>'}).join('');
