@@ -3008,7 +3008,12 @@
       "price_5m_usd": 0.008723,
       "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
       "return_5m_pct": 0.62,
-      "measurement_delay_minutes": 5.6
+      "measurement_delay_minutes": 5.6,
+      "price_10m_usd": 0.008261,
+      "observed_10m_at_utc": "2026-10-13T17:42:17.156647+00:00",
+      "measurement_10m_delay_minutes": 11.56,
+      "return_10m_pct": -4.71,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3025,7 +3030,12 @@
       "price_5m_usd": 0.0006958,
       "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
       "return_5m_pct": 0.71,
-      "measurement_delay_minutes": 5.6
+      "measurement_delay_minutes": 5.6,
+      "price_10m_usd": 0.0006908,
+      "observed_10m_at_utc": "2026-10-13T17:42:17.156647+00:00",
+      "measurement_10m_delay_minutes": 11.56,
+      "return_10m_pct": -0.01,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3042,7 +3052,12 @@
       "price_5m_usd": 0.004892,
       "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
       "return_5m_pct": -6.46,
-      "measurement_delay_minutes": 5.6
+      "measurement_delay_minutes": 5.6,
+      "price_10m_usd": 0.004935,
+      "observed_10m_at_utc": "2026-10-13T17:42:17.156647+00:00",
+      "measurement_10m_delay_minutes": 11.56,
+      "return_10m_pct": -5.64,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3089,10 +3104,11 @@
       "buys_5m": 58,
       "sells_5m": 27,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0006908,
+      "observed_5m_at_utc": "2026-10-13T17:42:17.156647+00:00",
+      "return_5m_pct": -0.72,
+      "measurement_delay_minutes": 5.95
     },
     {
       "day": "2026-10-13",
@@ -3105,10 +3121,11 @@
       "buys_5m": 14,
       "sells_5m": 9,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0006305,
+      "observed_5m_at_utc": "2026-10-13T17:42:17.156647+00:00",
+      "return_5m_pct": 0.65,
+      "measurement_delay_minutes": 5.95
     },
     {
       "day": "2026-10-13",
@@ -3159,9 +3176,6 @@
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {
-    "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump|HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN": true,
-    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true
-  },
-  "updated_at_utc": "2026-10-13T17:40:30.220563+00:00"
+  "active_alerts": {},
+  "updated_at_utc": "2026-10-13T17:42:17.156647+00:00"
 }
