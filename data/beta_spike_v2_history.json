@@ -135,11 +135,29 @@
       "price_5m_usd": 0.00119,
       "observed_5m_at_utc": "2026-10-13T08:42:24.877418+00:00",
       "measurement_delay_minutes": 5.95
+    },
+    {
+      "mint": "0x589f84b19933C1A8edaC82a37ED329B327F97777",
+      "pair_address": "0x434D3b73640a81022adF8529b612Cc221010F6Bf",
+      "symbol": "领头羊",
+      "first_qualified_at_utc": "2026-10-13T09:58:16.870970+00:00",
+      "first_alert_at_utc": "2026-10-13T09:58:16.870970+00:00",
+      "alert_price_usd": 0.001597,
+      "change_15m_pct": 6.75,
+      "buys_5m": 43,
+      "sells_5m": 20,
+      "liquidity_usd": 132515.74,
+      "status": "PENDING",
+      "return_5m_pct": null,
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null
     }
   ],
   "pending_confirmation": {},
-  "active_alerts": {},
+  "active_alerts": {
+    "0x589f84b19933C1A8edaC82a37ED329B327F97777|0x434D3b73640a81022adF8529b612Cc221010F6Bf": true
+  },
   "schema_version": 1,
-  "updated_at_utc": "2026-10-13T09:56:17.517509+00:00",
+  "updated_at_utc": "2026-10-13T09:58:16.870970+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, immediate first qualifying snapshot"
 }

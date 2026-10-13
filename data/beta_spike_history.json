@@ -2784,8 +2784,26 @@
       "observed_5m_at_utc": "2026-10-13T09:56:17.517509+00:00",
       "return_5m_pct": -1.37,
       "measurement_delay_minutes": 5.85
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0x589f84b19933C1A8edaC82a37ED329B327F97777",
+      "pair_address": "0x434D3b73640a81022adF8529b612Cc221010F6Bf",
+      "symbol": "领头羊",
+      "first_alert_at_utc": "2026-10-13T09:58:16.870970+00:00",
+      "alert_price_usd": 0.001597,
+      "initial_15m_change_pct": 6.75,
+      "buys_5m": 43,
+      "sells_5m": 20,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T09:56:17.517509+00:00"
+  "active_alerts": {
+    "0x589f84b19933C1A8edaC82a37ED329B327F97777|0x434D3b73640a81022adF8529b612Cc221010F6Bf": true
+  },
+  "updated_at_utc": "2026-10-13T09:58:16.870970+00:00"
 }
