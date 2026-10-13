@@ -1489,12 +1489,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "7yg2UT3Ksh7wwmAPAasaKU6SBbakRtzf2eYqjZZzpump",
+      "pair_address": "2jEKQ8vicyouWwTGpfFLq61Zu3nnxkJdjsWfqebk1C9a",
+      "symbol": "Bumo",
+      "first_alert_at_utc": "2026-10-13T15:08:19.239185+00:00",
+      "alert_price_usd": 0.0001075,
+      "initial_15m_change_pct": 3.37,
+      "buys_5m": 20,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0xaBFfa443547b34ab6C3B3173d26e233900527777|0xD05AdB810Fe61b441808a54137E410BBcCd9d03a": true,
     "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
-    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true
+    "7yg2UT3Ksh7wwmAPAasaKU6SBbakRtzf2eYqjZZzpump|2jEKQ8vicyouWwTGpfFLq61Zu3nnxkJdjsWfqebk1C9a": true
   },
-  "updated_at_utc": "2026-10-13T15:06:21.430670+00:00"
+  "updated_at_utc": "2026-10-13T15:08:19.239185+00:00"
 }
