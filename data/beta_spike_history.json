@@ -4940,10 +4940,11 @@
       "buys_5m": 140,
       "sells_5m": 63,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.01067,
+      "observed_5m_at_utc": "2026-10-13T23:10:26.911669+00:00",
+      "return_5m_pct": 8.53,
+      "measurement_delay_minutes": 6.15
     },
     {
       "day": "2026-10-14",
@@ -4956,10 +4957,11 @@
       "buys_5m": 23,
       "sells_5m": 4,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007845,
+      "observed_5m_at_utc": "2026-10-13T23:10:26.911669+00:00",
+      "return_5m_pct": -4.28,
+      "measurement_delay_minutes": 6.15
     },
     {
       "day": "2026-10-14",
@@ -5008,10 +5010,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
+      "pair_address": "7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy",
+      "symbol": "SECRETFROG",
+      "first_alert_at_utc": "2026-10-13T23:10:26.911669+00:00",
+      "alert_price_usd": 0.0004309,
+      "initial_15m_change_pct": 33.32,
+      "buys_5m": 32,
+      "sells_5m": 18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
+    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
   },
-  "updated_at_utc": "2026-10-13T23:08:17.795374+00:00"
+  "updated_at_utc": "2026-10-13T23:10:26.911669+00:00"
 }
