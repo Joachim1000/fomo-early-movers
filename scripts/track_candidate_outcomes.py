@@ -60,15 +60,15 @@ for r in records:
         t = parse(z.get("timestamp"))
         try: price = float(z.get("price_usd") or 0)
         except (TypeError, ValueError): continue
-        if t and start < t <= start + timedelta(minutes=18) and price > 0:
+        if t and start < t <= start + timedelta(days=7, minutes=30) and price > 0:
             observations.append((t, price))
-    for minutes in (5, 10, 15):
+    for minutes in (5, 10, 15, 360, 1440, 4320, 10080):
         label = str(minutes)
         if label in r["outcomes"] and r["outcomes"][label].get("status") != "NOT_VERIFIABLE":
             continue
         target = start + timedelta(minutes=minutes)
         # Only forward observations within three minutes: never use pre-signal prices.
-        eligible = [(t, p) for t, p in observations if target <= t <= target + timedelta(minutes=3)]
+        eligible = [(t, p) for t, p in observations if target <= t <= target + timedelta(minutes=3 if minutes <= 15 else 30)]
         if eligible:
             t, price = min(eligible)
             r["outcomes"][label] = {
