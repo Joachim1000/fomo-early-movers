@@ -742,7 +742,12 @@
       "price_5m_usd": 0.003733,
       "observed_5m_at_utc": "2026-10-13T13:30:43.439843+00:00",
       "return_5m_pct": -1.71,
-      "measurement_delay_minutes": 6.42
+      "measurement_delay_minutes": 6.42,
+      "price_10m_usd": 0.003853,
+      "observed_10m_at_utc": "2026-10-13T13:34:19.380941+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": 1.45,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -759,9 +764,32 @@
       "price_5m_usd": 0.009678,
       "observed_5m_at_utc": "2026-10-13T13:30:43.439843+00:00",
       "return_5m_pct": -0.32,
-      "measurement_delay_minutes": 6.42
+      "measurement_delay_minutes": 6.42,
+      "price_10m_usd": 0.00952,
+      "observed_10m_at_utc": "2026-10-13T13:34:19.380941+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -1.95,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "Ak4cZZkr4AdcHBorJvggMziofQe4wzskys3BmSxMpump",
+      "pair_address": "DZmbXNJRUxcApsmT5jGx2zb3BQiAW4mMAgtEYNwrQhY3",
+      "symbol": "Monke",
+      "first_alert_at_utc": "2026-10-13T13:34:19.380941+00:00",
+      "alert_price_usd": 0.0002353,
+      "initial_15m_change_pct": 3.43,
+      "buys_5m": 9,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T13:32:31.277251+00:00"
+  "active_alerts": {
+    "Ak4cZZkr4AdcHBorJvggMziofQe4wzskys3BmSxMpump|DZmbXNJRUxcApsmT5jGx2zb3BQiAW4mMAgtEYNwrQhY3": true
+  },
+  "updated_at_utc": "2026-10-13T13:34:19.380941+00:00"
 }
