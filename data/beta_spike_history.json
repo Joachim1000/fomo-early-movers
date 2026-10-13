@@ -2898,9 +2898,32 @@
       "price_5m_usd": 0.00388,
       "observed_5m_at_utc": "2026-10-13T05:26:16.572153+00:00",
       "return_5m_pct": 3.27,
-      "measurement_delay_minutes": 5.8
+      "measurement_delay_minutes": 5.8,
+      "price_10m_usd": 0.003667,
+      "observed_10m_at_utc": "2026-10-13T05:34:19.470401+00:00",
+      "measurement_10m_delay_minutes": 13.85,
+      "return_10m_pct": -2.4,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-13T05:34:19.470401+00:00",
+      "alert_price_usd": 0.004968,
+      "initial_15m_change_pct": 12.83,
+      "buys_5m": 22,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T05:26:16.572153+00:00"
+  "active_alerts": {
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+  },
+  "updated_at_utc": "2026-10-13T05:34:19.470401+00:00"
 }
