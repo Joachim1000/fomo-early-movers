@@ -3,6 +3,10 @@ name: Fomo Early Movers Data
 
 on:
   workflow_dispatch:
+  schedule:
+    # UTC pairs cover Warsaw summer/winter time; portfolio script enforces local time.
+    - cron: "5 6,7 * * *"
+    - cron: "35 21,22 * * *"
 
 permissions:
   contents: write
