@@ -2469,10 +2469,11 @@
       "buys_5m": 21,
       "sells_5m": 3,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00168,
+      "observed_5m_at_utc": "2026-10-13T16:38:17.343875+00:00",
+      "return_5m_pct": 2.38,
+      "measurement_delay_minutes": 5.83
     },
     {
       "day": "2026-10-13",
@@ -2485,6 +2486,39 @@
       "buys_5m": 12,
       "sells_5m": 6,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.000414,
+      "observed_5m_at_utc": "2026-10-13T16:38:17.343875+00:00",
+      "return_5m_pct": 0.19,
+      "measurement_delay_minutes": 5.83
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xDd806E436Dda5588bf54061C11590c77dDC87777",
+      "pair_address": "0x13b86Fcf85C9C8F5C36593822D216B8893C25450",
+      "symbol": "SAFU",
+      "first_alert_at_utc": "2026-10-13T16:38:17.343875+00:00",
+      "alert_price_usd": 0.0006574,
+      "initial_15m_change_pct": 8.82,
+      "buys_5m": 12,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-13T16:38:17.343875+00:00",
+      "alert_price_usd": 0.0007972,
+      "initial_15m_change_pct": 3.34,
+      "buys_5m": 9,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -2492,7 +2526,8 @@
     }
   ],
   "active_alerts": {
-    "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump|EwsYHiuznyNqH5f65YpfsoQBLq2KyETuvhm5un7wsfDG": true
+    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true,
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": true
   },
-  "updated_at_utc": "2026-10-13T16:36:17.793505+00:00"
+  "updated_at_utc": "2026-10-13T16:38:17.343875+00:00"
 }
