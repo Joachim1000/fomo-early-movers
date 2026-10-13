@@ -868,8 +868,9 @@ async function loadSpikeRadarBeta(){
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sorted=selected.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
   if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
-   const ret=x.status==='MEASURED'&&x.return_5m_pct!=null?Number(x.return_5m_pct):null;
-   const ret10=x.status_10m==='MEASURED'&&x.return_10m_pct!=null&&Number.isFinite(Number(x.return_10m_pct))?Number(x.return_10m_pct):null;
+   const validReturn=(price,reported)=>{const entry=Number(x.alert_price_usd),exit=Number(price);if(!Number.isFinite(entry)||entry<=0||price==null||!Number.isFinite(exit)||exit<=0)return null;const computed=(exit/entry-1)*100;return Number.isFinite(computed)?computed:null};
+   const ret=validReturn(x.price_5m_usd,x.return_5m_pct);
+   const ret10=validReturn(x.price_10m_usd,x.return_10m_pct);
    const when=x.first_alert_at_utc?new Date(x.first_alert_at_utc).toLocaleString('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit'}):'—';
    const money=v=>v==null?'—':'$'+Number(v).toPrecision(6);
    const signed=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(2)+'%';
