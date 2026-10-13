@@ -47,10 +47,12 @@ for x in latest.get("eligible_4h_candidates",[]):
     liquidity=num(x.get("liquidity_usd")) or 0
     volume=num(x.get("volume_5m_usd")) or 0
     # Beta risk gate: keep all observations for training but only rank qualified entries.
+    # Rank viable candidates even when one historical price point is missing.
+    # Missing features remain None in observations and never enter ML training.
     eligible_for_ranking = (
-        r5 is not None and r10 is not None and r15 is not None
-        and -5 <= r5 <= 15 and -8 <= r15 <= 25
-        and acceleration is not None and acceleration >= -2
+        (r5 is None or -5 <= r5 <= 15)
+        and (r15 is None or -8 <= r15 <= 25)
+        and (acceleration is None or acceleration >= -2)
         and buys >= 8 and ratio >= 1.3
         and liquidity >= 10000 and volume >= 1000
     )
@@ -131,7 +133,7 @@ stamp=latest["generated_at_utc"]
 for x in current:
     if not x.get('eligible_for_ranking'):continue
     f=features(x)
-    if not f:continue
+    if trained and not f:continue
     score=None
     if trained:
         standardized=[max(-5,min(5,(f[j]-means[j])/scales[j])) for j in range(len(FEATURES))]
