@@ -22,7 +22,31 @@ jobs:
           ref: market-data
           persist-credentials: true
 
+      - name: Check collection hours (Europe/Warsaw)
+        id: collection_window
+        shell: bash
+        run: |
+          git fetch --depth=1 origin main
+          git show origin/main:config/collection_hours.json > /tmp/fomo-collection-hours.json
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          config=json.load(open('/tmp/fomo-collection-hours.json'))
+          blocked=config.get('blocked_hours',[])
+          if not isinstance(blocked,list) or any(type(h) is not int or h<0 or h>23 for h in blocked):
+              raise ValueError('Invalid blocked_hours: expected integers 0..23')
+          if config.get('timezone')!='Europe/Warsaw':
+              raise ValueError('Only Europe/Warsaw timezone is supported')
+          now=datetime.now(ZoneInfo('Europe/Warsaw'))
+          enabled=now.hour not in blocked
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f"enabled={'true' if enabled else 'false'}\\n".replace('\\n','\n'))
+          print(f"Collection {'ENABLED' if enabled else 'PAUSED'} at {now.isoformat()} (blocked_hours={blocked})")
+          PY
+
       - name: Use current collection scripts from main
+        if: steps.collection_window.outputs.enabled == 'true'
         run: |
           git fetch --depth=1 origin main
           for script in collect.py track_beta_spikes.py track_beta_spikes_v2.py track_beta_live_daily.py track_live_v31.py lock_daily.py; do
@@ -31,12 +55,14 @@ jobs:
           # Keep code updates local to this run; only JSON is committed.
 
       - name: Collect market data
+        if: steps.collection_window.outputs.enabled == 'true'
         env:
           FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
         run: python scripts/collect.py
 
 
       - name: Record TOP 10 screening observations
+        if: steps.collection_window.outputs.enabled == 'true'
         shell: bash
         run: |
           python3 - <<'PY'
@@ -82,21 +108,27 @@ jobs:
           print(f"New observations: {added}; total: {len(rows)}")
           PY
       - name: Track experimental beta spikes and five-minute outcomes
+        if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_beta_spikes.py
 
       - name: Track independent BETA SPIKE V2 confirmations and outcomes
+        if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_beta_spikes_v2.py
 
       - name: Track beta live TOP 10 and lock daily performance
+        if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_beta_live_daily.py
 
       - name: Generate independent LIVE V3.1 ranking
+        if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_live_v31.py
 
       - name: Lock daily 23:30 Poland snapshot (once per day)
+        if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/lock_daily.py
 
       - name: Commit JSON
+        if: steps.collection_window.outputs.enabled == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
