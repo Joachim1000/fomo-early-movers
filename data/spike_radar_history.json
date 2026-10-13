@@ -918,7 +918,12 @@
       "price_5m_usd": 0.003514,
       "observed_5m_at_utc": "2026-10-13T14:02:20.125003+00:00",
       "return_5m_pct": 6.16,
-      "measurement_delay_minutes": 6.04
+      "measurement_delay_minutes": 6.04,
+      "price_10m_usd": 0.003377,
+      "observed_10m_at_utc": "2026-10-13T14:06:20.549037+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 2.02,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -948,10 +953,11 @@
       "buys_5m": 21,
       "sells_5m": 10,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0005436,
+      "observed_5m_at_utc": "2026-10-13T14:06:20.549037+00:00",
+      "return_5m_pct": 0.69,
+      "measurement_delay_minutes": 5.44
     },
     {
       "day": "2026-10-13",
@@ -964,6 +970,23 @@
       "buys_5m": 22,
       "sells_5m": 13,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.008365,
+      "observed_5m_at_utc": "2026-10-13T14:06:20.549037+00:00",
+      "return_5m_pct": 0.71,
+      "measurement_delay_minutes": 5.44
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "5JRgtF4Fwnv3eNmNPuAur6dEzh83ix6mtYP4XALupump",
+      "pair_address": "763jR65r5m9F25FAFK22n4UPQya6aLsK1uounP4jJxR",
+      "symbol": "WORM",
+      "first_alert_at_utc": "2026-10-13T14:06:20.549037+00:00",
+      "alert_price_usd": 0.0001345,
+      "initial_15m_change_pct": 405.26,
+      "buys_5m": 13,
+      "sells_5m": 6,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -972,7 +995,7 @@
   ],
   "active_alerts": {
     "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
-    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+    "5JRgtF4Fwnv3eNmNPuAur6dEzh83ix6mtYP4XALupump|763jR65r5m9F25FAFK22n4UPQya6aLsK1uounP4jJxR": true
   },
-  "updated_at_utc": "2026-10-13T14:04:21.169243+00:00"
+  "updated_at_utc": "2026-10-13T14:06:20.549037+00:00"
 }
