@@ -210,12 +210,48 @@
       "buys_5m": 9,
       "sells_5m": 1,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.003853,
+      "observed_5m_at_utc": "2026-10-13T12:18:17.198214+00:00",
+      "return_5m_pct": 1.13,
+      "measurement_delay_minutes": 5.95
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xB0c2aB5af4028461acE3f6e1C33a4eE1404E7777",
+      "pair_address": "0xdabbd019c0174BDAE6354f32b158D42e4A0E7489",
+      "symbol": "CETS",
+      "first_alert_at_utc": "2026-10-13T12:18:17.198214+00:00",
+      "alert_price_usd": 0.003741,
+      "initial_15m_change_pct": 8.78,
+      "buys_5m": 8,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump",
+      "pair_address": "9dsiuydk5EFRCLk6VEywY95Nn3jjGbdWNijuACf1PXuA",
+      "symbol": "MarsX",
+      "first_alert_at_utc": "2026-10-13T12:18:17.198214+00:00",
+      "alert_price_usd": 0.0004693,
+      "initial_15m_change_pct": 7.37,
+      "buys_5m": 19,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T12:16:17.226593+00:00"
+  "active_alerts": {
+    "0xB0c2aB5af4028461acE3f6e1C33a4eE1404E7777|0xdabbd019c0174BDAE6354f32b158D42e4A0E7489": true,
+    "Fak3rJEBfR4Vb8DoFpecf6yoxbkkr1gGUH5tdj2rpump|9dsiuydk5EFRCLk6VEywY95Nn3jjGbdWNijuACf1PXuA": true
+  },
+  "updated_at_utc": "2026-10-13T12:18:17.198214+00:00"
 }
