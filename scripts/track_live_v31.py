@@ -193,6 +193,8 @@ if day not in daily and local.hour>=8:
                   "symbol":x.get("symbol"),"entry_price_usd":x["entry_price_usd"],
                   "selected_observation_at_utc":t.isoformat(),
                   "v31_heuristic_score":score,"v31_rank":i,
+                  "buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),
+                  "sells_5m":x.get("sells_5m"),"change_15m_pct":x.get("change_15m_pct"),
                   "candidate_source":"DAILY_FIXED_SELECTION"} for i,(score,t,x) in enumerate(picks,1)]}
 # Daily portfolios freeze after 23:30 Warsaw, with the latest exact-pair observed price.
 for date,portfolio in daily.items():
