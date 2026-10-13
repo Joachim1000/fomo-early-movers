@@ -4,6 +4,7 @@ Chronological logistic regression, with explicit heuristic fallback until enough
 import json, math
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 from collections import defaultdict
 
 DATA=Path("data")
@@ -161,6 +162,63 @@ if len(ranking)<10:
                         "buy_sell_ratio":x.get("buy_sell_ratio"),
                         "buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
 ranking.sort(key=lambda x:(x["candidate_source"]=="V31_PROVISIONAL_WATCHLIST", -(x["predicted_10m_gain_probability_pct"] if trained and x["predicted_10m_gain_probability_pct"] is not None else x["v31_heuristic_score"])))
+# One fixed daily selection at/after 08:00 Warsaw, using the prior day's
+# independently observed candidate history. Never rerank today's portfolio.
+zone=ZoneInfo("Europe/Warsaw")
+local=now.astimezone(zone)
+day=local.date().isoformat()
+daily=prior.setdefault("daily_portfolios",{})
+if not isinstance(daily,dict):
+    daily={}
+    prior["daily_portfolios"]=daily
+if day not in daily and local.hour>=8:
+    start=now-timedelta(hours=24)
+    candidates={}
+    for obs in rows+current:
+        t=dt(obs.get("observed_at_utc"))
+        mint,pair=obs.get("mint"),obs.get("pair_address")
+        if not t or not mint or not pair or not start<=t<=now:continue
+        if not (num(obs.get("entry_price_usd")) or 0)>0:continue
+        if (num(obs.get("liquidity_usd")) or 0)<5000 or (num(obs.get("volume_5m_usd")) or 0)<500:continue
+        if (num(obs.get("buys_5m")) or 0)<3 or (num(obs.get("buy_sell_ratio")) or 0)<1:continue
+        key=(mint,pair)
+        score=num(obs.get("v31_heuristic_score")) or 0
+        # Prefer strong observations; break ties by most recent verified observation.
+        if key not in candidates or (score,t)>(candidates[key][0],candidates[key][1]):
+            candidates[key]=(score,t,obs)
+    picks=sorted(candidates.values(),key=lambda z:(z[0],z[1]),reverse=True)[:10]
+    daily[day]={"selected_at_utc":now.isoformat(),"selection_target_local":"08:00",
+                "status":"ACTIVE","selection_basis":"previous_24h_observations",
+                "candidates":[{"mint":x["mint"],"pair_address":x["pair_address"],
+                  "symbol":x.get("symbol"),"entry_price_usd":x["entry_price_usd"],
+                  "selected_observation_at_utc":t.isoformat(),
+                  "v31_heuristic_score":score,"v31_rank":i,
+                  "candidate_source":"DAILY_FIXED_SELECTION"} for i,(score,t,x) in enumerate(picks,1)]}
+# Daily portfolios freeze after 23:30 Warsaw, with the latest exact-pair observed price.
+for date,portfolio in daily.items():
+    if portfolio.get("status")=="LOCKED":continue
+    if date!=day or (local.hour,local.minute)>=(23,30):
+        portfolio["status"]="LOCKED"
+        portfolio["locked_at_utc"]=now.isoformat()
+    for item in portfolio.get("candidates",[]):
+        prices=[(dt(p.get("timestamp")),num(p.get("price_usd")))
+                for p in history.get(item["mint"],[])
+                if p.get("pair_address")==item["pair_address"]]
+        prices=[(t,p) for t,p in prices if t and p and p>0 and t<=now]
+        if prices:
+            t,p=max(prices)
+            item["last_price_usd"]=p
+            item["last_price_at_utc"]=t.isoformat()
+            entry=num(item.get("entry_price_usd"))
+            item["return_pct"]=round((p/entry-1)*100,3) if entry else None
+# Retain portfolios for seven days.
+daily={k:v for k,v in daily.items() if k>=(local.date()-timedelta(days=7)).isoformat()}
+prior["daily_portfolios"]=daily
+# The LIVE V3.1 page displays today's fixed selection; ranking never rotates.
+if day in daily:
+    ranking=daily[day]["candidates"]
+else:
+    ranking=[]
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
