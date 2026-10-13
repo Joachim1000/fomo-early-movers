@@ -165,9 +165,13 @@ for endpoint, items, error in discovery_results:
 # FOMO returns nested token.address and chain identifiers for Solana and EVM.
 # Prior versions silently skipped all FOMO mints, leaving their history empty.
 fomo_mints = set()
+fomo_mint_keys = set()
 fomo_network_by_mint = {}
 FOMO_NETWORKS = {"solana":"solana","1399811149":"solana","ethereum":"ethereum","1":"ethereum","eip155:1":"ethereum","base":"base","8453":"base","eip155:8453":"base","bsc":"bsc","56":"bsc","arbitrum":"arbitrum","42161":"arbitrum","polygon":"polygon","137":"polygon","optimism":"optimism","10":"optimism","avalanche":"avalanche","43114":"avalanche"}
 fomo_source_by_mint = {}
+def fomo_key(mint, network):
+    return (str(network or '').lower(), str(mint or '').lower() if str(network or '').lower() != 'solana' else str(mint or ''))
+
 for board_name, entries in [("trending", fomo.get("tokens", []))] + [
     (name, board.get("tokens", [])) for name, board in fomo_boards.items()
 ]:
@@ -180,9 +184,10 @@ for board_name, entries in [("trending", fomo.get("tokens", []))] + [
         mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
         if isinstance(mint, str) and mint:
             fomo_mints.add(mint)
+            fomo_mint_keys.add(fomo_key(mint, network))
             fomo_network_by_mint[mint.lower()] = network
             addresses.add(mint)
-            fomo_source_by_mint.setdefault(mint, []).append(board_name)
+            fomo_source_by_mint.setdefault(fomo_key(mint, network), []).append(board_name)
 
 # Always query FOMO addresses first; a capped alphabetical discovery list
 # previously crowded out the tokens the user actually sees in the FOMO app.
@@ -337,14 +342,14 @@ for mint, pair in best.items():
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
     fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
-                   mint in fomo_mints and liquidity >= 5000 and
+                   fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
                   change_15m >= 3)
     # Experimental BETA; retain the original fast alert unchanged.
     # Beta-only early breakout path; production fast_alert is unchanged.
     beta_alert = (pair_age_hours is not None and pair_age_hours > 2 and
-                  mint in fomo_mints and liquidity >= 10000 and
+                  fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 10000 and
                   volume >= 1500 and change_15m is not None and
                   3 <= change_15m <= 35 and buys >= 20 and
                   buys >= 1.5 * max(sells, 1))
@@ -376,10 +381,10 @@ for mint, pair in best.items():
         "historical_observations": len(historical_prices),
         "history_12h_verified": False,
         "history_4h_verified": eligible,
-        "fomo_trending_verified": "trending" in fomo_source_by_mint.get(mint, []),
-        "fomo_board_verified": mint in fomo_mints,
-        "fomo_boards": fomo_source_by_mint.get(mint, []),
-        "pre_trending_screening": mint in fomo_mints and "trending" not in fomo_source_by_mint.get(mint, []),
+        "fomo_trending_verified": "trending" in fomo_source_by_mint.get(fomo_key(mint, pair.get('chainId')), []),
+        "fomo_board_verified": fomo_key(mint, pair.get('chainId')) in fomo_mint_keys,
+        "fomo_boards": fomo_source_by_mint.get(fomo_key(mint, pair.get('chainId')), []),
+        "pre_trending_screening": fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and "trending" not in fomo_source_by_mint.get(fomo_key(mint, pair.get('chainId')), []),
         "minimum_history_hours": MIN_AGE_HOURS,
         "history_note": "4h+ observed same-pair snapshots and pair age" if eligible else "4h history not independently established",
         "label": label, "confidence": "LOW",
@@ -409,7 +414,7 @@ payload = {
     "source": "DEX Screener public API and FOMO Trending when available",
     "fomo_trending": fomo,
     "fomo_other_boards": fomo_boards,
-    "fomo_verified_mints": [{"mint": mint, "network": fomo_network_by_mint.get(mint.lower(), "unknown"), "boards": boards} for mint, boards in fomo_source_by_mint.items()],
+    "fomo_verified_mints": [{"mint": mint, "network": network, "boards": boards} for (network, mint), boards in fomo_source_by_mint.items()],
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
