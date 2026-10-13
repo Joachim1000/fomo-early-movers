@@ -2860,8 +2860,26 @@
       "measurement_10m_delay_minutes": 11.98,
       "return_10m_pct": 2.7,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "eYPUJqVPzCU3Rr6VVrSvbG9mvM2dawmwQK3HZrDpump",
+      "pair_address": "ErXcTCQoJnXA7mjgX8m4XPeWh8fDttNDU7ck3j2BwPGq",
+      "symbol": "fishy",
+      "first_alert_at_utc": "2026-10-13T04:42:17.306859+00:00",
+      "alert_price_usd": 8.905e-05,
+      "initial_15m_change_pct": 15.63,
+      "buys_5m": 26,
+      "sells_5m": 11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T04:40:26.026292+00:00"
+  "active_alerts": {
+    "eYPUJqVPzCU3Rr6VVrSvbG9mvM2dawmwQK3HZrDpump|ErXcTCQoJnXA7mjgX8m4XPeWh8fDttNDU7ck3j2BwPGq": true
+  },
+  "updated_at_utc": "2026-10-13T04:42:17.306859+00:00"
 }
