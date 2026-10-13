@@ -203,6 +203,12 @@ for date,portfolio in daily.items():
         portfolio["status"]="LOCKED"
         portfolio["locked_at_utc"]=now.isoformat()
     for item in portfolio.get("candidates",[]):
+        # Refresh market-derived columns without replacing the fixed selection.
+        live=next((x for x in current if x["mint"]==item["mint"] and x["pair_address"]==item["pair_address"]),None)
+        if live:
+            for field in ("buy_sell_ratio","buys_5m","sells_5m","change_15m_pct"):
+                item[field]=live.get(field)
+        item["observed_at_utc"]=now.isoformat()
         prices=[(dt(p.get("timestamp")),num(p.get("price_usd")))
                 for p in history.get(item["mint"],[])
                 if p.get("pair_address")==item["pair_address"]]
