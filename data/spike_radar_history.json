@@ -4231,10 +4231,11 @@
       "buys_5m": 11,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002981,
+      "observed_5m_at_utc": "2026-10-13T20:56:29.763803+00:00",
+      "return_5m_pct": -7.77,
+      "measurement_delay_minutes": 6.01
     },
     {
       "day": "2026-10-13",
@@ -4247,12 +4248,31 @@
       "buys_5m": 32,
       "sells_5m": 0,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.1204,
+      "observed_5m_at_utc": "2026-10-13T20:56:29.763803+00:00",
+      "return_5m_pct": 0.0,
+      "measurement_delay_minutes": 6.01
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-13T20:56:29.763803+00:00",
+      "alert_price_usd": 0.01556,
+      "initial_15m_change_pct": 5.85,
+      "buys_5m": 30,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T20:54:20.602065+00:00"
+  "active_alerts": {
+    "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP|AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ": true
+  },
+  "updated_at_utc": "2026-10-13T20:56:29.763803+00:00"
 }
