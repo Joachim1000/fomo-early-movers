@@ -38,7 +38,12 @@
       "price_5m_usd": 0.004221,
       "observed_5m_at_utc": "2026-10-13T11:26:19.306132+00:00",
       "return_5m_pct": 0.64,
-      "measurement_delay_minutes": 5.85
+      "measurement_delay_minutes": 5.85,
+      "price_10m_usd": 0.004155,
+      "observed_10m_at_utc": "2026-10-13T11:36:18.850255+00:00",
+      "measurement_10m_delay_minutes": 15.85,
+      "return_10m_pct": -0.93,
+      "status_10m": "DELAYED"
     },
     {
       "day": "2026-10-13",
@@ -51,7 +56,7 @@
       "buys_5m": 9,
       "sells_5m": 5,
       "measurement_minutes": 5,
-      "status": "PENDING",
+      "status": "NOT_VERIFIABLE",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
@@ -71,7 +76,12 @@
       "price_5m_usd": 0.0001247,
       "observed_5m_at_utc": "2026-10-13T11:28:17.958818+00:00",
       "return_5m_pct": 15.57,
-      "measurement_delay_minutes": 6.15
+      "measurement_delay_minutes": 6.15,
+      "price_10m_usd": 0.0001345,
+      "observed_10m_at_utc": "2026-10-13T11:36:18.850255+00:00",
+      "measurement_10m_delay_minutes": 14.16,
+      "return_10m_pct": 24.65,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -84,10 +94,11 @@
       "buys_5m": 55,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001113,
+      "observed_5m_at_utc": "2026-10-13T11:36:18.850255+00:00",
+      "return_5m_pct": 8.27,
+      "measurement_delay_minutes": 8.01
     },
     {
       "day": "2026-10-13",
@@ -100,6 +111,23 @@
       "buys_5m": 9,
       "sells_5m": 5,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001345,
+      "observed_5m_at_utc": "2026-10-13T11:36:18.850255+00:00",
+      "return_5m_pct": 0.07,
+      "measurement_delay_minutes": 8.01
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "7yg2UT3Ksh7wwmAPAasaKU6SBbakRtzf2eYqjZZzpump",
+      "pair_address": "2jEKQ8vicyouWwTGpfFLq61Zu3nnxkJdjsWfqebk1C9a",
+      "symbol": "Bumo",
+      "first_alert_at_utc": "2026-10-13T11:36:18.850255+00:00",
+      "alert_price_usd": 0.0001345,
+      "initial_15m_change_pct": 24.65,
+      "buys_5m": 15,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -108,7 +136,7 @@
   ],
   "active_alerts": {
     "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true,
-    "4ERwUz3AKfBw2J34W8sBBsWh4ohXGvcD1qa7iKo7KeHm|6MwHoA8PJBGRinEbwT4CqgqN1j8gtNzyAqfkQiNSn6TX": true
+    "7yg2UT3Ksh7wwmAPAasaKU6SBbakRtzf2eYqjZZzpump|2jEKQ8vicyouWwTGpfFLq61Zu3nnxkJdjsWfqebk1C9a": true
   },
-  "updated_at_utc": "2026-10-13T11:28:17.958818+00:00"
+  "updated_at_utc": "2026-10-13T11:36:18.850255+00:00"
 }
