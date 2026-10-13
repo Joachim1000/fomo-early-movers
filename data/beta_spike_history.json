@@ -5143,8 +5143,26 @@
       "observed_5m_at_utc": "2026-10-13T23:32:17.680267+00:00",
       "return_5m_pct": -8.55,
       "measurement_delay_minutes": 5.91
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg",
+      "pair_address": "7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy",
+      "symbol": "SECRETFROG",
+      "first_alert_at_utc": "2026-10-13T23:34:16.802343+00:00",
+      "alert_price_usd": 0.0004255,
+      "initial_15m_change_pct": 10.43,
+      "buys_5m": 39,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T23:32:17.680267+00:00"
+  "active_alerts": {
+    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
+  },
+  "updated_at_utc": "2026-10-13T23:34:16.802343+00:00"
 }
