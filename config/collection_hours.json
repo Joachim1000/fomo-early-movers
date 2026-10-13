@@ -1,13 +1,5 @@
 {
   "timezone": "Europe/Warsaw",
-  "blocked_hours": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    12,
-    13
-  ],
-  "description": "Hours in blocked_hours (0-23) disable all collection and data writes, including cronjob.org-triggered workflow_dispatch."
+  "blocked_hours": [],
+  "description": "No hours blocked. Collection runs according to existing GitHub Actions and cronjob schedules."
 }
