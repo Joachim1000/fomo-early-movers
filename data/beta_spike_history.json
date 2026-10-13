@@ -3932,7 +3932,12 @@
       "price_5m_usd": 0.007254,
       "observed_5m_at_utc": "2026-10-13T17:08:19.676805+00:00",
       "return_5m_pct": -6.98,
-      "measurement_delay_minutes": 6.01
+      "measurement_delay_minutes": 6.01,
+      "price_10m_usd": 0.007474,
+      "observed_10m_at_utc": "2026-10-13T17:14:27.660045+00:00",
+      "measurement_10m_delay_minutes": 12.14,
+      "return_10m_pct": -4.15,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3949,7 +3954,12 @@
       "price_5m_usd": 0.0005717,
       "observed_5m_at_utc": "2026-10-13T17:10:28.488035+00:00",
       "return_5m_pct": -2.72,
-      "measurement_delay_minutes": 6.13
+      "measurement_delay_minutes": 6.13,
+      "price_10m_usd": 0.000548,
+      "observed_10m_at_utc": "2026-10-13T17:14:27.660045+00:00",
+      "measurement_10m_delay_minutes": 10.12,
+      "return_10m_pct": -6.76,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -3966,9 +3976,32 @@
       "price_5m_usd": 0.01286,
       "observed_5m_at_utc": "2026-10-13T17:10:28.488035+00:00",
       "return_5m_pct": 0.39,
-      "measurement_delay_minutes": 6.13
+      "measurement_delay_minutes": 6.13,
+      "price_10m_usd": 0.01283,
+      "observed_10m_at_utc": "2026-10-13T17:14:27.660045+00:00",
+      "measurement_10m_delay_minutes": 10.12,
+      "return_10m_pct": 0.16,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0x018062E5b98C7CAe3C817B23f13a441C9d887777",
+      "pair_address": "0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82",
+      "symbol": "SpaceXSI",
+      "first_alert_at_utc": "2026-10-13T17:14:27.660045+00:00",
+      "alert_price_usd": 0.001511,
+      "initial_15m_change_pct": 14.38,
+      "buys_5m": 56,
+      "sells_5m": 23,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T17:12:18.266454+00:00"
+  "active_alerts": {
+    "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true
+  },
+  "updated_at_utc": "2026-10-13T17:14:27.660045+00:00"
 }
