@@ -341,6 +341,24 @@ for mint, pair in best.items():
     change_15m = (round(100 * (numeric(pair.get("priceUsd")) /
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
+    # Early momentum: measured against the closest observed same-pair price
+    # between 2 and 5 minutes old, never an inferred candle high.
+    short_baselines = [p for p in recent_15m if
+                       120 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 300]
+    short_baseline = min(short_baselines, key=lambda p:
+                         abs((NOW - parse_time(p["timestamp"])).total_seconds() - 180)) if short_baselines else None
+    change_2_5m = (round(100 * (numeric(pair.get("priceUsd")) /
+                   numeric(short_baseline["price_usd"]) - 1), 2)
+                   if short_baseline and numeric(short_baseline["price_usd"]) > 0 else None)
+    prior_activity = [p for p in recent_15m if
+                      300 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 600]
+    prior_buys = max((int(p.get("buys_5m") or 0) for p in prior_activity), default=None)
+    early_momentum = (pair_age_hours is not None and pair_age_hours > 2 and
+                      fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
+                      liquidity >= 5000 and volume >= 1000 and
+                      buys >= 8 and buys >= 1.5 * max(sells, 1) and
+                      change_2_5m is not None and 2 <= change_2_5m <= 25 and
+                      prior_buys is not None and buys >= prior_buys * 1.2)
     fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
@@ -358,6 +376,8 @@ for mint, pair in best.items():
     candidates.append({
         "mint": mint, "network": pair.get("chainId"),
         "early_alert": fast_alert,
+        "early_momentum": early_momentum,
+        "change_2_5m_pct": change_2_5m,
         "beta_alert": beta_alert,
         "change_15m_pct": change_15m,
         "early_alert_observation_count": len(recent_15m),
@@ -405,6 +425,8 @@ for mint in list(history):
 
 candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
 early_alert_candidates = [x for x in candidates if x["early_alert"]]
+early_momentum_candidates = [x for x in candidates if x["early_momentum"]]
+early_momentum_candidates.sort(key=lambda x: (x["change_2_5m_pct"], x["momentum_heuristic"]), reverse=True)
 beta_alert_candidates = [x for x in candidates if x["beta_alert"]]
 beta_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
 early_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
@@ -423,6 +445,8 @@ payload = {
     "eligible_4h_count": len(eligible_candidates),
     "beta_alert_count": len(beta_alert_candidates),
     "beta_alert_candidates": beta_alert_candidates[:20],
+    "early_momentum_count": len(early_momentum_candidates),
+    "early_momentum_candidates": early_momentum_candidates[:20],
     "early_alert_count": len(early_alert_candidates),
     "early_alert_candidates": early_alert_candidates[:20],
     "fomo_dex_matched_count": sum(1 for x in candidates if x["fomo_board_verified"]),
