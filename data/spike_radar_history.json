@@ -1419,10 +1419,44 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-13T15:04:19.440780+00:00",
+      "alert_price_usd": 0.02238,
+      "initial_15m_change_pct": 3.18,
+      "buys_5m": 9,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xDd806E436Dda5588bf54061C11590c77dDC87777",
+      "pair_address": "0x13b86Fcf85C9C8F5C36593822D216B8893C25450",
+      "symbol": "SAFU",
+      "first_alert_at_utc": "2026-10-13T15:04:19.440780+00:00",
+      "alert_price_usd": 0.0007349,
+      "initial_15m_change_pct": 3.03,
+      "buys_5m": 13,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0xaBFfa443547b34ab6C3B3173d26e233900527777|0xD05AdB810Fe61b441808a54137E410BBcCd9d03a": true
+    "0xaBFfa443547b34ab6C3B3173d26e233900527777|0xD05AdB810Fe61b441808a54137E410BBcCd9d03a": true,
+    "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7|4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm": true,
+    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true
   },
-  "updated_at_utc": "2026-10-13T15:02:20.716080+00:00"
+  "updated_at_utc": "2026-10-13T15:04:19.440780+00:00"
 }
