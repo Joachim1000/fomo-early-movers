@@ -1110,10 +1110,60 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-13T14:34:22.351732+00:00",
+      "alert_price_usd": 0.004077,
+      "initial_15m_change_pct": 23.06,
+      "buys_5m": 33,
+      "sells_5m": 14,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-13T14:34:22.351732+00:00",
+      "alert_price_usd": 0.004414,
+      "initial_15m_change_pct": 8.69,
+      "buys_5m": 17,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0x4E67DB19044549fF420860834c91b45BaD298722",
+      "pair_address": "0xf884f15815c943e08daebb0c8945d5b27cc7bfa4ed2880be1195048a9aad9f74",
+      "symbol": "ZC",
+      "first_alert_at_utc": "2026-10-13T14:34:22.351732+00:00",
+      "alert_price_usd": 0.003688,
+      "initial_15m_change_pct": 3.16,
+      "buys_5m": 19,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "7yg2UT3Ksh7wwmAPAasaKU6SBbakRtzf2eYqjZZzpump|2jEKQ8vicyouWwTGpfFLq61Zu3nnxkJdjsWfqebk1C9a": true
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true,
+    "0x4E67DB19044549fF420860834c91b45BaD298722|0xf884f15815c943e08daebb0c8945d5b27cc7bfa4ed2880be1195048a9aad9f74": true
   },
-  "updated_at_utc": "2026-10-13T14:32:21.442591+00:00"
+  "updated_at_utc": "2026-10-13T14:34:22.351732+00:00"
 }
