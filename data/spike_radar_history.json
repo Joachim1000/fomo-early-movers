@@ -2546,7 +2546,12 @@
       "price_5m_usd": 0.0006664,
       "observed_5m_at_utc": "2026-10-13T16:44:17.280481+00:00",
       "return_5m_pct": 1.37,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.0007014,
+      "observed_10m_at_utc": "2026-10-13T16:48:18.831085+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": 6.69,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -2563,7 +2568,12 @@
       "price_5m_usd": 0.0008038,
       "observed_5m_at_utc": "2026-10-13T16:44:17.280481+00:00",
       "return_5m_pct": 0.83,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.0007813,
+      "observed_10m_at_utc": "2026-10-13T16:48:18.831085+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -1.99,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -2576,12 +2586,31 @@
       "buys_5m": 88,
       "sells_5m": 56,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.007033,
+      "observed_5m_at_utc": "2026-10-13T16:48:18.831085+00:00",
+      "return_5m_pct": -16.77,
+      "measurement_delay_minutes": 5.99
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159",
+      "pair_address": "0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d",
+      "symbol": "BREW",
+      "first_alert_at_utc": "2026-10-13T16:48:18.831085+00:00",
+      "alert_price_usd": 0.006551,
+      "initial_15m_change_pct": 4.92,
+      "buys_5m": 14,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T16:46:18.767654+00:00"
+  "active_alerts": {
+    "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159|0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d": true
+  },
+  "updated_at_utc": "2026-10-13T16:48:18.831085+00:00"
 }
