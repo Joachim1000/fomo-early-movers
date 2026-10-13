@@ -151,11 +151,29 @@
       "return_5m_pct": null,
       "price_5m_usd": null,
       "observed_5m_at_utc": null
+    },
+    {
+      "mint": "GQdEL4MhL4v8bsmMvyBvjh6BdbWqasgkDnJGfaAHpump",
+      "pair_address": "8swjg8ZxS6HNNMTMzymHgUpQeHTLQaSEbSgW7A3L1ieX",
+      "symbol": "UNITS",
+      "first_qualified_at_utc": "2026-10-13T10:18:26.577163+00:00",
+      "first_alert_at_utc": "2026-10-13T10:18:26.577163+00:00",
+      "alert_price_usd": 0.0002619,
+      "change_15m_pct": 5.69,
+      "buys_5m": 35,
+      "sells_5m": 13,
+      "liquidity_usd": 43444.84,
+      "status": "PENDING",
+      "return_5m_pct": null,
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null
     }
   ],
   "pending_confirmation": {},
-  "active_alerts": {},
+  "active_alerts": {
+    "GQdEL4MhL4v8bsmMvyBvjh6BdbWqasgkDnJGfaAHpump|8swjg8ZxS6HNNMTMzymHgUpQeHTLQaSEbSgW7A3L1ieX": true
+  },
   "schema_version": 1,
-  "updated_at_utc": "2026-10-13T10:16:16.211272+00:00",
+  "updated_at_utc": "2026-10-13T10:18:26.577163+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, immediate first qualifying snapshot"
 }
