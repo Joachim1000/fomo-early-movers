@@ -3800,7 +3800,12 @@
       "price_5m_usd": 0.001779,
       "observed_5m_at_utc": "2026-10-13T19:06:22.372849+00:00",
       "return_5m_pct": -4.61,
-      "measurement_delay_minutes": 5.45
+      "measurement_delay_minutes": 5.45,
+      "price_10m_usd": 0.001889,
+      "observed_10m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "measurement_10m_delay_minutes": 19.9,
+      "return_10m_pct": 1.29,
+      "status_10m": "DELAYED"
     },
     {
       "day": "2026-10-13",
@@ -3813,10 +3818,16 @@
       "buys_5m": 15,
       "sells_5m": 10,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "DELAYED",
+      "price_5m_usd": 0.0004402,
+      "observed_5m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "return_5m_pct": -12.73,
+      "price_10m_usd": 0.0004402,
+      "observed_10m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "measurement_10m_delay_minutes": 16.51,
+      "return_10m_pct": -12.73,
+      "status_10m": "DELAYED",
+      "measurement_delay_minutes": 16.51
     },
     {
       "day": "2026-10-13",
@@ -3829,10 +3840,16 @@
       "buys_5m": 49,
       "sells_5m": 29,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "DELAYED",
+      "price_5m_usd": 0.007196,
+      "observed_5m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "return_5m_pct": -13.49,
+      "price_10m_usd": 0.007196,
+      "observed_10m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "measurement_10m_delay_minutes": 14.45,
+      "return_10m_pct": -13.49,
+      "status_10m": "MEASURED",
+      "measurement_delay_minutes": 14.45
     },
     {
       "day": "2026-10-13",
@@ -3845,12 +3862,53 @@
       "buys_5m": 17,
       "sells_5m": 9,
       "measurement_minutes": 5,
+      "status": "DELAYED",
+      "price_5m_usd": 0.0002979,
+      "observed_5m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "return_5m_pct": -7.91,
+      "price_10m_usd": 0.0002979,
+      "observed_10m_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "measurement_10m_delay_minutes": 14.45,
+      "return_10m_pct": -7.91,
+      "status_10m": "MEASURED",
+      "measurement_delay_minutes": 14.45
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "alert_price_usd": 0.0006483,
+      "initial_15m_change_pct": 11.72,
+      "buys_5m": 23,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
+      "pair_address": "G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh",
+      "symbol": "CYBERLEEK",
+      "first_alert_at_utc": "2026-10-13T19:20:49.264425+00:00",
+      "alert_price_usd": 0.002923,
+      "initial_15m_change_pct": 4.02,
+      "buys_5m": 60,
+      "sells_5m": 30,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T19:08:21.034066+00:00"
+  "active_alerts": {
+    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
+    "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg|G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh": true
+  },
+  "updated_at_utc": "2026-10-13T19:20:49.264425+00:00"
 }
