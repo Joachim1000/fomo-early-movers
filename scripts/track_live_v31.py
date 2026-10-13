@@ -162,6 +162,15 @@ if len(ranking)<10:
                         "buy_sell_ratio":x.get("buy_sell_ratio"),
                         "buys_5m":x.get("buys_5m"),"sells_5m":x.get("sells_5m")})
 ranking.sort(key=lambda x:(x["candidate_source"]=="V31_PROVISIONAL_WATCHLIST", -(x["predicted_10m_gain_probability_pct"] if trained and x["predicted_10m_gain_probability_pct"] is not None else x["v31_heuristic_score"])))
+# Freeze the risk at the actual daily selection observation; do not recalculate it from rolling history.
+def first_call_risk(obs):
+    change=num(obs.get("change_15m_pct"))
+    ratio=num(obs.get("buy_sell_ratio"))
+    if change is None and ratio is None:return "UNKNOWN"
+    if (change is not None and change<=-8) or (ratio is not None and ratio<0.9):return "HIGH"
+    if (change is not None and change<0) or (ratio is not None and ratio<1.25):return "ELEVATED"
+    return "LOW RELATIVE"
+
 # One fixed daily selection at/after 08:00 Warsaw, using the prior day's
 # independently observed candidate history. Never rerank today's portfolio.
 zone=ZoneInfo("Europe/Warsaw")
@@ -195,7 +204,14 @@ if day not in daily and local.hour>=8:
                   "v31_heuristic_score":score,"v31_rank":i,
                   "buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),
                   "sells_5m":x.get("sells_5m"),"change_15m_pct":x.get("change_15m_pct"),
-                  "candidate_source":"DAILY_FIXED_SELECTION"} for i,(score,t,x) in enumerate(picks,1)]}
+                  "candidate_source":"DAILY_FIXED_SELECTION","first_call_risk":first_call_risk(x)} for i,(score,t,x) in enumerate(picks,1)]}
+# Backfill older daily picks once using their fixed selection snapshot fields.
+# Existing saved values are immutable and never overwritten.
+for portfolio in daily.values():
+    for item in portfolio.get("candidates",[]):
+        if "first_call_risk" not in item:
+            item["first_call_risk"]=first_call_risk(item)
+
 # Daily portfolios freeze after 23:30 Warsaw, with the latest exact-pair observed price.
 for date,portfolio in daily.items():
     if portfolio.get("status")=="LOCKED":continue
