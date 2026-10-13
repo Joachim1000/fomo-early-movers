@@ -3241,10 +3241,11 @@
       "buys_5m": 8,
       "sells_5m": 0,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004634,
+      "observed_5m_at_utc": "2026-10-13T17:56:19.868496+00:00",
+      "return_5m_pct": 0.98,
+      "measurement_delay_minutes": 5.88
     },
     {
       "day": "2026-10-13",
@@ -3277,11 +3278,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump",
+      "pair_address": "HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN",
+      "symbol": "Chonk",
+      "first_alert_at_utc": "2026-10-13T17:56:19.868496+00:00",
+      "alert_price_usd": 0.0001564,
+      "initial_15m_change_pct": 52.14,
+      "buys_5m": 34,
+      "sells_5m": 21,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "GQdEL4MhL4v8bsmMvyBvjh6BdbWqasgkDnJGfaAHpump",
+      "pair_address": "8swjg8ZxS6HNNMTMzymHgUpQeHTLQaSEbSgW7A3L1ieX",
+      "symbol": "UNITS",
+      "first_alert_at_utc": "2026-10-13T17:56:19.868496+00:00",
+      "alert_price_usd": 0.000352,
+      "initial_15m_change_pct": 4.58,
+      "buys_5m": 8,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6x4Z2dr5DgHUBCKvta8T8GNsFTxJhsBZxNrycWQ8pump|GLN7Dr7AsP9GRxAjxiVBk9Rnwyn74ar2R3BuGk8ZxQn1": true,
-    "98AG3zJUawbvDnpgbDhmxpMKva43vtgPLLPSXqo1pump|2U5kdozDrdgYzyGRNbTdBejGLYEeRt1FkERQmyPbV85P": true
+    "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump|HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN": true,
+    "GQdEL4MhL4v8bsmMvyBvjh6BdbWqasgkDnJGfaAHpump|8swjg8ZxS6HNNMTMzymHgUpQeHTLQaSEbSgW7A3L1ieX": true
   },
-  "updated_at_utc": "2026-10-13T17:54:18.199860+00:00"
+  "updated_at_utc": "2026-10-13T17:56:19.868496+00:00"
 }
