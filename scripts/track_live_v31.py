@@ -240,7 +240,7 @@ for x in ranking[:10]:
     row=existing.get(key)
     if row is not None:
         row["v31_rank"]=x["v31_rank"]
-        row["predicted_10m_gain_probability_pct"]=x["predicted_10m_gain_probability_pct"]
+        row["predicted_10m_gain_probability_pct"]=x.get("predicted_10m_gain_probability_pct")
 # Preserve the seven-day window, rather than an arbitrary 10,000-row cap.
 # Only keep recent full feature observations; exact rank and entry remain stored.
 cutoff=now-timedelta(days=7)
