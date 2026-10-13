@@ -2382,7 +2382,12 @@
       "price_5m_usd": 0.0002776,
       "observed_5m_at_utc": "2026-10-13T16:30:44.443869+00:00",
       "return_5m_pct": 13.54,
-      "measurement_delay_minutes": 6.44
+      "measurement_delay_minutes": 6.44,
+      "price_10m_usd": 0.0002715,
+      "observed_10m_at_utc": "2026-10-13T16:34:19.961811+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 11.04,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -2395,10 +2400,11 @@
       "buys_5m": 8,
       "sells_5m": 0,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00103,
+      "observed_5m_at_utc": "2026-10-13T16:34:19.961811+00:00",
+      "return_5m_pct": 2.28,
+      "measurement_delay_minutes": 6.02
     },
     {
       "day": "2026-10-13",
@@ -2411,10 +2417,11 @@
       "buys_5m": 15,
       "sells_5m": 10,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002715,
+      "observed_5m_at_utc": "2026-10-13T16:34:19.961811+00:00",
+      "return_5m_pct": -2.97,
+      "measurement_delay_minutes": 6.02
     },
     {
       "day": "2026-10-13",
@@ -2427,10 +2434,11 @@
       "buys_5m": 15,
       "sells_5m": 9,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0006437,
+      "observed_5m_at_utc": "2026-10-13T16:34:19.961811+00:00",
+      "return_5m_pct": 0.64,
+      "measurement_delay_minutes": 6.02
     },
     {
       "day": "2026-10-13",
@@ -2485,5 +2493,5 @@
     "A75Xx6SeftAmWduv9KGwb2GCjXUAhxozcCUCys9jpump|EwsYHiuznyNqH5f65YpfsoQBLq2KyETuvhm5un7wsfDG": true,
     "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
   },
-  "updated_at_utc": "2026-10-13T16:32:27.513795+00:00"
+  "updated_at_utc": "2026-10-13T16:34:19.961811+00:00"
 }
