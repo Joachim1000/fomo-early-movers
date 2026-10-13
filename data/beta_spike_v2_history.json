@@ -185,11 +185,29 @@
       "price_5m_usd": 0.0001071,
       "observed_5m_at_utc": "2026-10-13T10:36:18.963006+00:00",
       "measurement_delay_minutes": 5.67
+    },
+    {
+      "mint": "0x018062E5b98C7CAe3C817B23f13a441C9d887777",
+      "pair_address": "0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82",
+      "symbol": "SpaceXSI",
+      "first_qualified_at_utc": "2026-10-13T11:28:17.958818+00:00",
+      "first_alert_at_utc": "2026-10-13T11:28:17.958818+00:00",
+      "alert_price_usd": 0.001028,
+      "change_15m_pct": 9.72,
+      "buys_5m": 55,
+      "sells_5m": 2,
+      "liquidity_usd": 116619.9,
+      "status": "PENDING",
+      "return_5m_pct": null,
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null
     }
   ],
   "pending_confirmation": {},
-  "active_alerts": {},
+  "active_alerts": {
+    "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true
+  },
   "schema_version": 1,
-  "updated_at_utc": "2026-10-13T11:26:19.306132+00:00",
+  "updated_at_utc": "2026-10-13T11:28:17.958818+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, immediate first qualifying snapshot"
 }

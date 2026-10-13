@@ -67,12 +67,48 @@
       "buys_5m": 19,
       "sells_5m": 12,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001247,
+      "observed_5m_at_utc": "2026-10-13T11:28:17.958818+00:00",
+      "return_5m_pct": 15.57,
+      "measurement_delay_minutes": 6.15
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0x018062E5b98C7CAe3C817B23f13a441C9d887777",
+      "pair_address": "0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82",
+      "symbol": "SpaceXSI",
+      "first_alert_at_utc": "2026-10-13T11:28:17.958818+00:00",
+      "alert_price_usd": 0.001028,
+      "initial_15m_change_pct": 9.72,
+      "buys_5m": 55,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "4ERwUz3AKfBw2J34W8sBBsWh4ohXGvcD1qa7iKo7KeHm",
+      "pair_address": "6MwHoA8PJBGRinEbwT4CqgqN1j8gtNzyAqfkQiNSn6TX",
+      "symbol": "ETHINU",
+      "first_alert_at_utc": "2026-10-13T11:28:17.958818+00:00",
+      "alert_price_usd": 0.0001344,
+      "initial_15m_change_pct": 8.04,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T11:26:19.306132+00:00"
+  "active_alerts": {
+    "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true,
+    "4ERwUz3AKfBw2J34W8sBBsWh4ohXGvcD1qa7iKo7KeHm|6MwHoA8PJBGRinEbwT4CqgqN1j8gtNzyAqfkQiNSn6TX": true
+  },
+  "updated_at_utc": "2026-10-13T11:28:17.958818+00:00"
 }
