@@ -544,7 +544,12 @@
       "price_5m_usd": 0.001705,
       "observed_5m_at_utc": "2026-10-13T12:52:18.453975+00:00",
       "return_5m_pct": -0.99,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.001742,
+      "observed_10m_at_utc": "2026-10-13T12:56:19.766715+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": 1.16,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -561,7 +566,12 @@
       "price_5m_usd": 0.01619,
       "observed_5m_at_utc": "2026-10-13T12:52:18.453975+00:00",
       "return_5m_pct": -1.16,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.01624,
+      "observed_10m_at_utc": "2026-10-13T12:56:19.766715+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -0.85,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -594,10 +604,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-13T12:56:19.766715+00:00",
+      "alert_price_usd": 0.003488,
+      "initial_15m_change_pct": 4.81,
+      "buys_5m": 27,
+      "sells_5m": 10,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true
+    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true,
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true
   },
-  "updated_at_utc": "2026-10-13T12:54:20.657681+00:00"
+  "updated_at_utc": "2026-10-13T12:56:19.766715+00:00"
 }
