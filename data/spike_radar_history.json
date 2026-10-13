@@ -3258,10 +3258,11 @@
       "buys_5m": 19,
       "sells_5m": 11,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001395,
+      "observed_5m_at_utc": "2026-10-13T17:58:16.904025+00:00",
+      "return_5m_pct": 14.72,
+      "measurement_delay_minutes": 5.99
     },
     {
       "day": "2026-10-13",
@@ -3310,11 +3311,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-13T17:58:16.904025+00:00",
+      "alert_price_usd": 0.0007452,
+      "initial_15m_change_pct": 8.87,
+      "buys_5m": 17,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "2UfsAijU7msunH4yrSoR7ZmV9tb5z4qEXWeKVaCqpump|HqSVYECmmFcktrxCFaLsgZfaecXKtnZQiECodeRD3XGN": true,
-    "GQdEL4MhL4v8bsmMvyBvjh6BdbWqasgkDnJGfaAHpump|8swjg8ZxS6HNNMTMzymHgUpQeHTLQaSEbSgW7A3L1ieX": true
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": true
   },
-  "updated_at_utc": "2026-10-13T17:56:19.868496+00:00"
+  "updated_at_utc": "2026-10-13T17:58:16.904025+00:00"
 }
