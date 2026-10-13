@@ -58,7 +58,7 @@ def trim(node, cutoff):
         for key, value in node.items():
             # YYYY-MM-DD keyed daily snapshots and timestamp-keyed maps.
             date = parse_date(key) if isinstance(key, str) and len(key) >= 10 and key[:4].isdigit() and key[4:5] == "-" else None
-            if date is not None and date < CUTOFF:
+            if date is not None and date < cutoff:
                 continue
             value = trim(value, cutoff)
             result[key] = value
