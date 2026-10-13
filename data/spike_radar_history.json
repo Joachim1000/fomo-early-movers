@@ -5472,7 +5472,12 @@
       "price_5m_usd": 0.0005284,
       "observed_5m_at_utc": "2026-10-13T23:32:17.680267+00:00",
       "return_5m_pct": -8.55,
-      "measurement_delay_minutes": 5.91
+      "measurement_delay_minutes": 5.91,
+      "price_10m_usd": 0.0004658,
+      "observed_10m_at_utc": "2026-10-13T23:38:20.355618+00:00",
+      "measurement_10m_delay_minutes": 11.96,
+      "return_10m_pct": -19.38,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5489,7 +5494,12 @@
       "price_5m_usd": 0.002469,
       "observed_5m_at_utc": "2026-10-13T23:34:16.802343+00:00",
       "return_5m_pct": -4.86,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.00256,
+      "observed_10m_at_utc": "2026-10-13T23:38:20.355618+00:00",
+      "measurement_10m_delay_minutes": 10.06,
+      "return_10m_pct": -1.35,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5506,7 +5516,12 @@
       "price_5m_usd": 0.001128,
       "observed_5m_at_utc": "2026-10-13T23:34:16.802343+00:00",
       "return_5m_pct": -0.27,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.001129,
+      "observed_10m_at_utc": "2026-10-13T23:38:20.355618+00:00",
+      "measurement_10m_delay_minutes": 10.06,
+      "return_10m_pct": -0.18,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5523,7 +5538,12 @@
       "price_5m_usd": 0.004471,
       "observed_5m_at_utc": "2026-10-13T23:34:16.802343+00:00",
       "return_5m_pct": 0.2,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.004351,
+      "observed_10m_at_utc": "2026-10-13T23:38:20.355618+00:00",
+      "measurement_10m_delay_minutes": 10.06,
+      "return_10m_pct": -2.49,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5593,8 +5613,7 @@
     }
   ],
   "active_alerts": {
-    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true,
-    "6x4Z2dr5DgHUBCKvta8T8GNsFTxJhsBZxNrycWQ8pump|GLN7Dr7AsP9GRxAjxiVBk9Rnwyn74ar2R3BuGk8ZxQn1": true
+    "85Mo19cmRzg89Vz1niSw7jRZtrtfvCrkEwFSW1CBaQcg|7dWwLrscRgkuhTEBnZm6rLvekvS2uft3Sz8EBj4XLUMy": true
   },
-  "updated_at_utc": "2026-10-13T23:36:17.963203+00:00"
+  "updated_at_utc": "2026-10-13T23:38:20.355618+00:00"
 }
