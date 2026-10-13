@@ -115,7 +115,7 @@ jobs:
         if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_spike_radar.py
 
-      - name: Simulate Spike Radar paper trades\n        if: steps.collection_window.outputs.enabled == 'true'\n        run: python scripts/track_paper_trades.py\n\n      - name: Track experimental beta spikes and five-minute outcomes
+      - name: Track experimental beta spikes and five-minute outcomes
         if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/track_beta_spikes.py
 
