@@ -236,7 +236,12 @@
       "price_5m_usd": 0.003741,
       "observed_5m_at_utc": "2026-10-13T12:24:18.449783+00:00",
       "return_5m_pct": 0.0,
-      "measurement_delay_minutes": 6.02
+      "measurement_delay_minutes": 6.02,
+      "price_10m_usd": 0.00371,
+      "observed_10m_at_utc": "2026-10-13T12:28:17.310754+00:00",
+      "measurement_10m_delay_minutes": 10.0,
+      "return_10m_pct": -0.83,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -253,7 +258,12 @@
       "price_5m_usd": 0.0004693,
       "observed_5m_at_utc": "2026-10-13T12:24:18.449783+00:00",
       "return_5m_pct": 0.0,
-      "measurement_delay_minutes": 6.02
+      "measurement_delay_minutes": 6.02,
+      "price_10m_usd": 0.0004406,
+      "observed_10m_at_utc": "2026-10-13T12:28:17.310754+00:00",
+      "measurement_10m_delay_minutes": 10.0,
+      "return_10m_pct": -6.12,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -283,10 +293,11 @@
       "buys_5m": 64,
       "sells_5m": 41,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001051,
+      "observed_5m_at_utc": "2026-10-13T12:28:17.310754+00:00",
+      "return_5m_pct": 3.24,
+      "measurement_delay_minutes": 5.99
     },
     {
       "day": "2026-10-13",
@@ -299,10 +310,11 @@
       "buys_5m": 20,
       "sells_5m": 6,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00041,
+      "observed_5m_at_utc": "2026-10-13T12:28:17.310754+00:00",
+      "return_5m_pct": 3.59,
+      "measurement_delay_minutes": 5.99
     },
     {
       "day": "2026-10-13",
@@ -335,11 +347,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-13T12:28:17.310754+00:00",
+      "alert_price_usd": 0.003642,
+      "initial_15m_change_pct": 5.14,
+      "buys_5m": 14,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true,
-    "0xB1b798c76a9F7BC6f5002DD72C23cF0d64b76666|0x6F0aa2c067ce5F6E5253d7F6487548fa01601B3B": true
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
   },
-  "updated_at_utc": "2026-10-13T12:26:26.488149+00:00"
+  "updated_at_utc": "2026-10-13T12:28:17.310754+00:00"
 }
