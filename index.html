@@ -779,7 +779,7 @@ async function loadSpikeRadarBeta(){
   const betaResetAt='2026-10-12T20:20:00Z';
   const records=allRecords.filter(x=>Number.isFinite(Date.parse(x.first_alert_at_utc))&&Date.parse(x.first_alert_at_utc)>=Date.parse(betaResetAt));
   const num=v=>v==null||v===''?NaN:Number(v);
-  const qualified=x=>{const buys=num(x.buys_5m),sells=num(x.sells_5m),change=num(x.initial_15m_change_pct);return Number.isFinite(buys)&&Number.isFinite(sells)&&Number.isFinite(change)&&buys>=30&&buys/Math.max(1,sells)>=2.5&&change>=5&&change<=20};
+  const qualified=x=>{const buys=num(x.buys_5m),sells=num(x.sells_5m),change=num(x.initial_15m_change_pct);return Number.isFinite(buys)&&Number.isFinite(sells)&&Number.isFinite(change)&&buys>=30&&buys/Math.max(1,sells)>=2.0&&change>=5&&change<=20};
   const candidates=records.filter(qualified).sort((a,b)=>Date.parse(a.first_alert_at_utc)-Date.parse(b.first_alert_at_utc));
   const lastByPair=new Map(),selected=[];
   for(const x of candidates){
