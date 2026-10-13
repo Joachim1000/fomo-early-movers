@@ -588,7 +588,12 @@
       "price_5m_usd": 0.0003907,
       "observed_5m_at_utc": "2026-10-13T12:58:18.144799+00:00",
       "return_5m_pct": 3.03,
-      "measurement_delay_minutes": 5.99
+      "measurement_delay_minutes": 5.99,
+      "price_10m_usd": 0.0003963,
+      "observed_10m_at_utc": "2026-10-13T13:02:20.402049+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 4.51,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -605,7 +610,12 @@
       "price_5m_usd": 0.003724,
       "observed_5m_at_utc": "2026-10-13T12:58:18.144799+00:00",
       "return_5m_pct": 0.16,
-      "measurement_delay_minutes": 5.99
+      "measurement_delay_minutes": 5.99,
+      "price_10m_usd": 0.00376,
+      "observed_10m_at_utc": "2026-10-13T13:02:20.402049+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 1.13,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-13",
@@ -618,12 +628,31 @@
       "buys_5m": 27,
       "sells_5m": 10,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.003919,
+      "observed_5m_at_utc": "2026-10-13T13:02:20.402049+00:00",
+      "return_5m_pct": 12.36,
+      "measurement_delay_minutes": 6.01
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159",
+      "pair_address": "0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d",
+      "symbol": "BREW",
+      "first_alert_at_utc": "2026-10-13T13:02:20.402049+00:00",
+      "alert_price_usd": 0.006826,
+      "initial_15m_change_pct": 3.44,
+      "buys_5m": 10,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T13:00:56.180672+00:00"
+  "active_alerts": {
+    "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159|0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d": true
+  },
+  "updated_at_utc": "2026-10-13T13:02:20.402049+00:00"
 }
