@@ -163,15 +163,16 @@
       "buys_5m": 35,
       "sells_5m": 13,
       "liquidity_usd": 43444.84,
-      "status": "PENDING",
-      "return_5m_pct": null,
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null
+      "status": "MEASURED",
+      "return_5m_pct": 7.83,
+      "price_5m_usd": 0.0002824,
+      "observed_5m_at_utc": "2026-10-13T10:24:20.091876+00:00",
+      "measurement_delay_minutes": 5.89
     }
   ],
   "pending_confirmation": {},
   "active_alerts": {},
   "schema_version": 1,
-  "updated_at_utc": "2026-10-13T10:22:17.387759+00:00",
+  "updated_at_utc": "2026-10-13T10:24:20.091876+00:00",
   "strategy": "BETA V2: 25 buys, buy/sell >=2, liquidity >=$20k, 15m gain 5–20%, immediate first qualifying snapshot"
 }
