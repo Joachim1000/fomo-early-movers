@@ -4778,11 +4778,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gjd3JUbNG2C3n5Ww98SfPxyWaqvDk2BkiKongGwEpump",
+      "pair_address": "7GF7CVXdHij7iZwgxZ3DbHaVk7zTXi9EYRbZc1dY8ySX",
+      "symbol": "FLOYD",
+      "first_alert_at_utc": "2026-10-13T22:04:16.295843+00:00",
+      "alert_price_usd": 0.0006783,
+      "initial_15m_change_pct": 17.52,
+      "buys_5m": 243,
+      "sells_5m": 158,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
-    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true
+    "Gjd3JUbNG2C3n5Ww98SfPxyWaqvDk2BkiKongGwEpump|7GF7CVXdHij7iZwgxZ3DbHaVk7zTXi9EYRbZc1dY8ySX": true
   },
-  "updated_at_utc": "2026-10-13T22:02:16.142587+00:00"
+  "updated_at_utc": "2026-10-13T22:04:16.295843+00:00"
 }
