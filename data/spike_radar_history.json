@@ -2708,10 +2708,11 @@
       "buys_5m": 25,
       "sells_5m": 12,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0005717,
+      "observed_5m_at_utc": "2026-10-13T17:10:28.488035+00:00",
+      "return_5m_pct": -2.72,
+      "measurement_delay_minutes": 6.13
     },
     {
       "day": "2026-10-13",
@@ -2724,10 +2725,11 @@
       "buys_5m": 9,
       "sells_5m": 3,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0008155,
+      "observed_5m_at_utc": "2026-10-13T17:10:28.488035+00:00",
+      "return_5m_pct": -0.02,
+      "measurement_delay_minutes": 6.13
     },
     {
       "day": "2026-10-13",
@@ -2740,10 +2742,11 @@
       "buys_5m": 21,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.01286,
+      "observed_5m_at_utc": "2026-10-13T17:10:28.488035+00:00",
+      "return_5m_pct": 0.39,
+      "measurement_delay_minutes": 6.13
     },
     {
       "day": "2026-10-13",
@@ -2760,8 +2763,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-13T17:10:28.488035+00:00",
+      "alert_price_usd": 0.005103,
+      "initial_15m_change_pct": 11.25,
+      "buys_5m": 10,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T17:08:19.676805+00:00"
+  "active_alerts": {
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
+  },
+  "updated_at_utc": "2026-10-13T17:10:28.488035+00:00"
 }
