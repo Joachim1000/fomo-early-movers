@@ -33,7 +33,7 @@ for x in latest.get("eligible_4h_candidates",[]):
     price=num(x.get("price_usd"))
     if not mint or not pair or not price or price<=0: continue
     series=sorted(((when(p.get("timestamp")),num(p.get("price_usd"))) for p in history.get(mint,[]) if p.get("pair_address")==pair),key=lambda z:z[0] or now)
-    series=[(t,p) for t,p in series if t and p and p>0 and t<=min(now,cutoff_utc)]
+    series=[(t,p) for t,p in series if t and p and p>0 and t<=now]
     def lag(minutes):
         eligible=[(t,p) for t,p in series if minutes-3 <= (now-t).total_seconds()/60 <= minutes+3]
         return min(eligible,key=lambda z:abs((now-z[0]).total_seconds()/60-minutes))[1] if eligible else None
