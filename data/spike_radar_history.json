@@ -5633,10 +5633,61 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "BECHKSgFWCoEPFL5jg3SwyjdqJWmLzNixnA7hq85pump",
+      "pair_address": "G7nwvpt9xTffuDzwtdy7Cu3g9YBcrg9vujQt6qBUsefZ",
+      "symbol": "ATTENTION",
+      "first_alert_at_utc": "2026-10-13T23:44:16.498745+00:00",
+      "alert_price_usd": 0.0001208,
+      "initial_15m_change_pct": 5.96,
+      "buys_5m": 18,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
+      "pair_address": "0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938",
+      "symbol": "Temo",
+      "first_alert_at_utc": "2026-10-13T23:44:16.498745+00:00",
+      "alert_price_usd": 0.0006999,
+      "initial_15m_change_pct": 4.09,
+      "buys_5m": 11,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "symbol": "HOOKED",
+      "first_alert_at_utc": "2026-10-13T23:44:16.498745+00:00",
+      "alert_price_usd": 0.002547,
+      "initial_15m_change_pct": 3.83,
+      "buys_5m": 21,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump|BFrSZakeqNzVtM3EFhroo4eRhagmmWN8BRntiQKFH6Ru": true
+    "DoVAVzViX8Bjy3r15nwikSaSbzE6dV4ovd28aWpJpump|BFrSZakeqNzVtM3EFhroo4eRhagmmWN8BRntiQKFH6Ru": true,
+    "BECHKSgFWCoEPFL5jg3SwyjdqJWmLzNixnA7hq85pump|G7nwvpt9xTffuDzwtdy7Cu3g9YBcrg9vujQt6qBUsefZ": true,
+    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true,
+    "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE|FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe": true
   },
-  "updated_at_utc": "2026-10-13T23:42:18.356218+00:00"
+  "updated_at_utc": "2026-10-13T23:44:16.498745+00:00"
 }
