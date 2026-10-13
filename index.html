@@ -853,13 +853,31 @@ async function loadSpikeRadarBeta(){
   const verified10=selected.filter(x=>x.status_10m==='MEASURED'&&x.return_10m_pct!=null&&Number.isFinite(Number(x.return_10m_pct)));
   const stats10=summarize(verified10.map(x=>({...x,return_5m_pct:x.return_10m_pct})));
   const bs=summarize(verified),os=summarize(original),hitLabel=stat=>stat.hit==null?'N/A':stat.hit.toFixed(1)+'% ('+stat.wins+'/'+stat.n+')',pct=v=>v==null?'N/A':(v>0?'+':'')+v.toFixed(2)+'%';
-  // Daily hypothetical profit: independent $100 entry on each qualified BETA signal.
-  const todayKey=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const dayKey=t=>Number.isFinite(Date.parse(t||''))?new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t)):null;
-  const todays=selected.filter(x=>dayKey(x.first_alert_at_utc)===todayKey);
+  // Daily hypothetical P/L: $100 invested in each verified qualifying signal.
+  const warsawDay=t=>{
+   if(!Number.isFinite(Date.parse(t||'')))return null;
+   const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(t));
+   const get=k=>p.find(v=>v.type===k)?.value;
+   return get('year')+'-'+get('month')+'-'+get('day');
+  };
+  const todayKey=warsawDay(new Date().toISOString());
+  const todays=selected.filter(x=>warsawDay(x.first_alert_at_utc)===todayKey);
   const daily=document.getElementById('spikeBetaDailyProfitContent');
   if(daily){
-   const usd=v=>(v<0?'−
+   const usd=v=>(v<0?'−$':'$')+Math.abs(v).toFixed(2);
+   const cells=[['Today’s BETA signals',todays.length]];
+   for(const [minutes,statusField,returnField] of [[5,'status','return_5m_pct'],[10,'status_10m','return_10m_pct']]){
+    const measured=todays.filter(x=>x[statusField]==='MEASURED'&&x[returnField]!=null&&Number.isFinite(Number(x[returnField])));
+    const profit=measured.reduce((sum,x)=>sum+Number(x[returnField]),0);
+    const principal=measured.length*100;
+    cells.push([minutes+'m · verified trades',measured.length+' / '+todays.length]);
+    cells.push([minutes+'m · total P/L',measured.length?usd(profit):'Pending']);
+    cells.push([minutes+'m · portfolio return',measured.length?(profit/principal*100).toFixed(2)+'%':'Pending']);
+    cells.push([minutes+'m · total invested',usd(principal)]);
+   }
+   daily.innerHTML=cells.map(([label,value])=>'<div class="mx-beta-kpi"><small>'+label+'</small><strong>'+value+'</strong></div>').join('');
+  }
+  const kpis=document.getElementById('spikeBetaKpis');
   if(kpis)kpis.innerHTML=[['Qualified signals',selected.length],['5m win rate',hitLabel(bs)],['Avg. return · 5m',pct(bs.avg)],['10m win rate',hitLabel(stats10)],['Avg. return · 10m',pct(stats10.avg)],['Verified · 5m / 10m',bs.n+' / '+stats10.n],['Median · 5m',pct(bs.median)],['Worst · 5m',pct(bs.worst)]].map(([label,value])=>'<div class="mx-beta-kpi"><small>'+label+'</small><strong>'+value+'</strong></div>').join('');
   const compare=document.getElementById('spikeBetaCompare');
   if(compare)compare.innerHTML=[['SPIKE RADAR',records.length,os],['SPIKE RADAR BETA',selected.length,bs]].map(([name,total,stat])=>'<tr><td>'+name+'</td><td>'+total+'</td><td>'+stat.n+'</td><td>'+hitLabel(stat)+'</td><td>'+pct(stat.avg)+'</td><td>'+pct(stat.median)+'</td><td>'+pct(stat.worst)+'</td></tr>').join('');
@@ -867,7 +885,6 @@ async function loadSpikeRadarBeta(){
   if(status)status.textContent='Source: '+stamp+' Warsaw · '+selected.length+' of '+records.length+' signals pass BETA filter · '+verified.length+' measured · Hit rate: '+(verified.length?(100*wins/verified.length).toFixed(1)+'%':'N/A')+' · Avg 5m: '+(avg===null?'N/A':(avg>=0?'+':'')+avg.toFixed(2)+'%')+' before costs';
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sorted=selected.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
-  if(false)void sorted.slice(0,60).map(x=>'<tr><td>'+escape(x.symbol)+'</td><td>'+escape(x.initial_15m_change_pct)+'%</td><td>'+escape(x.buys_5m)+' / '+escape(x.sells_5m)+'</td><td>'+escape(x.volume_5m_usd==null?'—':x.volume_5m_usd)+'</td><td>'+escape(x.liquidity_usd==null?'—':x.liquidity_usd)+'</td></tr>').join('')||'<tr><td colspan="5">No signals meet the BETA filter yet.</td></tr>';
   if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
    const ret=x.status==='MEASURED'&&x.return_5m_pct!=null?Number(x.return_5m_pct):null;
    const ret10=x.status_10m==='MEASURED'&&x.return_10m_pct!=null&&Number.isFinite(Number(x.return_10m_pct))?Number(x.return_10m_pct):null;
