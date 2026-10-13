@@ -807,7 +807,7 @@ async function loadSpikeRadarBeta(){
   if(body)body.innerHTML=sorted.slice(0,60).map(x=>'<tr><td>'+escape(x.symbol)+'</td><td>'+escape(x.initial_15m_change_pct)+'%</td><td>'+escape(x.buys_5m)+' / '+escape(x.sells_5m)+'</td><td>'+escape(x.volume_5m_usd==null?'—':x.volume_5m_usd)+'</td><td>'+escape(x.liquidity_usd==null?'—':x.liquidity_usd)+'</td></tr>').join('')||'<tr><td colspan="5">No signals meet the BETA filter yet.</td></tr>';
   if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
    const ret=x.status==='MEASURED'&&x.return_5m_pct!=null?Number(x.return_5m_pct):null;
-   const ret10=x.return_10m_pct!=null?Number(x.return_10m_pct):null;
+   const ret10=x.status_10m==='MEASURED'&&x.return_10m_pct!=null&&Number.isFinite(Number(x.return_10m_pct))?Number(x.return_10m_pct):null;
    const when=x.first_alert_at_utc?new Date(x.first_alert_at_utc).toLocaleString('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit'}):'—';
    const money=v=>v==null?'—':'$'+Number(v).toPrecision(6);
    const signed=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(2)+'%';
