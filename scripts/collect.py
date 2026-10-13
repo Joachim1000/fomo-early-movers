@@ -342,9 +342,12 @@ for mint, pair in best.items():
                   volume >= 1500 and change_15m is not None and
                   change_15m >= 5)
     # Experimental BETA; retain the original fast alert unchanged.
-    beta_alert = (fast_alert and buys >= 20 and
-                  change_15m <= 30 and
-                  buys >= 1.6 * max(sells, 1) and liquidity >= 10000)
+    # Beta-only early breakout path; production fast_alert is unchanged.
+    beta_alert = (pair_age_hours is not None and pair_age_hours > 2 and
+                  mint in fomo_mints and liquidity >= 10000 and
+                  volume >= 1500 and change_15m is not None and
+                  3 <= change_15m <= 35 and buys >= 20 and
+                  buys >= 1.5 * max(sells, 1))
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
