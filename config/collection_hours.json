@@ -1,0 +1,5 @@
+{
+  "timezone": "Europe/Warsaw",
+  "blocked_hours": [],
+  "description": "Hours in blocked_hours (0-23) disable all collection and data writes, including cronjob.org-triggered workflow_dispatch."
+}
