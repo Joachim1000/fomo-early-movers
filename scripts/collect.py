@@ -159,30 +159,34 @@ for endpoint, items, error in discovery_results:
         errors.append(f"{endpoint}: {error}")
     else:
         for item in items:
-            if item.get("chainId") == "solana" and item.get("tokenAddress"):
+            if item.get("chainId") in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche") and item.get("tokenAddress"):
                 addresses.add(item["tokenAddress"])
 
-# The FOMO API returns nested token.address and numeric Solana network 1399811149.
+# FOMO returns nested token.address and chain identifiers for Solana and EVM.
 # Prior versions silently skipped all FOMO mints, leaving their history empty.
-fomo_sol_mints = set()
+fomo_mints = set()
+fomo_network_by_mint = {}
+FOMO_NETWORKS = {"solana":"solana","1399811149":"solana","ethereum":"ethereum","1":"ethereum","eip155:1":"ethereum","base":"base","8453":"base","eip155:8453":"base","bsc":"bsc","56":"bsc","arbitrum":"arbitrum","42161":"arbitrum","polygon":"polygon","137":"polygon","optimism":"optimism","10":"optimism","avalanche":"avalanche","43114":"avalanche"}
 fomo_source_by_mint = {}
 for board_name, entries in [("trending", fomo.get("tokens", []))] + [
     (name, board.get("tokens", [])) for name, board in fomo_boards.items()
 ]:
     for item in entries:
         token = item.get("token") or {}
-        chain = str(item.get("network", "")).lower()
-        if chain not in ("solana", "1399811149"):
+        chain = str(item.get("network") or item.get("chainId") or token.get("network") or "").lower()
+        network = FOMO_NETWORKS.get(chain)
+        if not network:
             continue
         mint = token.get("address") or item.get("mint") or item.get("tokenAddress") or item.get("address")
         if isinstance(mint, str) and mint:
-            fomo_sol_mints.add(mint)
+            fomo_mints.add(mint)
+            fomo_network_by_mint[mint.lower()] = network
             addresses.add(mint)
             fomo_source_by_mint.setdefault(mint, []).append(board_name)
 
 # Always query FOMO addresses first; a capped alphabetical discovery list
 # previously crowded out the tokens the user actually sees in the FOMO app.
-ordered_addresses = sorted(fomo_sol_mints) + sorted(addresses - fomo_sol_mints)
+ordered_addresses = sorted(fomo_mints) + sorted(addresses - fomo_mints)
 ordered_addresses = ordered_addresses[:MAX_DISCOVERY_ADDRESSES]
 pairs = []
 for i in range(0, len(ordered_addresses), 20):
@@ -194,7 +198,10 @@ for i in range(0, len(ordered_addresses), 20):
 
 best = {}
 for pair in pairs:
-    if pair.get("chainId") != "solana":
+    if pair.get("chainId") not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
+        continue
+    expected = fomo_network_by_mint.get(str((pair.get("baseToken") or {}).get("address", "")).lower())
+    if expected and pair.get("chainId") != expected:
         continue
     mint = (pair.get("baseToken") or {}).get("address")
     if not mint:
@@ -236,7 +243,7 @@ for i in range(0, len(tracked_mints), 20):
     try:
         response = fetch("/latest/dex/tokens/" + ",".join(tracked_mints[i:i + 20]))
         for pair in response.get("pairs") or []:
-            if pair.get("chainId") != "solana":
+            if pair.get("chainId") not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
                 continue
             mint = (pair.get("baseToken") or {}).get("address")
             if mint not in history and mint not in recent_recommendations or mint in best:
@@ -330,7 +337,7 @@ for mint, pair in best.items():
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
     fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
-                   mint in fomo_sol_mints and liquidity >= 5000 and
+                   mint in fomo_mints and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1500 and change_15m is not None and
                   change_15m >= 5)
@@ -341,7 +348,7 @@ for mint, pair in best.items():
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
-        "mint": mint, "network": "solana",
+        "mint": mint, "network": pair.get("chainId"),
         "early_alert": fast_alert,
         "beta_alert": beta_alert,
         "change_15m_pct": change_15m,
@@ -367,9 +374,9 @@ for mint, pair in best.items():
         "history_12h_verified": False,
         "history_4h_verified": eligible,
         "fomo_trending_verified": "trending" in fomo_source_by_mint.get(mint, []),
-        "fomo_board_verified": mint in fomo_sol_mints,
+        "fomo_board_verified": mint in fomo_mints,
         "fomo_boards": fomo_source_by_mint.get(mint, []),
-        "pre_trending_screening": mint in fomo_sol_mints and "trending" not in fomo_source_by_mint.get(mint, []),
+        "pre_trending_screening": mint in fomo_mints and "trending" not in fomo_source_by_mint.get(mint, []),
         "minimum_history_hours": MIN_AGE_HOURS,
         "history_note": "4h+ observed same-pair snapshots and pair age" if eligible else "4h history not independently established",
         "label": label, "confidence": "LOW",
@@ -399,7 +406,7 @@ payload = {
     "source": "DEX Screener public API and FOMO Trending when available",
     "fomo_trending": fomo,
     "fomo_other_boards": fomo_boards,
-    "fomo_verified_mints": [{"mint": mint, "network": "solana", "boards": boards} for mint, boards in fomo_source_by_mint.items()],
+    "fomo_verified_mints": [{"mint": mint, "network": fomo_network_by_mint.get(mint.lower(), "unknown"), "boards": boards} for mint, boards in fomo_source_by_mint.items()],
     "social_media_used": False,
     "errors": errors,
     "discovered_candidate_count": len(candidates),
@@ -416,7 +423,7 @@ payload = {
     "candidates": candidates[:MAX_CANDIDATES],
     "eligible_4h_candidates": eligible_candidates[:MAX_CANDIDATES],
     "eligible_12h_candidates": [],
-    "warning": "4h verification requires timestamped same-pair observations spanning >=4h AND pair age >=4h. FOMO candidates are matched by exact Solana mint. Transaction counts are not unique wallets. No contract safety or KØB verification."
+    "warning": "4h verification requires timestamped same-pair observations spanning >=4h AND pair age >=4h. FOMO candidates are matched by exact address and network when available. Transaction counts are not unique wallets. No contract safety or KØB verification."
 }
 Path("data").mkdir(parents=True, exist_ok=True)
 # GitHub rejects any individual file above 100 MiB. Use compact JSON and
