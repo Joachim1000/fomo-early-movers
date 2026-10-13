@@ -2990,10 +2990,11 @@
       "buys_5m": 77,
       "sells_5m": 44,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.008723,
+      "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
+      "return_5m_pct": 0.62,
+      "measurement_delay_minutes": 5.6
     },
     {
       "day": "2026-10-13",
@@ -3006,10 +3007,11 @@
       "buys_5m": 30,
       "sells_5m": 20,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0006958,
+      "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
+      "return_5m_pct": 0.71,
+      "measurement_delay_minutes": 5.6
     },
     {
       "day": "2026-10-13",
@@ -3022,10 +3024,11 @@
       "buys_5m": 8,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004892,
+      "observed_5m_at_utc": "2026-10-13T17:36:20.040530+00:00",
+      "return_5m_pct": -6.46,
+      "measurement_delay_minutes": 5.6
     },
     {
       "day": "2026-10-13",
@@ -3058,11 +3061,44 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-13T17:36:20.040530+00:00",
+      "alert_price_usd": 0.0006958,
+      "initial_15m_change_pct": 13.32,
+      "buys_5m": 58,
+      "sells_5m": 27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "0xDd806E436Dda5588bf54061C11590c77dDC87777",
+      "pair_address": "0x13b86Fcf85C9C8F5C36593822D216B8893C25450",
+      "symbol": "SAFU",
+      "first_alert_at_utc": "2026-10-13T17:36:20.040530+00:00",
+      "alert_price_usd": 0.0006264,
+      "initial_15m_change_pct": 9.22,
+      "buys_5m": 14,
+      "sells_5m": 9,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
-    "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777|0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF": true
+    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
+    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true
   },
-  "updated_at_utc": "2026-10-13T17:34:23.534041+00:00"
+  "updated_at_utc": "2026-10-13T17:36:20.040530+00:00"
 }
