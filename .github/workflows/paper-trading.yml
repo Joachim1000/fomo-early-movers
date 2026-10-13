@@ -1,0 +1,34 @@
+name: Spike Radar Paper Trading (isolated)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: isolated-paper-trading
+  cancel-in-progress: false
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Update simulated positions from verified market observations
+        run: python3 scripts/paper_trade_isolated.py
+      - name: Save only paper trade ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/paper_trades.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update isolated paper trading ledger"
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git rebase origin/main || exit 1
+              if git push origin HEAD:main; then exit 0; fi
+              sleep $((attempt * 2))
+            done
+            exit 1
+          fi
