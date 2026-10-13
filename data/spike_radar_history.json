@@ -3341,10 +3341,11 @@
       "buys_5m": 17,
       "sells_5m": 7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007573,
+      "observed_5m_at_utc": "2026-10-13T18:04:17.057113+00:00",
+      "return_5m_pct": 1.62,
+      "measurement_delay_minutes": 6.0
     },
     {
       "day": "2026-10-13",
@@ -3366,5 +3367,5 @@
   "active_alerts": {
     "9PiG7wNVVxfhe7F7feVn8LRm9dH75U4Lt5cfdSx8void|AT8HJxp2hNigjLLLCCnu9KpSi7QkRSTtGuzhazDk74dJ": true
   },
-  "updated_at_utc": "2026-10-13T18:02:26.534630+00:00"
+  "updated_at_utc": "2026-10-13T18:04:17.057113+00:00"
 }
