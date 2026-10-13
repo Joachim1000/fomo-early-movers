@@ -2437,8 +2437,26 @@
       "observed_5m_at_utc": "2026-10-13T00:36:18.876293+00:00",
       "return_5m_pct": 2.59,
       "measurement_delay_minutes": 5.66
+    },
+    {
+      "day": "2026-10-13",
+      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
+      "pair_address": "57JmG2uos4wGFtBuerGS2azHEPBBnp8FJRgeLmnx8uXV",
+      "symbol": "QI",
+      "first_alert_at_utc": "2026-10-13T00:40:26.311289+00:00",
+      "alert_price_usd": 0.00116,
+      "initial_15m_change_pct": 16.14,
+      "buys_5m": 24,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-13T00:38:16.188728+00:00"
+  "active_alerts": {
+    "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ|57JmG2uos4wGFtBuerGS2azHEPBBnp8FJRgeLmnx8uXV": true
+  },
+  "updated_at_utc": "2026-10-13T00:40:26.311289+00:00"
 }
