@@ -46,6 +46,14 @@ for x in latest.get("eligible_4h_candidates",[]):
     ratio=buys/max(1,sells)
     liquidity=num(x.get("liquidity_usd")) or 0
     volume=num(x.get("volume_5m_usd")) or 0
+    # Beta risk gate: keep all observations for training but only rank qualified entries.
+    eligible_for_ranking = (
+        r5 is not None and r10 is not None and r15 is not None
+        and -5 <= r5 <= 15 and -8 <= r15 <= 25
+        and acceleration is not None and acceleration >= -2
+        and buys >= 8 and ratio >= 1.3
+        and liquidity >= 10000 and volume >= 1000
+    )
     # Shadow heuristic only: not ML, no estimated win probabilities.
     score=(clamp((acceleration or 0)*3,-20,20)
            +clamp((r5 or 0)*2,-20,20)
@@ -64,6 +72,7 @@ for x in latest.get("eligible_4h_candidates",[]):
           "buys_5m":buys,"sells_5m":sells,"buy_sell_ratio":round(ratio,3),
           "liquidity_usd":liquidity,"volume_5m_usd":volume,
           "v31_heuristic_score":round(score,3),
+          "eligible_for_ranking":eligible_for_ranking,
           "return_15m_pct":None,"return_30m_pct":None,"return_60m_pct":None}
     current.append(item)
 
@@ -120,6 +129,7 @@ if trained:
 ranking=[]
 stamp=latest["generated_at_utc"]
 for x in current:
+    if not x.get('eligible_for_ranking'):continue
     f=features(x)
     if not f:continue
     score=None
