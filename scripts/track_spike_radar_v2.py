@@ -32,19 +32,29 @@ def radar_blocked(timestamp):
     at = parse(timestamp)
     return at is not None and 12 <= at.astimezone(ZoneInfo("Europe/Warsaw")).hour < 15
 
-rows[:] = [row for row in rows if not radar_blocked(row.get("first_alert_at_utc"))]
+# Historical records are immutable once their trading day has closed.
+# Midday restrictions apply to NEW signals only, not previously frozen history.
 now = parse(latest.get("generated_at_utc"))
 if now is None:
     raise ValueError("Missing latest snapshot timestamp")
 zone = ZoneInfo("Europe/Warsaw")
 day = now.astimezone(zone).date().isoformat()
+# Freeze completed trading days at 23:30 Warsaw. Never revise prior-day
+# signals, statuses, prices, or returns during subsequent collections.
+local_now = now.astimezone(zone)
+day_closed = (local_now.hour, local_now.minute) >= (23, 30)
+def is_open_day_record(row):
+    signal_time = parse(row.get("first_alert_at_utc"))
+    return (not day_closed and signal_time is not None and
+            signal_time.astimezone(zone).date().isoformat() == day)
+
 # Record a new episode only after a previously active signal disappears.
 state = saved.get("active_alerts")
 if not isinstance(state, dict):
     state = {}
     saved["active_alerts"] = state
 current = set()
-for item in ([] if radar_blocked(now.isoformat()) else latest.get("spike_v2_candidates", [])):
+for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get("spike_v2_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
     if not mint or not pair or not price:
@@ -72,6 +82,8 @@ for key in list(state):
     if key not in current:
         del state[key]
 for row in rows:
+    if not is_open_day_record(row):
+        continue
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
     if row.get("status") not in ("PENDING", "NOT_VERIFIABLE") and row.get("return_10m_pct") is not None:
