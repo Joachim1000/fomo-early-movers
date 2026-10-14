@@ -5076,7 +5076,12 @@
       "price_5m_usd": 0.0002161,
       "observed_5m_at_utc": "2026-10-14T06:24:17.540839+00:00",
       "return_5m_pct": -14.85,
-      "measurement_delay_minutes": 5.97
+      "measurement_delay_minutes": 5.97,
+      "price_10m_usd": 0.0001823,
+      "observed_10m_at_utc": "2026-10-14T06:30:42.721706+00:00",
+      "measurement_10m_delay_minutes": 12.39,
+      "return_10m_pct": -28.17,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5093,7 +5098,12 @@
       "price_5m_usd": 0.0007709,
       "observed_5m_at_utc": "2026-10-14T06:26:28.698561+00:00",
       "return_5m_pct": 10.92,
-      "measurement_delay_minutes": 6.03
+      "measurement_delay_minutes": 6.03,
+      "price_10m_usd": 0.0008768,
+      "observed_10m_at_utc": "2026-10-14T06:30:42.721706+00:00",
+      "measurement_10m_delay_minutes": 10.26,
+      "return_10m_pct": 26.16,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5110,7 +5120,12 @@
       "price_5m_usd": 0.002422,
       "observed_5m_at_utc": "2026-10-14T06:26:28.698561+00:00",
       "return_5m_pct": -3.0,
-      "measurement_delay_minutes": 6.03
+      "measurement_delay_minutes": 6.03,
+      "price_10m_usd": 0.002253,
+      "observed_10m_at_utc": "2026-10-14T06:30:42.721706+00:00",
+      "measurement_10m_delay_minutes": 10.26,
+      "return_10m_pct": -9.77,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5127,7 +5142,12 @@
       "price_5m_usd": 0.0001291,
       "observed_5m_at_utc": "2026-10-14T06:26:28.698561+00:00",
       "return_5m_pct": -2.27,
-      "measurement_delay_minutes": 6.03
+      "measurement_delay_minutes": 6.03,
+      "price_10m_usd": 0.0001527,
+      "observed_10m_at_utc": "2026-10-14T06:30:42.721706+00:00",
+      "measurement_10m_delay_minutes": 10.26,
+      "return_10m_pct": 15.59,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5196,9 +5216,6 @@
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {
-    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
-    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
-  },
-  "updated_at_utc": "2026-10-14T06:28:17.275044+00:00"
+  "active_alerts": {},
+  "updated_at_utc": "2026-10-14T06:30:42.721706+00:00"
 }
