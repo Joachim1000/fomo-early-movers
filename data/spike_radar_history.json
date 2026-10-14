@@ -7849,7 +7849,11 @@
       "observed_5m_at_utc": "2026-10-14T09:00:55.325785+00:00",
       "return_5m_pct": 0.6,
       "measurement_delay_minutes": 6.6,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001718,
+      "observed_10m_at_utc": "2026-10-14T09:04:20.939364+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 14.3
     },
     {
       "day": "2026-10-14",
@@ -7867,7 +7871,11 @@
       "observed_5m_at_utc": "2026-10-14T09:00:55.325785+00:00",
       "return_5m_pct": -1.31,
       "measurement_delay_minutes": 6.6,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.007667,
+      "observed_10m_at_utc": "2026-10-14T09:04:20.939364+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": -3.28
     },
     {
       "day": "2026-10-14",
@@ -7885,7 +7893,11 @@
       "observed_5m_at_utc": "2026-10-14T09:00:55.325785+00:00",
       "return_5m_pct": -3.66,
       "measurement_delay_minutes": 6.6,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0005884,
+      "observed_10m_at_utc": "2026-10-14T09:04:20.939364+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": -5.64
     },
     {
       "day": "2026-10-14",
@@ -7903,7 +7915,11 @@
       "observed_5m_at_utc": "2026-10-14T09:00:55.325785+00:00",
       "return_5m_pct": -4.87,
       "measurement_delay_minutes": 6.6,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001996,
+      "observed_10m_at_utc": "2026-10-14T09:04:20.939364+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 6.91
     },
     {
       "day": "2026-10-14",
@@ -7938,11 +7954,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T09:04:20.939364+00:00",
+      "alert_price_usd": 0.0006472,
+      "initial_15m_change_pct": 4.64,
+      "buys_5m": 27,
+      "sells_5m": 18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T09:02:26.745148+00:00"
+  "updated_at_utc": "2026-10-14T09:04:20.939364+00:00"
 }
