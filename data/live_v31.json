@@ -87741,13 +87741,13 @@
       "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T20:28:19.609180+00:00",
+  "generated_at_utc": "2026-10-14T20:30:41.845175+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
-  "training_examples": 439,
+  "training_examples": 440,
   "positive_examples": 65,
-  "negative_examples": 374,
+  "negative_examples": 375,
   "target": "verified 10m return >= +3% (before trading costs)",
   "ranking": [
     {
