@@ -699,7 +699,7 @@ async function loadV3Daily(){
    const value=x.return_pct;
    const rating=x.first_call_risk||'UNKNOWN';
    const cls=rating==='HIGH'?'beta-risk-high':rating==='ELEVATED'?'beta-risk-medium':rating==='UNKNOWN'?'beta-risk-unknown':'beta-risk-low';
-   return '<tr><td>'+(i+1)+'</td><td><b>'+escape(x.symbol||x.mint?.slice(0,8))+'</b> <button class="copy-mint" type="button" data-mint="'+escape(x.mint)+'" onclick="copyMint(this)">Copy</button></td><td>'+clock(x.first_seen_at_utc||x.selected_observation_at_utc||portfolio.selected_at_utc)+'</td><td>'+escape(x.v31_rank||i+1)+'</td><td><span class="beta-risk '+cls+'">'+rating+'</span></td><td>'+money(x.entry_price_usd)+'</td><td>'+clock(x.last_price_at_utc)+'</td><td>'+money(x.last_price_usd)+'</td><td>—</td><td>—</td><td>—</td><td>'+ret(value)+'</td></tr>';
+   return '<tr><td>'+(i+1)+'</td><td><b>'+escape(x.symbol||x.mint?.slice(0,8))+'</b> <button class="copy-mint" type="button" data-mint="'+escape(x.mint)+'" onclick="copyMint(this)">Copy</button></td><td>'+clock(x.first_seen_at_utc||x.selected_observation_at_utc||portfolio.selected_at_utc)+'</td><td>'+escape(x.v31_rank||i+1)+'</td><td><span class="beta-risk '+cls+'">'+rating+'</span></td><td>'+money(x.entry_price_usd)+'</td><td>'+clock(x.last_price_at_utc)+'</td><td>'+money(x.last_price_usd)+'</td><td>'+ret(x.return_1h_pct)+'</td><td>'+ret(x.return_4h_pct)+'</td><td>'+ret(x.return_6h_pct)+'</td><td>'+ret(value)+'</td></tr>';
   }).join('')||'<tr><td colspan="12">No qualified candidates.</td></tr>';
  }catch(e){summary.textContent='V3.1 daily data unavailable: '+e.message;body.innerHTML='<tr><td colspan="12">Unable to load V3.1 daily results.</td></tr>'}
 }
