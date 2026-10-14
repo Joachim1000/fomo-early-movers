@@ -1260,9 +1260,32 @@
       "observed_5m_at_utc": "2026-10-14T19:44:27.755355+00:00",
       "return_5m_pct": 2.06,
       "measurement_delay_minutes": 6.1
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x34B658a2815F2a34C752A051a7C84bBc39B07777",
+      "pair_address": "0x24e8B27626b74BA5A067FF54992b55513dcB297C",
+      "symbol": "宇树科技",
+      "first_alert_at_utc": "2026-10-14T19:46:18.774778+00:00",
+      "alert_price_usd": 0.0007444,
+      "initial_15m_change_pct": 4.59,
+      "buys_5m": 189,
+      "sells_5m": 73,
+      "volume_5m_usd": 8801.65,
+      "liquidity_usd": 95825.78,
+      "buy_acceleration_pct": 76.64,
+      "volume_acceleration_pct": -10.42,
+      "spike_v2_score": 97,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0x34B658a2815F2a34C752A051a7C84bBc39B07777|0x24e8B27626b74BA5A067FF54992b55513dcB297C": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T19:44:27.755355+00:00"
+  "updated_at_utc": "2026-10-14T19:46:18.774778+00:00"
 }
