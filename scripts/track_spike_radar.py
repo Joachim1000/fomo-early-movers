@@ -32,18 +32,28 @@ def radar_blocked(timestamp):
     at = parse(timestamp)
     return at is not None and 12 <= at.astimezone(ZoneInfo("Europe/Warsaw")).hour < 15
 
-rows[:] = [row for row in rows if not radar_blocked(row.get("first_alert_at_utc"))]
+# Historical records are immutable once their trading day has closed.
+# Midday restrictions apply to NEW signals only, not previously frozen history.
 now = parse(latest.get("generated_at_utc"))
 if now is None:
     raise ValueError("Missing latest snapshot timestamp")
 zone = ZoneInfo("Europe/Warsaw")
 day = now.astimezone(zone).date().isoformat()
+# Freeze completed trading days at 23:30 Warsaw. Never revise prior-day
+# signals, statuses, prices, or returns during subsequent collections.
+local_now = now.astimezone(zone)
+day_closed = (local_now.hour, local_now.minute) >= (23, 30)
+def is_open_day_record(row):
+    signal_time = parse(row.get("first_alert_at_utc"))
+    return (not day_closed and signal_time is not None and
+            signal_time.astimezone(zone).date().isoformat() == day)
+
 # Every displayed Spike Radar snapshot is an independent observation.
 # Deduplicate only the exact token/pair/snapshot timestamp, never by a time window.
 # A token may reappear after 5 minutes or on successive collection cycles.
 seen={(r.get("mint"),r.get("pair_address"),r.get("first_alert_at_utc")) for r in rows}
 added=0
-for item in ([] if radar_blocked(now.isoformat()) else latest.get("early_alert_candidates", [])):
+for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get("early_alert_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
     if not mint or not pair or not price:
@@ -71,6 +81,8 @@ print(f"Spike Radar displayed observations added: {added}")
 # Retry both exits independently on every collection, including records whose
 # earlier attempt was NOT_VERIFIABLE. Never replace a measured price with a guess.
 for row in rows:
+    if not is_open_day_record(row):
+        continue
     start = parse(row.get("first_alert_at_utc"))
     entry = number(row.get("alert_price_usd"))
     if not start or not entry:
