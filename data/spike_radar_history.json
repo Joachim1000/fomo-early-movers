@@ -10634,10 +10634,12 @@
       "buys_5m": 17,
       "sells_5m": 7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001193,
+      "observed_5m_at_utc": "2026-10-14T15:26:22.464573+00:00",
+      "return_5m_pct": -12.6,
+      "measurement_delay_minutes": 5.77,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -10650,10 +10652,12 @@
       "buys_5m": 12,
       "sells_5m": 6,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00112,
+      "observed_5m_at_utc": "2026-10-14T15:26:22.464573+00:00",
+      "return_5m_pct": 1.17,
+      "measurement_delay_minutes": 5.77,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -10694,11 +10698,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2N8c4pXu6T2oBxE8ZDBYb3QgwMkyTe673HiBaYSNpump",
+      "pair_address": "G5CLkMU5gTeZ8xuh99m3bhWeBRV9SyDjntBfFUMRw2cG",
+      "symbol": "LouLou",
+      "first_alert_at_utc": "2026-10-14T15:26:22.464573+00:00",
+      "alert_price_usd": 0.0001193,
+      "initial_15m_change_pct": 12.65,
+      "buys_5m": 30,
+      "sells_5m": 17,
+      "volume_5m_usd": 5552.84,
+      "liquidity_usd": 31123.12,
+      "buy_acceleration_pct": 76.47,
+      "volume_acceleration_pct": 81.18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T15:24:20.081521+00:00"
+  "updated_at_utc": "2026-10-14T15:26:22.464573+00:00"
 }
