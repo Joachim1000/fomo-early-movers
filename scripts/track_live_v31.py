@@ -311,7 +311,19 @@ for x in ranking[:10]:
 # Preserve the seven-day window, rather than an arbitrary 10,000-row cap.
 # Only keep recent full feature observations; exact rank and entry remain stored.
 cutoff=now-timedelta(days=7)
-prior["observations"]=sorted((x for x in existing.values() if (dt(x.get("observed_at_utc")) or now)>=cutoff),key=lambda x:x.get("observed_at_utc") or "")
+# Keep one representative observation per mint/pair/hour. This matches the
+# independent training sample granularity and prevents multi-megabyte
+# snapshots from overwhelming the browser. Preserve the earliest observation
+# in each hour so historical first-call features remain stable.
+sampled={}
+for x in existing.values():
+    t=dt(x.get("observed_at_utc"))
+    if not t or t<cutoff:continue
+    key=(x.get("mint"),x.get("pair_address"),int(t.timestamp()//3600))
+    if not all(key[:2]):continue
+    if key not in sampled or t<dt(sampled[key].get("observed_at_utc")):
+        sampled[key]=x
+prior["observations"]=sorted(sampled.values(),key=lambda x:x.get("observed_at_utc") or "")
 prior.update({"generated_at_utc":stamp,"model":"L2_LOGISTIC_REGRESSION","trained":trained,
               "status":"TRAINED_INDEPENDENT" if trained else "INDEPENDENT_HEURISTIC_WAITING_FOR_VERIFIED_10M_TRAINING_DATA",
               "training_examples":len(train),"positive_examples":pos,"negative_examples":neg,
