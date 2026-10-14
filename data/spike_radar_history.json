@@ -8993,7 +8993,11 @@
       "observed_5m_at_utc": "2026-10-14T09:58:17.832714+00:00",
       "return_5m_pct": 25.81,
       "measurement_delay_minutes": 6.01,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0005513,
+      "observed_10m_at_utc": "2026-10-14T10:02:27.373690+00:00",
+      "measurement_10m_delay_minutes": 10.17,
+      "return_10m_pct": 8.44
     },
     {
       "day": "2026-10-14",
@@ -9011,7 +9015,11 @@
       "observed_5m_at_utc": "2026-10-14T09:58:17.832714+00:00",
       "return_5m_pct": -14.1,
       "measurement_delay_minutes": 6.01,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001313,
+      "observed_10m_at_utc": "2026-10-14T10:02:27.373690+00:00",
+      "measurement_10m_delay_minutes": 10.17,
+      "return_10m_pct": -27.42
     },
     {
       "day": "2026-10-14",
@@ -9029,7 +9037,11 @@
       "observed_5m_at_utc": "2026-10-14T09:58:17.832714+00:00",
       "return_5m_pct": 6.54,
       "measurement_delay_minutes": 6.01,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.002595,
+      "observed_10m_at_utc": "2026-10-14T10:02:27.373690+00:00",
+      "measurement_10m_delay_minutes": 10.17,
+      "return_10m_pct": 6.05
     },
     {
       "day": "2026-10-14",
@@ -9060,10 +9072,12 @@
       "buys_5m": 21,
       "sells_5m": 6,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0005231,
+      "observed_5m_at_utc": "2026-10-14T10:02:27.373690+00:00",
+      "return_5m_pct": 4.66,
+      "measurement_delay_minutes": 6.14,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -9102,5 +9116,5 @@
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T10:00:53.918452+00:00"
+  "updated_at_utc": "2026-10-14T10:02:27.373690+00:00"
 }
