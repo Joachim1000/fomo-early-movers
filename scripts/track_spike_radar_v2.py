@@ -63,6 +63,14 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
     price = number(item.get("price_usd"))
     if not mint or not pair or not price:
         continue
+    # Beta entry guard: avoid already-extended 15m momentum (>15%).
+    # Missing/non-numeric changes are rejected rather than silently bypassing the guard.
+    try:
+        change_15m = float(item.get("change_15m_pct"))
+    except (TypeError, ValueError):
+        continue
+    if not (-float("inf") < change_15m < 15.0):
+        continue
     key = mint + "|" + pair
     current.add(key)
     if state.get(key):
