@@ -1529,11 +1529,16 @@
       "price_5m_usd": 0.06667,
       "observed_5m_at_utc": "2026-10-14T21:14:23.254389+00:00",
       "return_5m_pct": -0.88,
-      "measurement_delay_minutes": 6.07
+      "measurement_delay_minutes": 6.07,
+      "price_10m_usd": 0.0673,
+      "observed_10m_at_utc": "2026-10-14T21:20:26.695272+00:00",
+      "measurement_10m_delay_minutes": 12.13,
+      "return_10m_pct": 0.06,
+      "status_10m": "MEASURED"
     }
   ],
   "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T21:18:16.999179+00:00",
+  "updated_at_utc": "2026-10-14T21:20:26.695272+00:00",
   "closed_days": {}
 }
