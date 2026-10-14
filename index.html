@@ -816,7 +816,10 @@ async function loadHomeTradingHours(force=false){
 }
 </script><script>
 /* Shadow-only SPIKE RADAR BETA: do not modify original alerts or trades. */
+let spikeBetaLoadBusy=false;
 async function loadSpikeRadarBeta(){
+ if(spikeBetaLoadBusy)return;
+ spikeBetaLoadBusy=true;
  const status=document.getElementById('spikeBetaStatus');
  const historyTarget=document.getElementById('spikeBetaHistoryRows');
  if(!historyTarget)return;
@@ -892,7 +895,7 @@ async function loadSpikeRadarBeta(){
    const result=v=>v==null?'PENDING':v>0?'POSITIVE':v<0?'NEGATIVE':'FLAT';
    return '<tr><td>'+escape(x.symbol)+'</td><td>'+escape(when)+'</td><td>'+money(x.alert_price_usd)+'</td><td>'+money(x.price_5m_usd)+'</td><td class="'+tone(ret)+'">'+signed(ret)+'</td><td>'+money(x.price_10m_usd)+'</td><td class="'+tone(ret10)+'">'+signed(ret10)+'</td></tr>';
   }).join('')||'<tr><td colspan="7">No BETA history yet.</td></tr>';
- }catch(e){console.error('SPIKE RADAR BETA loading error',e);if(status)status.textContent='BETA analysis unavailable: '+e.message;if(historyTarget)historyTarget.innerHTML='<tr><td colspan="7">BETA data error: '+String(e.message).replace(/[<>&]/g,'')+'</td></tr>'}
+ }catch(e){console.error('SPIKE RADAR BETA loading error',e);if(status)status.textContent='BETA analysis unavailable: '+e.message;if(historyTarget)historyTarget.innerHTML='<tr><td colspan="7">BETA data error: '+String(e.message).replace(/[<>&]/g,'')+'</td></tr>'}finally{spikeBetaLoadBusy=false}
 }
 </script><script>
 /* Ensure BETA loads when its panel is actually opened, including restored tabs. */
