@@ -70349,13 +70349,13 @@
       "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T10:16:19.021780+00:00",
+  "generated_at_utc": "2026-10-14T10:18:21.037460+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
-  "training_examples": 491,
+  "training_examples": 494,
   "positive_examples": 71,
-  "negative_examples": 420,
+  "negative_examples": 423,
   "target": "verified 10m return >= +3% (before trading costs)",
   "ranking": [
     {
