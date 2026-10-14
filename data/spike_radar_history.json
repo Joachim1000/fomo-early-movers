@@ -13235,7 +13235,11 @@
       "observed_5m_at_utc": "2026-10-14T13:18:18.744164+00:00",
       "return_5m_pct": 1.87,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001204,
+      "observed_10m_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": 7.31
     },
     {
       "day": "2026-10-14",
@@ -13253,7 +13257,11 @@
       "observed_5m_at_utc": "2026-10-14T13:18:18.744164+00:00",
       "return_5m_pct": -4.07,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001366,
+      "observed_10m_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": -4.07
     },
     {
       "day": "2026-10-14",
@@ -13271,7 +13279,11 @@
       "observed_5m_at_utc": "2026-10-14T13:18:18.744164+00:00",
       "return_5m_pct": 3.55,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0004668,
+      "observed_10m_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": 2.26
     },
     {
       "day": "2026-10-14",
@@ -13289,7 +13301,11 @@
       "observed_5m_at_utc": "2026-10-14T13:18:18.744164+00:00",
       "return_5m_pct": 0.31,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.05253,
+      "observed_10m_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": 0.32
     },
     {
       "day": "2026-10-14",
@@ -13422,11 +13438,75 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump",
+      "pair_address": "QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D",
+      "symbol": "OMNI",
+      "first_alert_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "alert_price_usd": 0.001645,
+      "initial_15m_change_pct": 20.69,
+      "buys_5m": 56,
+      "sells_5m": 28,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2N8c4pXu6T2oBxE8ZDBYb3QgwMkyTe673HiBaYSNpump",
+      "pair_address": "G5CLkMU5gTeZ8xuh99m3bhWeBRV9SyDjntBfFUMRw2cG",
+      "symbol": "LouLou",
+      "first_alert_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "alert_price_usd": 0.0001204,
+      "initial_15m_change_pct": 20.62,
+      "buys_5m": 29,
+      "sells_5m": 17,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo",
+      "symbol": "Altai",
+      "first_alert_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "alert_price_usd": 0.001831,
+      "initial_15m_change_pct": 6.95,
+      "buys_5m": 15,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-14T13:22:19.781360+00:00",
+      "alert_price_usd": 0.02921,
+      "initial_15m_change_pct": 6.37,
+      "buys_5m": 32,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T13:20:35.517541+00:00"
+  "updated_at_utc": "2026-10-14T13:22:19.781360+00:00"
 }
