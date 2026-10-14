@@ -220,10 +220,11 @@
       "sells_5m": 4,
       "spike_v2_score": 88,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001737,
+      "observed_5m_at_utc": "2026-10-14T08:54:19.026487+00:00",
+      "return_5m_pct": 1.52,
+      "measurement_delay_minutes": 6.0
     },
     {
       "day": "2026-10-14",
@@ -241,11 +242,28 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-14T08:54:19.026487+00:00",
+      "alert_price_usd": 0.007927,
+      "initial_15m_change_pct": 10.39,
+      "buys_5m": 26,
+      "sells_5m": 3,
+      "spike_v2_score": 94,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0x6cce346efaF2972374fB83cf85145C06b9A37777|0x8E63D38Ab1A1261eD35E448BdCB385cfE29033dB": true
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
   },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T08:52:18.200026+00:00"
+  "updated_at_utc": "2026-10-14T08:54:19.026487+00:00"
 }
