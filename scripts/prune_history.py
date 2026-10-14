@@ -17,8 +17,8 @@ TIMESTAMP_FIELDS = (
     "captured_at_utc", "created_at_utc", "time", "date",
 )
 FILES = (
-    "history.json", "recommendations.json", "beta_spike_history.json",
-    "beta_spike_v2_history.json", "early_spike_history.json",
+    "history.json", "recommendations.json", "spike_radar_v2_history.json",
+     "early_spike_history.json",
     "beta_live_daily.json", "live_v31.json", "daily_snapshots.json",
     "fomo_cache.json",
 )
