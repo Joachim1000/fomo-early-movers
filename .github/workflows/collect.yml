@@ -162,6 +162,18 @@ jobs:
           git restore -- scripts/collect.py scripts/track_beta_spikes.py scripts/track_beta_live_daily.py scripts/lock_daily.py
           rm -f scripts/track_spike_radar.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py
 
+          # Never publish a blank or invalid V3.1 file: it removes the LIVE list.
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/live_v31.json')
+          if not p.exists() or p.stat().st_size == 0:
+              raise SystemExit('LIVE V3.1 output missing or empty; refusing to publish')
+          data=json.loads(p.read_text())
+          if not isinstance(data.get('ranking'),list):
+              raise SystemExit('LIVE V3.1 ranking missing; refusing to publish')
+          print('LIVE V3.1 validated:',len(data['ranking']),'ranked candidates')
+          PY
           git add data/spike_radar_history.json data/candidate_outcomes.json data/latest.json data/history.json data/recommendations.json data/beta_spike_history.json data/beta_live_daily.json data/live_v31.json
           if [ -f data/early_spike_history.json ]; then git add data/early_spike_history.json; fi
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
