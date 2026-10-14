@@ -82829,9 +82829,53 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "4Bg632HXsgDJbzRAvz3upCoeGpkpcfY2WubsuxiDpump",
+      "pair_address": "43zNykSfudQvbjHzXpnNveQ4UfZfKzrrWwUu2DfDudYC",
+      "symbol": "KANTO",
+      "observed_at_utc": "2026-10-14T17:22:17.794598+00:00",
+      "entry_price_usd": 9.183e-05,
+      "momentum_heuristic": 20.76,
+      "change_5m_pct": 1.335,
+      "change_10m_pct": 23.229,
+      "change_15m_pct": 41.255,
+      "acceleration_pct_points": -20.27,
+      "buys_5m": 28,
+      "sells_5m": 27,
+      "buy_sell_ratio": 1.037,
+      "liquidity_usd": 24327.94,
+      "volume_5m_usd": 5731.34,
+      "v31_heuristic_score": -33.815,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "GiwMfYS4jHi256G8K41snZhKUovrMbyQL2hqv3fqr7WU",
+      "pair_address": "HoewBZ75tDe5TFzSd9Y8fRftByyshwTVawh1FMvke4Y1",
+      "symbol": "BURR",
+      "observed_at_utc": "2026-10-14T17:22:17.794598+00:00",
+      "entry_price_usd": 0.0001317,
+      "momentum_heuristic": -1.33,
+      "change_5m_pct": 2.172,
+      "change_10m_pct": 2.971,
+      "change_15m_pct": 22.512,
+      "acceleration_pct_points": 1.39,
+      "buys_5m": 25,
+      "sells_5m": 20,
+      "buy_sell_ratio": 1.25,
+      "liquidity_usd": 30894.88,
+      "volume_5m_usd": 3618.44,
+      "v31_heuristic_score": 11.552,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T17:20:31.198457+00:00",
+  "generated_at_utc": "2026-10-14T17:22:17.794598+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -84193,6 +84237,14 @@
     "0x840f09B95638744456240fE647938EE3EB4b7777|0x2931E0700f08BCC1f047bED22880A3D7844F7dFE": {
       "first_seen_at_utc": "2026-10-14T17:16:21.190039+00:00",
       "first_call_risk": "HIGH"
+    },
+    "4Bg632HXsgDJbzRAvz3upCoeGpkpcfY2WubsuxiDpump|43zNykSfudQvbjHzXpnNveQ4UfZfKzrrWwUu2DfDudYC": {
+      "first_seen_at_utc": "2026-10-14T17:22:17.794598+00:00",
+      "first_call_risk": "ELEVATED"
+    },
+    "GiwMfYS4jHi256G8K41snZhKUovrMbyQL2hqv3fqr7WU|HoewBZ75tDe5TFzSd9Y8fRftByyshwTVawh1FMvke4Y1": {
+      "first_seen_at_utc": "2026-10-14T17:22:17.794598+00:00",
+      "first_call_risk": "LOW RELATIVE"
     }
   }
 }
