@@ -5977,10 +5977,11 @@
       "buys_5m": 14,
       "sells_5m": 7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001769,
+      "observed_5m_at_utc": "2026-10-14T00:10:25.718856+00:00",
+      "return_5m_pct": 4.92,
+      "measurement_delay_minutes": 6.14
     },
     {
       "day": "2026-10-14",
@@ -6013,11 +6014,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x2dff820f15855FCd1a44B7ae3f0dbf12Dd887777",
+      "pair_address": "0x8d34dA546015db49f24f2be03A4BFe62F70CE0B8",
+      "symbol": "MURMUR",
+      "first_alert_at_utc": "2026-10-14T00:10:25.718856+00:00",
+      "alert_price_usd": 4.047e-05,
+      "initial_15m_change_pct": 66.0,
+      "buys_5m": 16,
+      "sells_5m": 10,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump|QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D": true,
-    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true
+    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true,
+    "0x2dff820f15855FCd1a44B7ae3f0dbf12Dd887777|0x8d34dA546015db49f24f2be03A4BFe62F70CE0B8": true
   },
-  "updated_at_utc": "2026-10-14T00:08:16.815618+00:00"
+  "updated_at_utc": "2026-10-14T00:10:25.718856+00:00"
 }
