@@ -360,7 +360,8 @@ for mint, pair in best.items():
                       change_2_5m is not None and 2 <= change_2_5m <= 25 and
                       prior_buys is not None and buys >= prior_buys * 1.2)
     radar_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
-    fast_alert = (radar_time_allowed and pair_age_hours is not None and pair_age_hours > 2 and
+    fast_alert = (radar_time_allowed and prior_buys is not None and buys >= prior_buys * 1.10 and
+                  pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
