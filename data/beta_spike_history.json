@@ -5763,10 +5763,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM",
+      "pair_address": "G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3",
+      "symbol": "Kirk",
+      "first_alert_at_utc": "2026-10-14T01:50:26.346838+00:00",
+      "alert_price_usd": 0.0001022,
+      "initial_15m_change_pct": 22.28,
+      "buys_5m": 81,
+      "sells_5m": 50,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true
+    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
   },
-  "updated_at_utc": "2026-10-14T01:48:17.080805+00:00"
+  "updated_at_utc": "2026-10-14T01:50:26.346838+00:00"
 }
