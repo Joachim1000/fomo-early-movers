@@ -82873,9 +82873,31 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "0xc49621f283e8D7677C8dd645B4043c9B4bEfFfFF",
+      "pair_address": "0x0636Aca1C6b3a13312Cf297f3BA20A01F797c398",
+      "symbol": "4HOOK",
+      "observed_at_utc": "2026-10-14T17:32:18.914520+00:00",
+      "entry_price_usd": 0.0001408,
+      "momentum_heuristic": 8.08,
+      "change_5m_pct": 12.64,
+      "change_10m_pct": -1.401,
+      "change_15m_pct": -3.297,
+      "acceleration_pct_points": 25.105,
+      "buys_5m": 22,
+      "sells_5m": 16,
+      "buy_sell_ratio": 1.375,
+      "liquidity_usd": 35404.0,
+      "volume_5m_usd": 2082.01,
+      "v31_heuristic_score": 40.024,
+      "eligible_for_ranking": true,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T17:30:45.729789+00:00",
+  "generated_at_utc": "2026-10-14T17:32:18.914520+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -84245,6 +84267,10 @@
     "GiwMfYS4jHi256G8K41snZhKUovrMbyQL2hqv3fqr7WU|HoewBZ75tDe5TFzSd9Y8fRftByyshwTVawh1FMvke4Y1": {
       "first_seen_at_utc": "2026-10-14T17:22:17.794598+00:00",
       "first_call_risk": "LOW RELATIVE"
+    },
+    "0xc49621f283e8D7677C8dd645B4043c9B4bEfFfFF|0x0636Aca1C6b3a13312Cf297f3BA20A01F797c398": {
+      "first_seen_at_utc": "2026-10-14T17:32:18.914520+00:00",
+      "first_call_risk": "ELEVATED"
     }
   }
 }
