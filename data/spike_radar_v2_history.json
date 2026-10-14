@@ -1066,10 +1066,11 @@
       "volume_acceleration_pct": -26.65,
       "spike_v2_score": 81,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0009613,
+      "observed_5m_at_utc": "2026-10-14T18:46:17.793355+00:00",
+      "return_5m_pct": -7.92,
+      "measurement_delay_minutes": 5.85
     },
     {
       "day": "2026-10-14",
@@ -1093,9 +1094,7 @@
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {
-    "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump|AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn": true
-  },
+  "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T18:44:21.182296+00:00"
+  "updated_at_utc": "2026-10-14T18:46:17.793355+00:00"
 }
