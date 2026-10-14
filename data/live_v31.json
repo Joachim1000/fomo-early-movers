@@ -82875,13 +82875,13 @@
       "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T17:28:20.427609+00:00",
+  "generated_at_utc": "2026-10-14T17:30:45.729789+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
-  "training_examples": 462,
-  "positive_examples": 81,
-  "negative_examples": 381,
+  "training_examples": 465,
+  "positive_examples": 82,
+  "negative_examples": 383,
   "target": "verified 10m return >= +3% (before trading costs)",
   "ranking": [
     {
