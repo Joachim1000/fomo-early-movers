@@ -11003,7 +11003,11 @@
       "observed_5m_at_utc": "2026-10-14T15:52:18.882127+00:00",
       "return_5m_pct": -1.98,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.009953,
+      "observed_10m_at_utc": "2026-10-14T15:58:22.224014+00:00",
+      "measurement_10m_delay_minutes": 12.05,
+      "return_10m_pct": -0.15
     },
     {
       "day": "2026-10-14",
@@ -11025,7 +11029,11 @@
       "observed_5m_at_utc": "2026-10-14T15:54:20.653174+00:00",
       "return_5m_pct": -4.28,
       "measurement_delay_minutes": 6.05,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001242,
+      "observed_10m_at_utc": "2026-10-14T15:58:22.224014+00:00",
+      "measurement_10m_delay_minutes": 10.08,
+      "return_10m_pct": -4.97
     },
     {
       "day": "2026-10-14",
@@ -11070,11 +11078,31 @@
       "return_5m_pct": 0.34,
       "measurement_delay_minutes": 5.83,
       "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "J2XBZkpC7ygBQiPw2MWWCqiVJn9i44b8GwtTRoFV1ijj",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-14T15:58:22.224014+00:00",
+      "alert_price_usd": 0.002219,
+      "initial_15m_change_pct": 3.89,
+      "buys_5m": 13,
+      "sells_5m": 2,
+      "volume_5m_usd": 3793.7,
+      "liquidity_usd": 202366.11,
+      "buy_acceleration_pct": 225.0,
+      "volume_acceleration_pct": 1544.86,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T15:56:18.840166+00:00"
+  "updated_at_utc": "2026-10-14T15:58:22.224014+00:00"
 }
