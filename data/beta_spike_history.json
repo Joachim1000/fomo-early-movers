@@ -6101,10 +6101,11 @@
       "buys_5m": 39,
       "sells_5m": 25,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.007576,
+      "observed_5m_at_utc": "2026-10-14T02:46:18.101499+00:00",
+      "return_5m_pct": -5.67,
+      "measurement_delay_minutes": 5.84
     },
     {
       "day": "2026-10-14",
@@ -6117,10 +6118,11 @@
       "buys_5m": 27,
       "sells_5m": 18,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.02839,
+      "observed_5m_at_utc": "2026-10-14T02:46:18.101499+00:00",
+      "return_5m_pct": 1.65,
+      "measurement_delay_minutes": 5.84
     },
     {
       "day": "2026-10-14",
@@ -6155,10 +6157,6 @@
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {
-    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
-    "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7|4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm": true,
-    "98AG3zJUawbvDnpgbDhmxpMKva43vtgPLLPSXqo1pump|2U5kdozDrdgYzyGRNbTdBejGLYEeRt1FkERQmyPbV85P": true
-  },
-  "updated_at_utc": "2026-10-14T02:44:20.014702+00:00"
+  "active_alerts": {},
+  "updated_at_utc": "2026-10-14T02:46:18.101499+00:00"
 }
