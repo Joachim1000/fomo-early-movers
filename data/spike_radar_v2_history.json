@@ -633,9 +633,28 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo",
+      "symbol": "Altai",
+      "first_alert_at_utc": "2026-10-14T12:38:20.614575+00:00",
+      "alert_price_usd": 0.00181,
+      "initial_15m_change_pct": 8.12,
+      "buys_5m": 20,
+      "sells_5m": 0,
+      "spike_v2_score": 80,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T12:36:18.714353+00:00"
+  "updated_at_utc": "2026-10-14T12:38:20.614575+00:00"
 }
