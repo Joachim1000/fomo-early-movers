@@ -1,0 +1,52 @@
+name: Close DAILY portfolios (Warsaw 23:30)
+on:
+  workflow_dispatch:
+  schedule:
+    # 21:40 UTC summer / 22:40 UTC winter; local-time guard below.
+    - cron: '40 21,22 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: fomo-data-collection
+  cancel-in-progress: false
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: market-data
+      - name: Check Warsaw closing time
+        id: gate
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os
+          now=datetime.now(ZoneInfo("Europe/Warsaw"))
+          enabled=(now.hour,now.minute)>=(23,30) and now.hour==23
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:
+              f.write("enabled="+str(enabled).lower()+"\n")
+          print("Close enabled:",enabled,"local time:",now.isoformat())
+          PY
+      - name: Get closing script
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git fetch --depth=1 origin main
+          git show origin/main:scripts/close_daily_portfolios.py > /tmp/close_daily_portfolios.py
+          git show origin/main:scripts/lock_daily.py > /tmp/lock_daily.py
+      - name: Lock saved observations
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          python3 /tmp/close_daily_portfolios.py
+          python3 /tmp/lock_daily.py
+      - name: Commit locked snapshots
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_v31.json data/beta_live_daily.json data/daily_snapshots.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Lock DAILY portfolios at Warsaw close"
+            git push origin HEAD:market-data
+          fi
