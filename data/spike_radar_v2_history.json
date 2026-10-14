@@ -665,11 +665,32 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
+      "pair_address": "0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938",
+      "symbol": "Temo",
+      "first_alert_at_utc": "2026-10-14T15:32:29.225004+00:00",
+      "alert_price_usd": 0.0002957,
+      "initial_15m_change_pct": 14.52,
+      "buys_5m": 21,
+      "sells_5m": 10,
+      "volume_5m_usd": 13537.29,
+      "liquidity_usd": 72206.31,
+      "buy_acceleration_pct": 950.0,
+      "volume_acceleration_pct": 1591.34,
+      "spike_v2_score": 82,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3|AeQAcZb73pUe7BF7NyZEDKV9xnS78ckrhpbYu8uLDHds": true
+    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true
   },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T15:30:46.578069+00:00"
+  "updated_at_utc": "2026-10-14T15:32:29.225004+00:00"
 }
