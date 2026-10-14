@@ -449,9 +449,28 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
+      "pair_address": "0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF",
+      "symbol": "BIBI",
+      "first_alert_at_utc": "2026-10-14T11:20:27.019683+00:00",
+      "alert_price_usd": 0.001898,
+      "initial_15m_change_pct": 13.93,
+      "buys_5m": 32,
+      "sells_5m": 10,
+      "spike_v2_score": 98,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777|0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T11:18:17.948431+00:00"
+  "updated_at_utc": "2026-10-14T11:20:27.019683+00:00"
 }
