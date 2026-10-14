@@ -8586,10 +8586,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HfpLdX35Kc6b7zDNWbe5x1xWLekKUXPYZbmz71vMpump",
+      "pair_address": "GibvJm9bExyJye7E8Gch9TSmVmuvU192bsGv6cGdUq4s",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-14T04:26:23.055092+00:00",
+      "alert_price_usd": 0.0001307,
+      "initial_15m_change_pct": 32.88,
+      "buys_5m": 112,
+      "sells_5m": 69,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true,
+    "HfpLdX35Kc6b7zDNWbe5x1xWLekKUXPYZbmz71vMpump|GibvJm9bExyJye7E8Gch9TSmVmuvU192bsGv6cGdUq4s": true
   },
-  "updated_at_utc": "2026-10-14T04:24:17.948255+00:00"
+  "updated_at_utc": "2026-10-14T04:26:23.055092+00:00"
 }
