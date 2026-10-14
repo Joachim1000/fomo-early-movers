@@ -365,7 +365,7 @@ body.home-mode #homeView{display:block!important}
  for(const [name,id] of Object.entries(ids)){const button=document.getElementById(id);if(button)button.classList.toggle('active',name===tab)}
  for(const [id,show] of [['spikeBetaView',tab==='spike-beta'],['homeView',tab==='home'],['v3View',tab==='v3'],['v3DailyView',tab==='v3-daily']]){const node=document.getElementById(id);if(node)node.style.display=show?('flex'):'none'}
  try{updateTabUpdateInfo();updateDataAge()}catch(e){console.warn('Tab timestamp',e)}
- try{if(tab==='home')loadHomeTradingHours();if(tab==='spike-beta')loadSpikeRadarBeta();if(tab==='v3-daily'&&typeof loadV3Daily==='function')loadV3Daily();if(tab==='v3'&&typeof loadV3==='function')loadV3();if(tab==='performance')refreshPerformancePage()}catch(e){console.error('Tab data loading',e)}
+ try{if(tab==='home'&&typeof loadHomeTradingHours==='function')loadHomeTradingHours();if(tab==='spike-beta')loadSpikeRadarBeta();if(tab==='v3-daily'&&typeof loadV3Daily==='function')loadV3Daily();if(tab==='v3'&&typeof loadV3==='function')loadV3();if(tab==='performance')refreshPerformancePage()}catch(e){console.error('Tab data loading',e)}
 }
 
 /* Daily views: freeze displayed results until the next 23:30 Europe/Warsaw close. */
@@ -903,12 +903,10 @@ async function loadHomeTradingHours(force=false){
  const button=document.getElementById('homeRefreshChartButton'),status=document.getElementById('homeRefreshChartStatus');
  homeChartBusy=true;if(force&&button){button.disabled=true;button.textContent='Refreshing…'}if(force&&status)status.textContent='Fetching latest published history…';
  try{
-  let root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
-  if(force){try{const c=await fetch('https://api.github.com/repos/Joachim1000/fomo-early-movers/commits/market-data?refresh='+Date.now(),{cache:'no-store'});if(c.ok){const j=await c.json();if(/^[a-f0-9]{40}$/.test(j.sha))root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/'+j.sha+'/data/'}}catch(e){console.warn('Home refresh commit lookup',e)}}
-  // Trading-hours chart uses original Spike Radar only, never Beta.
-  const res=await fetch(root+'spike_radar_history.json?t='+Date.now(),{cache:'no-store'});
-  if(!res.ok)throw Error('Spike Radar history HTTP '+res.status);
-  const data=await res.json();
+  // Use the same shared Spike Radar history source as the signal and performance tabs.
+  // Force refresh invalidates the shared cache so all tabs can see the new snapshot.
+  if(force){radarSharedCache=null;radarSharedFetchedAt=0;}
+  const data=await getSharedRadarHistory();
   if(!Array.isArray(data.records))throw Error('Invalid Spike Radar history');
   const groups=Array.from({length:24},()=>[]);
   const latestStamp=data.updated_at_utc||data.generated_at_utc||'';
@@ -916,7 +914,9 @@ async function loadHomeTradingHours(force=false){
   if(force&&status)status.textContent=(changed?'Updated':'No newer published data')+' · '+(latestStamp?new Date(latestStamp).toLocaleString('en-GB',{timeZone:'Europe/Warsaw',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'timestamp unavailable');
   const hourFmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',hourCycle:'h23'});
   let verifiedTotal=0;
-  for(const x of canonicalRadarSignals(data.records)){
+  const allSignals=canonicalRadarSignals(data.records);
+  const recordedTotal=allSignals.filter(x=>isWarsawTradingDaySignal(x.first_alert_at_utc,warsawDay(Date.parse(x.first_alert_at_utc||'')))).length;
+  for(const x of allSignals){
    const value=Number(x.return_5m_pct),t=new Date(x.first_alert_at_utc||'');
    if(x.status!=='MEASURED'||x.return_5m_pct==null||!Number.isFinite(value)||!Number.isFinite(t.getTime()))continue;
    if(!isWarsawTradingDaySignal(x.first_alert_at_utc,warsawDay(t.getTime())))continue;
