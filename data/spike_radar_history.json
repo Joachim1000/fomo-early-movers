@@ -7994,10 +7994,12 @@
       "buys_5m": 71,
       "sells_5m": 39,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001597,
+      "observed_5m_at_utc": "2026-10-14T09:14:20.005221+00:00",
+      "return_5m_pct": -6.39,
+      "measurement_delay_minutes": 6.0,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8010,10 +8012,12 @@
       "buys_5m": 28,
       "sells_5m": 17,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001197,
+      "observed_5m_at_utc": "2026-10-14T09:14:20.005221+00:00",
+      "return_5m_pct": 5.84,
+      "measurement_delay_minutes": 6.0,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8026,10 +8030,12 @@
       "buys_5m": 25,
       "sells_5m": 15,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0003948,
+      "observed_5m_at_utc": "2026-10-14T09:14:20.005221+00:00",
+      "return_5m_pct": 11.05,
+      "measurement_delay_minutes": 6.0,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8094,11 +8100,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-14T09:14:20.005221+00:00",
+      "alert_price_usd": 0.000663,
+      "initial_15m_change_pct": 9.14,
+      "buys_5m": 11,
+      "sells_5m": 2,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T09:12:19.640646+00:00"
+  "updated_at_utc": "2026-10-14T09:14:20.005221+00:00"
 }
