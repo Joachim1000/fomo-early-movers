@@ -109,7 +109,12 @@
       "price_5m_usd": 0.0005387,
       "observed_5m_at_utc": "2026-10-14T08:24:19.760568+00:00",
       "return_5m_pct": 14.74,
-      "measurement_delay_minutes": 6.0
+      "measurement_delay_minutes": 6.0,
+      "price_10m_usd": 0.0005456,
+      "observed_10m_at_utc": "2026-10-14T08:30:42.838039+00:00",
+      "measurement_10m_delay_minutes": 12.38,
+      "return_10m_pct": 16.21,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -127,10 +132,34 @@
       "price_5m_usd": 0.001898,
       "observed_5m_at_utc": "2026-10-14T08:26:30.843687+00:00",
       "return_5m_pct": 8.27,
-      "measurement_delay_minutes": 5.88
+      "measurement_delay_minutes": 5.88,
+      "price_10m_usd": 0.001922,
+      "observed_10m_at_utc": "2026-10-14T08:30:42.838039+00:00",
+      "measurement_10m_delay_minutes": 10.08,
+      "return_10m_pct": 9.64,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "pair_address": "9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6",
+      "symbol": "SAINDRA",
+      "first_alert_at_utc": "2026-10-14T08:30:42.838039+00:00",
+      "alert_price_usd": 0.0001145,
+      "initial_15m_change_pct": 13.93,
+      "buys_5m": 71,
+      "sells_5m": 30,
+      "spike_v2_score": 95,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T|9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T08:28:18.253102+00:00"
+  "updated_at_utc": "2026-10-14T08:30:42.838039+00:00"
 }
