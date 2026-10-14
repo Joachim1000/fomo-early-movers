@@ -5427,7 +5427,8 @@
       "status": "NOT_VERIFIABLE",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "status_10m": "NOT_VERIFIABLE"
     },
     {
       "day": "2026-10-14",
@@ -5449,5 +5450,5 @@
   "active_alerts": {
     "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true
   },
-  "updated_at_utc": "2026-10-14T00:38:16.337889+00:00"
+  "updated_at_utc": "2026-10-14T00:40:26.610304+00:00"
 }
