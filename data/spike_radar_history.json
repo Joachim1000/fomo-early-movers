@@ -8135,7 +8135,11 @@
       "observed_5m_at_utc": "2026-10-14T09:18:19.877207+00:00",
       "return_5m_pct": 2.66,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001592,
+      "observed_10m_at_utc": "2026-10-14T09:24:19.495974+00:00",
+      "measurement_10m_delay_minutes": 12.0,
+      "return_10m_pct": -5.8
     },
     {
       "day": "2026-10-14",
@@ -8184,10 +8188,12 @@
       "buys_5m": 26,
       "sells_5m": 14,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000178,
+      "observed_5m_at_utc": "2026-10-14T09:24:19.495974+00:00",
+      "return_5m_pct": 47.23,
+      "measurement_delay_minutes": 5.99,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8200,10 +8206,12 @@
       "buys_5m": 30,
       "sells_5m": 15,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 8.16e-05,
+      "observed_5m_at_utc": "2026-10-14T09:24:19.495974+00:00",
+      "return_5m_pct": 6.72,
+      "measurement_delay_minutes": 5.99,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8268,11 +8276,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM",
+      "pair_address": "G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3",
+      "symbol": "Kirk",
+      "first_alert_at_utc": "2026-10-14T09:24:19.495974+00:00",
+      "alert_price_usd": 0.0001132,
+      "initial_15m_change_pct": 11.42,
+      "buys_5m": 12,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-14T09:24:19.495974+00:00",
+      "alert_price_usd": 0.006487,
+      "initial_15m_change_pct": 6.47,
+      "buys_5m": 15,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T09:22:17.520084+00:00"
+  "updated_at_utc": "2026-10-14T09:24:19.495974+00:00"
 }
