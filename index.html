@@ -816,7 +816,9 @@ async function loadSpikeRadarBeta(){
   const data=await response.json(),allRecords=Array.isArray(data.records)?data.records:[];
   // BETA reset: retain original SPIKE RADAR source history, but begin BETA observations afresh.
   const betaResetAt='2026-10-12T20:20:00Z';
-  const records=allRecords.filter(x=>Number.isFinite(Date.parse(x.first_alert_at_utc))&&Date.parse(x.first_alert_at_utc)>=Date.parse(betaResetAt));
+  const excludedNightStart=Date.parse('2026-10-13T21:30:00Z'); // 13 Oct 23:30 Warsaw
+  const excludedNightEnd=Date.parse('2026-10-14T04:00:00Z'); // 14 Oct 06:00 Warsaw
+  const records=allRecords.filter(x=>{const t=Date.parse(x.first_alert_at_utc);return Number.isFinite(t)&&t>=Date.parse(betaResetAt)&&(t<excludedNightStart||t>=excludedNightEnd)});
   const num=v=>v==null||v===''?NaN:Number(v);
   const qualified=x=>{const buys=num(x.buys_5m),sells=num(x.sells_5m),change=num(x.initial_15m_change_pct);return Number.isFinite(buys)&&Number.isFinite(sells)&&Number.isFinite(change)&&buys>=20&&buys/Math.max(1,sells)>=1.5&&change>=3&&change<=35};
   const candidates=records.filter(qualified).sort((a,b)=>Date.parse(a.first_alert_at_utc)-Date.parse(b.first_alert_at_utc));
