@@ -936,9 +936,32 @@
       "observed_5m_at_utc": "2026-10-14T17:34:19.687404+00:00",
       "return_5m_pct": 5.21,
       "measurement_delay_minutes": 5.99
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "symbol": "CATE",
+      "first_alert_at_utc": "2026-10-14T17:36:21.803308+00:00",
+      "alert_price_usd": 0.06415,
+      "initial_15m_change_pct": 4.82,
+      "buys_5m": 86,
+      "sells_5m": 10,
+      "volume_5m_usd": 16245.52,
+      "liquidity_usd": 2876667.84,
+      "buy_acceleration_pct": 72.0,
+      "volume_acceleration_pct": -51.03,
+      "spike_v2_score": 100,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump|HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T17:34:19.687404+00:00"
+  "updated_at_utc": "2026-10-14T17:36:21.803308+00:00"
 }
