@@ -283,10 +283,9 @@ for date,portfolio in daily.items():
 # Retain portfolios for seven days.
 daily={k:v for k,v in daily.items() if k>=(local.date()-timedelta(days=7)).isoformat()}
 prior["daily_portfolios"]=daily
-# LIVE and DAILY are separate: LIVE follows the current market ranking,
-# while DAILY retains its independently frozen daily selection.
-# Do not replace live candidates with the daily portfolio.
-
+# LIVE is the fixed 08:00 Warsaw selection for this calendar day.
+# Daily reporting uses the most recent LOCKED portfolio, never today's active one.
+ranking = [dict(x) for x in daily.get(day, {}).get("candidates", [])] if (8, 0) <= (local.hour, local.minute) < (23, 30) else []
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
