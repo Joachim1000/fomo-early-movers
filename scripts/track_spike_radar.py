@@ -58,6 +58,10 @@ for item in ([] if radar_blocked(now.isoformat()) else latest.get("early_alert_c
         "initial_15m_change_pct": item.get("change_15m_pct"),
         "buys_5m": item.get("buy_transactions_5m"),
         "sells_5m": item.get("sell_transactions_5m"),
+        "volume_5m_usd": item.get("volume_5m_usd"),
+        "liquidity_usd": item.get("liquidity_usd"),
+        "buy_acceleration_pct": item.get("buy_acceleration_pct"),
+        "volume_acceleration_pct": item.get("volume_acceleration_pct"),
         "measurement_minutes": 5, "status": "PENDING", "price_5m_usd": None,
         "observed_5m_at_utc": None, "return_5m_pct": None
     })
