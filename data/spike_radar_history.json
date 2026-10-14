@@ -13265,7 +13265,11 @@
       "observed_5m_at_utc": "2026-10-14T19:12:17.733262+00:00",
       "return_5m_pct": 3.99,
       "measurement_delay_minutes": 5.95,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001531,
+      "observed_10m_at_utc": "2026-10-14T19:18:19.131369+00:00",
+      "measurement_10m_delay_minutes": 11.97,
+      "return_10m_pct": 0.13
     },
     {
       "day": "2026-10-14",
@@ -13326,11 +13330,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0xf40592DaACb3e5abf358789F5688C0B4f64d7777",
+      "pair_address": "0x9793a9cBb04f781433254e4530398107E6a8dcee",
+      "symbol": "FLORK",
+      "first_alert_at_utc": "2026-10-14T19:18:19.131369+00:00",
+      "alert_price_usd": 0.003003,
+      "initial_15m_change_pct": 6.91,
+      "buys_5m": 8,
+      "sells_5m": 0,
+      "volume_5m_usd": 4190.1,
+      "liquidity_usd": 250331.81,
+      "buy_acceleration_pct": 700.0,
+      "volume_acceleration_pct": 429.58,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T19:16:19.456997+00:00"
+  "updated_at_utc": "2026-10-14T19:18:19.131369+00:00"
 }
