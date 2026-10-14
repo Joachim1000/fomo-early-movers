@@ -155,7 +155,12 @@
       "price_5m_usd": 0.000108,
       "observed_5m_at_utc": "2026-10-14T08:36:19.233032+00:00",
       "return_5m_pct": -5.68,
-      "measurement_delay_minutes": 5.61
+      "measurement_delay_minutes": 5.61,
+      "price_10m_usd": 0.0001146,
+      "observed_10m_at_utc": "2026-10-14T08:42:17.931815+00:00",
+      "measurement_10m_delay_minutes": 11.58,
+      "return_10m_pct": 0.09,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -174,9 +179,28 @@
       "observed_5m_at_utc": "2026-10-14T08:38:19.592501+00:00",
       "return_5m_pct": 1.41,
       "measurement_delay_minutes": 5.88
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-14T08:42:17.931815+00:00",
+      "alert_price_usd": 0.01355,
+      "initial_15m_change_pct": 3.04,
+      "buys_5m": 19,
+      "sells_5m": 0,
+      "spike_v2_score": 80,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T08:40:25.146424+00:00"
+  "updated_at_utc": "2026-10-14T08:42:17.931815+00:00"
 }
