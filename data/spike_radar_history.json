@@ -12537,7 +12537,11 @@
       "observed_5m_at_utc": "2026-10-14T17:56:19.184584+00:00",
       "return_5m_pct": -4.72,
       "measurement_delay_minutes": 5.77,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 9.785e-05,
+      "observed_10m_at_utc": "2026-10-14T18:00:56.680816+00:00",
+      "measurement_10m_delay_minutes": 10.4,
+      "return_10m_pct": -12.94
     },
     {
       "day": "2026-10-14",
@@ -12576,10 +12580,12 @@
       "buy_acceleration_pct": 26.67,
       "volume_acceleration_pct": 135.85,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001912,
+      "observed_5m_at_utc": "2026-10-14T18:00:56.680816+00:00",
+      "return_5m_pct": -15.51,
+      "measurement_delay_minutes": 6.65,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -12600,11 +12606,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "symbol": "CATE",
+      "first_alert_at_utc": "2026-10-14T18:00:56.680816+00:00",
+      "alert_price_usd": 0.06413,
+      "initial_15m_change_pct": 4.67,
+      "buys_5m": 103,
+      "sells_5m": 44,
+      "volume_5m_usd": 54865.54,
+      "liquidity_usd": 2871102.68,
+      "buy_acceleration_pct": 415.0,
+      "volume_acceleration_pct": 131.27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T17:58:19.528095+00:00"
+  "updated_at_utc": "2026-10-14T18:00:56.680816+00:00"
 }
