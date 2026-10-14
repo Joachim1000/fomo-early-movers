@@ -8151,7 +8151,12 @@
       "price_5m_usd": 0.002835,
       "observed_5m_at_utc": "2026-10-14T03:40:25.978718+00:00",
       "return_5m_pct": 0.64,
-      "measurement_delay_minutes": 6.1
+      "measurement_delay_minutes": 6.1,
+      "price_10m_usd": 0.002585,
+      "observed_10m_at_utc": "2026-10-14T03:46:17.176717+00:00",
+      "measurement_10m_delay_minutes": 11.95,
+      "return_10m_pct": -8.24,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -8168,7 +8173,12 @@
       "price_5m_usd": 0.0001367,
       "observed_5m_at_utc": "2026-10-14T03:40:25.978718+00:00",
       "return_5m_pct": 49.89,
-      "measurement_delay_minutes": 6.1
+      "measurement_delay_minutes": 6.1,
+      "price_10m_usd": 0.0001896,
+      "observed_10m_at_utc": "2026-10-14T03:46:17.176717+00:00",
+      "measurement_10m_delay_minutes": 11.95,
+      "return_10m_pct": 107.89,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -8215,10 +8225,11 @@
       "buys_5m": 9,
       "sells_5m": 5,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00239,
+      "observed_5m_at_utc": "2026-10-14T03:46:17.176717+00:00",
+      "return_5m_pct": 0.21,
+      "measurement_delay_minutes": 5.85
     },
     {
       "day": "2026-10-14",
@@ -8251,11 +8262,28 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HKJa4Y8actmpGvHpgL6DBWjsUjVt8r6bmvPaV33fpump",
+      "pair_address": "H2C18Ps2Hg8FpSEy1LbfaNtQ1HUVwGjm7fDhQPZkZQqR",
+      "symbol": "Catnip",
+      "first_alert_at_utc": "2026-10-14T03:46:17.176717+00:00",
+      "alert_price_usd": 0.0001472,
+      "initial_15m_change_pct": 21.75,
+      "buys_5m": 51,
+      "sells_5m": 25,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true,
-    "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump|3hUwrAajx6NyWezqkAXW3nHCmKLv1Vq7wDcBZVetoqy1": true
+    "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump|3hUwrAajx6NyWezqkAXW3nHCmKLv1Vq7wDcBZVetoqy1": true,
+    "HKJa4Y8actmpGvHpgL6DBWjsUjVt8r6bmvPaV33fpump|H2C18Ps2Hg8FpSEy1LbfaNtQ1HUVwGjm7fDhQPZkZQqR": true
   },
-  "updated_at_utc": "2026-10-14T03:44:19.315204+00:00"
+  "updated_at_utc": "2026-10-14T03:46:17.176717+00:00"
 }
