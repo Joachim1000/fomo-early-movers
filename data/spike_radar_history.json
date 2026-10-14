@@ -4614,7 +4614,12 @@
       "price_5m_usd": 0.0001018,
       "observed_5m_at_utc": "2026-10-14T05:58:16.822443+00:00",
       "return_5m_pct": -1.17,
-      "measurement_delay_minutes": 5.99
+      "measurement_delay_minutes": 5.99,
+      "price_10m_usd": 0.0001174,
+      "observed_10m_at_utc": "2026-10-14T06:02:25.418533+00:00",
+      "measurement_10m_delay_minutes": 10.14,
+      "return_10m_pct": 13.98,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -4627,10 +4632,11 @@
       "buys_5m": 22,
       "sells_5m": 14,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 8.386e-05,
+      "observed_5m_at_utc": "2026-10-14T06:02:25.418533+00:00",
+      "return_5m_pct": -10.13,
+      "measurement_delay_minutes": 6.09
     },
     {
       "day": "2026-10-14",
@@ -4643,10 +4649,11 @@
       "buys_5m": 8,
       "sells_5m": 5,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0008937,
+      "observed_5m_at_utc": "2026-10-14T06:02:25.418533+00:00",
+      "return_5m_pct": -2.32,
+      "measurement_delay_minutes": 6.09
     },
     {
       "day": "2026-10-14",
@@ -4659,10 +4666,11 @@
       "buys_5m": 10,
       "sells_5m": 1,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00198,
+      "observed_5m_at_utc": "2026-10-14T06:02:25.418533+00:00",
+      "return_5m_pct": -1.0,
+      "measurement_delay_minutes": 6.09
     },
     {
       "day": "2026-10-14",
@@ -4743,11 +4751,28 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga",
+      "pair_address": "6wXTJaLNN3GCUJajJ9Vj2te51zsNgPVXV37EbFGRAjLz",
+      "symbol": "Malfoid",
+      "first_alert_at_utc": "2026-10-14T06:02:25.418533+00:00",
+      "alert_price_usd": 0.001023,
+      "initial_15m_change_pct": 5.17,
+      "buys_5m": 11,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "HfpLdX35Kc6b7zDNWbe5x1xWLekKUXPYZbmz71vMpump|GibvJm9bExyJye7E8Gch9TSmVmuvU192bsGv6cGdUq4s": true,
-    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true,
+    "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga|6wXTJaLNN3GCUJajJ9Vj2te51zsNgPVXV37EbFGRAjLz": true
   },
-  "updated_at_utc": "2026-10-14T06:00:53.420479+00:00"
+  "updated_at_utc": "2026-10-14T06:02:25.418533+00:00"
 }
