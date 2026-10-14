@@ -4451,10 +4451,11 @@
       "buys_5m": 11,
       "sells_5m": 0,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.002733,
+      "observed_5m_at_utc": "2026-10-14T05:38:26.334841+00:00",
+      "return_5m_pct": 0.96,
+      "measurement_delay_minutes": 6.05
     },
     {
       "day": "2026-10-14",
@@ -4471,11 +4472,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-14T05:38:26.334841+00:00",
+      "alert_price_usd": 0.004179,
+      "initial_15m_change_pct": 6.31,
+      "buys_5m": 10,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-14T05:38:26.334841+00:00",
+      "alert_price_usd": 0.01224,
+      "initial_15m_change_pct": 4.35,
+      "buys_5m": 9,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|J2XBZkpC7ygBQiPw2MWWCqiVJn9i44b8GwtTRoFV1ijj": true,
-    "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true,
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo": true
   },
-  "updated_at_utc": "2026-10-14T05:36:20.382820+00:00"
+  "updated_at_utc": "2026-10-14T05:38:26.334841+00:00"
 }
