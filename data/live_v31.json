@@ -82739,15 +82739,37 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "0x840f09B95638744456240fE647938EE3EB4b7777",
+      "pair_address": "0x2931E0700f08BCC1f047bED22880A3D7844F7dFE",
+      "symbol": "萌兰",
+      "observed_at_utc": "2026-10-14T17:16:21.190039+00:00",
+      "entry_price_usd": 8.613e-05,
+      "momentum_heuristic": 13.95,
+      "change_5m_pct": -11.462,
+      "change_10m_pct": -28.7,
+      "change_15m_pct": -35.386,
+      "acceleration_pct_points": 8.008,
+      "buys_5m": 49,
+      "sells_5m": 39,
+      "buy_sell_ratio": 1.256,
+      "liquidity_usd": 29249.26,
+      "volume_5m_usd": 5513.6,
+      "v31_heuristic_score": -24.228,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T17:14:19.289698+00:00",
+  "generated_at_utc": "2026-10-14T17:16:21.190039+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
-  "training_examples": 471,
-  "positive_examples": 72,
-  "negative_examples": 399,
+  "training_examples": 521,
+  "positive_examples": 88,
+  "negative_examples": 433,
   "target": "verified 10m return >= +3% (before trading costs)",
   "ranking": [
     {
@@ -84098,6 +84120,10 @@
     },
     "0xBf8E8f0e8866a7052F948C16508644347c57aba3|0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4": {
       "first_seen_at_utc": "2026-10-14T16:26:22.482089+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "0x840f09B95638744456240fE647938EE3EB4b7777|0x2931E0700f08BCC1f047bED22880A3D7844F7dFE": {
+      "first_seen_at_utc": "2026-10-14T17:16:21.190039+00:00",
       "first_call_risk": "HIGH"
     }
   }
