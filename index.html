@@ -1101,7 +1101,7 @@ async function loadSpikeRadarBeta(){
    const signed=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(2)+'%';
    const tone=v=>v==null?'beta-pending':v>0?'beta-positive':v<0?'beta-negative':'beta-pending';
    const result=v=>v==null?'PENDING':v>0?'POSITIVE':v<0?'NEGATIVE':'FLAT';
-   return '<tr><td>'+escape(x.symbol)+'</td><td>'+escape(when)+'</td><td>'+(x.volume_5m_usd==null?'—':'+'</td><td>'+money(x.price_5m_usd)+'</td><td class="'+tone(ret)+'">'+signed(ret)+'</td><td>'+money(x.price_10m_usd)+'</td><td class="'+tone(ret10)+'">'+signed(ret10)+'</td></tr>';
+   return '<tr><td>'+escape(x.symbol)+'</td><td>'+escape(when)+'</td><td>'+(x.volume_5m_usd==null?'—':'$'+Number(x.volume_5m_usd).toLocaleString('en-US',{maximumFractionDigits:0}))+'</td><td>'+signed(x.buy_acceleration_pct)+'</td><td>'+signed(x.volume_acceleration_pct)+'</td><td>'+money(x.alert_price_usd)+'</td><td>'+money(x.price_5m_usd)+'</td><td class="'+tone(ret)+'">'+signed(ret)+'</td><td>'+money(x.price_10m_usd)+'</td><td class="'+tone(ret10)+'">'+signed(ret10)+'</td></tr>';
   }).join('')||'<tr><td colspan="10">No V2 history yet.</td></tr>';
  }catch(e){console.error('SPIKE RADAR V2 loading error',e);if(status)status.textContent='V2 analysis unavailable: '+e.message;if(historyTarget)historyTarget.innerHTML='<tr><td colspan="10">V2 data error: '+String(e.message).replace(/[<>&]/g,'')+'</td></tr>'}finally{spikeBetaLoadBusy=false}
 }
