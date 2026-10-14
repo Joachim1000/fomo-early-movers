@@ -14274,11 +14274,51 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-14T20:26:17.353772+00:00",
+      "alert_price_usd": 0.005554,
+      "initial_15m_change_pct": 9.63,
+      "buys_5m": 12,
+      "sells_5m": 2,
+      "volume_5m_usd": 7892.36,
+      "liquidity_usd": 597748.47,
+      "buy_acceleration_pct": 100.0,
+      "volume_acceleration_pct": -25.72,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump",
+      "pair_address": "3hUwrAajx6NyWezqkAXW3nHCmKLv1Vq7wDcBZVetoqy1",
+      "symbol": "SPOOKY",
+      "first_alert_at_utc": "2026-10-14T20:26:17.353772+00:00",
+      "alert_price_usd": 0.0001741,
+      "initial_15m_change_pct": 5.13,
+      "buys_5m": 23,
+      "sells_5m": 8,
+      "volume_5m_usd": 3489.77,
+      "liquidity_usd": 36413.13,
+      "buy_acceleration_pct": 109.09,
+      "volume_acceleration_pct": 28.42,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T20:24:19.301907+00:00"
+  "updated_at_utc": "2026-10-14T20:26:17.353772+00:00"
 }
