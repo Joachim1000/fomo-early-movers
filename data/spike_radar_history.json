@@ -12993,7 +12993,11 @@
       "observed_5m_at_utc": "2026-10-14T13:08:19.894911+00:00",
       "return_5m_pct": -4.02,
       "measurement_delay_minutes": 5.87,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.002244,
+      "observed_10m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "measurement_10m_delay_minutes": 12.02,
+      "return_10m_pct": 3.7
     },
     {
       "day": "2026-10-14",
@@ -13011,7 +13015,11 @@
       "observed_5m_at_utc": "2026-10-14T13:08:19.894911+00:00",
       "return_5m_pct": 0.45,
       "measurement_delay_minutes": 5.87,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.05236,
+      "observed_10m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "measurement_10m_delay_minutes": 12.02,
+      "return_10m_pct": 1.36
     },
     {
       "day": "2026-10-14",
@@ -13029,7 +13037,11 @@
       "observed_5m_at_utc": "2026-10-14T13:10:27.497260+00:00",
       "return_5m_pct": 0.68,
       "measurement_delay_minutes": 6.14,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.002244,
+      "observed_10m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "measurement_10m_delay_minutes": 10.16,
+      "return_10m_pct": 1.72
     },
     {
       "day": "2026-10-14",
@@ -13047,7 +13059,11 @@
       "observed_5m_at_utc": "2026-10-14T13:10:27.497260+00:00",
       "return_5m_pct": 0.68,
       "measurement_delay_minutes": 6.14,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.05236,
+      "observed_10m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "measurement_10m_delay_minutes": 10.16,
+      "return_10m_pct": 1.02
     },
     {
       "day": "2026-10-14",
@@ -13096,10 +13112,12 @@
       "buys_5m": 13,
       "sells_5m": 5,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001093,
+      "observed_5m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "return_5m_pct": -1.35,
+      "measurement_delay_minutes": 6.14,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13112,10 +13130,12 @@
       "buys_5m": 19,
       "sells_5m": 0,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.006,
+      "observed_5m_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "return_5m_pct": 0.22,
+      "measurement_delay_minutes": 6.14,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13228,11 +13248,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
+      "pair_address": "0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF",
+      "symbol": "BIBI",
+      "first_alert_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "alert_price_usd": 0.001417,
+      "initial_15m_change_pct": 22.47,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-14T13:14:28.534738+00:00",
+      "alert_price_usd": 0.02882,
+      "initial_15m_change_pct": 5.37,
+      "buys_5m": 17,
+      "sells_5m": 11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T13:12:19.477659+00:00"
+  "updated_at_utc": "2026-10-14T13:14:28.534738+00:00"
 }
