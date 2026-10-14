@@ -537,11 +537,17 @@ function radarSignalsForDay(records,day){
 function radarSourceTimestamp(data){
  return data?.updated_at_utc||null;
 }
+function isWarsawBlockedSignal(timestamp){
+ const ms=Date.parse(timestamp||'');
+ if(!Number.isFinite(ms))return false;
+ const hour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',hourCycle:'h23'}).format(new Date(ms)));
+ return hour>=12&&hour<15;
+}
 function canonicalRadarSignals(records){
  const byId=new Map();
  for(const row of (Array.isArray(records)?records:[])){
   const stamp=Date.parse(row.first_alert_at_utc||'');
-  if(!Number.isFinite(stamp)||!row.mint||!row.pair_address)continue;
+  if(!Number.isFinite(stamp)||!row.mint||!row.pair_address||isWarsawBlockedSignal(row.first_alert_at_utc))continue;
   const id=row.mint+'|'+row.pair_address+'|'+new Date(stamp).toISOString();
   const previous=byId.get(id);
   if(!previous){byId.set(id,{...row});continue}
@@ -565,7 +571,7 @@ function selectDailyBetaSignals(allRecords){
  const n=v=>v==null||v===''?NaN:Number(v);
  const records=(Array.isArray(allRecords)?allRecords:[]).filter(x=>{
   const t=Date.parse(x.first_alert_at_utc||'');
-  return Number.isFinite(t)&&t>=reset&&(t<nightStart||t>=nightEnd);
+  return Number.isFinite(t)&&!isWarsawBlockedSignal(x.first_alert_at_utc)&&t>=reset&&(t<nightStart||t>=nightEnd);
  });
  const candidates=records.filter(x=>{
   const buys=n(x.buys_5m),sells=n(x.sells_5m),change=n(x.initial_15m_change_pct);
@@ -590,7 +596,7 @@ function isWarsawTradingDaySignal(timestamp,day){
  const v=k=>parts.find(x=>x.type===k)?.value;
  const date=v('year')+'-'+v('month')+'-'+v('day');
  const minutes=Number(v('hour'))*60+Number(v('minute'));
- return date===day&&minutes>=420&&minutes<1410;
+ return date===day&&minutes>=420&&minutes<1410&&!(minutes>=720&&minutes<900);
 }
 function warsawTradingDayNow(){
  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
@@ -1001,7 +1007,7 @@ async function loadSpikeRadarBeta(){
   const betaResetAt='2026-10-12T20:20:00Z';
   const excludedNightStart=Date.parse('2026-10-13T21:30:00Z'); // 13 Oct 23:30 Warsaw
   const excludedNightEnd=Date.parse('2026-10-14T04:00:00Z'); // 14 Oct 06:00 Warsaw
-  const records=allRecords.filter(x=>{const t=Date.parse(x.first_alert_at_utc);return Number.isFinite(t)&&t>=Date.parse(betaResetAt)&&(t<excludedNightStart||t>=excludedNightEnd)});
+  const records=allRecords.filter(x=>{const t=Date.parse(x.first_alert_at_utc);return Number.isFinite(t)&&!isWarsawBlockedSignal(x.first_alert_at_utc)&&t>=Date.parse(betaResetAt)&&(t<excludedNightStart||t>=excludedNightEnd)});
   const selected=selectDailyBetaSignals(allRecords);
   const verified=selected.filter(x=>x.status==='MEASURED'&&x.return_5m_pct!=null&&Number.isFinite(Number(x.return_5m_pct)));
   const wins=verified.filter(x=>Number(x.return_5m_pct)>0).length;
