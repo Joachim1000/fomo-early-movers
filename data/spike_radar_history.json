@@ -13286,10 +13286,12 @@
       "buy_acceleration_pct": 25.0,
       "volume_acceleration_pct": -78.04,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001642,
+      "observed_5m_at_utc": "2026-10-14T19:20:30.057366+00:00",
+      "return_5m_pct": 1.17,
+      "measurement_delay_minutes": 6.19,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13306,10 +13308,12 @@
       "buy_acceleration_pct": 34.48,
       "volume_acceleration_pct": -7.33,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001843,
+      "observed_5m_at_utc": "2026-10-14T19:20:30.057366+00:00",
+      "return_5m_pct": 1.99,
+      "measurement_delay_minutes": 6.19,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13350,11 +13354,51 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T19:20:30.057366+00:00",
+      "alert_price_usd": 0.0004501,
+      "initial_15m_change_pct": 3.69,
+      "buys_5m": 20,
+      "sells_5m": 9,
+      "volume_5m_usd": 3431.71,
+      "liquidity_usd": 71327.46,
+      "buy_acceleration_pct": 11.11,
+      "volume_acceleration_pct": 115.46,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump",
+      "pair_address": "GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi",
+      "symbol": "Pepper",
+      "first_alert_at_utc": "2026-10-14T19:20:30.057366+00:00",
+      "alert_price_usd": 0.00104,
+      "initial_15m_change_pct": 3.48,
+      "buys_5m": 33,
+      "sells_5m": 16,
+      "volume_5m_usd": 4419.65,
+      "liquidity_usd": 102909.6,
+      "buy_acceleration_pct": 73.68,
+      "volume_acceleration_pct": -50.66,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T19:18:19.131369+00:00"
+  "updated_at_utc": "2026-10-14T19:20:30.057366+00:00"
 }
