@@ -197,13 +197,33 @@
       "sells_5m": 0,
       "spike_v2_score": 80,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0137,
+      "observed_5m_at_utc": "2026-10-14T08:48:18.863073+00:00",
+      "return_5m_pct": 1.11,
+      "measurement_delay_minutes": 6.02
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x018062E5b98C7CAe3C817B23f13a441C9d887777",
+      "pair_address": "0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82",
+      "symbol": "SpaceXSI",
+      "first_alert_at_utc": "2026-10-14T08:48:18.863073+00:00",
+      "alert_price_usd": 0.001711,
+      "initial_15m_change_pct": 5.1,
+      "buys_5m": 57,
+      "sells_5m": 4,
+      "spike_v2_score": 88,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T08:46:18.304617+00:00"
+  "updated_at_utc": "2026-10-14T08:48:18.863073+00:00"
 }
