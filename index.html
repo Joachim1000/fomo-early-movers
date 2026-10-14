@@ -503,7 +503,7 @@ if(spikeEl){
  const warsawDay=t=>{const p=warsawParts(t),v=k=>p.find(x=>x.type===k)?.value;return v('year')+'-'+v('month')+'-'+v('day')};
  const labelDay=d=>d.slice(8,10)+'/'+d.slice(5,7);
  const days=Array.from({length:7},(_,i)=>warsawDay(Date.now()-i*86400000));
- const records=spikeModels.flatMap(([name,data])=>(data?.records||[]).map(x=>({...x,model:name})));
+ const records=(radar?.records||[]).filter(x=>isWarsawTradingDaySignal(x.first_alert_at_utc,warsawDay(Date.parse(x.first_alert_at_utc||''))));
  const byDay=new Map();
  for(const x of records){const at=Date.parse(x.first_alert_at_utc||'');if(!Number.isFinite(at))continue;const key=warsawDay(at);if(!byDay.has(key))byDay.set(key,[]);byDay.get(key).push(x)}
  const daily=days.map(date=>{const subset=byDay.get(date)||[];return {day:labelDay(date),signals:subset.length,m5:spikeMetrics({records:subset},5),m10:spikeMetrics({records:subset},10)}});
