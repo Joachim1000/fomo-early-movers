@@ -376,7 +376,11 @@ for mint, pair in best.items():
         (20 if accelerating else 0) +
         (10 if change_15m is not None and 3 <= change_15m <= 15 else 0)
         - (30 if exhaustion else 0)))
-    v2_alert = (pair_age_hours is not None and pair_age_hours > 2 and
+    # Do not create new V2 alerts between 12:00 and 15:00 Warsaw time.
+    # Other radar signals and follow-up measurements remain unaffected.
+    v2_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
+    v2_alert = (v2_time_allowed and
+                pair_age_hours is not None and pair_age_hours > 2 and
                 fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                 liquidity >= 5000 and volume >= 1500 and
                 change_15m is not None and 3 <= change_15m <= 25 and
