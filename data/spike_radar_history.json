@@ -7205,7 +7205,12 @@
       "price_5m_usd": 9.607e-05,
       "observed_5m_at_utc": "2026-10-14T02:02:20.516830+00:00",
       "return_5m_pct": -6.46,
-      "measurement_delay_minutes": 6.05
+      "measurement_delay_minutes": 6.05,
+      "price_10m_usd": 0.0001028,
+      "observed_10m_at_utc": "2026-10-14T02:06:20.025430+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 0.1,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -7222,7 +7227,12 @@
       "price_5m_usd": 0.004602,
       "observed_5m_at_utc": "2026-10-14T02:02:20.516830+00:00",
       "return_5m_pct": 0.0,
-      "measurement_delay_minutes": 6.05
+      "measurement_delay_minutes": 6.05,
+      "price_10m_usd": 0.004453,
+      "observed_10m_at_utc": "2026-10-14T02:06:20.025430+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": -3.24,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -7256,11 +7266,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
+      "pair_address": "0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938",
+      "symbol": "Temo",
+      "first_alert_at_utc": "2026-10-14T02:06:20.025430+00:00",
+      "alert_price_usd": 0.0007694,
+      "initial_15m_change_pct": 7.44,
+      "buys_5m": 14,
+      "sells_5m": 8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump|QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D": true,
-    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
+    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true
   },
-  "updated_at_utc": "2026-10-14T02:04:18.669850+00:00"
+  "updated_at_utc": "2026-10-14T02:06:20.025430+00:00"
 }
