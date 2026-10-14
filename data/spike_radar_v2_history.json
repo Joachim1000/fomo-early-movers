@@ -276,9 +276,28 @@
       "measurement_10m_delay_minutes": 10.03,
       "return_10m_pct": -3.28,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2N8c4pXu6T2oBxE8ZDBYb3QgwMkyTe673HiBaYSNpump",
+      "pair_address": "G5CLkMU5gTeZ8xuh99m3bhWeBRV9SyDjntBfFUMRw2cG",
+      "symbol": "LouLou",
+      "first_alert_at_utc": "2026-10-14T09:48:17.888215+00:00",
+      "alert_price_usd": 0.0001821,
+      "initial_15m_change_pct": 15.99,
+      "buys_5m": 36,
+      "sells_5m": 9,
+      "spike_v2_score": 82,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "2N8c4pXu6T2oBxE8ZDBYb3QgwMkyTe673HiBaYSNpump|G5CLkMU5gTeZ8xuh99m3bhWeBRV9SyDjntBfFUMRw2cG": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T09:46:19.988212+00:00"
+  "updated_at_utc": "2026-10-14T09:48:17.888215+00:00"
 }
