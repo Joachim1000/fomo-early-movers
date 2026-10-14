@@ -611,10 +611,11 @@
       "sells_5m": 9,
       "spike_v2_score": 80,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.03035,
+      "observed_5m_at_utc": "2026-10-14T15:10:29.047290+00:00",
+      "return_5m_pct": 3.3,
+      "measurement_delay_minutes": 6.15
     },
     {
       "day": "2026-10-14",
@@ -628,13 +629,14 @@
       "sells_5m": 7,
       "spike_v2_score": 75,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001047,
+      "observed_5m_at_utc": "2026-10-14T15:10:29.047290+00:00",
+      "return_5m_pct": -1.04,
+      "measurement_delay_minutes": 6.15
     }
   ],
   "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T15:08:20.320316+00:00"
+  "updated_at_utc": "2026-10-14T15:10:29.047290+00:00"
 }
