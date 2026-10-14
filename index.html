@@ -822,7 +822,7 @@ async function loadSpikeRadarBeta(){
  if(!historyTarget)return;
  historyTarget.innerHTML='<tr><td colspan="7">Updating BETA signals…</td></tr>';
  try{
-  const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'beta_spike_history.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('History HTTP '+response.status);
   const data=await response.json(),allRecords=Array.isArray(data.records)?data.records:[];
