@@ -4935,12 +4935,13 @@
       "buys_5m": 24,
       "sells_5m": 13,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001222,
+      "observed_5m_at_utc": "2026-10-14T04:54:19.223495+00:00",
+      "return_5m_pct": -3.93,
+      "measurement_delay_minutes": 6.02
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-14T04:52:18.422396+00:00"
+  "updated_at_utc": "2026-10-14T04:54:19.223495+00:00"
 }
