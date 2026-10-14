@@ -263,6 +263,19 @@ for date,portfolio in daily.items():
             item["last_price_at_utc"]=t.isoformat()
             entry=num(item.get("entry_price_usd"))
             item["return_pct"]=round((p/entry-1)*100,3) if entry else None
+            # Fixed holding-period returns measured from the immutable daily entry.
+            # Use the first verified same-pair observation at/after each target,
+            # with a 15-minute tolerance. Never use data beyond 23:30.
+            selected=dt(portfolio.get("selected_at_utc"))
+            if selected and entry:
+                for hours in (1,4,6):
+                    target=selected+timedelta(hours=hours)
+                    field=f"return_{hours}h_pct"
+                    if target>cutoff_utc:
+                        item[field]=None
+                        continue
+                    exits=[(t0,p0) for t0,p0 in prices if target<=t0<=min(target+timedelta(minutes=15),cutoff_utc)]
+                    item[field]=round(100*(min(exits)[1]/entry-1),3) if exits else None
         else:
             item.pop("last_price_usd",None)
             item.pop("last_price_at_utc",None)
