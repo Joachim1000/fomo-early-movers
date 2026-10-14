@@ -57,40 +57,48 @@ for item in latest.get("early_alert_candidates", []):
     seen.add(key)
     added+=1
 print(f"Spike Radar displayed observations added: {added}")
+# Retry both exits independently on every collection, including records whose
+# earlier attempt was NOT_VERIFIABLE. Never replace a measured price with a guess.
 for row in rows:
-    if "measurement_minutes" not in row:
-        row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
-    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE") and row.get("return_10m_pct") is not None:
-        continue
     start = parse(row.get("first_alert_at_utc"))
-    if not start or (now - start).total_seconds() < 300:
+    entry = number(row.get("alert_price_usd"))
+    if not start or not entry:
         continue
-    later = []
+    age = (now - start).total_seconds()
+    if age < 300:
+        continue
+    points = []
     for point in history.get(row["mint"], []):
-        if point.get("pair_address") != row["pair_address"]:
+        if point.get("pair_address") != row.get("pair_address"):
             continue
         at, price = parse(point.get("timestamp")), number(point.get("price_usd"))
-        if at and price and 300 <= (at - start).total_seconds() <= 86400:
-            later.append((at, price))
-    ten = [(at, price) for at, price in later if (at - start).total_seconds() >= 600]
-    if ten and row.get("return_10m_pct") is None:
-        at10, price10 = min(ten, key=lambda p: p[0])
-        row.update(price_10m_usd=price10, observed_10m_at_utc=at10.isoformat(),
-                   measurement_10m_delay_minutes=round((at10-start).total_seconds()/60, 2),
-                   return_10m_pct=round((price10 / row["alert_price_usd"] - 1)*100, 2),
-                   status_10m="MEASURED" if (at10-start).total_seconds() <= 900 else "DELAYED")
-    elif (now-start).total_seconds() > 900 and row.get("return_10m_pct") is None:
-        row["status_10m"] = "NOT_VERIFIABLE"
-    if row.get("status") not in ("PENDING", "NOT_VERIFIABLE"):
-        continue
-    if later:
-        at, price = min(later, key=lambda p: p[0])
-        delay = round((at - start).total_seconds() / 60, 2)
-        row.update(status="MEASURED" if delay <= 10 else "DELAYED", measurement_delay_minutes=delay, price_5m_usd=price,
-                   observed_5m_at_utc=at.isoformat(),
-                   return_5m_pct=round((price / row["alert_price_usd"] - 1) * 100, 2))
-    elif (now - start).total_seconds() > 600:
-        row["status"] = "NOT_VERIFIABLE"  # Retry if a later verified same-pair observation becomes available
+        if at and price and at >= start:
+            points.append((at, price))
+    points.sort(key=lambda p: p[0])
+    for minutes in (5, 10):
+        price_key = f"price_{minutes}m_usd"
+        return_key = f"return_{minutes}m_pct"
+        observed_key = f"observed_{minutes}m_at_utc"
+        delay_key = "measurement_delay_minutes" if minutes == 5 else "measurement_10m_delay_minutes"
+        status_key = "status" if minutes == 5 else "status_10m"
+        if row.get(price_key) is not None and row.get(return_key) is not None:
+            continue
+        target = minutes * 60
+        eligible = [(at, price) for at, price in points if (at-start).total_seconds() >= target]
+        if eligible:
+            at, price = eligible[0]
+            delay = round((at-start).total_seconds()/60, 2)
+            row.update({
+                price_key: price,
+                observed_key: at.isoformat(),
+                delay_key: delay,
+                return_key: round((price/entry-1)*100, 2),
+                status_key: "MEASURED" if delay <= minutes+5 else "DELAYED"
+            })
+        elif age >= (minutes+5)*60:
+            row[status_key] = "NOT_VERIFIABLE"
+        else:
+            row[status_key] = "PENDING"
 # Performance retention: rolling seven days, independent of the 23:30 daily reset.
 cutoff = now - timedelta(days=7)
 saved["records"] = [row for row in rows if (parse(row.get("first_alert_at_utc")) or now) >= cutoff]
