@@ -26,6 +26,13 @@ if not isinstance(saved, dict):
 if not isinstance(saved.get("records"), list):
     saved["records"] = []
 rows = saved["records"]
+# Enforce the midday signal block on historical data as well as new alerts.
+# This also cleans stale records restored by a concurrent workflow checkout.
+def radar_blocked(timestamp):
+    at = parse(timestamp)
+    return at is not None and 12 <= at.astimezone(ZoneInfo("Europe/Warsaw")).hour < 15
+
+rows[:] = [row for row in rows if not radar_blocked(row.get("first_alert_at_utc"))]
 now = parse(latest.get("generated_at_utc"))
 if now is None:
     raise ValueError("Missing latest snapshot timestamp")
@@ -37,7 +44,7 @@ if not isinstance(state, dict):
     state = {}
     saved["active_alerts"] = state
 current = set()
-for item in latest.get("spike_v2_candidates", []):
+for item in ([] if radar_blocked(now.isoformat()) else latest.get("spike_v2_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
     if not mint or not pair or not price:
