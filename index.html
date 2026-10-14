@@ -673,7 +673,9 @@ async function loadV3Daily(){
   const response=await fetch(base+'live_v31.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('HTTP '+response.status);
   const data=await response.json();markTabData('v3-daily',data.generated_at_utc);
-  const portfolios=data.daily_portfolios||{};
+  const rawPortfolios=data.daily_portfolios||{};
+  // Never display intraday DAILY profit even if an older published JSON still has rolling returns.
+  const portfolios=Object.fromEntries(Object.entries(rawPortfolios).map(([day,p])=>[day,p?.status==='LOCKED'?p:{...p,candidates:(p?.candidates||[]).map(x=>{const copy={...x};delete copy.return_pct;delete copy.last_price_usd;delete copy.last_price_at_utc;return copy})}]));
   const keys=Object.keys(portfolios).sort();
   const key=keys.at(-1),portfolio=key?portfolios[key]:null;
   if(!portfolio){summary.textContent='Awaiting first daily V3.1 portfolio';body.innerHTML='<tr><td colspan="12">No daily selection recorded yet.</td></tr>';return}
