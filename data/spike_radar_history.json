@@ -8514,11 +8514,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0xDd806E436Dda5588bf54061C11590c77dDC87777",
+      "pair_address": "0x13b86Fcf85C9C8F5C36593822D216B8893C25450",
+      "symbol": "SAFU",
+      "first_alert_at_utc": "2026-10-14T04:12:17.375976+00:00",
+      "alert_price_usd": 0.0004071,
+      "initial_15m_change_pct": 13.78,
+      "buys_5m": 8,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump|3hUwrAajx6NyWezqkAXW3nHCmKLv1Vq7wDcBZVetoqy1": true,
-    "98AG3zJUawbvDnpgbDhmxpMKva43vtgPLLPSXqo1pump|2U5kdozDrdgYzyGRNbTdBejGLYEeRt1FkERQmyPbV85P": true
+    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true
   },
-  "updated_at_utc": "2026-10-14T04:10:27.817221+00:00"
+  "updated_at_utc": "2026-10-14T04:12:17.375976+00:00"
 }
