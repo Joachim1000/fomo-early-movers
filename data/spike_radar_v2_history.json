@@ -752,9 +752,32 @@
       "measurement_10m_delay_minutes": 10.08,
       "return_10m_pct": -4.97,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump",
+      "pair_address": "QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D",
+      "symbol": "OMNI",
+      "first_alert_at_utc": "2026-10-14T16:08:22.418138+00:00",
+      "alert_price_usd": 0.001664,
+      "initial_15m_change_pct": 21.82,
+      "buys_5m": 42,
+      "sells_5m": 16,
+      "volume_5m_usd": 10142.14,
+      "liquidity_usd": 140316.45,
+      "buy_acceleration_pct": 50.0,
+      "volume_acceleration_pct": -18.5,
+      "spike_v2_score": 87,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump|QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T16:06:17.545836+00:00"
+  "updated_at_utc": "2026-10-14T16:08:22.418138+00:00"
 }
