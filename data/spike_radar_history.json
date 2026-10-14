@@ -10463,7 +10463,11 @@
       "observed_5m_at_utc": "2026-10-14T11:26:26.724216+00:00",
       "return_5m_pct": -24.08,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001508,
+      "observed_10m_at_utc": "2026-10-14T11:31:10.719372+00:00",
+      "measurement_10m_delay_minutes": 10.73,
+      "return_10m_pct": -20.55
     },
     {
       "day": "2026-10-14",
@@ -10481,7 +10485,11 @@
       "observed_5m_at_utc": "2026-10-14T11:26:26.724216+00:00",
       "return_5m_pct": -0.13,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.004619,
+      "observed_10m_at_utc": "2026-10-14T11:31:10.719372+00:00",
+      "measurement_10m_delay_minutes": 10.73,
+      "return_10m_pct": -0.35
     },
     {
       "day": "2026-10-14",
@@ -10499,7 +10507,11 @@
       "observed_5m_at_utc": "2026-10-14T11:26:26.724216+00:00",
       "return_5m_pct": 2.75,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.00044,
+      "observed_10m_at_utc": "2026-10-14T11:31:10.719372+00:00",
+      "measurement_10m_delay_minutes": 10.73,
+      "return_10m_pct": -8.39
     },
     {
       "day": "2026-10-14",
@@ -10688,11 +10700,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T11:31:10.719372+00:00",
+      "alert_price_usd": 0.0008002,
+      "initial_15m_change_pct": 8.11,
+      "buys_5m": 51,
+      "sells_5m": 27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM",
+      "pair_address": "G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3",
+      "symbol": "Kirk",
+      "first_alert_at_utc": "2026-10-14T11:31:10.719372+00:00",
+      "alert_price_usd": 0.0001187,
+      "initial_15m_change_pct": 7.52,
+      "buys_5m": 19,
+      "sells_5m": 9,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T11:30:18.258536+00:00"
+  "updated_at_utc": "2026-10-14T11:31:10.719372+00:00"
 }
