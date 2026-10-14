@@ -283,11 +283,10 @@ for date,portfolio in daily.items():
 # Retain portfolios for seven days.
 daily={k:v for k,v in daily.items() if k>=(local.date()-timedelta(days=7)).isoformat()}
 prior["daily_portfolios"]=daily
-# The LIVE V3.1 page displays today's fixed selection; ranking never rotates.
-if day in daily:
-    ranking=daily[day]["candidates"]
-else:
-    ranking=[]
+# LIVE and DAILY are separate: LIVE follows the current market ranking,
+# while DAILY retains its independently frozen daily selection.
+# Do not replace live candidates with the daily portfolio.
+
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
