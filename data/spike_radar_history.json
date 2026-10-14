@@ -7386,7 +7386,12 @@
       "price_5m_usd": 0.007475,
       "observed_5m_at_utc": "2026-10-14T02:20:33.213913+00:00",
       "return_5m_pct": 2.29,
-      "measurement_delay_minutes": 6.16
+      "measurement_delay_minutes": 6.16,
+      "price_10m_usd": 0.007033,
+      "observed_10m_at_utc": "2026-10-14T02:26:28.401911+00:00",
+      "measurement_10m_delay_minutes": 12.08,
+      "return_10m_pct": -3.76,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -7468,12 +7473,45 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "6iep3EgqksbZwgzMBCyAJtiVtVYkCgL9BnPBEwLR8AGQ",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-14T02:26:28.401911+00:00",
+      "alert_price_usd": 0.00263,
+      "initial_15m_change_pct": 20.48,
+      "buys_5m": 127,
+      "sells_5m": 55,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM",
+      "pair_address": "G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3",
+      "symbol": "Kirk",
+      "first_alert_at_utc": "2026-10-14T02:26:28.401911+00:00",
+      "alert_price_usd": 9.285e-05,
+      "initial_15m_change_pct": 11.38,
+      "buys_5m": 15,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "0x018062E5b98C7CAe3C817B23f13a441C9d887777|0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82": true,
     "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7|4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm": true,
-    "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ|cb4GFRgEitfu5qtxfRMiqzsaVPwgbD3HEor4cs2jFpn": true
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|6iep3EgqksbZwgzMBCyAJtiVtVYkCgL9BnPBEwLR8AGQ": true,
+    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
   },
-  "updated_at_utc": "2026-10-14T02:24:18.033588+00:00"
+  "updated_at_utc": "2026-10-14T02:26:28.401911+00:00"
 }
