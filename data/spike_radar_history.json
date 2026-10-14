@@ -14664,7 +14664,11 @@
       "observed_5m_at_utc": "2026-10-14T20:56:27.517769+00:00",
       "return_5m_pct": 0.91,
       "measurement_delay_minutes": 5.98,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.00569,
+      "observed_10m_at_utc": "2026-10-14T21:00:58.549865+00:00",
+      "measurement_10m_delay_minutes": 10.5,
+      "return_10m_pct": -2.12
     },
     {
       "day": "2026-10-14",
@@ -14686,7 +14690,11 @@
       "observed_5m_at_utc": "2026-10-14T20:56:27.517769+00:00",
       "return_5m_pct": -1.08,
       "measurement_delay_minutes": 5.98,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001177,
+      "observed_10m_at_utc": "2026-10-14T21:00:58.549865+00:00",
+      "measurement_10m_delay_minutes": 10.5,
+      "return_10m_pct": -2.16
     },
     {
       "day": "2026-10-14",
@@ -14793,11 +14801,37 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-14T21:00:58.549865+00:00",
+      "alert_price_usd": 0.003886,
+      "initial_15m_change_pct": 4.18,
+      "buys_5m": 10,
+      "sells_5m": 0,
+      "volume_5m_usd": 4697.29,
+      "liquidity_usd": 431338.62,
+      "buy_acceleration_pct": 900.0,
+      "volume_acceleration_pct": 1822.52,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T20:58:20.698579+00:00"
+  "updated_at_utc": "2026-10-14T21:00:58.549865+00:00",
+  "closed_days": {
+    "2026-10-13": {
+      "locked": true,
+      "records": 172
+    }
+  }
 }
