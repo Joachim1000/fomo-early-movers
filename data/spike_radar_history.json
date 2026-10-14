@@ -4812,7 +4812,12 @@
       "price_5m_usd": 0.0009892,
       "observed_5m_at_utc": "2026-10-14T06:08:19.491222+00:00",
       "return_5m_pct": -3.3,
-      "measurement_delay_minutes": 5.9
+      "measurement_delay_minutes": 5.9,
+      "price_10m_usd": 0.0009853,
+      "observed_10m_at_utc": "2026-10-14T06:14:20.131135+00:00",
+      "measurement_10m_delay_minutes": 11.91,
+      "return_10m_pct": -3.69,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -4829,7 +4834,12 @@
       "price_5m_usd": 0.0001349,
       "observed_5m_at_utc": "2026-10-14T06:10:25.443677+00:00",
       "return_5m_pct": -3.92,
-      "measurement_delay_minutes": 6.11
+      "measurement_delay_minutes": 6.11,
+      "price_10m_usd": 0.0001477,
+      "observed_10m_at_utc": "2026-10-14T06:14:20.131135+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": 5.2,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -4962,13 +4972,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo",
+      "symbol": "Altai",
+      "first_alert_at_utc": "2026-10-14T06:14:20.131135+00:00",
+      "alert_price_usd": 0.002484,
+      "initial_15m_change_pct": 5.21,
+      "buys_5m": 10,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0xE7063B4C3b567b39e860f494BD4F2F6Fa6567777|0x9176c4494AA0EE78bDF424d8eF70cFf2A0CC0D7a": true,
     "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777|0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF": true,
-    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true,
-    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh": true
+    "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true
   },
-  "updated_at_utc": "2026-10-14T06:12:18.554123+00:00"
+  "updated_at_utc": "2026-10-14T06:14:20.131135+00:00"
 }
