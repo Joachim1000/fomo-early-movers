@@ -6589,7 +6589,12 @@
       "price_5m_usd": 0.0001108,
       "observed_5m_at_utc": "2026-10-14T04:32:26.879429+00:00",
       "return_5m_pct": -15.23,
-      "measurement_delay_minutes": 6.06
+      "measurement_delay_minutes": 6.06,
+      "price_10m_usd": 9.401e-05,
+      "observed_10m_at_utc": "2026-10-14T04:38:30.899874+00:00",
+      "measurement_10m_delay_minutes": 12.13,
+      "return_10m_pct": -28.07,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -6606,7 +6611,12 @@
       "price_5m_usd": 0.004301,
       "observed_5m_at_utc": "2026-10-14T04:32:26.879429+00:00",
       "return_5m_pct": 2.87,
-      "measurement_delay_minutes": 6.06
+      "measurement_delay_minutes": 6.06,
+      "price_10m_usd": 0.004344,
+      "observed_10m_at_utc": "2026-10-14T04:38:30.899874+00:00",
+      "measurement_10m_delay_minutes": 12.13,
+      "return_10m_pct": 3.9,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -6674,10 +6684,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-14T04:38:30.899874+00:00",
+      "alert_price_usd": 0.01218,
+      "initial_15m_change_pct": 5.0,
+      "buys_5m": 31,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
+    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true,
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo": true
   },
-  "updated_at_utc": "2026-10-14T04:36:19.167411+00:00"
+  "updated_at_utc": "2026-10-14T04:38:30.899874+00:00"
 }
