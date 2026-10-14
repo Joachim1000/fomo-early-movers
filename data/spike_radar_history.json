@@ -11133,7 +11133,11 @@
       "observed_5m_at_utc": "2026-10-14T16:06:17.545836+00:00",
       "return_5m_pct": 1.4,
       "measurement_delay_minutes": 5.35,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.002246,
+      "observed_10m_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "measurement_10m_delay_minutes": 11.38,
+      "return_10m_pct": 1.4
     },
     {
       "day": "2026-10-14",
@@ -11150,10 +11154,12 @@
       "buy_acceleration_pct": 30.77,
       "volume_acceleration_pct": 187.34,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002901,
+      "observed_5m_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "return_5m_pct": -2.32,
+      "measurement_delay_minutes": 6.03,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -11234,11 +11240,91 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5q5pEZZwhkuazS4rGa66LcNotdsnUE9KcJ7xQmXSpump",
+      "pair_address": "Cxq6T1FqqwpwbnvKGP492qRUzvvLzxqAfKQupTMQd3L3",
+      "symbol": "MEMEOS",
+      "first_alert_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "alert_price_usd": 0.0001613,
+      "initial_15m_change_pct": 255.99,
+      "buys_5m": 272,
+      "sells_5m": 171,
+      "volume_5m_usd": 50023.11,
+      "liquidity_usd": 33349.73,
+      "buy_acceleration_pct": 353.33,
+      "volume_acceleration_pct": 374.55,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "EMUZChJXbptGGLpQa8bTK6vD4B8tB2dVeQVY8SNTpump",
+      "pair_address": "D5HwMjxBxEM4PE9LotqVJ9ivqeYdA1o8AWDxiM6UEuFW",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "alert_price_usd": 0.0001342,
+      "initial_15m_change_pct": 20.36,
+      "buys_5m": 11,
+      "sells_5m": 6,
+      "volume_5m_usd": 1484.18,
+      "liquidity_usd": 33198.04,
+      "buy_acceleration_pct": 22.22,
+      "volume_acceleration_pct": -24.82,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump",
+      "pair_address": "GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi",
+      "symbol": "Pepper",
+      "first_alert_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "alert_price_usd": 0.000758,
+      "initial_15m_change_pct": 9.22,
+      "buys_5m": 20,
+      "sells_5m": 9,
+      "volume_5m_usd": 3079.01,
+      "liquidity_usd": 86767.23,
+      "buy_acceleration_pct": 17.65,
+      "volume_acceleration_pct": -9.84,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-14T16:12:19.379533+00:00",
+      "alert_price_usd": 0.005807,
+      "initial_15m_change_pct": 6.04,
+      "buys_5m": 8,
+      "sells_5m": 0,
+      "volume_5m_usd": 1066.92,
+      "liquidity_usd": 597950.95,
+      "buy_acceleration_pct": 14.29,
+      "volume_acceleration_pct": -83.99,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T16:10:29.741084+00:00"
+  "updated_at_utc": "2026-10-14T16:12:19.379533+00:00"
 }
