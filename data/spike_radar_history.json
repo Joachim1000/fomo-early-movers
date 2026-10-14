@@ -12838,11 +12838,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Bs5oWCyQBMTszdEYenKApgEwHDzx9EHinTTADZConDom",
+      "pair_address": "FezVa6BE3qx6uZe8Lyzo4wfe5wsfoBiB3xTAxffgHCFg",
+      "symbol": "CONDOM",
+      "first_alert_at_utc": "2026-10-14T18:22:18.192118+00:00",
+      "alert_price_usd": 0.0003238,
+      "initial_15m_change_pct": 96.48,
+      "buys_5m": 214,
+      "sells_5m": 138,
+      "volume_5m_usd": 25199.04,
+      "liquidity_usd": 51839.29,
+      "buy_acceleration_pct": 68.5,
+      "volume_acceleration_pct": 38.64,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T18:20:28.530515+00:00"
+  "updated_at_utc": "2026-10-14T18:22:18.192118+00:00"
 }
