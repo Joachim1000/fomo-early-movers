@@ -1,5 +1,18 @@
 {
   "timezone": "Europe/Warsaw",
-  "blocked_hours": [],
-  "description": "No hours blocked. Collection runs according to existing GitHub Actions and cronjob schedules."
+  "blocked_hours": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "blocked_intervals": [
+    {
+      "start": "23:30",
+      "end": "06:00"
+    }
+  ],
+  "description": "Collection paused daily 23:30–06:00 Warsaw local time. The blocked_hours list covers complete hours; blocked_intervals adds the 23:30 half-hour cutoff."
 }
