@@ -12459,7 +12459,11 @@
       "observed_5m_at_utc": "2026-10-14T17:48:18.131038+00:00",
       "return_5m_pct": 0.75,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001331,
+      "observed_10m_at_utc": "2026-10-14T17:54:17.575343+00:00",
+      "measurement_10m_delay_minutes": 11.98,
+      "return_10m_pct": -9.52
     },
     {
       "day": "2026-10-14",
@@ -12481,7 +12485,11 @@
       "observed_5m_at_utc": "2026-10-14T17:48:18.131038+00:00",
       "return_5m_pct": -1.15,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001728,
+      "observed_10m_at_utc": "2026-10-14T17:54:17.575343+00:00",
+      "measurement_10m_delay_minutes": 11.98,
+      "return_10m_pct": -5.63
     },
     {
       "day": "2026-10-14",
@@ -12544,11 +12552,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "GiwMfYS4jHi256G8K41snZhKUovrMbyQL2hqv3fqr7WU",
+      "pair_address": "HoewBZ75tDe5TFzSd9Y8fRftByyshwTVawh1FMvke4Y1",
+      "symbol": "BURR",
+      "first_alert_at_utc": "2026-10-14T17:54:17.575343+00:00",
+      "alert_price_usd": 0.0002263,
+      "initial_15m_change_pct": 71.83,
+      "buys_5m": 38,
+      "sells_5m": 24,
+      "volume_5m_usd": 7661.43,
+      "liquidity_usd": 40994.0,
+      "buy_acceleration_pct": 26.67,
+      "volume_acceleration_pct": 135.85,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T17:52:18.377475+00:00"
+  "updated_at_utc": "2026-10-14T17:54:17.575343+00:00"
 }
