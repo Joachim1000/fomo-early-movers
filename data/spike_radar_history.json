@@ -6858,7 +6858,12 @@
       "price_5m_usd": 0.007625,
       "observed_5m_at_utc": "2026-10-14T01:42:16.757448+00:00",
       "return_5m_pct": -4.53,
-      "measurement_delay_minutes": 5.98
+      "measurement_delay_minutes": 5.98,
+      "price_10m_usd": 0.007616,
+      "observed_10m_at_utc": "2026-10-14T01:48:17.080805+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": -4.65,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -6875,7 +6880,12 @@
       "price_5m_usd": 0.001061,
       "observed_5m_at_utc": "2026-10-14T01:42:16.757448+00:00",
       "return_5m_pct": 0.95,
-      "measurement_delay_minutes": 5.98
+      "measurement_delay_minutes": 5.98,
+      "price_10m_usd": 0.001006,
+      "observed_10m_at_utc": "2026-10-14T01:48:17.080805+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": -4.28,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -6939,10 +6949,11 @@
       "buys_5m": 30,
       "sells_5m": 10,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0008102,
+      "observed_5m_at_utc": "2026-10-14T01:48:17.080805+00:00",
+      "return_5m_pct": 36.4,
+      "measurement_delay_minutes": 6.01
     },
     {
       "day": "2026-10-14",
@@ -6971,10 +6982,11 @@
       "buys_5m": 11,
       "sells_5m": 7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0005195,
+      "observed_5m_at_utc": "2026-10-14T01:48:17.080805+00:00",
+      "return_5m_pct": -0.8,
+      "measurement_delay_minutes": 6.01
     },
     {
       "day": "2026-10-14",
@@ -7007,12 +7019,29 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777",
+      "pair_address": "0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1",
+      "symbol": "蝴蝶人生",
+      "first_alert_at_utc": "2026-10-14T01:48:17.080805+00:00",
+      "alert_price_usd": 0.007959,
+      "initial_15m_change_pct": 3.78,
+      "buys_5m": 35,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump|QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D": true,
     "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true,
-    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
+    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true,
+    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true
   },
-  "updated_at_utc": "2026-10-14T01:46:16.442859+00:00"
+  "updated_at_utc": "2026-10-14T01:48:17.080805+00:00"
 }
