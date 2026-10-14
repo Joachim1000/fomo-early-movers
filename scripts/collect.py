@@ -364,13 +364,24 @@ for mint, pair in best.items():
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
                   change_15m >= 3)
-    # Experimental BETA; retain the original fast alert unchanged.
-    # Beta-only early breakout path; production fast_alert is unchanged.
-    beta_alert = (pair_age_hours is not None and pair_age_hours > 2 and
-                  fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
-                  volume >= 1500 and change_15m is not None and
-                  3 <= change_15m <= 35 and buys >= 20 and
-                  buys >= 1.5 * max(sells, 1))
+    # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
+    pressure = buys / max(sells, 1)
+    accelerating = prior_buys is not None and buys >= prior_buys * 1.2
+    exhaustion = change_15m is not None and change_15m > 25 or (
+        prior_buys is not None and buys < prior_buys * 0.8)
+    v2_score = min(100, round(
+        25 * min(pressure / 3, 1) +
+        25 * min(buys / 35, 1) +
+        20 * min(volume / 5000, 1) +
+        (20 if accelerating else 0) +
+        (10 if change_15m is not None and 3 <= change_15m <= 15 else 0)
+        - (30 if exhaustion else 0)))
+    v2_alert = (pair_age_hours is not None and pair_age_hours > 2 and
+                fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
+                liquidity >= 5000 and volume >= 1500 and
+                change_15m is not None and 3 <= change_15m <= 25 and
+                buys >= 15 and pressure >= 2 and accelerating and
+                not exhaustion and v2_score >= 75)
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
@@ -378,7 +389,7 @@ for mint, pair in best.items():
         "early_alert": fast_alert,
         "early_momentum": early_momentum,
         "change_2_5m_pct": change_2_5m,
-        "beta_alert": beta_alert,
+        "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
         "change_15m_pct": change_15m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
@@ -427,8 +438,8 @@ candidates.sort(key=lambda x: x["momentum_heuristic"], reverse=True)
 early_alert_candidates = [x for x in candidates if x["early_alert"]]
 early_momentum_candidates = [x for x in candidates if x["early_momentum"]]
 early_momentum_candidates.sort(key=lambda x: (x["change_2_5m_pct"], x["momentum_heuristic"]), reverse=True)
-beta_alert_candidates = [x for x in candidates if x["beta_alert"]]
-beta_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
+spike_v2_candidates = [x for x in candidates if x["spike_v2_alert"]]
+spike_v2_candidates.sort(key=lambda x: (x["spike_v2_score"], x["momentum_heuristic"]), reverse=True)
 early_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
 eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
@@ -443,8 +454,8 @@ payload = {
     "tracked_recommendation_mints": len(recent_recommendations),
     "refreshed_tracked_mints": len(tracked_pairs),
     "eligible_4h_count": len(eligible_candidates),
-    "beta_alert_count": len(beta_alert_candidates),
-    "beta_alert_candidates": beta_alert_candidates[:20],
+    "spike_v2_count": len(spike_v2_candidates),
+    "spike_v2_candidates": spike_v2_candidates[:20],
     "early_momentum_count": len(early_momentum_candidates),
     "early_momentum_candidates": early_momentum_candidates[:20],
     "early_alert_count": len(early_alert_candidates),
