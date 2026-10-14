@@ -181,12 +181,84 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Update market snapshot"
-            # The market-data branch is written by collectors and occasional manual resets.
-            # Preserve a manual reset of beta history instead of rebasing stale JSON over it.
-            if git push origin HEAD:market-data; then
-              echo "Market snapshot pushed successfully."
-            else
-              echo "::error::Concurrent market-data update detected. Stale snapshot not pushed; next scheduled run will recollect."
-              exit 1
-            fi
+            # Retry non-fast-forward pushes without overwriting concurrent signal history.
+            # A retry merges append-only signal records by mint + pair + alert timestamp,
+            # and keeps the newest market snapshot when another collector won the race.
+            for attempt in 1 2 3; do
+              if git push origin HEAD:market-data; then
+                echo "Market snapshot pushed successfully (attempt $attempt)."
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "::error::Could not safely reconcile concurrent market-data updates after 3 attempts."
+                exit 1
+              fi
+              echo "Concurrent update detected; fetching latest market-data and reconciling JSON (attempt $attempt)."
+              git fetch origin market-data
+              # Save this job's committed data before updating to the remote tip.
+              mkdir -p /tmp/fomo-retry-local
+              cp data/*.json /tmp/fomo-retry-local/
+              git reset --hard origin/market-data
+              python3 - <<'PY'
+          import json
+          from pathlib import Path
+          local = Path('/tmp/fomo-retry-local')
+          remote = Path('data')
+          signal_files = ('spike_radar_history.json', 'spike_radar_v2_history.json',
+                          'candidate_outcomes.json', 'recommendations.json')
+          def stamp(row):
+              return str(row.get('first_alert_at_utc') or row.get('observed_at_utc')
+                         or row.get('first_qualified_at_utc') or '')
+          def identity(row):
+              return (str(row.get('mint') or ''), str(row.get('pair_address') or ''),
+                      stamp(row))
+          def updated(row):
+              return sum(row.get(k) is not None for k in
+                         ('return_5m_pct','return_10m_pct','price_5m_usd','price_10m_usd'))
+          def load(path):
+              try: return json.loads(path.read_text())
+              except (FileNotFoundError, ValueError): return None
+          for name in signal_files:
+              incoming, existing = load(local/name), load(remote/name)
+              if not isinstance(incoming,dict) or not isinstance(incoming.get('records'),list):
+                  continue
+              if not isinstance(existing,dict) or not isinstance(existing.get('records'),list):
+                  existing={'records':[]}
+              combined={}
+              for row in existing['records']+incoming['records']:
+                  if not isinstance(row,dict): continue
+                  key=identity(row)
+                  if key not in combined:
+                      combined[key]=row.copy()
+                  else:
+                      previous=combined[key]
+                      # Preserve verified observations and enrich records, never replace with pending.
+                      for field,value in row.items():
+                          if value is not None and (previous.get(field) is None or
+                              (field in ('status','status_10m') and updated(row)>updated(previous))):
+                              previous[field]=value
+              existing['records']=sorted(combined.values(),key=stamp)
+              if name in ('spike_radar_history.json','spike_radar_v2_history.json'):
+                  active=dict(existing.get('active_alerts') or {})
+                  active.update(incoming.get('active_alerts') or {})
+                  existing['active_alerts']=active
+              (remote/name).write_text(json.dumps(existing,indent=2,ensure_ascii=False)+'\n')
+          # Market snapshots are not merged: only publish this job's snapshot when newer.
+          def snapshot_time(data):
+              return str(data.get('generated_at_utc') or '') if isinstance(data,dict) else ''
+          incoming=load(local/'latest.json')
+          existing=load(remote/'latest.json')
+          if snapshot_time(incoming)>snapshot_time(existing):
+              for name in ('latest.json','history.json','fomo_cache.json','live_v31.json',
+                           'beta_live_daily.json','daily_snapshots.json'):
+                  source=local/name
+                  if source.exists(): (remote/name).write_bytes(source.read_bytes())
+          PY
+              git add data/*.json
+              if git diff --cached --quiet; then
+                echo "Remote already contains equivalent or newer data."
+                break
+              fi
+              git commit -m "Reconcile concurrent market snapshots and preserve signal history"
+            done
           fi
