@@ -353,6 +353,7 @@ for mint, pair in best.items():
     prior_activity = [p for p in recent_15m if
                       300 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 600]
     prior_buys = max((int(p.get("buys_5m") or 0) for p in prior_activity), default=None)
+    prior_volume = max((numeric(p.get("volume_5m_usd")) for p in prior_activity), default=None)
     early_momentum = (pair_age_hours is not None and pair_age_hours > 2 and
                       fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                       liquidity >= 5000 and volume >= 1000 and
@@ -393,6 +394,8 @@ for mint, pair in best.items():
         "early_alert": fast_alert,
         "early_momentum": early_momentum,
         "change_2_5m_pct": change_2_5m,
+        "buy_acceleration_pct": round(100 * (buys / prior_buys - 1), 2) if prior_buys is not None and prior_buys > 0 else None,
+        "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
         "change_15m_pct": change_15m,
         "early_alert_observation_count": len(recent_15m),
