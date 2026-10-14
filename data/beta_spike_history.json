@@ -6619,10 +6619,11 @@
       "buys_5m": 702,
       "sells_5m": 434,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007535,
+      "observed_5m_at_utc": "2026-10-14T04:36:19.167411+00:00",
+      "return_5m_pct": -9.24,
+      "measurement_delay_minutes": 5.63
     },
     {
       "day": "2026-10-14",
@@ -6635,10 +6636,11 @@
       "buys_5m": 29,
       "sells_5m": 1,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.006407,
+      "observed_5m_at_utc": "2026-10-14T04:36:19.167411+00:00",
+      "return_5m_pct": 0.02,
+      "measurement_delay_minutes": 5.63
     },
     {
       "day": "2026-10-14",
@@ -6651,12 +6653,31 @@
       "buys_5m": 23,
       "sells_5m": 3,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0008241,
+      "observed_5m_at_utc": "2026-10-14T04:36:19.167411+00:00",
+      "return_5m_pct": 2.26,
+      "measurement_delay_minutes": 5.63
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM",
+      "pair_address": "G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3",
+      "symbol": "Kirk",
+      "first_alert_at_utc": "2026-10-14T04:36:19.167411+00:00",
+      "alert_price_usd": 0.0001311,
+      "initial_15m_change_pct": 14.2,
+      "buys_5m": 39,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-14T04:34:17.716955+00:00"
+  "active_alerts": {
+    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
+  },
+  "updated_at_utc": "2026-10-14T04:36:19.167411+00:00"
 }
