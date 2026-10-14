@@ -13672,10 +13672,12 @@
       "buys_5m": 21,
       "sells_5m": 13,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0004496,
+      "observed_5m_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "return_5m_pct": -9.08,
+      "measurement_delay_minutes": 5.95,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13688,10 +13690,12 @@
       "buys_5m": 69,
       "sells_5m": 45,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001447,
+      "observed_5m_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "return_5m_pct": 10.46,
+      "measurement_delay_minutes": 5.95,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13704,10 +13708,12 @@
       "buys_5m": 26,
       "sells_5m": 8,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.02978,
+      "observed_5m_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "return_5m_pct": -0.03,
+      "measurement_delay_minutes": 5.95,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13836,11 +13842,75 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6KDpQM4BVDdtAkjtyFDiBCkbii8q8BieEyXXm6kNpump",
+      "pair_address": "ARcvd2GiVSmz7oR2ozpe3KzVBadsVrEav5DdnVJ8sjhK",
+      "symbol": "TM",
+      "first_alert_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "alert_price_usd": 0.0005329,
+      "initial_15m_change_pct": 11.16,
+      "buys_5m": 29,
+      "sells_5m": 18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "pair_address": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+      "symbol": "baton",
+      "first_alert_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "alert_price_usd": 0.01041,
+      "initial_15m_change_pct": 8.45,
+      "buys_5m": 49,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "pair_address": "FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo",
+      "symbol": "Altai",
+      "first_alert_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "alert_price_usd": 0.001927,
+      "initial_15m_change_pct": 5.24,
+      "buys_5m": 20,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-14T13:34:18.104416+00:00",
+      "alert_price_usd": 0.02978,
+      "initial_15m_change_pct": 3.65,
+      "buys_5m": 11,
+      "sells_5m": 4,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T13:32:25.519719+00:00"
+  "updated_at_utc": "2026-10-14T13:34:18.104416+00:00"
 }
