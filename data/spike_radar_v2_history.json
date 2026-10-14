@@ -1,7 +1,27 @@
 {
   "schema_version": 2,
-  "records": [],
-  "active_alerts": {},
+  "records": [
+    {
+      "day": "2026-10-14",
+      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
+      "pair_address": "GLL3CzybpSCLZdoACf8QUM5YrKVwyA65kQ2RcTsJxxzV",
+      "symbol": "HOTBOT",
+      "first_alert_at_utc": "2026-10-14T07:42:20.476663+00:00",
+      "alert_price_usd": 0.004397,
+      "initial_15m_change_pct": 5.52,
+      "buys_5m": 23,
+      "sells_5m": 9,
+      "spike_v2_score": 75,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    }
+  ],
+  "active_alerts": {
+    "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF|GLL3CzybpSCLZdoACf8QUM5YrKVwyA65kQ2RcTsJxxzV": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T07:40:26.433869+00:00"
+  "updated_at_utc": "2026-10-14T07:42:20.476663+00:00"
 }
