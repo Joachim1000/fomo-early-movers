@@ -795,7 +795,7 @@ async function loadHomeTradingHours(force=false){
    if(x.measurement_minutes!==5||x.status!=='MEASURED'||x.return_5m_pct==null||!Number.isFinite(value)||!Number.isFinite(t.getTime()))continue;
    const h=Number(hourFmt.format(t));if(h>=0&&h<24)groups[h].push(value);
   }
-  let collectionConfig={blocked_hours:[0,1,2,3,4,5],blocked_intervals:[{start:'23:30',end:'06:00'}]};
+  let collectionConfig={blocked_hours:[0,1,2,3,4,5,6],blocked_intervals:[{start:'23:30',end:'07:00'}]};
   try{const cr=await fetch('https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/main/config/collection_hours.json?t='+Date.now(),{cache:'no-store'});if(cr.ok)collectionConfig=await cr.json()}catch(e){console.warn('Collection settings',e)}
   window.mxCollectionConfig=collectionConfig;
   const blockedHours=new Set(collectionConfig.blocked_hours||[]);
@@ -904,17 +904,17 @@ async function loadSpikeRadarBeta(){
 </script><script>
 window.openCollectionSettings=function(){
  const prior=document.getElementById('mxCollectionSettings');if(prior){prior.remove();return}
- const config=window.mxCollectionConfig||{blocked_hours:[0,1,2,3,4,5],blocked_intervals:[{start:'23:30',end:'06:00'}]};
+ const config=window.mxCollectionConfig||{blocked_hours:[0,1,2,3,4,5,6],blocked_intervals:[{start:'23:30',end:'07:00'}]};
  const modal=document.createElement('div');modal.id='mxCollectionSettings';modal.className='collection-settings-modal';
  const panel=document.createElement('div');panel.className='collection-settings-panel';
  const heading=document.createElement('div');heading.className='collection-settings-heading';heading.innerHTML='<h2>COLLECTION SETTINGS</h2>';
  const close=document.createElement('button');close.textContent='Close';close.onclick=()=>modal.remove();heading.appendChild(close);panel.appendChild(heading);
- const info=document.createElement('p');info.className='small muted';info.textContent='Warsaw time · Active schedule 06:00–23:30. Checked hours are blocked. Changes require committing the configuration to GitHub.';panel.appendChild(info);
+ const info=document.createElement('p');info.className='small muted';info.textContent='Warsaw time · Active schedule 07:00–23:30. Checked hours are blocked. Changes require committing the configuration to GitHub.';panel.appendChild(info);
  const grid=document.createElement('div');grid.className='collection-hour-grid';const blocked=new Set(config.blocked_hours||[]);
  for(let h=0;h<24;h++){const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.checked=blocked.has(h);check.dataset.hour=h;label.append(check,document.createTextNode(String(h).padStart(2,'0')+':00'));grid.appendChild(label)}
  panel.appendChild(grid);
  const note=document.createElement('p');note.className='small muted';note.textContent='23:30–00:00 is a separately blocked partial slot.';panel.appendChild(note);
- const copy=document.createElement('button');copy.textContent='Copy configuration';copy.onclick=()=>{const hours=Array.from(grid.querySelectorAll('input:checked')).map(x=>Number(x.dataset.hour));navigator.clipboard.writeText(JSON.stringify({timezone:'Europe/Warsaw',blocked_hours:hours,blocked_intervals:config.blocked_intervals||[{start:'23:30',end:'06:00'}]},null,2));copy.textContent='Copied · commit in GitHub'};panel.appendChild(copy);
+ const copy=document.createElement('button');copy.textContent='Copy configuration';copy.onclick=()=>{const hours=Array.from(grid.querySelectorAll('input:checked')).map(x=>Number(x.dataset.hour));navigator.clipboard.writeText(JSON.stringify({timezone:'Europe/Warsaw',blocked_hours:hours,blocked_intervals:config.blocked_intervals||[{start:'23:30',end:'07:00'}]},null,2));copy.textContent='Copied · commit in GitHub'};panel.appendChild(copy);
  modal.appendChild(panel);modal.onclick=e=>{if(e.target===modal)modal.remove()};document.body.appendChild(modal)
 };
 </script></body></html>
