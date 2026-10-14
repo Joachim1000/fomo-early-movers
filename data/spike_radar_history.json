@@ -10899,7 +10899,11 @@
       "observed_5m_at_utc": "2026-10-14T15:40:33.835716+00:00",
       "return_5m_pct": 15.68,
       "measurement_delay_minutes": 6.2,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0003821,
+      "observed_10m_at_utc": "2026-10-14T15:46:19.303131+00:00",
+      "measurement_10m_delay_minutes": 11.96,
+      "return_10m_pct": 25.36
     },
     {
       "day": "2026-10-14",
@@ -10921,7 +10925,11 @@
       "observed_5m_at_utc": "2026-10-14T15:40:33.835716+00:00",
       "return_5m_pct": 2.89,
       "measurement_delay_minutes": 6.2,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001066,
+      "observed_10m_at_utc": "2026-10-14T15:46:19.303131+00:00",
+      "measurement_10m_delay_minutes": 11.96,
+      "return_10m_pct": -14.51
     },
     {
       "day": "2026-10-14",
@@ -10960,6 +10968,28 @@
       "buy_acceleration_pct": 20.0,
       "volume_acceleration_pct": -70.29,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.001066,
+      "observed_5m_at_utc": "2026-10-14T15:46:19.303131+00:00",
+      "return_5m_pct": -16.91,
+      "measurement_delay_minutes": 5.76,
+      "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+      "pair_address": "Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu",
+      "symbol": "baton",
+      "first_alert_at_utc": "2026-10-14T15:46:19.303131+00:00",
+      "alert_price_usd": 0.009968,
+      "initial_15m_change_pct": 3.67,
+      "buys_5m": 14,
+      "sells_5m": 3,
+      "volume_5m_usd": 2075.41,
+      "liquidity_usd": 616145.72,
+      "buy_acceleration_pct": 133.33,
+      "volume_acceleration_pct": 495.36,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -10970,5 +11000,5 @@
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T15:44:19.282206+00:00"
+  "updated_at_utc": "2026-10-14T15:46:19.303131+00:00"
 }
