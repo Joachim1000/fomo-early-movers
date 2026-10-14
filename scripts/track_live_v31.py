@@ -245,22 +245,28 @@ for date,portfolio in daily.items():
         portfolio["locked_at_utc"]=now.isoformat()
         portfolio["evaluation_cutoff_utc"]=cutoff_utc.isoformat()
     for item in portfolio.get("candidates",[]):
-        # Refresh market-derived columns without replacing the fixed selection.
-        live=next((x for x in current if x["mint"]==item["mint"] and x["pair_address"]==item["pair_address"]),None)
-        if live and not locking:
-            for field in ("buy_sell_ratio","buys_5m","sells_5m","change_15m_pct"):
-                item[field]=live.get(field)
-        item["observed_at_utc"]=min(now,cutoff_utc).isoformat()
+        # Published DAILY profit is final only at the 23:30 Warsaw cutoff.
+        # Previously LOCKED portfolios are skipped above and never recalculated.
+        if not locking:
+            item.pop("last_price_usd",None)
+            item.pop("last_price_at_utc",None)
+            item.pop("return_pct",None)
+            continue
+        item["observed_at_utc"]=cutoff_utc.isoformat()
         prices=[(dt(p.get("timestamp")),num(p.get("price_usd")))
                 for p in history.get(item["mint"],[])
                 if p.get("pair_address")==item["pair_address"]]
-        prices=[(t,p) for t,p in prices if t and p and p>0 and t<=now]
+        prices=[(t,p) for t,p in prices if t and p and p>0 and t<=cutoff_utc]
         if prices:
             t,p=max(prices)
             item["last_price_usd"]=p
             item["last_price_at_utc"]=t.isoformat()
             entry=num(item.get("entry_price_usd"))
             item["return_pct"]=round((p/entry-1)*100,3) if entry else None
+        else:
+            item.pop("last_price_usd",None)
+            item.pop("last_price_at_utc",None)
+            item.pop("return_pct",None)
 # Retain portfolios for seven days.
 daily={k:v for k,v in daily.items() if k>=(local.date()-timedelta(days=7)).isoformat()}
 prior["daily_portfolios"]=daily
