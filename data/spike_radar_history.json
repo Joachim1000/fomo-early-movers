@@ -15610,10 +15610,12 @@
       "buy_acceleration_pct": 31.82,
       "volume_acceleration_pct": -38.59,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 9.033e-05,
+      "observed_5m_at_utc": "2026-10-14T21:24:17.827862+00:00",
+      "return_5m_pct": -5.58,
+      "measurement_delay_minutes": 6.01,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -15630,10 +15632,12 @@
       "buy_acceleration_pct": 100.0,
       "volume_acceleration_pct": 105.36,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001594,
+      "observed_5m_at_utc": "2026-10-14T21:24:17.827862+00:00",
+      "return_5m_pct": -2.75,
+      "measurement_delay_minutes": 6.01,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -15654,13 +15658,33 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "EMUZChJXbptGGLpQa8bTK6vD4B8tB2dVeQVY8SNTpump",
+      "pair_address": "D5HwMjxBxEM4PE9LotqVJ9ivqeYdA1o8AWDxiM6UEuFW",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-14T21:24:17.827862+00:00",
+      "alert_price_usd": 0.0001195,
+      "initial_15m_change_pct": 25.79,
+      "buys_5m": 18,
+      "sells_5m": 6,
+      "volume_5m_usd": 1827.98,
+      "liquidity_usd": 31236.82,
+      "buy_acceleration_pct": 157.14,
+      "volume_acceleration_pct": 174.27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T21:22:20.581958+00:00",
+  "updated_at_utc": "2026-10-14T21:24:17.827862+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
