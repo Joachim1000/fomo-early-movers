@@ -5600,8 +5600,43 @@
       "observed_5m_at_utc": "2026-10-14T01:24:16.515801+00:00",
       "return_5m_pct": -14.53,
       "measurement_delay_minutes": 5.97
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-14T01:28:16.538493+00:00",
+      "alert_price_usd": 0.007778,
+      "initial_15m_change_pct": 13.95,
+      "buys_5m": 41,
+      "sells_5m": 27,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-14T01:28:16.538493+00:00",
+      "alert_price_usd": 0.01407,
+      "initial_15m_change_pct": 6.91,
+      "buys_5m": 73,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-14T01:26:19.944993+00:00"
+  "active_alerts": {
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo": true
+  },
+  "updated_at_utc": "2026-10-14T01:28:16.538493+00:00"
 }
