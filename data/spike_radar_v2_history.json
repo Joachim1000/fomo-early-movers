@@ -542,15 +542,14 @@
       "sells_5m": 11,
       "spike_v2_score": 100,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.03291,
+      "observed_5m_at_utc": "2026-10-14T11:50:33.542719+00:00",
+      "return_5m_pct": 1.67,
+      "measurement_delay_minutes": 6.14
     }
   ],
-  "active_alerts": {
-    "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7|4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm": true
-  },
+  "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T11:48:18.039496+00:00"
+  "updated_at_utc": "2026-10-14T11:50:33.542719+00:00"
 }
