@@ -5568,10 +5568,11 @@
       "buys_5m": 10,
       "sells_5m": 4,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.002504,
+      "observed_5m_at_utc": "2026-10-14T07:04:18.400703+00:00",
+      "return_5m_pct": 0.52,
+      "measurement_delay_minutes": 5.99
     },
     {
       "day": "2026-10-14",
@@ -5584,12 +5585,31 @@
       "buys_5m": 12,
       "sells_5m": 1,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.002996,
+      "observed_5m_at_utc": "2026-10-14T07:04:18.400703+00:00",
+      "return_5m_pct": 0.5,
+      "measurement_delay_minutes": 5.99
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0xDd806E436Dda5588bf54061C11590c77dDC87777",
+      "pair_address": "0x13b86Fcf85C9C8F5C36593822D216B8893C25450",
+      "symbol": "SAFU",
+      "first_alert_at_utc": "2026-10-14T07:04:18.400703+00:00",
+      "alert_price_usd": 0.0004805,
+      "initial_15m_change_pct": 12.53,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-14T07:02:25.533003+00:00"
+  "active_alerts": {
+    "0xDd806E436Dda5588bf54061C11590c77dDC87777|0x13b86Fcf85C9C8F5C36593822D216B8893C25450": true
+  },
+  "updated_at_utc": "2026-10-14T07:04:18.400703+00:00"
 }
