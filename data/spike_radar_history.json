@@ -12554,10 +12554,12 @@
       "buy_acceleration_pct": 22.22,
       "volume_acceleration_pct": 76.67,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002169,
+      "observed_5m_at_utc": "2026-10-14T17:58:19.528095+00:00",
+      "return_5m_pct": 12.5,
+      "measurement_delay_minutes": 6.02,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -12578,11 +12580,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "4Bg632HXsgDJbzRAvz3upCoeGpkpcfY2WubsuxiDpump",
+      "pair_address": "43zNykSfudQvbjHzXpnNveQ4UfZfKzrrWwUu2DfDudYC",
+      "symbol": "KANTO",
+      "first_alert_at_utc": "2026-10-14T17:58:19.528095+00:00",
+      "alert_price_usd": 0.0001551,
+      "initial_15m_change_pct": 28.61,
+      "buys_5m": 35,
+      "sells_5m": 23,
+      "volume_5m_usd": 8331.31,
+      "liquidity_usd": 32140.59,
+      "buy_acceleration_pct": 483.33,
+      "volume_acceleration_pct": 2235.92,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T17:56:19.184584+00:00"
+  "updated_at_utc": "2026-10-14T17:58:19.528095+00:00"
 }
