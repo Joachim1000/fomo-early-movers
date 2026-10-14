@@ -142,7 +142,18 @@ jobs:
 
       - name: Generate independent LIVE V3.1 ranking
         if: steps.collection_window.outputs.enabled == 'true'
-        run: python scripts/track_live_v31.py
+        run: |
+          # Live V3.1 begins at 08:00 Warsaw time; other collectors remain independent.
+          python3 - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import subprocess
+          now=datetime.now(ZoneInfo("Europe/Warsaw"))
+          if (8,0) <= (now.hour,now.minute) < (23,30):
+              subprocess.run(["python","scripts/track_live_v31.py"],check=True)
+          else:
+              print("LIVE V3.1 paused outside 08:00–23:30 Warsaw:",now.isoformat())
+          PY
 
       - name: Lock daily 23:30 Poland snapshot (once per day)
         if: steps.collection_window.outputs.enabled == 'true'
