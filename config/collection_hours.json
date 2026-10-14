@@ -7,14 +7,13 @@
     3,
     4,
     5,
-    6,
-    7
+    6
   ],
   "blocked_intervals": [
     {
       "start": "23:30",
-      "end": "08:00"
+      "end": "07:00"
     }
   ],
-  "description": "Collection paused daily 23:30–08:00 Warsaw time. Trading-hour chart marks blocked and partial hours."
+  "description": "Collection paused daily 23:30–07:00 Warsaw time; 06:00–06:59 blocked, 07:00–07:59 active."
 }
