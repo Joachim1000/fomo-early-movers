@@ -7289,6 +7289,55 @@
       "buys_5m": 14,
       "sells_5m": 8,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0008275,
+      "observed_5m_at_utc": "2026-10-14T02:12:17.296720+00:00",
+      "return_5m_pct": 7.55,
+      "measurement_delay_minutes": 5.95
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "98AG3zJUawbvDnpgbDhmxpMKva43vtgPLLPSXqo1pump",
+      "pair_address": "2U5kdozDrdgYzyGRNbTdBejGLYEeRt1FkERQmyPbV85P",
+      "symbol": "HIRE",
+      "first_alert_at_utc": "2026-10-14T02:12:17.296720+00:00",
+      "alert_price_usd": 0.0003321,
+      "initial_15m_change_pct": 8.46,
+      "buys_5m": 19,
+      "sells_5m": 9,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "pair_address": "6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G",
+      "symbol": "SAPLING",
+      "first_alert_at_utc": "2026-10-14T02:12:17.296720+00:00",
+      "alert_price_usd": 0.002894,
+      "initial_15m_change_pct": 7.42,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ",
+      "pair_address": "cb4GFRgEitfu5qtxfRMiqzsaVPwgbD3HEor4cs2jFpn",
+      "symbol": "QI",
+      "first_alert_at_utc": "2026-10-14T02:12:17.296720+00:00",
+      "alert_price_usd": 0.0006122,
+      "initial_15m_change_pct": 3.32,
+      "buys_5m": 16,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -7296,7 +7345,10 @@
     }
   ],
   "active_alerts": {
-    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|4MWjp1aBQqE9Y6iC5cd3NrVvWWcHsN2LgpjWYMDK7u7E": true,
+    "98AG3zJUawbvDnpgbDhmxpMKva43vtgPLLPSXqo1pump|2U5kdozDrdgYzyGRNbTdBejGLYEeRt1FkERQmyPbV85P": true,
+    "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W|6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G": true,
+    "8TiMkgvsrat9tM2esko8zVTt99LZLpefUM4SnZaziXaQ|cb4GFRgEitfu5qtxfRMiqzsaVPwgbD3HEor4cs2jFpn": true
   },
-  "updated_at_utc": "2026-10-14T02:10:27.774525+00:00"
+  "updated_at_utc": "2026-10-14T02:12:17.296720+00:00"
 }
