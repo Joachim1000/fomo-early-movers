@@ -6238,11 +6238,16 @@
       "buys_5m": 34,
       "sells_5m": 22,
       "measurement_minutes": 5,
-      "status": "NOT_VERIFIABLE",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null,
-      "status_10m": "NOT_VERIFIABLE"
+      "status": "DELAYED",
+      "price_5m_usd": 8.358e-05,
+      "observed_5m_at_utc": "2026-10-14T01:40:25.101273+00:00",
+      "return_5m_pct": -15.67,
+      "status_10m": "DELAYED",
+      "price_10m_usd": 8.358e-05,
+      "observed_10m_at_utc": "2026-10-14T01:40:25.101273+00:00",
+      "measurement_10m_delay_minutes": 75.22,
+      "return_10m_pct": -15.67,
+      "measurement_delay_minutes": 75.22
     },
     {
       "day": "2026-10-14",
@@ -6822,10 +6827,11 @@
       "buys_5m": 9,
       "sells_5m": 0,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0004583,
+      "observed_5m_at_utc": "2026-10-14T01:40:25.101273+00:00",
+      "return_5m_pct": 3.22,
+      "measurement_delay_minutes": 6.13
     },
     {
       "day": "2026-10-14",
@@ -6890,12 +6896,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
+      "pair_address": "0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938",
+      "symbol": "Temo",
+      "first_alert_at_utc": "2026-10-14T01:40:25.101273+00:00",
+      "alert_price_usd": 0.0004583,
+      "initial_15m_change_pct": 25.63,
+      "buys_5m": 15,
+      "sells_5m": 6,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true,
-    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true,
-    "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP|AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ": true
+    "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D|0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938": true
   },
-  "updated_at_utc": "2026-10-14T01:38:26.276553+00:00"
+  "updated_at_utc": "2026-10-14T01:40:25.101273+00:00"
 }
