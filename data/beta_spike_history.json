@@ -5463,10 +5463,11 @@
       "buys_5m": 4655,
       "sells_5m": 22,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007457,
+      "observed_5m_at_utc": "2026-10-14T00:50:24.255230+00:00",
+      "return_5m_pct": -27.74,
+      "measurement_delay_minutes": 5.97
     },
     {
       "day": "2026-10-14",
@@ -5499,8 +5500,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8",
+      "pair_address": "4iVHkn5WhmGwrKb2fYFNPnTkqhwYTEEezvsju9YEBY76",
+      "symbol": "ALLINU",
+      "first_alert_at_utc": "2026-10-14T00:50:24.255230+00:00",
+      "alert_price_usd": 0.00768,
+      "initial_15m_change_pct": 7.71,
+      "buys_5m": 24,
+      "sells_5m": 15,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-14T00:48:19.644654+00:00"
+  "active_alerts": {
+    "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8|4iVHkn5WhmGwrKb2fYFNPnTkqhwYTEEezvsju9YEBY76": true
+  },
+  "updated_at_utc": "2026-10-14T00:50:24.255230+00:00"
 }
