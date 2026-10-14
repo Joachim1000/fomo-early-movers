@@ -7049,7 +7049,11 @@
       "observed_5m_at_utc": "2026-10-14T08:30:42.838039+00:00",
       "return_5m_pct": 1.91,
       "measurement_delay_minutes": 6.38,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001759,
+      "observed_10m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": -6.73
     },
     {
       "day": "2026-10-14",
@@ -7067,7 +7071,11 @@
       "observed_5m_at_utc": "2026-10-14T08:30:42.838039+00:00",
       "return_5m_pct": 1.28,
       "measurement_delay_minutes": 6.38,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.000552,
+      "observed_10m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": 2.47
     },
     {
       "day": "2026-10-14",
@@ -7085,7 +7093,11 @@
       "observed_5m_at_utc": "2026-10-14T08:30:42.838039+00:00",
       "return_5m_pct": 1.66,
       "measurement_delay_minutes": 6.38,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.05607,
+      "observed_10m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": 3.43
     },
     {
       "day": "2026-10-14",
@@ -7188,10 +7200,12 @@
       "buys_5m": 71,
       "sells_5m": 30,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000108,
+      "observed_5m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "return_5m_pct": -5.68,
+      "measurement_delay_minutes": 5.61,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -7204,10 +7218,12 @@
       "buys_5m": 124,
       "sells_5m": 75,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001759,
+      "observed_5m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "return_5m_pct": -8.48,
+      "measurement_delay_minutes": 5.61,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -7220,10 +7236,12 @@
       "buys_5m": 11,
       "sells_5m": 5,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00182,
+      "observed_5m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "return_5m_pct": -1.03,
+      "measurement_delay_minutes": 5.61,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -7236,10 +7254,12 @@
       "buys_5m": 33,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.05607,
+      "observed_5m_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "return_5m_pct": 1.74,
+      "measurement_delay_minutes": 5.61,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -7304,11 +7324,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x848e2b1cB00DC439a15b03B8C3194e7D08917777",
+      "pair_address": "0xc7A398A7F9C4D8181Fd847a2062360f9247a5E59",
+      "symbol": "BAN",
+      "first_alert_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "alert_price_usd": 0.05607,
+      "initial_15m_change_pct": 4.47,
+      "buys_5m": 30,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
+      "pair_address": "0xa1f688283d43c59e4d8dbd937b64021083871680d82a77d1ca4dec75ce483938",
+      "symbol": "Temo",
+      "first_alert_at_utc": "2026-10-14T08:36:19.233032+00:00",
+      "alert_price_usd": 0.000552,
+      "initial_15m_change_pct": 4.07,
+      "buys_5m": 11,
+      "sells_5m": 3,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T08:34:18.667774+00:00"
+  "updated_at_utc": "2026-10-14T08:36:19.233032+00:00"
 }
