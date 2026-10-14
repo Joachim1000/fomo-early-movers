@@ -31,20 +31,18 @@ if now is None:
     raise ValueError("Missing latest snapshot timestamp")
 zone = ZoneInfo("Europe/Warsaw")
 day = now.astimezone(zone).date().isoformat()
-# Record a new episode only after a previously active signal disappears.
-state = saved.get("active_alerts")
-if not isinstance(state, dict):
-    state = {}
-    saved["active_alerts"] = state
-current = set()
+# Every displayed Spike Radar snapshot is an independent observation.
+# Deduplicate only the exact token/pair/snapshot timestamp, never by a time window.
+# A token may reappear after 5 minutes or on successive collection cycles.
+seen={(r.get("mint"),r.get("pair_address"),r.get("first_alert_at_utc")) for r in rows}
+added=0
 for item in latest.get("early_alert_candidates", []):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
     if not mint or not pair or not price:
         continue
-    key = mint + "|" + pair
-    current.add(key)
-    if state.get(key):
+    key=(mint,pair,now.isoformat())
+    if key in seen:
         continue
     rows.append({
         "day": day, "mint": mint, "pair_address": pair,
@@ -56,10 +54,9 @@ for item in latest.get("early_alert_candidates", []):
         "measurement_minutes": 5, "status": "PENDING", "price_5m_usd": None,
         "observed_5m_at_utc": None, "return_5m_pct": None
     })
-    state[key] = True
-for key in list(state):
-    if key not in current:
-        del state[key]
+    seen.add(key)
+    added+=1
+print(f"Spike Radar displayed observations added: {added}")
 for row in rows:
     if "measurement_minutes" not in row:
         row["measurement_minutes"] = 15 if row.get("status") == "MEASURED" else 5
