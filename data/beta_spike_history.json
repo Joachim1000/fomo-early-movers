@@ -5292,8 +5292,26 @@
       "observed_5m_at_utc": "2026-10-14T07:12:17.079507+00:00",
       "return_5m_pct": -2.45,
       "measurement_delay_minutes": 5.92
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x6cce346efaF2972374fB83cf85145C06b9A37777",
+      "pair_address": "0x8E63D38Ab1A1261eD35E448BdCB385cfE29033dB",
+      "symbol": "BS",
+      "first_alert_at_utc": "2026-10-14T07:16:17.487537+00:00",
+      "alert_price_usd": 0.0006596,
+      "initial_15m_change_pct": 18.08,
+      "buys_5m": 133,
+      "sells_5m": 80,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
-  "updated_at_utc": "2026-10-14T07:14:28.374813+00:00"
+  "active_alerts": {
+    "0x6cce346efaF2972374fB83cf85145C06b9A37777|0x8E63D38Ab1A1261eD35E448BdCB385cfE29033dB": true
+  },
+  "updated_at_utc": "2026-10-14T07:16:17.487537+00:00"
 }
