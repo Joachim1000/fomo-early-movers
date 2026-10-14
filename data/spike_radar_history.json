@@ -11704,10 +11704,12 @@
       "buys_5m": 72,
       "sells_5m": 45,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.01162,
+      "observed_5m_at_utc": "2026-10-14T12:16:20.748658+00:00",
+      "return_5m_pct": 3.47,
+      "measurement_delay_minutes": 5.88,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -11772,11 +11774,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "NTRNDMqQSiwEC2jJs3wJiZS6bpGYQJtMNQJgiX3WyV6",
+      "pair_address": "7r3ZPwVD966dZfZ5xifEQyAfME7xSTA5bbmztctQhDG3",
+      "symbol": "NTRNDM",
+      "first_alert_at_utc": "2026-10-14T12:16:20.748658+00:00",
+      "alert_price_usd": 0.0002505,
+      "initial_15m_change_pct": 7.28,
+      "buys_5m": 34,
+      "sells_5m": 13,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x6cce346efaF2972374fB83cf85145C06b9A37777",
+      "pair_address": "0x8E63D38Ab1A1261eD35E448BdCB385cfE29033dB",
+      "symbol": "BS",
+      "first_alert_at_utc": "2026-10-14T12:16:20.748658+00:00",
+      "alert_price_usd": 0.0003948,
+      "initial_15m_change_pct": 4.42,
+      "buys_5m": 19,
+      "sells_5m": 12,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T12:14:17.844409+00:00"
+  "updated_at_utc": "2026-10-14T12:16:20.748658+00:00"
 }
