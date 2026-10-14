@@ -12448,11 +12448,43 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "HfpLdX35Kc6b7zDNWbe5x1xWLekKUXPYZbmz71vMpump",
+      "pair_address": "GibvJm9bExyJye7E8Gch9TSmVmuvU192bsGv6cGdUq4s",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-14T12:48:20.461880+00:00",
+      "alert_price_usd": 0.0001305,
+      "initial_15m_change_pct": 10.97,
+      "buys_5m": 15,
+      "sells_5m": 6,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x848e2b1cB00DC439a15b03B8C3194e7D08917777",
+      "pair_address": "0xc7A398A7F9C4D8181Fd847a2062360f9247a5E59",
+      "symbol": "BAN",
+      "first_alert_at_utc": "2026-10-14T12:48:20.461880+00:00",
+      "alert_price_usd": 0.04861,
+      "initial_15m_change_pct": 6.07,
+      "buys_5m": 54,
+      "sells_5m": 7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T12:46:19.186916+00:00"
+  "updated_at_utc": "2026-10-14T12:48:20.461880+00:00"
 }
