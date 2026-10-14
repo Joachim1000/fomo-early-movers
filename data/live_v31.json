@@ -84315,13 +84315,13 @@
       "predicted_10m_gain_probability_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T18:10:27.588257+00:00",
+  "generated_at_utc": "2026-10-14T18:12:18.862123+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
-  "training_examples": 473,
+  "training_examples": 474,
   "positive_examples": 82,
-  "negative_examples": 391,
+  "negative_examples": 392,
   "target": "verified 10m return >= +3% (before trading costs)",
   "ranking": [
     {
