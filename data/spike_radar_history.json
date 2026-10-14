@@ -11938,11 +11938,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "symbol": "HOOKED",
+      "first_alert_at_utc": "2026-10-14T17:04:18.931246+00:00",
+      "alert_price_usd": 0.001707,
+      "initial_15m_change_pct": 8.38,
+      "buys_5m": 11,
+      "sells_5m": 7,
+      "volume_5m_usd": 4824.22,
+      "liquidity_usd": 175713.99,
+      "buy_acceleration_pct": 22.22,
+      "volume_acceleration_pct": -39.8,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T17:02:17.868619+00:00"
+  "updated_at_utc": "2026-10-14T17:04:18.931246+00:00"
 }
