@@ -13629,7 +13629,11 @@
       "observed_5m_at_utc": "2026-10-14T19:44:27.755355+00:00",
       "return_5m_pct": 2.06,
       "measurement_delay_minutes": 6.1,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001797,
+      "observed_10m_at_utc": "2026-10-14T19:50:29.233570+00:00",
+      "measurement_10m_delay_minutes": 12.12,
+      "return_10m_pct": 2.8
     },
     {
       "day": "2026-10-14",
@@ -13651,7 +13655,11 @@
       "observed_5m_at_utc": "2026-10-14T19:46:18.774778+00:00",
       "return_5m_pct": -0.28,
       "measurement_delay_minutes": 5.89,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001797,
+      "observed_10m_at_utc": "2026-10-14T19:50:29.233570+00:00",
+      "measurement_10m_delay_minutes": 10.07,
+      "return_10m_pct": 0.73
     },
     {
       "day": "2026-10-14",
@@ -13668,10 +13676,12 @@
       "buy_acceleration_pct": 33.7,
       "volume_acceleration_pct": 111.54,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007056,
+      "observed_5m_at_utc": "2026-10-14T19:50:29.233570+00:00",
+      "return_5m_pct": -12.46,
+      "measurement_delay_minutes": 6.02,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13732,11 +13742,51 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump",
+      "pair_address": "3hUwrAajx6NyWezqkAXW3nHCmKLv1Vq7wDcBZVetoqy1",
+      "symbol": "SPOOKY",
+      "first_alert_at_utc": "2026-10-14T19:50:29.233570+00:00",
+      "alert_price_usd": 0.0001332,
+      "initial_15m_change_pct": 31.62,
+      "buys_5m": 31,
+      "sells_5m": 19,
+      "volume_5m_usd": 3513.27,
+      "liquidity_usd": 31469.17,
+      "buy_acceleration_pct": 82.35,
+      "volume_acceleration_pct": 277.57,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
+      "pair_address": "0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF",
+      "symbol": "BIBI",
+      "first_alert_at_utc": "2026-10-14T19:50:29.233570+00:00",
+      "alert_price_usd": 0.001201,
+      "initial_15m_change_pct": 7.33,
+      "buys_5m": 28,
+      "sells_5m": 12,
+      "volume_5m_usd": 9392.67,
+      "liquidity_usd": 107795.74,
+      "buy_acceleration_pct": 460.0,
+      "volume_acceleration_pct": 1362.6,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T19:48:20.603909+00:00"
+  "updated_at_utc": "2026-10-14T19:50:29.233570+00:00"
 }
