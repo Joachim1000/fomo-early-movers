@@ -13262,11 +13262,51 @@
       "return_5m_pct": 3.99,
       "measurement_delay_minutes": 5.95,
       "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "J2XBZkpC7ygBQiPw2MWWCqiVJn9i44b8GwtTRoFV1ijj",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-14T19:14:18.446985+00:00",
+      "alert_price_usd": 0.001623,
+      "initial_15m_change_pct": 7.34,
+      "buys_5m": 10,
+      "sells_5m": 0,
+      "volume_5m_usd": 1038.09,
+      "liquidity_usd": 202109.78,
+      "buy_acceleration_pct": 25.0,
+      "volume_acceleration_pct": -78.04,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump",
+      "pair_address": "AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn",
+      "symbol": "DIKSHIT",
+      "first_alert_at_utc": "2026-10-14T19:14:18.446985+00:00",
+      "alert_price_usd": 0.0001807,
+      "initial_15m_change_pct": 4.09,
+      "buys_5m": 39,
+      "sells_5m": 21,
+      "volume_5m_usd": 3251.44,
+      "liquidity_usd": 36986.52,
+      "buy_acceleration_pct": 34.48,
+      "volume_acceleration_pct": -7.33,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T19:12:17.733262+00:00"
+  "updated_at_utc": "2026-10-14T19:14:18.446985+00:00"
 }

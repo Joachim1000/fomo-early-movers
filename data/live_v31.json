@@ -86015,9 +86015,31 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "0x0647085FD0333db506074Eed5B931078b6737777",
+      "pair_address": "0xF8F8b530aed4552a39dA4dbd35a2Ef90812B6b97",
+      "symbol": "루피",
+      "observed_at_utc": "2026-10-14T19:14:18.446985+00:00",
+      "entry_price_usd": 5.937e-05,
+      "momentum_heuristic": -9.74,
+      "change_5m_pct": -6.194,
+      "change_10m_pct": -4.396,
+      "change_15m_pct": -13.392,
+      "acceleration_pct_points": -8.11,
+      "buys_5m": 0,
+      "sells_5m": 1,
+      "buy_sell_ratio": 0.0,
+      "liquidity_usd": 324.89,
+      "volume_5m_usd": 8.31,
+      "v31_heuristic_score": -69.171,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T19:12:17.733262+00:00",
+  "generated_at_utc": "2026-10-14T19:14:18.446985+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -87410,6 +87432,10 @@
     },
     "8sWe4GzK1YqG3vyzKHf8ZyB1WB5asofw2o6TqgFePtPo|DCyrA6dumbKmSZk77cWv1wfZfjtBDYQjLjoHwvBxK3U1": {
       "first_seen_at_utc": "2026-10-14T19:04:20.505026+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "0x0647085FD0333db506074Eed5B931078b6737777|0xF8F8b530aed4552a39dA4dbd35a2Ef90812B6b97": {
+      "first_seen_at_utc": "2026-10-14T19:14:18.446985+00:00",
       "first_call_risk": "HIGH"
     }
   }
