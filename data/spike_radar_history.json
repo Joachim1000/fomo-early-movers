@@ -11757,7 +11757,11 @@
       "observed_5m_at_utc": "2026-10-14T16:50:27.169540+00:00",
       "return_5m_pct": 0.48,
       "measurement_delay_minutes": 6.06,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.01018,
+      "observed_10m_at_utc": "2026-10-14T16:56:25.398123+00:00",
+      "measurement_10m_delay_minutes": 12.03,
+      "return_10m_pct": -1.83
     },
     {
       "day": "2026-10-14",
@@ -11779,7 +11783,11 @@
       "observed_5m_at_utc": "2026-10-14T16:52:18.831769+00:00",
       "return_5m_pct": -0.87,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.01018,
+      "observed_10m_at_utc": "2026-10-14T16:56:25.398123+00:00",
+      "measurement_10m_delay_minutes": 10.11,
+      "return_10m_pct": -1.74
     },
     {
       "day": "2026-10-14",
@@ -11822,11 +11830,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0xc49621f283e8D7677C8dd645B4043c9B4bEfFfFF",
+      "pair_address": "0x0636Aca1C6b3a13312Cf297f3BA20A01F797c398",
+      "symbol": "4HOOK",
+      "first_alert_at_utc": "2026-10-14T16:56:25.398123+00:00",
+      "alert_price_usd": 0.0001339,
+      "initial_15m_change_pct": 26.2,
+      "buys_5m": 36,
+      "sells_5m": 19,
+      "volume_5m_usd": 1815.27,
+      "liquidity_usd": 34496.27,
+      "buy_acceleration_pct": 24.14,
+      "volume_acceleration_pct": -6.49,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T16:54:19.582673+00:00"
+  "updated_at_utc": "2026-10-14T16:56:25.398123+00:00"
 }
