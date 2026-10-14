@@ -1368,9 +1368,32 @@
       "observed_5m_at_utc": "2026-10-14T20:06:17.248855+00:00",
       "return_5m_pct": -4.33,
       "measurement_delay_minutes": 5.37
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-14T20:08:17.855247+00:00",
+      "alert_price_usd": 0.01482,
+      "initial_15m_change_pct": 15.51,
+      "buys_5m": 33,
+      "sells_5m": 1,
+      "volume_5m_usd": 42271.6,
+      "liquidity_usd": 674788.74,
+      "buy_acceleration_pct": 50.0,
+      "volume_acceleration_pct": 49.05,
+      "spike_v2_score": 89,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP|AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T20:06:17.248855+00:00"
+  "updated_at_utc": "2026-10-14T20:08:17.855247+00:00"
 }
