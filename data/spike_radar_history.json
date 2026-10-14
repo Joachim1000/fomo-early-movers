@@ -7866,10 +7866,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777",
+      "pair_address": "0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1",
+      "symbol": "蝴蝶人生",
+      "first_alert_at_utc": "2026-10-14T02:52:17.806287+00:00",
+      "alert_price_usd": 0.007601,
+      "initial_15m_change_pct": 3.6,
+      "buys_5m": 31,
+      "sells_5m": 1,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true
+    "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump|Cb7ZRgPLhji3Th7htXyKEqbXvNjPpeTvckXuWakBUhXu": true,
+    "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0xd4ae7DD719ec71594f13d0e3B17E65E9085f1Ca1": true
   },
-  "updated_at_utc": "2026-10-14T02:50:36.876117+00:00"
+  "updated_at_utc": "2026-10-14T02:52:17.806287+00:00"
 }
