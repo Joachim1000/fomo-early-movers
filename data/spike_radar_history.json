@@ -6380,10 +6380,12 @@
       "buys_5m": 35,
       "sells_5m": 12,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.005237,
+      "observed_5m_at_utc": "2026-10-14T08:10:29.997998+00:00",
+      "return_5m_pct": 5.52,
+      "measurement_delay_minutes": 6.14,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -6396,10 +6398,12 @@
       "buys_5m": 62,
       "sells_5m": 32,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001541,
+      "observed_5m_at_utc": "2026-10-14T08:10:29.997998+00:00",
+      "return_5m_pct": 0.0,
+      "measurement_delay_minutes": 6.14,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -6448,11 +6452,59 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T08:10:29.997998+00:00",
+      "alert_price_usd": 0.000743,
+      "initial_15m_change_pct": 4.74,
+      "buys_5m": 26,
+      "sells_5m": 9,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "pair_address": "AfrddTGYwCVEQB1gxCAhR8i48o6qtxYqksdVkeLudEhg",
+      "symbol": "STONK",
+      "first_alert_at_utc": "2026-10-14T08:10:29.997998+00:00",
+      "alert_price_usd": 0.1286,
+      "initial_15m_change_pct": 3.38,
+      "buys_5m": 24,
+      "sells_5m": 0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x018062E5b98C7CAe3C817B23f13a441C9d887777",
+      "pair_address": "0xaeFA9c5E51087BB4Ca86a0CF60fA6a46972cbF82",
+      "symbol": "SpaceXSI",
+      "first_alert_at_utc": "2026-10-14T08:10:29.997998+00:00",
+      "alert_price_usd": 0.001928,
+      "initial_15m_change_pct": 3.16,
+      "buys_5m": 9,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T08:08:26.243634+00:00"
+  "updated_at_utc": "2026-10-14T08:10:29.997998+00:00"
 }
