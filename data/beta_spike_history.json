@@ -5714,7 +5714,12 @@
       "price_5m_usd": 0.0008102,
       "observed_5m_at_utc": "2026-10-14T01:48:17.080805+00:00",
       "return_5m_pct": 36.4,
-      "measurement_delay_minutes": 6.01
+      "measurement_delay_minutes": 6.01,
+      "price_10m_usd": 0.0009074,
+      "observed_10m_at_utc": "2026-10-14T01:52:17.186605+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": 52.76,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5727,7 +5732,7 @@
       "buys_5m": 25,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
+      "status": "NOT_VERIFIABLE",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
@@ -5743,10 +5748,11 @@
       "buys_5m": 36,
       "sells_5m": 15,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001072,
+      "observed_5m_at_utc": "2026-10-14T01:52:17.186605+00:00",
+      "return_5m_pct": 8.92,
+      "measurement_delay_minutes": 6.01
     },
     {
       "day": "2026-10-14",
@@ -5779,10 +5785,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "Gjd3JUbNG2C3n5Ww98SfPxyWaqvDk2BkiKongGwEpump",
+      "pair_address": "7GF7CVXdHij7iZwgxZ3DbHaVk7zTXi9EYRbZc1dY8ySX",
+      "symbol": "FLOYD",
+      "first_alert_at_utc": "2026-10-14T01:52:17.186605+00:00",
+      "alert_price_usd": 8.815e-05,
+      "initial_15m_change_pct": 15.86,
+      "buys_5m": 90,
+      "sells_5m": 55,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "5jhRCo21HuE8Rq5wyvvuHxs2iaCydT6pr44oyBVBKsqM|G4Up41TmzdCPtd1LE8dUqs6ppAYkL2VJB4TKjwtrjPJ3": true
+    "Gjd3JUbNG2C3n5Ww98SfPxyWaqvDk2BkiKongGwEpump|7GF7CVXdHij7iZwgxZ3DbHaVk7zTXi9EYRbZc1dY8ySX": true
   },
-  "updated_at_utc": "2026-10-14T01:50:26.346838+00:00"
+  "updated_at_utc": "2026-10-14T01:52:17.186605+00:00"
 }
