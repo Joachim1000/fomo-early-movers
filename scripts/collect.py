@@ -359,7 +359,8 @@ for mint, pair in best.items():
                       buys >= 8 and buys >= 1.5 * max(sells, 1) and
                       change_2_5m is not None and 2 <= change_2_5m <= 25 and
                       prior_buys is not None and buys >= prior_buys * 1.2)
-    fast_alert = (pair_age_hours is not None and pair_age_hours > 2 and
+    radar_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
+    fast_alert = (radar_time_allowed and pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
@@ -376,10 +377,8 @@ for mint, pair in best.items():
         (20 if accelerating else 0) +
         (10 if change_15m is not None and 3 <= change_15m <= 15 else 0)
         - (30 if exhaustion else 0)))
-    # Do not create new V2 alerts between 12:00 and 15:00 Warsaw time.
-    # Other radar signals and follow-up measurements remain unaffected.
-    v2_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
-    v2_alert = (v2_time_allowed and
+    # The same midday signal pause applies to both Spike Radar models.
+    v2_alert = (radar_time_allowed and
                 pair_age_hours is not None and pair_age_hours > 2 and
                 fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                 liquidity >= 5000 and volume >= 1500 and
