@@ -6678,10 +6678,26 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+      "pair_address": "6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G",
+      "symbol": "SAPLING",
+      "first_alert_at_utc": "2026-10-14T01:22:16.594349+00:00",
+      "alert_price_usd": 0.002675,
+      "initial_15m_change_pct": 20.17,
+      "buys_5m": 10,
+      "sells_5m": 5,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump|QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D": true
+    "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W|6ejg4aYJM3Mk1t2zBKjbJ43df3s7rBMpC9mgo526K51G": true
   },
-  "updated_at_utc": "2026-10-14T01:20:27.148862+00:00"
+  "updated_at_utc": "2026-10-14T01:22:16.594349+00:00"
 }
