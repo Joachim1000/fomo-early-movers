@@ -364,11 +364,18 @@ for mint, pair in best.items():
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
                   change_15m >= 3)
-    # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
+    # Spike Radar V2: earlier momentum entry with a bounded extension filter.
     pressure = buys / max(sells, 1)
-    accelerating = prior_buys is not None and buys >= prior_buys * 1.2
-    exhaustion = change_15m is not None and change_15m > 25 or (
-        prior_buys is not None and buys < prior_buys * 0.8)
+    accelerating = prior_buys is not None and buys >= prior_buys * 1.1
+    # Strong short-term price momentum can substitute for 10% buy acceleration,
+    # provided buying activity has not contracted.
+    strong_momentum = (change_2_5m is not None and change_2_5m >= 3 and
+                       prior_buys is not None and buys >= prior_buys)
+    # Dynamic exhaustion: avoid sharp declines in buying activity, and
+    # require short-term confirmation for already extended (>25%) moves.
+    exhaustion = ((prior_buys is not None and buys < prior_buys * 0.8) or
+                  (change_15m is not None and change_15m > 25 and
+                   not (accelerating and change_2_5m is not None and change_2_5m >= 2)))
     v2_score = min(100, round(
         25 * min(pressure / 3, 1) +
         25 * min(buys / 35, 1) +
@@ -379,9 +386,10 @@ for mint, pair in best.items():
     v2_alert = (pair_age_hours is not None and pair_age_hours > 2 and
                 fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                 liquidity >= 5000 and volume >= 1500 and
-                change_15m is not None and 3 <= change_15m <= 25 and
-                buys >= 15 and pressure >= 2 and accelerating and
-                not exhaustion and v2_score >= 75)
+                change_15m is not None and 3 <= change_15m <= 35 and
+                buys >= 15 and pressure >= 1.5 and
+                (accelerating or strong_momentum) and
+                not exhaustion and v2_score >= 70)
     label = ("UNDGÅ" if liquidity < 5000 else
              "TIDLIG KANDIDAT" if eligible and buys >= 5 and buys > sells else "AFVENT")
     candidates.append({
