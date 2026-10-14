@@ -43,7 +43,20 @@ jobs:
           if config.get('timezone')!='Europe/Warsaw':
               raise ValueError('Only Europe/Warsaw timezone is supported')
           now=datetime.now(ZoneInfo('Europe/Warsaw'))
-          enabled=now.hour not in blocked
+          def minute_of_day(value):
+              hh, mm = map(int, value.split(':'))
+              if not (0 <= hh <= 23 and 0 <= mm <= 59):
+                  raise ValueError('Invalid interval time')
+              return hh * 60 + mm
+          minute=now.hour*60+now.minute
+          intervals=config.get('blocked_intervals',[])
+          if not isinstance(intervals,list):
+              raise ValueError('Invalid blocked_intervals')
+          def in_interval(item):
+              start=minute_of_day(item['start'])
+              end=minute_of_day(item['end'])
+              return (start <= minute < end) if start < end else (minute >= start or minute < end) if start > end else True
+          enabled=now.hour not in blocked and not any(in_interval(item) for item in intervals)
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write(f"enabled={'true' if enabled else 'false'}\\n".replace('\\n','\n'))
           print(f"Collection {'ENABLED' if enabled else 'PAUSED'} at {now.isoformat()} (blocked_hours={blocked})")
