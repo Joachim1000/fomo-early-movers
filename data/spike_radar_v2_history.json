@@ -1088,13 +1088,37 @@
       "volume_acceleration_pct": 21.34,
       "spike_v2_score": 97,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002095,
+      "observed_5m_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "return_5m_pct": 5.81,
+      "measurement_delay_minutes": 6.08
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "alert_price_usd": 0.0004912,
+      "initial_15m_change_pct": 12.2,
+      "buys_5m": 33,
+      "sells_5m": 16,
+      "volume_5m_usd": 7289.15,
+      "liquidity_usd": 74431.48,
+      "buy_acceleration_pct": 43.48,
+      "volume_acceleration_pct": 42.63,
+      "spike_v2_score": 91,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump|HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T18:48:19.187348+00:00"
+  "updated_at_utc": "2026-10-14T18:50:26.261383+00:00"
 }

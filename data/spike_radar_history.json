@@ -12996,10 +12996,12 @@
       "buy_acceleration_pct": 39.22,
       "volume_acceleration_pct": 21.34,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002095,
+      "observed_5m_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "return_5m_pct": 5.81,
+      "measurement_delay_minutes": 6.08,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13016,10 +13018,12 @@
       "buy_acceleration_pct": 85.71,
       "volume_acceleration_pct": 72.46,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001317,
+      "observed_5m_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "return_5m_pct": -11.97,
+      "measurement_delay_minutes": 6.08,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13060,11 +13064,51 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x840f09B95638744456240fE647938EE3EB4b7777",
+      "pair_address": "0x2931E0700f08BCC1f047bED22880A3D7844F7dFE",
+      "symbol": "萌兰",
+      "first_alert_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "alert_price_usd": 9.042e-05,
+      "initial_15m_change_pct": 12.45,
+      "buys_5m": 12,
+      "sells_5m": 8,
+      "volume_5m_usd": 1587.66,
+      "liquidity_usd": 30068.76,
+      "buy_acceleration_pct": 300.0,
+      "volume_acceleration_pct": 302.88,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-14T18:50:26.261383+00:00",
+      "alert_price_usd": 0.0004912,
+      "initial_15m_change_pct": 12.2,
+      "buys_5m": 33,
+      "sells_5m": 16,
+      "volume_5m_usd": 7289.15,
+      "liquidity_usd": 74431.48,
+      "buy_acceleration_pct": 43.48,
+      "volume_acceleration_pct": 42.63,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T18:48:19.187348+00:00"
+  "updated_at_utc": "2026-10-14T18:50:26.261383+00:00"
 }
