@@ -86213,9 +86213,53 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "Bs5oWCyQBMTszdEYenKApgEwHDzx9EHinTTADZConDom",
+      "pair_address": "FezVa6BE3qx6uZe8Lyzo4wfe5wsfoBiB3xTAxffgHCFg",
+      "symbol": "CONDOM",
+      "observed_at_utc": "2026-10-14T19:38:21.843715+00:00",
+      "entry_price_usd": 0.0001437,
+      "momentum_heuristic": 6.89,
+      "change_5m_pct": -3.815,
+      "change_10m_pct": 10.624,
+      "change_15m_pct": 0.349,
+      "acceleration_pct_points": -18.827,
+      "buys_5m": 22,
+      "sells_5m": 29,
+      "buy_sell_ratio": 0.759,
+      "liquidity_usd": 34093.43,
+      "volume_5m_usd": 2199.93,
+      "v31_heuristic_score": -27.169,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "0xf40592DaACb3e5abf358789F5688C0B4f64d7777",
+      "pair_address": "0x9793a9cBb04f781433254e4530398107E6a8dcee",
+      "symbol": "FLORK",
+      "observed_at_utc": "2026-10-14T19:38:21.843715+00:00",
+      "entry_price_usd": 0.003016,
+      "momentum_heuristic": -2.4,
+      "change_5m_pct": -0.033,
+      "change_10m_pct": -0.066,
+      "change_15m_pct": -0.132,
+      "acceleration_pct_points": -0.0,
+      "buys_5m": 0,
+      "sells_5m": 1,
+      "buy_sell_ratio": 0.0,
+      "liquidity_usd": 250861.6,
+      "volume_5m_usd": 8.71,
+      "v31_heuristic_score": -7.932,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T19:36:19.630470+00:00",
+  "generated_at_utc": "2026-10-14T19:38:21.843715+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -87616,6 +87660,14 @@
     },
     "5q5pEZZwhkuazS4rGa66LcNotdsnUE9KcJ7xQmXSpump|Cxq6T1FqqwpwbnvKGP492qRUzvvLzxqAfKQupTMQd3L3": {
       "first_seen_at_utc": "2026-10-14T19:20:30.057366+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "Bs5oWCyQBMTszdEYenKApgEwHDzx9EHinTTADZConDom|FezVa6BE3qx6uZe8Lyzo4wfe5wsfoBiB3xTAxffgHCFg": {
+      "first_seen_at_utc": "2026-10-14T19:38:21.843715+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "0xf40592DaACb3e5abf358789F5688C0B4f64d7777|0x9793a9cBb04f781433254e4530398107E6a8dcee": {
+      "first_seen_at_utc": "2026-10-14T19:38:21.843715+00:00",
       "first_call_risk": "HIGH"
     }
   }
