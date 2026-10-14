@@ -8179,7 +8179,11 @@
       "observed_5m_at_utc": "2026-10-14T09:22:17.520084+00:00",
       "return_5m_pct": 2.93,
       "measurement_delay_minutes": 5.91,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0006895,
+      "observed_10m_at_utc": "2026-10-14T09:28:22.255533+00:00",
+      "measurement_10m_delay_minutes": 11.99,
+      "return_10m_pct": 4.72
     },
     {
       "day": "2026-10-14",
@@ -8197,7 +8201,11 @@
       "observed_5m_at_utc": "2026-10-14T09:24:19.495974+00:00",
       "return_5m_pct": 47.23,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001878,
+      "observed_10m_at_utc": "2026-10-14T09:28:22.255533+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 55.33
     },
     {
       "day": "2026-10-14",
@@ -8215,7 +8223,11 @@
       "observed_5m_at_utc": "2026-10-14T09:24:19.495974+00:00",
       "return_5m_pct": 6.72,
       "measurement_delay_minutes": 5.99,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 8.057e-05,
+      "observed_10m_at_utc": "2026-10-14T09:28:22.255533+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 5.38
     },
     {
       "day": "2026-10-14",
@@ -8282,10 +8294,12 @@
       "buys_5m": 18,
       "sells_5m": 9,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000104,
+      "observed_5m_at_utc": "2026-10-14T09:28:22.255533+00:00",
+      "return_5m_pct": -11.11,
+      "measurement_delay_minutes": 6.08,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -8350,11 +8364,27 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "55Vr2VpSwxsDkB6uGGHAvRv86K6zax2Zb4TT8ivwDEzW",
+      "pair_address": "BNG5962Zkbd6ZFmfAKjtCF6Z2mJbA7qn97oMsQShspLP",
+      "symbol": "slopcannon",
+      "first_alert_at_utc": "2026-10-14T09:28:22.255533+00:00",
+      "alert_price_usd": 0.0002916,
+      "initial_15m_change_pct": 14.98,
+      "buys_5m": 28,
+      "sells_5m": 17,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T09:26:19.581554+00:00"
+  "updated_at_utc": "2026-10-14T09:28:22.255533+00:00"
 }
