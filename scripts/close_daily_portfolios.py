@@ -27,12 +27,23 @@ history=json.loads((data/"history.json").read_text())
 vpath=data/"live_v31.json"
 v=json.loads(vpath.read_text())
 portfolio=v.get("daily_portfolios",{}).get(day)
-if portfolio and portfolio.get("status")!="LOCKED":
+if portfolio:
+    was_locked=portfolio.get("status")=="LOCKED"
     selected=parse(portfolio.get("selected_at_utc"))
     for item in portfolio.get("candidates",[]):
         observed=prices(history,item["mint"],item["pair_address"])
         try:entry=float(item["entry_price_usd"])
         except (ValueError,TypeError):entry=0
+        if was_locked:
+            # Preserve immutable close values; only backfill missing horizon returns.
+            observed=prices(history,item["mint"],item["pair_address"])
+            for hours in (1,4,6):
+                field=f"return_{hours}h_pct"
+                if item.get(field) is not None or not selected or entry<=0:continue
+                target=selected+timedelta(hours=hours)
+                exits=[(t,p) for t,p in observed if target<=t<=min(cutoff,target+timedelta(minutes=60))]
+                if exits:item[field]=round(100*(exits[0][1]/entry-1),3)
+            continue
         item["observed_at_utc"]=cutoff.isoformat()
         if observed and entry>0:
             t,p=observed[-1]
@@ -41,9 +52,9 @@ if portfolio and portfolio.get("status")!="LOCKED":
             for field in ("last_price_usd","last_price_at_utc","return_pct"):item.pop(field,None)
         for hours in (1,4,6):
             target=selected+timedelta(hours=hours) if selected else cutoff+timedelta(days=1)
-            exits=[(t,p) for t,p in observed if target<=t<=min(cutoff,target+timedelta(minutes=15))]
+            exits=[(t,p) for t,p in observed if target<=t<=min(cutoff,target+timedelta(minutes=60))]
             item[f"return_{hours}h_pct"]=round(100*(exits[0][1]/entry-1),3) if exits and entry>0 else None
-    portfolio.update(status="LOCKED",locked_at_utc=datetime.now(timezone.utc).isoformat(),evaluation_cutoff_utc=cutoff.isoformat())
+    if not was_locked:portfolio.update(status="LOCKED",locked_at_utc=datetime.now(timezone.utc).isoformat(),evaluation_cutoff_utc=cutoff.isoformat())
     vpath.write_text(json.dumps(v,indent=2,ensure_ascii=False)+"\n")
     print("Locked V3.1",day)
 else:print("V3.1 already locked or no portfolio",day)
