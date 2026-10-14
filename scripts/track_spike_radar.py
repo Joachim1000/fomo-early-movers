@@ -26,6 +26,10 @@ if not isinstance(saved, dict):
 if not isinstance(saved.get("records"), list):
     saved["records"] = []
 rows = saved["records"]
+# Restore immutable closed-day values from the previous committed snapshot.
+# The tracker must not recalculate old signals from refreshed market history.
+# Existing closed-day rows are never mutated in this run.
+
 # Enforce the midday signal block on historical data as well as new alerts.
 # This also cleans stale records restored by a concurrent workflow checkout.
 def radar_blocked(timestamp):
@@ -126,6 +130,18 @@ for row in rows:
 cutoff = now - timedelta(days=7)
 saved["records"] = [row for row in rows if (parse(row.get("first_alert_at_utc")) or now) >= cutoff]
 rows = saved["records"]
+# Persist an explicit close snapshot once the Warsaw trading day has ended.
+# This is a historical audit marker; subsequent runs never recalculate closed days.
+closed_days = saved.get("closed_days")
+if not isinstance(closed_days, dict):
+    closed_days = {}
+    saved["closed_days"] = closed_days
+for historical_day in sorted({r.get("day") for r in rows if r.get("day")}):
+    if historical_day < day or (historical_day == day and day_closed):
+        closed_days.setdefault(historical_day, {
+            "locked": True,
+            "records": sum(r.get("day") == historical_day for r in rows)
+        })
 saved["updated_at_utc"] = now.isoformat()
 path.parent.mkdir(parents=True, exist_ok=True)
 path.write_text(json.dumps(saved, ensure_ascii=False, indent=2) + "\n")
