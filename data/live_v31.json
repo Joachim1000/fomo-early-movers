@@ -70721,9 +70721,53 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "pair_address": "9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6",
+      "symbol": "SAINDRA",
+      "observed_at_utc": "2026-10-14T10:56:25.456558+00:00",
+      "entry_price_usd": 0.0001587,
+      "momentum_heuristic": 5.09,
+      "change_5m_pct": -6.316,
+      "change_10m_pct": -10.085,
+      "change_15m_pct": 16.094,
+      "acceleration_pct_points": -2.294,
+      "buys_5m": 17,
+      "sells_5m": 20,
+      "buy_sell_ratio": 0.85,
+      "liquidity_usd": 35524.48,
+      "volume_5m_usd": 1128.61,
+      "v31_heuristic_score": -18.411,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump",
+      "pair_address": "Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX",
+      "symbol": "pill",
+      "observed_at_utc": "2026-10-14T10:56:25.456558+00:00",
+      "entry_price_usd": 0.001271,
+      "momentum_heuristic": -0.54,
+      "change_5m_pct": 0.474,
+      "change_10m_pct": -2.68,
+      "change_15m_pct": -2.68,
+      "acceleration_pct_points": 3.614,
+      "buys_5m": 0,
+      "sells_5m": 2,
+      "buy_sell_ratio": 0.0,
+      "liquidity_usd": 159264.79,
+      "volume_5m_usd": 15.52,
+      "v31_heuristic_score": -1.368,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-14T10:54:16.480529+00:00",
+  "generated_at_utc": "2026-10-14T10:56:25.456558+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -72040,6 +72084,10 @@
     },
     "0xE7063B4C3b567b39e860f494BD4F2F6Fa6567777|0x9176c4494AA0EE78bDF424d8eF70cFf2A0CC0D7a": {
       "first_seen_at_utc": "2026-10-14T10:02:27.373690+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T|9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6": {
+      "first_seen_at_utc": "2026-10-14T10:56:25.456558+00:00",
       "first_call_risk": "HIGH"
     }
   }
