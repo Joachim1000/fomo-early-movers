@@ -13624,10 +13624,12 @@
       "buy_acceleration_pct": 175.0,
       "volume_acceleration_pct": -8.96,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001784,
+      "observed_5m_at_utc": "2026-10-14T19:44:27.755355+00:00",
+      "return_5m_pct": 2.06,
+      "measurement_delay_minutes": 6.1,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-14",
@@ -13648,11 +13650,31 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-14",
+      "mint": "0x34B658a2815F2a34C752A051a7C84bBc39B07777",
+      "pair_address": "0x24e8B27626b74BA5A067FF54992b55513dcB297C",
+      "symbol": "宇树科技",
+      "first_alert_at_utc": "2026-10-14T19:44:27.755355+00:00",
+      "alert_price_usd": 0.000806,
+      "initial_15m_change_pct": 12.82,
+      "buys_5m": 123,
+      "sells_5m": 81,
+      "volume_5m_usd": 12889.88,
+      "liquidity_usd": 99693.48,
+      "buy_acceleration_pct": 33.7,
+      "volume_acceleration_pct": 111.54,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-14T19:42:19.477418+00:00"
+  "updated_at_utc": "2026-10-14T19:44:27.755355+00:00"
 }
