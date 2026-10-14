@@ -1447,7 +1447,8 @@
       "status": "NOT_VERIFIABLE",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "status_10m": "NOT_VERIFIABLE"
     },
     {
       "day": "2026-10-14",
@@ -1479,5 +1480,5 @@
   ],
   "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-14T20:46:19.421782+00:00"
+  "updated_at_utc": "2026-10-14T20:48:18.329693+00:00"
 }
