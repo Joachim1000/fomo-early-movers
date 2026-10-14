@@ -524,14 +524,15 @@ function selectDailyBetaSignals(allRecords){
   const buys=n(x.buys_5m),sells=n(x.sells_5m),change=n(x.initial_15m_change_pct);
   return Number.isFinite(buys)&&Number.isFinite(sells)&&Number.isFinite(change)&&buys>=20&&buys/Math.max(1,sells)>=1.5&&change>=3&&change<=35;
  }).sort((a,b)=>Date.parse(a.first_alert_at_utc)-Date.parse(b.first_alert_at_utc));
- const lastByPair=new Map(),selected=[];
- for(const x of candidates){
-  const key=(x.mint||x.symbol||'')+'|'+(x.pair_address||'');
-  const at=Date.parse(x.first_alert_at_utc),last=lastByPair.get(key);
-  if(last!=null&&at-last<15*60*1000)continue;
-  selected.push(x);lastByPair.set(key,at);
- }
- return selected;
+ // No cooldown: every separately timestamped qualified alert can represent a new spike.
+ // Remove only identical copies of the exact same signal.
+ const seen=new Set();
+ return candidates.filter(x=>{
+  const key=(x.mint||x.symbol||'')+'|'+(x.pair_address||'')+'|'+new Date(x.first_alert_at_utc).toISOString();
+  if(seen.has(key))return false;
+  seen.add(key);
+  return true;
+ });
 }
 // Shared trading-day filter for Spike Radar, Beta and Performance.
 // Keeps counts aligned across tabs, including Warsaw DST transitions.
