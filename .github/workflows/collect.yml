@@ -159,8 +159,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Scripts were loaded from main for execution; never commit them to the data branch.
-          git restore -- scripts/collect.py scripts/track_spike_radar_v2.py scripts/track_beta_live_daily.py scripts/lock_daily.py
-          rm -f scripts/track_spike_radar.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py
+          git restore -- scripts/collect.py scripts/track_beta_live_daily.py scripts/lock_daily.py
+          rm -f scripts/track_spike_radar.py scripts/track_spike_radar_v2.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py
 
           # Never publish a blank or invalid V3.1 file: it removes the LIVE list.
           python3 - <<'PY'
