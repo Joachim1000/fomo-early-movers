@@ -5692,7 +5692,12 @@
       "price_5m_usd": 0.0005258,
       "observed_5m_at_utc": "2026-10-14T07:20:32.509220+00:00",
       "return_5m_pct": 7.86,
-      "measurement_delay_minutes": 6.07
+      "measurement_delay_minutes": 6.07,
+      "price_10m_usd": 0.0005258,
+      "observed_10m_at_utc": "2026-10-14T07:26:24.385098+00:00",
+      "measurement_10m_delay_minutes": 11.93,
+      "return_10m_pct": 7.86,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5709,7 +5714,12 @@
       "price_5m_usd": 0.0005845,
       "observed_5m_at_utc": "2026-10-14T07:22:20.131729+00:00",
       "return_5m_pct": -11.39,
-      "measurement_delay_minutes": 6.04
+      "measurement_delay_minutes": 6.04,
+      "price_10m_usd": 0.0006027,
+      "observed_10m_at_utc": "2026-10-14T07:26:24.385098+00:00",
+      "measurement_10m_delay_minutes": 10.11,
+      "return_10m_pct": -8.63,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-14",
@@ -5722,10 +5732,11 @@
       "buys_5m": 12,
       "sells_5m": 1,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002613,
+      "observed_5m_at_utc": "2026-10-14T07:26:24.385098+00:00",
+      "return_5m_pct": -2.1,
+      "measurement_delay_minutes": 5.86
     },
     {
       "day": "2026-10-14",
@@ -5738,10 +5749,11 @@
       "buys_5m": 14,
       "sells_5m": 2,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.002296,
+      "observed_5m_at_utc": "2026-10-14T07:26:24.385098+00:00",
+      "return_5m_pct": 1.86,
+      "measurement_delay_minutes": 5.86
     },
     {
       "day": "2026-10-14",
@@ -5761,5 +5773,5 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-14T07:24:20.663172+00:00"
+  "updated_at_utc": "2026-10-14T07:26:24.385098+00:00"
 }
