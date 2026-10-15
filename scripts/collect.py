@@ -370,7 +370,7 @@ for mint, pair in best.items():
                         if prior_buys is not None and prior_buys > 0 else None)
     strong_pressure = buys >= 1.5 * max(sells, 1)
     strong_acceleration = buy_acceleration is not None and buy_acceleration >= 10
-    radar_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
+    radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 10, 14, 15, 20, 21)
     fast_alert = (solana_only and strong_acceleration and radar_time_allowed and
                   pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
