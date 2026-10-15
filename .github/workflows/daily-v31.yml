@@ -1,0 +1,96 @@
+name: FOMO Daily V3.1 Schedule
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC alternatives for Europe/Warsaw daylight-saving transitions.
+    # The local-time guard below selects the correct one.
+    - cron: "3 4,5 * * *"
+    - cron: "33 21,22 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fomo-data-collection
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Warsaw daily schedule
+        id: window
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo('Europe/Warsaw'))
+          minutes=now.hour*60+now.minute
+          # Allow modest GitHub Actions scheduling delays; run at most once per day.
+          morning=360<=minutes<400
+          close=1410<=minutes<1440
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f"morning={str(morning).lower()}\nclose={str(close).lower()}\n")
+          print('Warsaw time:',now.isoformat(),'morning:',morning,'close:',close)
+          PY
+      - name: Checkout market data
+        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: market-data
+          persist-credentials: true
+      - name: Install Python dependencies
+        if: steps.window.outputs.morning == 'true'
+        run: |
+          git fetch --depth=1 origin main
+          git show origin/main:requirements.txt > /tmp/fomo-requirements.txt
+          pip install -r /tmp/fomo-requirements.txt
+      - name: Load current scripts
+        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        run: |
+          git fetch --depth=1 origin main
+          for script in collect.py track_live_v31.py lock_daily.py; do
+            git show "origin/main:scripts/$script" > "scripts/$script"
+          done
+      - name: Refresh market snapshot for morning selection
+        if: steps.window.outputs.morning == 'true'
+        env:
+          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
+        run: python scripts/collect.py
+      - name: Generate fixed Daily V3.1 selection
+        if: steps.window.outputs.morning == 'true'
+        run: |
+          python scripts/track_live_v31.py
+          python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          data=json.load(open('data/live_v31.json'))
+          today=datetime.now(ZoneInfo('Europe/Warsaw')).date().isoformat()
+          portfolio=data.get('daily_portfolios',{}).get(today)
+          if not portfolio or not portfolio.get('candidates'):
+              raise SystemExit('No candidates selected for Warsaw day '+today)
+          print('Daily V3.1',today,len(portfolio['candidates']),'candidates')
+          PY
+      - name: Lock daily screening snapshot
+        if: steps.window.outputs.close == 'true'
+        run: python scripts/lock_daily.py
+      - name: Commit daily data
+        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git restore -- scripts/collect.py scripts/lock_daily.py
+          rm -f scripts/track_live_v31.py
+          if [ "${{ steps.window.outputs.morning }}" = "true" ]; then
+            git add data/latest.json data/history.json data/live_v31.json
+            for file in data/fomo_cache.json; do if [ -f "$file" ]; then git add "$file"; fi; done
+          else
+            git add data/daily_snapshots.json
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Update scheduled Daily V3.1 data"
+            git push origin HEAD:market-data
+          fi
