@@ -364,8 +364,14 @@ for mint, pair in best.items():
                       buys >= 8 and buys >= 1.5 * max(sells, 1) and
                       change_2_5m is not None and 2 <= change_2_5m <= 25 and
                       prior_buys is not None and buys >= prior_buys * 1.2)
+    # Only Solana candidates can become actionable radar signals.
+    solana_only = str(pair.get("chainId", "")).lower() == "solana"
+    buy_acceleration = (100 * (buys / prior_buys - 1)
+                        if prior_buys is not None and prior_buys > 0 else None)
+    strong_pressure = buys >= 1.5 * max(sells, 1)
+    strong_acceleration = buy_acceleration is not None and buy_acceleration >= 10
     radar_time_allowed = not (12 <= NOW.astimezone(WARSAW).hour < 15)
-    fast_alert = (radar_time_allowed and
+    fast_alert = (solana_only and strong_acceleration and radar_time_allowed and
                   pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
@@ -384,7 +390,7 @@ for mint, pair in best.items():
         (10 if change_15m is not None and 3 <= change_15m <= 15 else 0)
         - (30 if exhaustion else 0)))
     # The same midday signal pause applies to both Spike Radar models.
-    v2_alert = (radar_time_allowed and
+    v2_alert = (solana_only and strong_pressure and strong_acceleration and radar_time_allowed and
                 pair_age_hours is not None and pair_age_hours > 2 and
                 fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                 liquidity >= 5000 and volume >= 1500 and
@@ -401,6 +407,7 @@ for mint, pair in best.items():
         "buy_acceleration_pct": round(100 * (buys / prior_buys - 1), 2) if prior_buys is not None and prior_buys > 0 else None,
         "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
+        "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if solana_only and radar_time_allowed and pair_age_hours is not None and pair_age_hours > 2 and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 3 else None,
         "change_15m_pct": change_15m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
