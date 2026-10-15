@@ -109349,7 +109349,7 @@
     "2026-10-15": {
       "selected_at_utc": "2026-10-15T06:00:50.539336+00:00",
       "selection_target_local": "08:00",
-      "status": "ACTIVE",
+      "status": "LOCKED",
       "selection_basis": "previous_24h_observations",
       "candidates": [
         {
@@ -109366,7 +109366,14 @@
           "sells_5m": 0,
           "change_15m_pct": 2.745,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.004636,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": -33.044,
+          "return_1h_pct": -47.53,
+          "return_4h_pct": -50.968,
+          "return_6h_pct": -47.241
         },
         {
           "mint": "0x0f8B5B82A8A62137e4eA563A3709fE4Ca1fF1A2D",
@@ -109382,7 +109389,14 @@
           "sells_5m": 0,
           "change_15m_pct": 1.756,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 4.451e-05,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": -87.609,
+          "return_1h_pct": -70.685,
+          "return_4h_pct": -61.609,
+          "return_6h_pct": -70.212
         },
         {
           "mint": "HKJa4Y8actmpGvHpgL6DBWjsUjVt8r6bmvPaV33fpump",
@@ -109398,7 +109412,14 @@
           "sells_5m": 4,
           "change_15m_pct": 8.706,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 6.418e-06,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": -92.496,
+          "return_1h_pct": -93.091,
+          "return_4h_pct": -92.942,
+          "return_6h_pct": -93.311
         },
         {
           "mint": "2N8c4pXu6T2oBxE8ZDBYb3QgwMkyTe673HiBaYSNpump",
@@ -109414,7 +109435,14 @@
           "sells_5m": 2,
           "change_15m_pct": 18.509,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 1.246e-05,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": -81.378,
+          "return_1h_pct": -59.304,
+          "return_4h_pct": -64.191,
+          "return_6h_pct": -62.188
         },
         {
           "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
@@ -109430,7 +109458,14 @@
           "sells_5m": 0,
           "change_15m_pct": 1.389,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.006948,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": 5.737,
+          "return_1h_pct": 14.579,
+          "return_4h_pct": 13.392,
+          "return_6h_pct": -8.659
         },
         {
           "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -109446,7 +109481,14 @@
           "sells_5m": 0,
           "change_15m_pct": 0.0,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "LOW RELATIVE"
+          "first_call_risk": "LOW RELATIVE",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.006945,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": 166.092,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
@@ -109462,7 +109504,14 @@
           "sells_5m": 12,
           "change_15m_pct": 10.387,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.001639,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": 22.405,
+          "return_1h_pct": -10.082,
+          "return_4h_pct": -0.075,
+          "return_6h_pct": -2.24
         },
         {
           "mint": "CZ3X9XUxSTc1hN9iGPteG3iKoXGC4q332bmWi4JBpump",
@@ -109478,7 +109527,14 @@
           "sells_5m": 5,
           "change_15m_pct": 19.33,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "LOW RELATIVE"
+          "first_call_risk": "LOW RELATIVE",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.0001012,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": 19.396,
+          "return_1h_pct": 41.812,
+          "return_4h_pct": 26.239,
+          "return_6h_pct": 49.599
         },
         {
           "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -109494,7 +109550,14 @@
           "sells_5m": 0,
           "change_15m_pct": 1.128,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.01731,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": 37.928,
+          "return_1h_pct": -6.932,
+          "return_4h_pct": 17.689,
+          "return_6h_pct": 19.363
         },
         {
           "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
@@ -109510,9 +109573,18 @@
           "sells_5m": 0,
           "change_15m_pct": 11.681,
           "candidate_source": "DAILY_FIXED_SELECTION",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-15T21:30:00+00:00",
+          "last_price_usd": 0.0004914,
+          "last_price_at_utc": "2026-10-15T20:45:34.753490+00:00",
+          "return_pct": -39.676,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         }
-      ]
+      ],
+      "locked_at_utc": "2026-10-15T21:40:34.487019+00:00",
+      "evaluation_cutoff_utc": "2026-10-15T21:30:00+00:00"
     }
   },
   "first_calls": {
