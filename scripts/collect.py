@@ -472,6 +472,8 @@ payload = {
     "tracked_recommendation_mints": len(recent_recommendations),
     "refreshed_tracked_mints": len(tracked_pairs),
     "eligible_4h_count": len(eligible_candidates),
+    "spike_watch_count": sum(x.get("spike_signal_tier") == "WATCH" for x in candidates),
+    "spike_watch_candidates": [x for x in candidates if x.get("spike_signal_tier") == "WATCH"][:20],
     "spike_v2_count": len(spike_v2_candidates),
     "spike_v2_candidates": spike_v2_candidates[:20],
     "early_momentum_count": len(early_momentum_candidates),
