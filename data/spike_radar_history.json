@@ -17136,10 +17136,12 @@
       "buy_acceleration_pct": 73.33,
       "volume_acceleration_pct": 146.78,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.00155,
+      "observed_5m_at_utc": "2026-10-15T06:26:16.805812+00:00",
+      "return_5m_pct": 2.24,
+      "measurement_delay_minutes": 5.86,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -17156,10 +17158,12 @@
       "buy_acceleration_pct": -23.44,
       "volume_acceleration_pct": -35.92,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002608,
+      "observed_5m_at_utc": "2026-10-15T06:26:16.805812+00:00",
+      "return_5m_pct": 12.8,
+      "measurement_delay_minutes": 5.86,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -17240,13 +17244,53 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "Fk5MuGv2H3Qpt6AxdhS2KHgDL2os424BvfEoqFNTdv9Y",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-15T06:26:16.805812+00:00",
+      "alert_price_usd": 0.0002608,
+      "initial_15m_change_pct": 28.41,
+      "buys_5m": 25,
+      "sells_5m": 16,
+      "volume_5m_usd": 1660.46,
+      "liquidity_usd": 44790.44,
+      "buy_acceleration_pct": -54.55,
+      "volume_acceleration_pct": -80.7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "0x151a674aa51FF8DEF71247eB9f6406152BF57777",
+      "pair_address": "0x0A9C5BCc4560f853451DF8F64692297a5073EaF8",
+      "symbol": "MJ",
+      "first_alert_at_utc": "2026-10-15T06:26:16.805812+00:00",
+      "alert_price_usd": 7.571e-05,
+      "initial_15m_change_pct": 15.39,
+      "buys_5m": 30,
+      "sells_5m": 16,
+      "volume_5m_usd": 2118.71,
+      "liquidity_usd": 26385.08,
+      "buy_acceleration_pct": -63.86,
+      "volume_acceleration_pct": -73.67,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T06:24:23.362075+00:00",
+  "updated_at_utc": "2026-10-15T06:26:16.805812+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
