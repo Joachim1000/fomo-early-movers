@@ -1805,11 +1805,34 @@
       "measurement_10m_delay_minutes": 12.18,
       "return_10m_pct": 3.06,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-15T07:00:54.225741+00:00",
+      "alert_price_usd": 0.004084,
+      "initial_15m_change_pct": 4.24,
+      "buys_5m": 17,
+      "sells_5m": 2,
+      "volume_5m_usd": 3603.05,
+      "liquidity_usd": 287487.97,
+      "buy_acceleration_pct": 240.0,
+      "volume_acceleration_pct": 27.81,
+      "spike_v2_score": 82,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T06:58:17.445905+00:00",
+  "updated_at_utc": "2026-10-15T07:00:54.225741+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
