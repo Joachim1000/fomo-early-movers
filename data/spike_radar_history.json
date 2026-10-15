@@ -16329,7 +16329,11 @@
       "observed_5m_at_utc": "2026-10-15T05:52:25.671677+00:00",
       "return_5m_pct": 26.89,
       "measurement_delay_minutes": 6.15,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001371,
+      "observed_10m_at_utc": "2026-10-15T05:58:18.504579+00:00",
+      "measurement_10m_delay_minutes": 12.03,
+      "return_10m_pct": 33.11
     },
     {
       "day": "2026-10-15",
@@ -16434,10 +16438,12 @@
       "buy_acceleration_pct": 52.08,
       "volume_acceleration_pct": 83.17,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001371,
+      "observed_5m_at_utc": "2026-10-15T05:58:18.504579+00:00",
+      "return_5m_pct": 4.9,
+      "measurement_delay_minutes": 5.88,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -16454,10 +16460,12 @@
       "buy_acceleration_pct": 44.74,
       "volume_acceleration_pct": 32.48,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000487,
+      "observed_5m_at_utc": "2026-10-15T05:58:18.504579+00:00",
+      "return_5m_pct": -0.37,
+      "measurement_delay_minutes": 5.88,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -16474,10 +16482,12 @@
       "buy_acceleration_pct": 800.0,
       "volume_acceleration_pct": 27.44,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.01081,
+      "observed_5m_at_utc": "2026-10-15T05:58:18.504579+00:00",
+      "return_5m_pct": -4.25,
+      "measurement_delay_minutes": 5.88,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -16564,7 +16574,7 @@
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T05:56:15.727881+00:00",
+  "updated_at_utc": "2026-10-15T05:58:18.504579+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
