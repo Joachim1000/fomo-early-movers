@@ -1137,7 +1137,7 @@ async function loadSpikeRadarBeta(){
  if(!historyTarget)return;
  if(!historyTarget.dataset.loaded)historyTarget.innerHTML='<tr><td colspan="12">Updating V2 signals…</td></tr>';
  try{
-  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+  const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'spike_radar_v2_history.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('History HTTP '+response.status);
   const data=await response.json(),allRecords=Array.isArray(data.records)?data.records:[];
