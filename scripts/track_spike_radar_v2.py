@@ -61,7 +61,7 @@ current = set()
 for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get("spike_v2_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
-    if not mint or not pair or not price:
+    if not mint or not pair or not price or str(item.get("network", "")).lower() != "solana":
         continue
     # Beta entry guard: avoid already-extended 15m momentum (>15%).
     # Missing/non-numeric changes are rejected rather than silently bypassing the guard.
@@ -77,6 +77,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         continue
     rows.append({
         "day": day, "mint": mint, "pair_address": pair,
+        "signal_tier": "STRONG SIGNAL", "network": item.get("network"),
         "symbol": item.get("symbol") or mint[:8],
         "first_alert_at_utc": now.isoformat(), "alert_price_usd": price,
         "initial_15m_change_pct": item.get("change_15m_pct"),
