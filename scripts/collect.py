@@ -66,8 +66,9 @@ def fetch_fomo_board(board):
         **metadata
     }
 
-# Refresh FOMO boards every five minutes, around the clock (including weekends).
-# The external trigger must also run at least every five minutes.
+# Conserve paid FOMO calls: refresh leaderboard boards at most every 15 minutes.
+# Collection is separately gated to 07:00–11:00 and 14:00–16:00 Warsaw time.
+# DEX market prices can still refresh on each active collection run.
 FOMO_CACHE_PATH = Path("data/fomo_cache.json")
 fomo_now = datetime.now(timezone.utc)
 try:
@@ -80,7 +81,7 @@ try:
     cache_age = (fomo_now - datetime.fromisoformat(cached_at.replace("Z", "+00:00"))).total_seconds()
 except (AttributeError, ValueError, TypeError):
     cache_age = float("inf")
-refresh_fomo = cache_age >= 300 or len(cached_boards) != 3
+refresh_fomo = cache_age >= 900 or len(cached_boards) != 3
 if refresh_fomo:
     with ThreadPoolExecutor(max_workers=3) as pool:
         boards = list(pool.map(fetch_fomo_board, ("trending", "graduated", "most-held")))
