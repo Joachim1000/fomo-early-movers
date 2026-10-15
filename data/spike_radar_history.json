@@ -18279,7 +18279,11 @@
       "observed_5m_at_utc": "2026-10-15T07:06:18.076819+00:00",
       "return_5m_pct": 1.17,
       "measurement_delay_minutes": 5.4,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0004875,
+      "observed_10m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "measurement_10m_delay_minutes": 11.53,
+      "return_10m_pct": -9.52
     },
     {
       "day": "2026-10-15",
@@ -18301,7 +18305,11 @@
       "observed_5m_at_utc": "2026-10-15T07:06:18.076819+00:00",
       "return_5m_pct": 0.98,
       "measurement_delay_minutes": 5.4,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.004157,
+      "observed_10m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "measurement_10m_delay_minutes": 11.53,
+      "return_10m_pct": 1.79
     },
     {
       "day": "2026-10-15",
@@ -18323,7 +18331,11 @@
       "observed_5m_at_utc": "2026-10-15T07:08:17.256837+00:00",
       "return_5m_pct": -11.78,
       "measurement_delay_minutes": 5.97,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0004875,
+      "observed_10m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "measurement_10m_delay_minutes": 10.12,
+      "return_10m_pct": -12.76
     },
     {
       "day": "2026-10-15",
@@ -18345,7 +18357,11 @@
       "observed_5m_at_utc": "2026-10-15T07:08:17.256837+00:00",
       "return_5m_pct": 6.46,
       "measurement_delay_minutes": 5.97,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001834,
+      "observed_10m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "measurement_10m_delay_minutes": 10.12,
+      "return_10m_pct": 3.85
     },
     {
       "day": "2026-10-15",
@@ -18367,7 +18383,11 @@
       "observed_5m_at_utc": "2026-10-15T07:08:17.256837+00:00",
       "return_5m_pct": 3.07,
       "measurement_delay_minutes": 5.97,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0007776,
+      "observed_10m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "measurement_10m_delay_minutes": 10.12,
+      "return_10m_pct": -2.67
     },
     {
       "day": "2026-10-15",
@@ -18450,11 +18470,12 @@
       "buy_acceleration_pct": 137.5,
       "volume_acceleration_pct": -44.82,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null,
-      "status_10m": "PENDING"
+      "status": "MEASURED",
+      "price_5m_usd": 0.004157,
+      "observed_5m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "return_5m_pct": 1.64,
+      "status_10m": "PENDING",
+      "measurement_delay_minutes": 8.13
     },
     {
       "day": "2026-10-15",
@@ -18471,10 +18492,12 @@
       "buy_acceleration_pct": -25.69,
       "volume_acceleration_pct": -58.66,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0004875,
+      "observed_5m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "return_5m_pct": -10.57,
+      "measurement_delay_minutes": 6.13,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -18491,10 +18514,12 @@
       "buy_acceleration_pct": 23.53,
       "volume_acceleration_pct": -50.18,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004157,
+      "observed_5m_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "return_5m_pct": 0.8,
+      "measurement_delay_minutes": 6.13,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -18579,13 +18604,55 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "JCsfUhtjjHpfMuRTDk2VXTStGU2z1Uz17aWHjkPdpump",
+      "pair_address": "9vxJnC1er9jyK1VxUHJEV21BddEyQnVqezTs89XpZBN2",
+      "symbol": "QPF",
+      "first_alert_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "alert_price_usd": 0.0001323,
+      "initial_15m_change_pct": 11.83,
+      "buys_5m": 27,
+      "sells_5m": 10,
+      "volume_5m_usd": 1370.51,
+      "liquidity_usd": 31069.17,
+      "estimated_100usd_buy_impact_pct": 0.64,
+      "buy_acceleration_pct": 28.57,
+      "volume_acceleration_pct": 7.11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "3sKaoPryg4KrXubLWtoqF7MznLT7QNqKRxMMkkxTpump",
+      "pair_address": "HvYfFr8nm6bn9V93TDDMgqWwS2D2LsMn1Y3rDCToqeAB",
+      "symbol": "SEALS",
+      "first_alert_at_utc": "2026-10-15T07:12:25.944394+00:00",
+      "alert_price_usd": 0.0003258,
+      "initial_15m_change_pct": 4.56,
+      "buys_5m": 29,
+      "sells_5m": 15,
+      "volume_5m_usd": 2862.46,
+      "liquidity_usd": 60651.72,
+      "estimated_100usd_buy_impact_pct": 0.33,
+      "buy_acceleration_pct": -3.33,
+      "volume_acceleration_pct": -60.76,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T07:10:26.527556+00:00",
+  "updated_at_utc": "2026-10-15T07:12:25.944394+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
