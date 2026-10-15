@@ -2075,11 +2075,34 @@
       "measurement_10m_delay_minutes": 15.86,
       "return_10m_pct": 0.1,
       "status_10m": "DELAYED"
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-15T13:18:22.115493+00:00",
+      "alert_price_usd": 0.00463,
+      "initial_15m_change_pct": 8.46,
+      "buys_5m": 17,
+      "sells_5m": 2,
+      "volume_5m_usd": 5458.08,
+      "liquidity_usd": 363694.62,
+      "buy_acceleration_pct": 88.89,
+      "volume_acceleration_pct": -30.27,
+      "spike_v2_score": 87,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM|DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T13:16:19.795676+00:00",
+  "updated_at_utc": "2026-10-15T13:18:22.115493+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
