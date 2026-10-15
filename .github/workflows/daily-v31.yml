@@ -73,8 +73,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git restore -- scripts/collect.py
           rm -f scripts/track_live_v31.py
-            git add data/latest.json data/history.json data/live_v31.json
-            for file in data/fomo_cache.json; do if [ -f "$file" ]; then git add "$file"; fi; done
+          git add data/latest.json data/history.json data/live_v31.json
+          for file in data/fomo_cache.json; do if [ -f "$file" ]; then git add "$file"; fi; done
 
           if ! git diff --cached --quiet; then
             git commit -m "Update scheduled Daily V3.1 data"
