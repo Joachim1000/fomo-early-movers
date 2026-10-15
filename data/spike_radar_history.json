@@ -24067,7 +24067,11 @@
       "observed_5m_at_utc": "2026-10-15T19:28:19.857805+00:00",
       "return_5m_pct": -2.97,
       "measurement_delay_minutes": 6.02,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001438,
+      "observed_10m_at_utc": "2026-10-15T19:34:20.045988+00:00",
+      "measurement_10m_delay_minutes": 12.02,
+      "return_10m_pct": -7.11
     },
     {
       "day": "2026-10-15",
@@ -24116,13 +24120,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "Diy4Q5aiNEcdn7CWhuwYtuoHtHD9rKBTHCa9hi4qpump",
+      "pair_address": "91TcJ2v9wFs11pkvyZkNTswC35cB1tUJXpkUgsGnRJcQ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "STREAM",
+      "first_alert_at_utc": "2026-10-15T19:34:20.045988+00:00",
+      "alert_price_usd": 0.000122,
+      "initial_15m_change_pct": 21.88,
+      "buys_5m": 53,
+      "sells_5m": 20,
+      "volume_5m_usd": 2419.07,
+      "liquidity_usd": 30925.66,
+      "estimated_100usd_buy_impact_pct": 0.64,
+      "buy_acceleration_pct": 10.42,
+      "volume_acceleration_pct": 8.72,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T19:32:17.422990+00:00",
+  "updated_at_utc": "2026-10-15T19:34:20.045988+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
