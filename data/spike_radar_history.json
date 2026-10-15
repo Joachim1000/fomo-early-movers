@@ -23081,7 +23081,11 @@
       "observed_5m_at_utc": "2026-10-15T18:30:46.404047+00:00",
       "return_5m_pct": 0.37,
       "measurement_delay_minutes": 6.47,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001217,
+      "observed_10m_at_utc": "2026-10-15T18:34:20.592631+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 13.21
     },
     {
       "day": "2026-10-15",
@@ -23101,10 +23105,12 @@
       "buy_acceleration_pct": 60.0,
       "volume_acceleration_pct": 67.16,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001217,
+      "observed_5m_at_utc": "2026-10-15T18:34:20.592631+00:00",
+      "return_5m_pct": 8.95,
+      "measurement_delay_minutes": 6.02,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -23124,10 +23130,12 @@
       "buy_acceleration_pct": 68.57,
       "volume_acceleration_pct": 125.31,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0001463,
+      "observed_5m_at_utc": "2026-10-15T18:34:20.592631+00:00",
+      "return_5m_pct": 5.86,
+      "measurement_delay_minutes": 6.02,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -23151,13 +23159,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump",
+      "pair_address": "AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "DIKSHIT",
+      "first_alert_at_utc": "2026-10-15T18:34:20.592631+00:00",
+      "alert_price_usd": 0.0003812,
+      "initial_15m_change_pct": 7.93,
+      "buys_5m": 111,
+      "sells_5m": 73,
+      "volume_5m_usd": 16889.3,
+      "liquidity_usd": 57356.71,
+      "estimated_100usd_buy_impact_pct": 0.35,
+      "buy_acceleration_pct": 19.35,
+      "volume_acceleration_pct": -30.99,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T18:32:20.763659+00:00",
+  "updated_at_utc": "2026-10-15T18:34:20.592631+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
