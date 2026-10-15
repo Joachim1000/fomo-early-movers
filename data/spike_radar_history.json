@@ -20975,10 +20975,12 @@
       "buy_acceleration_pct": 141.67,
       "volume_acceleration_pct": -62.41,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.005045,
+      "observed_5m_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "return_5m_pct": 2.21,
+      "measurement_delay_minutes": 6.12,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -20996,10 +20998,12 @@
       "buy_acceleration_pct": -41.3,
       "volume_acceleration_pct": -88.69,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0007653,
+      "observed_5m_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "return_5m_pct": 1.7,
+      "measurement_delay_minutes": 6.12,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -21017,10 +21021,12 @@
       "buy_acceleration_pct": 140.0,
       "volume_acceleration_pct": -94.43,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0134,
+      "observed_5m_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "return_5m_pct": -3.8,
+      "measurement_delay_minutes": 6.12,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -21038,10 +21044,12 @@
       "buy_acceleration_pct": -11.11,
       "volume_acceleration_pct": 112.76,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001853,
+      "observed_5m_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "return_5m_pct": 8.49,
+      "measurement_delay_minutes": 6.12,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -21105,13 +21113,55 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump",
+      "pair_address": "AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn",
+      "symbol": "DIKSHIT",
+      "first_alert_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "alert_price_usd": 0.0002039,
+      "initial_15m_change_pct": 13.97,
+      "buys_5m": 17,
+      "sells_5m": 6,
+      "volume_5m_usd": 1924.85,
+      "liquidity_usd": 40252.81,
+      "estimated_100usd_buy_impact_pct": 0.49,
+      "buy_acceleration_pct": 240.0,
+      "volume_acceleration_pct": 512.0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-15T08:50:27.107781+00:00",
+      "alert_price_usd": 0.007848,
+      "initial_15m_change_pct": 6.33,
+      "buys_5m": 8,
+      "sells_5m": 2,
+      "volume_5m_usd": 6035.14,
+      "liquidity_usd": 650065.97,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 33.33,
+      "volume_acceleration_pct": -64.77,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T08:48:27.351569+00:00",
+  "updated_at_utc": "2026-10-15T08:50:27.107781+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
