@@ -15744,13 +15744,33 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "0x8E7307BEE5200a0D6Ae4ddE971383Db19b277777",
+      "pair_address": "0xB8Cf4B21B07Bf725082eDD3254550eF0ead9A025",
+      "symbol": "CATTO",
+      "first_alert_at_utc": "2026-10-15T05:08:16.178076+00:00",
+      "alert_price_usd": 0.0003986,
+      "initial_15m_change_pct": 7.99,
+      "buys_5m": 20,
+      "sells_5m": 12,
+      "volume_5m_usd": 3613.41,
+      "liquidity_usd": 66408.54,
+      "buy_acceleration_pct": 400.0,
+      "volume_acceleration_pct": 376.08,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T05:06:24.121529+00:00",
+  "updated_at_utc": "2026-10-15T05:08:16.178076+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
