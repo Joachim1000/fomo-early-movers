@@ -17,6 +17,18 @@ def number(value):
     except (ValueError, TypeError):
         return None
 
+def estimate_buy_impact_pct(liquidity_usd, trade_usd=100):
+    """Approximate $100 buy impact for a balanced constant-product AMM pool.
+
+    Liquidity is assumed to be total pool TVL, half in quote assets.
+    Excludes DEX fees, routing, concentrated liquidity and MEV.
+    """
+    liquidity = number(liquidity_usd)
+    if liquidity is None:
+        return None
+    quote_reserve = liquidity / 2
+    return round(100 * trade_usd / (quote_reserve + trade_usd), 2)
+
 latest = json.loads(Path("data/latest.json").read_text())
 history = json.loads(Path("data/history.json").read_text())
 path = Path("data/spike_radar_history.json")
@@ -74,6 +86,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         "sells_5m": item.get("sell_transactions_5m"),
         "volume_5m_usd": item.get("volume_5m_usd"),
         "liquidity_usd": item.get("liquidity_usd"),
+        "estimated_100usd_buy_impact_pct": estimate_buy_impact_pct(item.get("liquidity_usd")),
         "buy_acceleration_pct": item.get("buy_acceleration_pct"),
         "volume_acceleration_pct": item.get("volume_acceleration_pct"),
         "measurement_minutes": 5, "status": "PENDING", "price_5m_usd": None,
