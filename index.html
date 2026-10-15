@@ -609,7 +609,7 @@ async function forceRefreshPerformance(){
 let radarSharedCache=null,radarSharedPromise=null,radarSharedFetchedAt=0;
 async function getSharedRadarHistory(){
  const now=Date.now();
- if(radarSharedCache&&now-radarSharedFetchedAt<60000)return radarSharedCache;
+ if(radarSharedCache&&now-radarSharedFetchedAt<10000)return radarSharedCache;
  if(radarSharedPromise)return radarSharedPromise;
  radarSharedPromise=(async()=>{
   const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
@@ -634,7 +634,7 @@ function isWarsawBlockedSignal(timestamp){
  const ms=Date.parse(timestamp||'');
  if(!Number.isFinite(ms))return false;
  const hour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',hourCycle:'h23'}).format(new Date(ms)));
- return !([7,8,9,10,14,15].includes(hour));
+ return !([7,8,9,10,14,15,20,21].includes(hour));
 }
 function canonicalRadarSignals(records){
  const byId=new Map();
