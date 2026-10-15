@@ -1854,11 +1854,34 @@
       "observed_5m_at_utc": "2026-10-15T07:12:25.944394+00:00",
       "return_5m_pct": 0.8,
       "measurement_delay_minutes": 6.13
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-15T07:14:16.806317+00:00",
+      "alert_price_usd": 0.0008335,
+      "initial_15m_change_pct": 3.05,
+      "buys_5m": 28,
+      "sells_5m": 10,
+      "volume_5m_usd": 3562.88,
+      "liquidity_usd": 84845.88,
+      "buy_acceleration_pct": 64.71,
+      "volume_acceleration_pct": 125.88,
+      "spike_v2_score": 88,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|4powEghZAR3Qd2HpbKrkyq8bB3dy7vAnSZHbQ3rSXrYh": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T07:12:25.944394+00:00",
+  "updated_at_utc": "2026-10-15T07:14:16.806317+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
