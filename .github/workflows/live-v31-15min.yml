@@ -1,0 +1,84 @@
+name: 05 | LIVE V3.1 Market Updates (15 min)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 15 minutes, UTC. Warsaw-local guard handles CET/CEST.
+    - cron: "*/15 4-22 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fomo-data-collection
+  cancel-in-progress: false
+
+jobs:
+  live-v31:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check LIVE V3.1 collection window (Europe/Warsaw)
+        id: window
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("Europe/Warsaw"))
+          minute=now.hour*60+now.minute
+          enabled=360<=minute<1410
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:
+              f.write("enabled="+str(enabled).lower()+"\n")
+          print("LIVE V3.1", "enabled" if enabled else "paused", now.isoformat())
+          PY
+
+      - name: Checkout market data
+        if: steps.window.outputs.enabled == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: market-data
+          persist-credentials: true
+
+      - name: Load current collection and LIVE scripts
+        if: steps.window.outputs.enabled == 'true'
+        run: |
+          git fetch --depth=1 origin main
+          git show origin/main:scripts/collect.py > scripts/collect.py
+          git show origin/main:scripts/track_live_v31.py > scripts/track_live_v31.py
+
+      - name: Collect market data
+        if: steps.window.outputs.enabled == 'true'
+        env:
+          FOMO_API_KEY: ${{ secrets.FOMO_API_KEY }}
+        run: python scripts/collect.py
+
+      - name: Update LIVE V3.1 observations and fixed daily portfolio
+        if: steps.window.outputs.enabled == 'true'
+        run: |
+          python scripts/track_live_v31.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          latest=json.loads(Path('data/latest.json').read_text())
+          live=json.loads(Path('data/live_v31.json').read_text())
+          if latest.get('generated_at_utc')!=live.get('generated_at_utc'):
+              raise SystemExit('LIVE V3.1 snapshot timestamp does not match market snapshot')
+          if not isinstance(live.get('daily_portfolios'),dict):
+              raise SystemExit('LIVE V3.1 daily portfolios missing')
+          print('LIVE V3.1 updated:',live['generated_at_utc'])
+          PY
+
+      - name: Publish LIVE V3.1 market snapshot
+        if: steps.window.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git restore -- scripts/collect.py
+          rm -f scripts/track_live_v31.py
+          git add data/latest.json data/history.json data/live_v31.json
+          if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Update LIVE V3.1 market observations (15 min)"
+            git push origin HEAD:market-data
+          fi
