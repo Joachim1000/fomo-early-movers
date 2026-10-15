@@ -108657,9 +108657,75 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "Diy4Q5aiNEcdn7CWhuwYtuoHtHD9rKBTHCa9hi4qpump",
+      "pair_address": "91TcJ2v9wFs11pkvyZkNTswC35cB1tUJXpkUgsGnRJcQ",
+      "symbol": "STREAM",
+      "observed_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "entry_price_usd": 0.0002193,
+      "momentum_heuristic": 25.65,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 17.398,
+      "acceleration_pct_points": null,
+      "buys_5m": 49,
+      "sells_5m": 26,
+      "buy_sell_ratio": 1.885,
+      "liquidity_usd": 42280.51,
+      "volume_5m_usd": 4027.02,
+      "v31_heuristic_score": 12.077,
+      "eligible_for_ranking": true,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "0x7D0443CdDFc8E11AF105F4fE44Dd28c630237777",
+      "pair_address": "0x9E83Be1267E9A6D43bb7f3a8c0Dc3c092cCAe63E",
+      "symbol": "DAWG",
+      "observed_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "entry_price_usd": 0.003976,
+      "momentum_heuristic": 1.5,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 0.76,
+      "acceleration_pct_points": null,
+      "buys_5m": 5,
+      "sells_5m": 3,
+      "buy_sell_ratio": 1.667,
+      "liquidity_usd": 211912.39,
+      "volume_5m_usd": 90.78,
+      "v31_heuristic_score": 8.993,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "EQcKUXfKugCghU5kLe8vTsF4EnZZZJ2rPXou2RqzTN11",
+      "symbol": "FTR",
+      "observed_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "entry_price_usd": 0.001964,
+      "momentum_heuristic": 1.44,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 8.09,
+      "acceleration_pct_points": null,
+      "buys_5m": 6,
+      "sells_5m": 5,
+      "buy_sell_ratio": 1.2,
+      "liquidity_usd": 149812.13,
+      "volume_5m_usd": 2101.68,
+      "v31_heuristic_score": 5.498,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-15T20:30:46.857337+00:00",
+  "generated_at_utc": "2026-10-15T20:32:37.219554+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -110433,6 +110499,18 @@
     "6rnnJiAXBTFf6vdd416HkBtGU3mGTCMoTGSU4HkSN7go|8cZtT29APVTUttbu3SygaVXcASArC2T7N2gDtib6rGL2": {
       "first_seen_at_utc": "2026-10-15T19:00:54.156643+00:00",
       "first_call_risk": "HIGH"
+    },
+    "Diy4Q5aiNEcdn7CWhuwYtuoHtHD9rKBTHCa9hi4qpump|91TcJ2v9wFs11pkvyZkNTswC35cB1tUJXpkUgsGnRJcQ": {
+      "first_seen_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "first_call_risk": "LOW RELATIVE"
+    },
+    "0x7D0443CdDFc8E11AF105F4fE44Dd28c630237777|0x9E83Be1267E9A6D43bb7f3a8c0Dc3c092cCAe63E": {
+      "first_seen_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "first_call_risk": "LOW RELATIVE"
+    },
+    "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump|EQcKUXfKugCghU5kLe8vTsF4EnZZZJ2rPXou2RqzTN11": {
+      "first_seen_at_utc": "2026-10-15T20:32:37.219554+00:00",
+      "first_call_risk": "ELEVATED"
     }
   }
 }
