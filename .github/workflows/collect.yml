@@ -66,7 +66,7 @@ jobs:
         if: steps.collection_window.outputs.enabled == 'true'
         run: |
           git fetch --depth=1 origin main
-          for script in collect.py track_spike_radar_v2.py track_spike_radar.py track_beta_live_daily.py track_live_v31.py lock_daily.py prune_history.py track_candidate_outcomes.py scan_social.py; do
+          for script in collect.py track_spike_radar_v2.py track_spike_radar.py track_beta_live_daily.py track_live_v31.py lock_daily.py prune_history.py track_candidate_outcomes.py; do
             git show "origin/main:scripts/$script" > "scripts/$script"
           done
           # Keep code updates local to this run; only JSON is committed.
@@ -155,11 +155,6 @@ jobs:
               print("LIVE V3.1 paused outside 08:00–23:30 Warsaw:",now.isoformat())
           PY
 
-      - name: Scan public social posts for current LIVE V3.1 tokens
-        if: steps.collection_window.outputs.enabled == 'true'
-        continue-on-error: true
-        run: python scripts/scan_social.py
-
       - name: Lock daily 23:30 Poland snapshot (once per day)
         if: steps.collection_window.outputs.enabled == 'true'
         run: python scripts/lock_daily.py
@@ -176,7 +171,7 @@ jobs:
 
           # Scripts were loaded from main for execution; never commit them to the data branch.
           git restore -- scripts/collect.py scripts/track_beta_live_daily.py scripts/lock_daily.py
-          rm -f scripts/track_spike_radar.py scripts/track_spike_radar_v2.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py scripts/scan_social.py
+          rm -f scripts/track_spike_radar.py scripts/track_spike_radar_v2.py scripts/track_live_v31.py scripts/prune_history.py scripts/track_candidate_outcomes.py
 
           # Never publish a blank or invalid V3.1 file: it removes the LIVE list.
           python3 - <<'PY'
@@ -190,7 +185,6 @@ jobs:
               raise SystemExit('LIVE V3.1 ranking missing; refusing to publish')
           print('LIVE V3.1 validated:',len(data['ranking']),'ranked candidates')
           PY
-          if [ -f data/social_v31.json ]; then git add data/social_v31.json; fi
           git add data/spike_radar_history.json data/candidate_outcomes.json data/latest.json data/history.json data/recommendations.json data/spike_radar_v2_history.json data/beta_live_daily.json data/live_v31.json
           if [ -f data/early_spike_history.json ]; then git add data/early_spike_history.json; fi
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
