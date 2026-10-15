@@ -243,7 +243,7 @@ for record in recommendation_records:
             recent_recommendations.setdefault(mint, set()).add(pair_address)
 
 # Refresh previously tracked tokens independently of the discovery cap.
-tracked_mints = sorted((set(history) | set(recent_recommendations)) - set(best))
+tracked_mints = sorted(set(history) | set(recent_recommendations))
 tracked_pairs = {}
 for i in range(0, len(tracked_mints), 20):
     try:
@@ -252,7 +252,7 @@ for i in range(0, len(tracked_mints), 20):
             if pair.get("chainId") not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
                 continue
             mint = (pair.get("baseToken") or {}).get("address")
-            if mint not in history and mint not in recent_recommendations or mint in best:
+            if mint not in history and mint not in recent_recommendations:
                 continue
             prior_pairs = {p.get("pair_address") for p in history.get(mint, []) if isinstance(p, dict)} | recent_recommendations.get(mint, set())
             if pair.get("pairAddress") not in prior_pairs or numeric(pair.get("priceUsd")) <= 0:
@@ -264,6 +264,9 @@ for i in range(0, len(tracked_mints), 20):
 
 # These are price-only observations, not new FOMO discovery candidates.
 for (mint, pair_address), pair in tracked_pairs.items():
+    # The discovery pass already records its chosen pair below; avoid duplicate samples.
+    if mint in best and best[mint].get('pairAddress') == pair_address:
+        continue
     tx = (pair.get("txns") or {}).get("m5") or {}
     history.setdefault(mint, []).append({
         "timestamp": NOW.isoformat(),
