@@ -1,4 +1,4 @@
-name: Close DAILY portfolios (Warsaw 23:30)
+name: 03 | Daily Close & Portfolio Lock
 on:
   workflow_dispatch:
   schedule:
