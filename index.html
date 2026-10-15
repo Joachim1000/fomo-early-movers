@@ -891,7 +891,7 @@ async function loadV3Daily(){
   if(!portfolio){summary.textContent='Awaiting first daily V3.1 portfolio';body.innerHTML='<tr><td colspan="12">No daily selection recorded yet.</td></tr>';return}
   const profitEl=document.getElementById('v31DailyProfit');
   if(profitEl){
-   const recent=Array.from({length:7},(_,i)=>{const warsawToday=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());const d=new Date(warsawToday+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-(6-i));return d.toISOString().slice(0,10)});
+   const recent=Array.from({length:7},(_,i)=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const part=k=>parts.find(x=>x.type===k)?.value;const warsawToday=part('year')+'-'+part('month')+'-'+part('day');const d=new Date(warsawToday+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-(6-i));return d.toISOString().slice(0,10)});
    const stats=recent.map(day=>{const p=portfolios[day],all=p?.candidates||[],valid=all.filter(x=>x.return_pct!=null&&Number.isFinite(Number(x.return_pct))&&Number(x.entry_price_usd)>0&&Number(x.last_price_usd)>0),pnl=valid.reduce((n,x)=>n+Number(x.return_pct),0);return {day,locked:p?.status==='LOCKED',count:all.length,verified:valid.length,pnl,complete:all.length>0&&valid.length===all.length}});
    
    const daily=stats.map(x=>({...x,pct:x.verified?x.pnl/x.verified:null}));
