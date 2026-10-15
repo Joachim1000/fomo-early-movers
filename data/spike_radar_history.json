@@ -19673,7 +19673,11 @@
       "observed_5m_at_utc": "2026-10-15T07:44:22.291527+00:00",
       "return_5m_pct": -3.79,
       "measurement_delay_minutes": 6.09,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001403,
+      "observed_10m_at_utc": "2026-10-15T07:48:18.319056+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -1.54
     },
     {
       "day": "2026-10-15",
@@ -19696,7 +19700,11 @@
       "observed_5m_at_utc": "2026-10-15T07:44:22.291527+00:00",
       "return_5m_pct": 1.53,
       "measurement_delay_minutes": 6.09,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0004483,
+      "observed_10m_at_utc": "2026-10-15T07:48:18.319056+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -10.89
     },
     {
       "day": "2026-10-15",
@@ -19719,7 +19727,11 @@
       "observed_5m_at_utc": "2026-10-15T07:44:22.291527+00:00",
       "return_5m_pct": -2.91,
       "measurement_delay_minutes": 6.09,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 8.656e-05,
+      "observed_10m_at_utc": "2026-10-15T07:48:18.319056+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -1.0
     },
     {
       "day": "2026-10-15",
@@ -19760,10 +19772,12 @@
       "buy_acceleration_pct": 38.89,
       "volume_acceleration_pct": 61.05,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002808,
+      "observed_5m_at_utc": "2026-10-15T07:48:18.319056+00:00",
+      "return_5m_pct": 9.05,
+      "measurement_delay_minutes": 5.97,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -19932,13 +19946,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-15T07:48:18.319056+00:00",
+      "alert_price_usd": 0.0125,
+      "initial_15m_change_pct": 3.22,
+      "buys_5m": 24,
+      "sells_5m": 2,
+      "volume_5m_usd": 3973.35,
+      "liquidity_usd": 714658.6,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 380.0,
+      "volume_acceleration_pct": -65.22,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T07:46:18.742966+00:00",
+  "updated_at_utc": "2026-10-15T07:48:18.319056+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
