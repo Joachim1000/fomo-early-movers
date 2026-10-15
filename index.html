@@ -10,7 +10,9 @@
   .prior-labels{font-size:9px;letter-spacing:0}
 }
 /* EARLY SPIKE RADAR: compact table matching the main TOP 10 */
-.spike-view .tablewrap{overflow-x:hidden}
+.spike-view .tablewrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+.spike-view .spike-history-wrap table{min-width:1320px;table-layout:auto}
+.spike-view .spike-history-wrap th,.spike-view .spike-history-wrap td{white-space:nowrap;overflow:visible;text-overflow:clip}
 .spike-view table{width:100%;table-layout:fixed;white-space:normal}
 .spike-view th,.spike-view td{overflow-wrap:normal;word-break:normal;vertical-align:middle}
 .spike-view th:nth-child(1){width:22%}
