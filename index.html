@@ -879,6 +879,7 @@ setInterval(()=>{
  if(document.hidden)return;
  marketRefreshTicks++;
  load(); // every 10 seconds; load() guards overlapping requests
+ if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta(); // keep Beta history in sync
  if(marketRefreshTicks%3===0){pollMarketFreshness();refreshPerformancePage()}
  if(marketRefreshTicks%30===0)loadV3();
 },10000);
@@ -1134,7 +1135,7 @@ async function loadSpikeRadarBeta(){
  const status=document.getElementById('spikeBetaStatus');
  const historyTarget=document.getElementById('spikeBetaHistoryRows');
  if(!historyTarget)return;
- historyTarget.innerHTML='<tr><td colspan="12">Updating V2 signals…</td></tr>';
+ if(!historyTarget.dataset.loaded)historyTarget.innerHTML='<tr><td colspan="12">Updating V2 signals…</td></tr>';
  try{
   const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'spike_radar_v2_history.json?t='+Date.now(),{cache:'no-store'});
@@ -1187,6 +1188,7 @@ async function loadSpikeRadarBeta(){
   if(status)status.textContent='Signal data updated: '+stamp+' Warsaw · '+selected.length+' of '+records.length+' signals pass BETA filter · '+verified.length+' measured · Hit rate: '+(verified.length?(100*wins/verified.length).toFixed(1)+'%':'N/A')+' · Avg 5m: '+(avg===null?'N/A':(avg>=0?'+':'')+avg.toFixed(2)+'%')+' before costs';
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sorted=selected.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
+  historyTarget.dataset.loaded='true';
   if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
    const validReturn=(price,reported)=>{const entry=Number(x.alert_price_usd),exit=Number(price);if(!Number.isFinite(entry)||entry<=0||price==null||!Number.isFinite(exit)||exit<=0)return null;const computed=(exit/entry-1)*100;return Number.isFinite(computed)?computed:null};
    const ret=validReturn(x.price_5m_usd,x.return_5m_pct);
