@@ -2210,11 +2210,34 @@
       "measurement_10m_delay_minutes": 10.04,
       "return_10m_pct": -5.86,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump",
+      "pair_address": "AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn",
+      "symbol": "DIKSHIT",
+      "first_alert_at_utc": "2026-10-15T13:58:18.491146+00:00",
+      "alert_price_usd": 0.0002407,
+      "initial_15m_change_pct": 7.79,
+      "buys_5m": 31,
+      "sells_5m": 11,
+      "volume_5m_usd": 3109.43,
+      "liquidity_usd": 43904.16,
+      "buy_acceleration_pct": 40.91,
+      "volume_acceleration_pct": 29.86,
+      "spike_v2_score": 88,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "AMQ8BusAhpwbt3ufSCTi4k3BEQ7AecX9u12Jnk6Spump|AmJYXEDj5Q9BJscXMXXnDcNKrT39ZX4JqZ9NWp8hudrn": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T13:56:19.421864+00:00",
+  "updated_at_utc": "2026-10-15T13:58:18.491146+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
