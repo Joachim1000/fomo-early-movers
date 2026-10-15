@@ -880,7 +880,7 @@ async function loadV3Daily(){
  const money=v=>v==null?'—':'$'+Number(v).toLocaleString('en-US',{maximumSignificantDigits:5});
  const ret=v=>v==null||!Number.isFinite(Number(v))?'MISSING PRICE':'<span class="'+(v>=0?'good':'bad')+'">'+(v>0?'+':'')+Number(v).toFixed(2)+'%</span>';
  try{
-  const response=await fetch(base+'live_v31.json?t='+Date.now(),{cache:'no-store'});
+  const response=await fetch(base+'live_v31.json?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});
   if(!response.ok)throw Error('HTTP '+response.status);
   const data=await response.json();markTabData('v3-daily',data.generated_at_utc);
   const rawPortfolios=data.daily_portfolios||{};
