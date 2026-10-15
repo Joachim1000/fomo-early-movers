@@ -1,0 +1,52 @@
+name: Finalize Daily V3.1
+on:
+  workflow_dispatch:
+  schedule:
+    # 23:45 Europe/Warsaw (summer UTC+2 / winter UTC+1).
+    - cron: "45 21,22 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: fomo-data-collection
+  cancel-in-progress: false
+jobs:
+  close-v31:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: market-data
+          persist-credentials: true
+      - name: Check local close window
+        id: gate
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          local=datetime.now(ZoneInfo('Europe/Warsaw'))
+          enabled=(local.hour==23 and local.minute>=30) or os.environ.get('GITHUB_EVENT_NAME')=='workflow_dispatch'
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('enabled='+str(enabled).lower()+'\n')
+          print('Daily close enabled:',enabled,'Warsaw:',local)
+          PY
+      - name: Load latest V3.1 script without API calls
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git fetch --depth=1 origin main
+          git show origin/main:scripts/track_live_v31.py > scripts/track_live_v31.py
+      - name: Finalize previously selected portfolios from saved DEX history
+        if: steps.gate.outputs.enabled == 'true'
+        run: python scripts/track_live_v31.py
+      - name: Publish daily V3.1 close
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git restore -- scripts/track_live_v31.py
+          git add data/live_v31.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalize Daily V3.1 portfolios at 23:30 Warsaw without API calls"
+            git pull --rebase origin market-data
+            git push origin HEAD:market-data
+          fi
