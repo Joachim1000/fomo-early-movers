@@ -41,12 +41,6 @@ jobs:
         with:
           ref: market-data
           persist-credentials: true
-      - name: Install Python dependencies
-        if: steps.window.outputs.morning == 'true'
-        run: |
-          git fetch --depth=1 origin main
-          git show origin/main:requirements.txt > /tmp/fomo-requirements.txt
-          pip install -r /tmp/fomo-requirements.txt
       - name: Load current scripts
         if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
         run: |
