@@ -609,10 +609,10 @@ async function forceRefreshPerformance(){
 let radarSharedCache=null,radarSharedPromise=null,radarSharedFetchedAt=0;
 async function getSharedRadarHistory(){
  const now=Date.now();
- if(radarSharedCache&&now-radarSharedFetchedAt<10000)return radarSharedCache;
+ if(radarSharedCache&&now-radarSharedFetchedAt<8000)return radarSharedCache;
  if(radarSharedPromise)return radarSharedPromise;
  radarSharedPromise=(async()=>{
-  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+  const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'spike_radar_history.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('Spike Radar history HTTP '+response.status);
   const data=await response.json();
