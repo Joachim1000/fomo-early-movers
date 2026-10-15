@@ -23168,7 +23168,11 @@
       "observed_5m_at_utc": "2026-10-15T18:38:21.093579+00:00",
       "return_5m_pct": -26.7,
       "measurement_delay_minutes": 6.75,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 6.206e-05,
+      "observed_10m_at_utc": "2026-10-15T18:42:17.335163+00:00",
+      "measurement_10m_delay_minutes": 10.69,
+      "return_10m_pct": -16.53
     },
     {
       "day": "2026-10-15",
@@ -23213,10 +23217,12 @@
       "buy_acceleration_pct": 77.27,
       "volume_acceleration_pct": -29.7,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0002152,
+      "observed_5m_at_utc": "2026-10-15T18:42:17.335163+00:00",
+      "return_5m_pct": -5.2,
+      "measurement_delay_minutes": 5.97,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -23286,13 +23292,59 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "HOOKED",
+      "first_alert_at_utc": "2026-10-15T18:42:17.335163+00:00",
+      "alert_price_usd": 0.001592,
+      "initial_15m_change_pct": 5.71,
+      "buys_5m": 35,
+      "sells_5m": 20,
+      "volume_5m_usd": 8676.27,
+      "liquidity_usd": 115306.48,
+      "estimated_100usd_buy_impact_pct": 0.17,
+      "buy_acceleration_pct": 191.67,
+      "volume_acceleration_pct": 165.93,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-15T18:42:17.335163+00:00",
+      "alert_price_usd": 0.01728,
+      "initial_15m_change_pct": 4.6,
+      "buys_5m": 9,
+      "sells_5m": 0,
+      "volume_5m_usd": 4117.62,
+      "liquidity_usd": 624052.0,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 50.0,
+      "volume_acceleration_pct": 92.69,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T18:40:26.680710+00:00",
+  "updated_at_utc": "2026-10-15T18:42:17.335163+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
