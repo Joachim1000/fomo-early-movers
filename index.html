@@ -878,10 +878,10 @@ let marketRefreshTicks=0;
 setInterval(()=>{
  if(document.hidden)return;
  marketRefreshTicks++;
- load(); // every 30 seconds; load() guards overlapping requests
- if(marketRefreshTicks%2===0){pollMarketFreshness();refreshPerformancePage()}
- if(marketRefreshTicks%10===0)loadV3();
-},30000);
+ load(); // every 10 seconds; load() guards overlapping requests
+ if(marketRefreshTicks%3===0){pollMarketFreshness();refreshPerformancePage()}
+ if(marketRefreshTicks%30===0)loadV3();
+},10000);
 setInterval(updateDataAge,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){pollMarketFreshness();load()}});
 </script>
