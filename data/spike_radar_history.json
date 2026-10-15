@@ -18262,10 +18262,12 @@
       "buy_acceleration_pct": 107.62,
       "volume_acceleration_pct": 107.74,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0005451,
+      "observed_5m_at_utc": "2026-10-15T07:06:18.076819+00:00",
+      "return_5m_pct": 1.17,
+      "measurement_delay_minutes": 5.4,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -18282,10 +18284,12 @@
       "buy_acceleration_pct": 240.0,
       "volume_acceleration_pct": 27.81,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004124,
+      "observed_5m_at_utc": "2026-10-15T07:06:18.076819+00:00",
+      "return_5m_pct": 0.98,
+      "measurement_delay_minutes": 5.4,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -18426,13 +18430,53 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "Fk5MuGv2H3Qpt6AxdhS2KHgDL2os424BvfEoqFNTdv9Y",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-15T07:06:18.076819+00:00",
+      "alert_price_usd": 0.0005451,
+      "initial_15m_change_pct": 42.29,
+      "buys_5m": 162,
+      "sells_5m": 90,
+      "volume_5m_usd": 14736.69,
+      "liquidity_usd": 66095.08,
+      "buy_acceleration_pct": -25.69,
+      "volume_acceleration_pct": -58.66,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-15T07:06:18.076819+00:00",
+      "alert_price_usd": 0.004124,
+      "initial_15m_change_pct": 6.51,
+      "buys_5m": 21,
+      "sells_5m": 3,
+      "volume_5m_usd": 2258.48,
+      "liquidity_usd": 285165.85,
+      "buy_acceleration_pct": 23.53,
+      "volume_acceleration_pct": -50.18,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T07:04:17.974806+00:00",
+  "updated_at_utc": "2026-10-15T07:06:18.076819+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
