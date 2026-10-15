@@ -171,7 +171,7 @@ def first_call_risk(obs):
     if (change is not None and change<0) or (ratio is not None and ratio<1.25):return "ELEVATED"
     return "LOW RELATIVE"
 
-# One fixed daily selection at/after 08:00 Warsaw, using the prior day's
+# One fixed daily selection at/after 06:00 Warsaw, using the prior day's
 # independently observed candidate history. Never rerank today's portfolio.
 zone=ZoneInfo("Europe/Warsaw")
 local=now.astimezone(zone)
@@ -193,7 +193,7 @@ daily=prior.setdefault("daily_portfolios",{})
 if not isinstance(daily,dict):
     daily={}
     prior["daily_portfolios"]=daily
-if day not in daily and local.hour>=8:
+if day not in daily and local.hour>=6:
     start=now-timedelta(hours=24)
     candidates={}
     for obs in rows+current:
@@ -213,7 +213,7 @@ if day not in daily and local.hour>=8:
         key=x["mint"]+"|"+x["pair_address"]
         return first_calls.get(key,{"first_seen_at_utc":x["observed_at_utc"],"first_call_risk":first_call_risk(x)})
 
-    daily[day]={"selected_at_utc":now.isoformat(),"selection_target_local":"08:00",
+    daily[day]={"selected_at_utc":now.isoformat(),"selection_target_local":"06:00",
                 "status":"ACTIVE","selection_basis":"previous_24h_observations",
                 "candidates":[{"mint":x["mint"],"pair_address":x["pair_address"],
                   "symbol":x.get("symbol"),"entry_price_usd":x["entry_price_usd"],
@@ -283,9 +283,9 @@ for date,portfolio in daily.items():
 # Retain portfolios for seven days.
 daily={k:v for k,v in daily.items() if k>=(local.date()-timedelta(days=7)).isoformat()}
 prior["daily_portfolios"]=daily
-# LIVE is the fixed 08:00 Warsaw selection for this calendar day.
+# LIVE is the fixed 06:00 Warsaw selection for this calendar day.
 # Daily reporting uses the most recent LOCKED portfolio, never today's active one.
-ranking = [dict(x) for x in daily.get(day, {}).get("candidates", [])] if (8, 0) <= (local.hour, local.minute) < (23, 30) else []
+ranking = [dict(x) for x in daily.get(day, {}).get("candidates", [])] if (6, 0) <= (local.hour, local.minute) < (23, 30) else []
 for rank,x in enumerate(ranking,1):
     x["v31_rank"]=rank
 # No fabricated ML results: until sufficient labels, publish baseline-only candidates.
