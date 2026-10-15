@@ -149,10 +149,10 @@ jobs:
           from zoneinfo import ZoneInfo
           import subprocess
           now=datetime.now(ZoneInfo("Europe/Warsaw"))
-          if (8,0) <= (now.hour,now.minute) < (23,30):
+          if (6,0) <= (now.hour,now.minute) < (23,30):
               subprocess.run(["python","scripts/track_live_v31.py"],check=True)
           else:
-              print("LIVE V3.1 paused outside 08:00–23:30 Warsaw:",now.isoformat())
+              print("LIVE V3.1 paused outside 06:00–23:30 Warsaw:",now.isoformat())
           PY
 
       - name: Lock daily 23:30 Poland snapshot (once per day)
