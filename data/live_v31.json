@@ -102457,9 +102457,53 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "4qH8A5GxvRMZgpRFjXASc6U9HAoEzKeUqxY2dPB7pump",
+      "pair_address": "7oDjba4hZozvNWboKSRwFetStnM4iA5WiTKwFr1Lsy8t",
+      "symbol": "Groklet",
+      "observed_at_utc": "2026-10-15T15:45:33.596473+00:00",
+      "entry_price_usd": 0.0005107,
+      "momentum_heuristic": 32.58,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": -35.42,
+      "acceleration_pct_points": null,
+      "buys_5m": 173,
+      "sells_5m": 121,
+      "buy_sell_ratio": 1.43,
+      "liquidity_usd": 69538.94,
+      "volume_5m_usd": 16993.36,
+      "v31_heuristic_score": -21.63,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "symbol": "VEIL",
+      "observed_at_utc": "2026-10-15T15:45:33.596473+00:00",
+      "entry_price_usd": 0.004283,
+      "momentum_heuristic": 1.36,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": -0.534,
+      "acceleration_pct_points": null,
+      "buys_5m": 3,
+      "sells_5m": 13,
+      "buy_sell_ratio": 0.231,
+      "liquidity_usd": 200265.46,
+      "volume_5m_usd": 5159.59,
+      "v31_heuristic_score": -4.746,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-15T15:30:47.811668+00:00",
+  "generated_at_utc": "2026-10-15T15:45:33.596473+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -104201,6 +104245,10 @@
     "0x23dcd2317a7D2d4602c74e6cd9273cB8e5e77777|0xDbF992Ccc8865e5BC17d979353A01F28a42fa90D": {
       "first_seen_at_utc": "2026-10-15T14:45:34.211691+00:00",
       "first_call_risk": "ELEVATED"
+    },
+    "4qH8A5GxvRMZgpRFjXASc6U9HAoEzKeUqxY2dPB7pump|7oDjba4hZozvNWboKSRwFetStnM4iA5WiTKwFr1Lsy8t": {
+      "first_seen_at_utc": "2026-10-15T15:45:33.596473+00:00",
+      "first_call_risk": "HIGH"
     }
   }
 }
