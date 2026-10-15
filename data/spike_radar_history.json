@@ -21376,13 +21376,55 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "2Srf6mhufzWJKZ5nniVXgwamLmDJWXPQBmddJ1MMpump",
+      "pair_address": "AJE7eWHJMBjvwib78dGwS8iZxb7bGx7NXLZVXX6xMHn6",
+      "symbol": "CyberAxe",
+      "first_alert_at_utc": "2026-10-15T13:06:23.503715+00:00",
+      "alert_price_usd": 0.0001606,
+      "initial_15m_change_pct": 31.64,
+      "buys_5m": 17,
+      "sells_5m": 11,
+      "volume_5m_usd": 2765.12,
+      "liquidity_usd": 35797.09,
+      "estimated_100usd_buy_impact_pct": 0.56,
+      "buy_acceleration_pct": 6.25,
+      "volume_acceleration_pct": 84.47,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "HxKqU1V7L8jUfMwuScDMtww3Ex2TPWL7zYmFuCJ4Zvki",
+      "pair_address": "Df7aaGkCxzHZ4F2p7YsJ3GnJZQokyk5R8roy7uRcYLY8",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-15T13:06:23.503715+00:00",
+      "alert_price_usd": 0.0003272,
+      "initial_15m_change_pct": 15.54,
+      "buys_5m": 44,
+      "sells_5m": 28,
+      "volume_5m_usd": 7359.94,
+      "liquidity_usd": 61610.55,
+      "estimated_100usd_buy_impact_pct": 0.32,
+      "buy_acceleration_pct": 76.0,
+      "volume_acceleration_pct": 42.0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T13:04:25.917545+00:00",
+  "updated_at_utc": "2026-10-15T13:06:23.503715+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
