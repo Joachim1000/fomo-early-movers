@@ -2145,13 +2145,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "symbol": "CATE",
+      "first_alert_at_utc": "2026-10-15T13:36:28.280803+00:00",
+      "alert_price_usd": 0.06068,
+      "initial_15m_change_pct": 3.74,
+      "buys_5m": 54,
+      "sells_5m": 13,
+      "volume_5m_usd": 14282.0,
+      "liquidity_usd": 2752972.64,
+      "buy_acceleration_pct": 980.0,
+      "volume_acceleration_pct": 1217.7,
+      "spike_v2_score": 100,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE|FtiotJckV2ZG4S1YgJDJLiXKKDAnKWXgQxo7vxsjPwPe": true
+    "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump|HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3": true
   },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T13:34:19.109153+00:00",
+  "updated_at_utc": "2026-10-15T13:36:28.280803+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
