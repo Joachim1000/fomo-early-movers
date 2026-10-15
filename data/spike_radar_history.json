@@ -23045,13 +23045,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "4jjQjDRYd7xLcFMViRsz4GvtgU6gPZgbVaxN3Rq9pump",
+      "pair_address": "EDjt1EqFX2xbLmJDqYr2whCS3vZRH2bRXg2bMQXPaFw4",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "PONK",
+      "first_alert_at_utc": "2026-10-15T18:24:18.128469+00:00",
+      "alert_price_usd": 0.0001075,
+      "initial_15m_change_pct": 24.15,
+      "buys_5m": 50,
+      "sells_5m": 12,
+      "volume_5m_usd": 2485.61,
+      "liquidity_usd": 27443.23,
+      "estimated_100usd_buy_impact_pct": 0.72,
+      "buy_acceleration_pct": 455.56,
+      "volume_acceleration_pct": 672.7,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T18:22:18.823715+00:00",
+  "updated_at_utc": "2026-10-15T18:24:18.128469+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
