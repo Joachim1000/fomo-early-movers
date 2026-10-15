@@ -880,9 +880,23 @@ async function loadV3Daily(){
  const money=v=>v==null?'—':'$'+Number(v).toLocaleString('en-US',{maximumSignificantDigits:5});
  const ret=v=>v==null||!Number.isFinite(Number(v))?'MISSING PRICE':'<span class="'+(v>=0?'good':'bad')+'">'+(v>0?'+':'')+Number(v).toFixed(2)+'%</span>';
  try{
-  const response=await fetch(base+'live_v31.json?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});
-  if(!response.ok)throw Error('HTTP '+response.status);
-  const data=await response.json();markTabData('v3-daily',data.generated_at_utc);
+  // The snapshot URL may point at a newly pushed SHA before GitHub's raw CDN
+  // has propagated. Retry against the branch and an independent CDN.
+  const sources=[base+'live_v31.json',
+   'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/live_v31.json',
+   'https://cdn.jsdelivr.net/gh/Joachim1000/fomo-early-movers@market-data/data/live_v31.json'];
+  let data=null,lastError=null;
+  for(const source of [...new Set(sources)]){
+   try{
+    const response=await fetch(source+(source.includes('?')?'&':'?')+'t='+Date.now(),{cache:'no-store'});
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const candidate=await response.json();
+    if(!candidate?.daily_portfolios||!Object.keys(candidate.daily_portfolios).length)throw Error('No daily portfolios in source');
+    data=candidate;break;
+   }catch(e){lastError=e;console.warn('Daily V3.1 data source unavailable',source,e)}
+  }
+  if(!data)throw Error('All Daily V3.1 data sources failed: '+(lastError?.message||'network error'));
+  markTabData('v3-daily',data.generated_at_utc);
   const rawPortfolios=data.daily_portfolios||{};
   // Never display intraday DAILY profit even if an older published JSON still has rolling returns.
   const portfolios=Object.fromEntries(Object.entries(rawPortfolios).map(([day,p])=>[day,p?.status==='LOCKED'?p:{...p,candidates:(p?.candidates||[]).map(x=>{const copy={...x};delete copy.return_pct;delete copy.last_price_usd;delete copy.last_price_at_utc;return copy})}]));
