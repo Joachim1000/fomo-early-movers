@@ -21355,13 +21355,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "HxKqU1V7L8jUfMwuScDMtww3Ex2TPWL7zYmFuCJ4Zvki",
+      "pair_address": "Df7aaGkCxzHZ4F2p7YsJ3GnJZQokyk5R8roy7uRcYLY8",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-15T13:04:25.917545+00:00",
+      "alert_price_usd": 0.0003237,
+      "initial_15m_change_pct": 24.6,
+      "buys_5m": 76,
+      "sells_5m": 37,
+      "volume_5m_usd": 15450.92,
+      "liquidity_usd": 61260.43,
+      "estimated_100usd_buy_impact_pct": 0.33,
+      "buy_acceleration_pct": 130.3,
+      "volume_acceleration_pct": 140.88,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T13:02:19.385829+00:00",
+  "updated_at_utc": "2026-10-15T13:04:25.917545+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
