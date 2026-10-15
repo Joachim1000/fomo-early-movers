@@ -1557,11 +1557,34 @@
       "observed_5m_at_utc": "2026-10-15T05:12:28.089652+00:00",
       "return_5m_pct": -6.33,
       "measurement_delay_minutes": 6.07
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "pair_address": "9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6",
+      "symbol": "SAINDRA",
+      "first_alert_at_utc": "2026-10-15T05:14:17.202941+00:00",
+      "alert_price_usd": 0.0006452,
+      "initial_15m_change_pct": 5.32,
+      "buys_5m": 44,
+      "sells_5m": 19,
+      "volume_5m_usd": 2628.54,
+      "liquidity_usd": 77897.71,
+      "buy_acceleration_pct": 22.22,
+      "volume_acceleration_pct": -57.01,
+      "spike_v2_score": 85,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T|9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-15T05:12:28.089652+00:00",
+  "updated_at_utc": "2026-10-15T05:14:17.202941+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
