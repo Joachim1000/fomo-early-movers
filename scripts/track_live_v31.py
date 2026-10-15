@@ -194,32 +194,79 @@ if not isinstance(daily,dict):
     daily={}
     prior["daily_portfolios"]=daily
 if day not in daily and local.hour>=6:
+    # Long-horizon LIVE V3.1: score 1h/2h/6h trends, persistent activity
+    # and liquidity, not 5-minute spike acceleration or 10-minute ML labels.
     start=now-timedelta(hours=24)
     candidates={}
+    def long_horizon_score(obs):
+        mint,pair=obs["mint"],obs["pair_address"]
+        t=dt(obs["observed_at_utc"])
+        if not t or now-t>timedelta(hours=2):return None
+        liquidity=num(obs.get("liquidity_usd")) or 0
+        if liquidity<25000:return None
+        prices=sorted((dt(p.get("timestamp")),num(p.get("price_usd"))) for p in history.get(mint,[])
+                      if p.get("pair_address")==pair and dt(p.get("timestamp")) and (num(p.get("price_usd")) or 0)>0
+                      and start<=dt(p.get("timestamp"))<=now)
+        if len(prices)<4:return None
+        latest_t,latest_price=prices[-1]
+        if now-latest_t>timedelta(hours=2):return None
+        def ret(hours):
+            target=latest_t-timedelta(hours=hours)
+            prior_prices=[(abs((ts-target).total_seconds()),price) for ts,price in prices
+                          if abs((ts-target).total_seconds())<=3600]
+            if not prior_prices:return None
+            base=min(prior_prices)[1]
+            return 100*(latest_price/base-1) if base>0 else None
+        r1,r2,r6=ret(1),ret(2),ret(6)
+        if r2 is None or r6 is None:return None
+        # Avoid ranking a single sharp spike as a sustained trend.
+        if r2 < -8 or r6 < -12 or r2 > 35 or r6 > 80:return None
+        related=[z for z in rows+current if z.get("mint")==mint and z.get("pair_address")==pair
+                 and (dt(z.get("observed_at_utc")) or now-timedelta(days=2))>=now-timedelta(hours=6)]
+        hours_active=len({dt(z["observed_at_utc"]).strftime("%Y-%m-%dT%H")
+                          for z in related if dt(z.get("observed_at_utc"))})
+        if hours_active<2:return None
+        ratio=num(obs.get("buy_sell_ratio")) or 0
+        volume=num(obs.get("volume_5m_usd")) or 0
+        if ratio<1.2 or volume<500:return None
+        risk=first_call_risk(obs)
+        # Weights: momentum 30, observed historical trend 25,
+        # liquidity/volume 20, risk/volatility 15, buy pressure 10.
+        momentum=30*clamp((r2+5)/20,0,1)
+        history_score=25*clamp((r6+10)/35,0,1)
+        depth=10*clamp(math.log10(max(liquidity,1)/25000+1)/1.5,0,1)
+        activity=10*clamp(hours_active/6,0,1)
+        stability=15*clamp(1-max(0,abs(r2)-12)/30,0,1)
+        pressure=10*clamp((ratio-1)/1.5,0,1)
+        risk_penalty={"HIGH":15,"ELEVATED":7,"UNKNOWN":5}.get(risk,0)
+        return round(momentum+history_score+depth+activity+stability+pressure-risk_penalty,3),r1,r2,r6,hours_active
     for obs in rows+current:
         t=dt(obs.get("observed_at_utc"))
         mint,pair=obs.get("mint"),obs.get("pair_address")
         if not t or not mint or not pair or not start<=t<=now:continue
         if not (num(obs.get("entry_price_usd")) or 0)>0:continue
-        if (num(obs.get("liquidity_usd")) or 0)<5000 or (num(obs.get("volume_5m_usd")) or 0)<500:continue
-        if (num(obs.get("buys_5m")) or 0)<3 or (num(obs.get("buy_sell_ratio")) or 0)<1:continue
+        outcome=long_horizon_score(obs)
+        if outcome is None:continue
+        score,r1,r2,r6,hours_active=outcome
         key=(mint,pair)
-        score=num(obs.get("v31_heuristic_score")) or 0
-        # Prefer strong observations; break ties by most recent verified observation.
         if key not in candidates or (score,t)>(candidates[key][0],candidates[key][1]):
-            candidates[key]=(score,t,obs)
+            enriched=dict(obs)
+            enriched.update({"long_horizon_score":score,"trend_1h_pct":r1,
+                             "trend_2h_pct":r2,"trend_6h_pct":r6,
+                             "active_hours_6h":hours_active})
+            candidates[key]=(score,t,enriched)
     picks=sorted(candidates.values(),key=lambda z:(z[0],z[1]),reverse=True)[:10]
     def original_call(x):
         key=x["mint"]+"|"+x["pair_address"]
         return first_calls.get(key,{"first_seen_at_utc":x["observed_at_utc"],"first_call_risk":first_call_risk(x)})
 
     daily[day]={"selected_at_utc":now.isoformat(),"selection_target_local":"06:00",
-                "status":"ACTIVE","selection_basis":"previous_24h_observations",
+                "status":"ACTIVE","selection_basis":"long_horizon_6h_momentum_and_liquidity",
                 "candidates":[{"mint":x["mint"],"pair_address":x["pair_address"],
                   "symbol":x.get("symbol"),"entry_price_usd":x["entry_price_usd"],
                   "selected_observation_at_utc":t.isoformat(),
                   "first_seen_at_utc":original_call(x)["first_seen_at_utc"],
-                  "v31_heuristic_score":score,"v31_rank":i,
+                  "v31_heuristic_score":score,"long_horizon_score":score,"trend_1h_pct":x.get("trend_1h_pct"),"trend_2h_pct":x.get("trend_2h_pct"),"trend_6h_pct":x.get("trend_6h_pct"),"active_hours_6h":x.get("active_hours_6h"),"v31_rank":i,
                   "buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),
                   "sells_5m":x.get("sells_5m"),"change_15m_pct":x.get("change_15m_pct"),
                   "candidate_source":"DAILY_FIXED_SELECTION","first_call_risk":original_call(x)["first_call_risk"]} for i,(score,t,x) in enumerate(picks,1)]}
