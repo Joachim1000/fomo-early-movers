@@ -887,7 +887,7 @@ async function loadV3Daily(){
   // Never display intraday DAILY profit even if an older published JSON still has rolling returns.
   const portfolios=Object.fromEntries(Object.entries(rawPortfolios).map(([day,p])=>[day,p?.status==='LOCKED'?p:{...p,candidates:(p?.candidates||[]).map(x=>{const copy={...x};delete copy.return_pct;delete copy.last_price_usd;delete copy.last_price_at_utc;return copy})}]));
   const keys=Object.keys(portfolios).sort();
-  const key=keys.filter(day=>portfolios[day]?.status==='LOCKED').at(-1),portfolio=key?portfolios[key]:null;
+  const key=keys.at(-1),portfolio=key?portfolios[key]:null;
   if(!portfolio){summary.textContent='Awaiting first daily V3.1 portfolio';body.innerHTML='<tr><td colspan="12">No daily selection recorded yet.</td></tr>';return}
   const profitEl=document.getElementById('v31DailyProfit');
   if(profitEl){
@@ -904,7 +904,7 @@ async function loadV3Daily(){
 
   }
   const entries=(portfolio.candidates||[]).slice().sort((a,b)=>Number(a.v31_rank||999)-Number(b.v31_rank||999));
-  summary.textContent='Poland day: '+key+' · '+entries.length+' fixed candidates · '+(portfolio.status==='LOCKED'?'LOCKED at 23:30 Warsaw':'ACTIVE until 23:30 Warsaw')+' · Selection: first successful run after 08:00 Warsaw (scheduled 08:05) · Fixed TOP 10 until 23:30 · Verified returns use exact mint and pair';
+  summary.textContent='Poland day: '+key+' · '+entries.length+' fixed candidates · '+(portfolio.status==='LOCKED'?'LOCKED at 23:30 Warsaw':'ACTIVE until 23:30 Warsaw')+' · Selection: first successful run after 06:00 Warsaw · Fixed TOP 10 until 23:30 · Verified returns use exact mint and pair';
   body.innerHTML=entries.map((x,i)=>{
    const value=x.return_pct;
    const rating=data.first_calls?.[x.mint+'|'+x.pair_address]?.first_call_risk||x.first_call_risk||'UNKNOWN';
