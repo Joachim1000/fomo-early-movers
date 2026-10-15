@@ -15804,10 +15804,12 @@
       "buy_acceleration_pct": 22.22,
       "volume_acceleration_pct": -57.01,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.0006738,
+      "observed_5m_at_utc": "2026-10-15T05:20:24.597987+00:00",
+      "return_5m_pct": 4.43,
+      "measurement_delay_minutes": 6.12,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-15",
@@ -15888,13 +15890,33 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-15",
+      "mint": "JCsfUhtjjHpfMuRTDk2VXTStGU2z1Uz17aWHjkPdpump",
+      "pair_address": "9vxJnC1er9jyK1VxUHJEV21BddEyQnVqezTs89XpZBN2",
+      "symbol": "QPF",
+      "first_alert_at_utc": "2026-10-15T05:20:24.597987+00:00",
+      "alert_price_usd": 8.1e-05,
+      "initial_15m_change_pct": 3.94,
+      "buys_5m": 24,
+      "sells_5m": 15,
+      "volume_5m_usd": 2723.94,
+      "liquidity_usd": 23841.55,
+      "buy_acceleration_pct": 200.0,
+      "volume_acceleration_pct": 231.02,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-15T05:18:22.874050+00:00",
+  "updated_at_utc": "2026-10-15T05:20:24.597987+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
