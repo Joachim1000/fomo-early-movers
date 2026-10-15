@@ -1,11 +1,10 @@
-name: FOMO Daily V3.1 Schedule
+name: 02 | Daily V3.1 Morning Selection
 on:
   workflow_dispatch:
   schedule:
     # UTC alternatives for Europe/Warsaw daylight-saving transitions.
     # The local-time guard below selects the correct one.
     - cron: "3 4,5 * * *"
-    - cron: "33 21,22 * * *"
 
 permissions:
   contents: write
@@ -30,22 +29,21 @@ jobs:
           minutes=now.hour*60+now.minute
           # Allow modest GitHub Actions scheduling delays; run at most once per day.
           morning=360<=minutes<400
-          close=1410<=minutes<1440
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write(f"morning={str(morning).lower()}\nclose={str(close).lower()}\n")
-          print('Warsaw time:',now.isoformat(),'morning:',morning,'close:',close)
+              f.write(f"morning={str(morning).lower()}\n")
+          print('Warsaw time:',now.isoformat(),'morning:',morning)
           PY
       - name: Checkout market data
-        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        if: steps.window.outputs.morning == 'true'
         uses: actions/checkout@v4
         with:
           ref: market-data
           persist-credentials: true
       - name: Load current scripts
-        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        if: steps.window.outputs.morning == 'true'
         run: |
           git fetch --depth=1 origin main
-          for script in collect.py track_live_v31.py lock_daily.py; do
+          for script in collect.py track_live_v31.py; do
             git show "origin/main:scripts/$script" > "scripts/$script"
           done
       - name: Refresh market snapshot for morning selection
@@ -68,22 +66,16 @@ jobs:
               raise SystemExit('No candidates selected for Warsaw day '+today)
           print('Daily V3.1',today,len(portfolio['candidates']),'candidates')
           PY
-      - name: Lock daily screening snapshot
-        if: steps.window.outputs.close == 'true'
-        run: python scripts/lock_daily.py
       - name: Commit daily data
-        if: steps.window.outputs.morning == 'true' || steps.window.outputs.close == 'true'
+        if: steps.window.outputs.morning == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git restore -- scripts/collect.py scripts/lock_daily.py
+          git restore -- scripts/collect.py
           rm -f scripts/track_live_v31.py
-          if [ "${{ steps.window.outputs.morning }}" = "true" ]; then
             git add data/latest.json data/history.json data/live_v31.json
             for file in data/fomo_cache.json; do if [ -f "$file" ]; then git add "$file"; fi; done
-          else
-            git add data/daily_snapshots.json
-          fi
+
           if ! git diff --cached --quiet; then
             git commit -m "Update scheduled Daily V3.1 data"
             git push origin HEAD:market-data
