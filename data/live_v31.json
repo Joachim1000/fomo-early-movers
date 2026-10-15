@@ -91437,9 +91437,31 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "FhKMz9ZBhbCL8nHLFtYVhAkbemhVTiT79QE5jjZCLAiM",
+      "pair_address": "3mHNTMFjD92kPN5NjxfRPeA4yPkGEFzHQpZQixJk3QHj",
+      "symbol": "CLAIM",
+      "observed_at_utc": "2026-10-15T07:34:23.929124+00:00",
+      "entry_price_usd": 0.0001014,
+      "momentum_heuristic": 4.76,
+      "change_5m_pct": 36.327,
+      "change_10m_pct": 75.372,
+      "change_15m_pct": 85.205,
+      "acceleration_pct_points": 7.686,
+      "buys_5m": 17,
+      "sells_5m": 43,
+      "buy_sell_ratio": 0.395,
+      "liquidity_usd": 26081.67,
+      "volume_5m_usd": 6646.47,
+      "v31_heuristic_score": 17.192,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-15T07:32:17.993216+00:00",
+  "generated_at_utc": "2026-10-15T07:34:23.929124+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -93105,6 +93127,10 @@
     "4r4jzMDj8e8FJodYWQTPojHKiiGGNJC3vQBCc3T9pump|BQP2X2tChbLLuUcbfk3r8dGREVwv4vx6CRsHfW4n2Ujq": {
       "first_seen_at_utc": "2026-10-15T06:46:18.640820+00:00",
       "first_call_risk": "LOW RELATIVE"
+    },
+    "FhKMz9ZBhbCL8nHLFtYVhAkbemhVTiT79QE5jjZCLAiM|3mHNTMFjD92kPN5NjxfRPeA4yPkGEFzHQpZQixJk3QHj": {
+      "first_seen_at_utc": "2026-10-15T07:34:23.929124+00:00",
+      "first_call_risk": "HIGH"
     }
   }
 }
