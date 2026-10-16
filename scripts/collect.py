@@ -367,7 +367,7 @@ for mint, pair in best.items():
                       300 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 600]
     prior_buys = max((int(p.get("buys_5m") or 0) for p in prior_activity), default=None)
     prior_volume = max((numeric(p.get("volume_5m_usd")) for p in prior_activity), default=None)
-    early_momentum = (pair_age_hours is not None and pair_age_hours > 8 and
+    early_momentum = (pair_age_hours is not None and pair_age_hours > 2 and
                       fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                       liquidity >= 5000 and volume >= 1000 and
                       buys >= 8 and buys >= 1.5 * max(sells, 1) and
@@ -381,7 +381,7 @@ for mint, pair in best.items():
     strong_acceleration = buy_acceleration is not None and buy_acceleration >= 10
     radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 11, 12, 13, 14, 15)
     fast_alert = (supported_radar_chain and radar_time_allowed and
-                  pair_age_hours is not None and pair_age_hours > 8 and
+                  pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 2.0 * max(sells, 1) and
                   volume >= 1000 and change_5m is not None and
@@ -400,7 +400,7 @@ for mint, pair in best.items():
         - (30 if exhaustion else 0)))
     # The same midday signal pause applies to both Spike Radar models.
     v2_alert = (supported_radar_chain and strong_pressure and strong_acceleration and radar_time_allowed and
-                pair_age_hours is not None and pair_age_hours > 8 and
+                pair_age_hours is not None and pair_age_hours > 2 and
                 fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and
                 liquidity >= 5000 and volume >= 1500 and
                 change_15m is not None and 3 <= change_15m <= 25 and
@@ -416,7 +416,7 @@ for mint, pair in best.items():
         "buy_acceleration_pct": round(100 * (buys / prior_buys - 1), 2) if prior_buys is not None and prior_buys > 0 else None,
         "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
-        "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and pair_age_hours is not None and pair_age_hours > 8 and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 3 else None,
+        "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and pair_age_hours is not None and pair_age_hours > 2 and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 3 else None,
         "change_15m_pct": change_15m, "change_5m_pct": change_5m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
