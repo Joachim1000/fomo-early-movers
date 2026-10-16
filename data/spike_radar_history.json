@@ -25749,13 +25749,37 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "HgSyn9PW73cNd6KZx9r7TydWB4fKnMWToSH238EC7ray",
+      "pair_address": "2nf4py6WW1RNZxs9hUuJ9DSDXW9Lc2vud9BNh7Pwt3wX",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "SHADE",
+      "first_alert_at_utc": "2026-10-16T13:28:21.622888+00:00",
+      "alert_price_usd": 0.0001065,
+      "initial_15m_change_pct": 30.84,
+      "initial_7m_change_pct": null,
+      "buys_5m": 16,
+      "sells_5m": 5,
+      "volume_5m_usd": 2418.55,
+      "liquidity_usd": 28374.92,
+      "estimated_100usd_buy_impact_pct": 0.7,
+      "buy_acceleration_pct": 166.67,
+      "volume_acceleration_pct": 1397.83,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T13:26:27.891266+00:00",
+  "updated_at_utc": "2026-10-16T13:28:21.622888+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
