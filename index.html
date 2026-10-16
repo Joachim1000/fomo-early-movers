@@ -841,7 +841,7 @@ async function fetchMarketJson(file,timeoutMs=6500){
  if(cached&&now-cached.at<(file==='spike_radar_history.json'?5000:60000))return cached.promise;
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeoutMs);
  const liveHistory=file==='spike_radar_history.json'||file==='spike_radar_v2_history.json';
- const url=root+file+(liveHistory?(root+file).includes('?')?'&':'?')+'refresh='+Math.floor(now/15000):'';
+ const url=root+file+(liveHistory?'?refresh='+Math.floor(now/15000):'');
  const promise=fetch(url,{cache:liveHistory?'no-store':'default',signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error(file+' HTTP '+r.status);return r.json()}).finally(()=>clearTimeout(timer));
  marketJsonRequests.set(key,{at:now,promise});
  promise.catch(()=>{if(marketJsonRequests.get(key)?.promise===promise)marketJsonRequests.delete(key)});
