@@ -125,7 +125,7 @@ for row in rows:
     if not start or not entry:
         continue
     age = (now - start).total_seconds()
-    if age < 300:
+    if age < 120:
         continue
     points = []
     for point in history.get(row["mint"], []):
@@ -135,12 +135,12 @@ for row in rows:
         if at and price and at >= start:
             points.append((at, price))
     points.sort(key=lambda p: p[0])
-    for minutes in (5, 10):
+    for minutes in (2, 4, 5, 6, 10):
         price_key = f"price_{minutes}m_usd"
         return_key = f"return_{minutes}m_pct"
         observed_key = f"observed_{minutes}m_at_utc"
-        delay_key = "measurement_delay_minutes" if minutes == 5 else "measurement_10m_delay_minutes"
-        status_key = "status" if minutes == 5 else "status_10m"
+        delay_key = "measurement_delay_minutes" if minutes == 5 else "measurement_10m_delay_minutes" if minutes == 10 else f"measurement_{minutes}m_delay_minutes"
+        status_key = "status" if minutes == 5 else f"status_{minutes}m"
         if row.get(price_key) is not None and row.get(return_key) is not None:
             continue
         target = minutes * 60
