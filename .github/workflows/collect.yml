@@ -226,7 +226,7 @@ jobs:
                               previous[field]=value
               if name == 'spike_radar_history.json':
                   # Honor explicit 16 Oct reset even when retrying a stale collector push.
-                  combined={k:v for k,v in combined.items() if not (v.get('day') == '2026-10-16' and stamp(v) <= '2026-10-16T15:18:18.541098+00:00')}
+                  combined={k:v for k,v in combined.items() if not (v.get('day') == '2026-10-16' and stamp(v) <= '2026-10-16T16:12:23.403666+00:00')}
               existing['records']=sorted(combined.values(),key=stamp)
               if name in ('spike_radar_history.json','spike_radar_v2_history.json'):
                   active=dict(existing.get('active_alerts') or {})
