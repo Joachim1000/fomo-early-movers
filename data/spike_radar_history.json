@@ -24922,7 +24922,11 @@
       "observed_5m_at_utc": "2026-10-16T15:04:26.776170+00:00",
       "return_5m_pct": 10.95,
       "measurement_delay_minutes": 6.02,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001114,
+      "observed_10m_at_utc": "2026-10-16T15:08:27.357660+00:00",
+      "measurement_10m_delay_minutes": 10.03,
+      "return_10m_pct": 12.88
     },
     {
       "day": "2026-10-16",
@@ -24947,10 +24951,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-16T15:08:27.357660+00:00",
+      "alert_price_usd": 0.04069,
+      "initial_15m_change_pct": 3.22,
+      "initial_7m_change_pct": null,
+      "buys_5m": 25,
+      "sells_5m": 8,
+      "volume_5m_usd": 26738.68,
+      "liquidity_usd": 754438.59,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 2400.0,
+      "volume_acceleration_pct": 14998.07,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:06:20.557761+00:00",
+  "updated_at_utc": "2026-10-16T15:08:27.357660+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
