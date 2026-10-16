@@ -25324,10 +25324,34 @@
       "observed_6m_at_utc": "2026-10-16T18:38:27.111694+00:00",
       "measurement_6m_delay_minutes": 6.01,
       "return_6m_pct": 2.65
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "5d33RRdTCJjqhZVD85h1M5xK6cUHdAt7BE61XPV7pump",
+      "pair_address": "EymcB9oCmF366PTidCxKuvajbx1CsrCFJLRRQ3YhSHiM",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "VAULTA",
+      "first_alert_at_utc": "2026-10-16T18:40:35.357408+00:00",
+      "alert_price_usd": 9.223e-05,
+      "initial_15m_change_pct": 11.6,
+      "initial_7m_change_pct": null,
+      "buys_5m": 1557,
+      "sells_5m": 685,
+      "volume_5m_usd": 39848.18,
+      "liquidity_usd": 24820.74,
+      "estimated_100usd_buy_impact_pct": 0.8,
+      "buy_acceleration_pct": -8.57,
+      "volume_acceleration_pct": -15.11,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T18:38:27.111694+00:00",
+  "updated_at_utc": "2026-10-16T18:40:35.357408+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
