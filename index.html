@@ -611,16 +611,23 @@ async function forceRefreshPerformance(){
 // share the same request and timestamp rather than racing different snapshots.
 let radarSharedCache=null,radarSharedPromise=null,radarSharedFetchedAt=0;
 async function getSharedRadarHistory(){
- const now=Date.now();
- if(radarSharedCache&&now-radarSharedFetchedAt<8000&&radarSharedCache._sourceBase===(window.marketDataBase||''))return radarSharedCache;
+ const now=Date.now(),source='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+ if(radarSharedCache&&now-radarSharedFetchedAt<15000)return radarSharedCache;
  if(radarSharedPromise)return radarSharedPromise;
  radarSharedPromise=(async()=>{
-  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
-  const data=await fetchMarketJson('spike_radar_history.json',6500);
-  dashboardRefreshTimestamp=Date.now();updateDataAge();
-  if(!Array.isArray(data.records))throw Error('Invalid Spike Radar history');
-  data._sourceBase=window.marketDataBase||'';radarSharedCache=data;radarSharedFetchedAt=Date.now();
-  return data;
+  try{
+   // History is a large, frequently updated JSON file. Avoid short timeouts,
+   // stale pinned commit URLs, and browser/CDN caching of the moving branch.
+   const url=source+'spike_radar_history.json?fresh='+Date.now();
+   const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),20000);
+   let response;
+   try{response=await fetch(url,{cache:'no-store',signal:ctrl.signal});if(!response.ok)throw Error('History HTTP '+response.status);const data=await response.json();if(!Array.isArray(data.records))throw Error('Invalid Spike Radar history');data._sourceBase=source;radarSharedCache=data;radarSharedFetchedAt=Date.now();dashboardRefreshTimestamp=Date.now();updateDataAge();return data}
+   finally{clearTimeout(timer)}
+  }catch(error){
+   console.warn('Spike Radar history refresh failed',error);
+   if(radarSharedCache&&Array.isArray(radarSharedCache.records))return radarSharedCache;
+   throw error;
+  }
  })();
  try{return await radarSharedPromise}finally{radarSharedPromise=null}
 }
