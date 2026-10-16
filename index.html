@@ -577,7 +577,7 @@ function updateDataAge(){const el=document.getElementById('dataAge'),updated=doc
 el.style.color='#94a3b8';if(tab==='performance'){updated.textContent='PERFORMANCE · 4-hour refresh';}else if(['beta-daily','v3-daily'].includes(tab)){updated.textContent='DAILY · 23:30 Warsaw close';}else{updated.textContent='Latest observed prices';}el.textContent=' · '+ageLabel(tabDataTimestamps[tab]);}
 function copySocialMint(btn){const mint=btn.getAttribute('data-mint')||'';if(!mint)return;const done=()=>{btn.textContent='Copied ✓';setTimeout(()=>btn.textContent='Copy',1500)};if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(mint).then(done).catch(()=>fallback())}else fallback();function fallback(){const t=document.createElement('textarea');t.value=mint;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{if(document.execCommand('copy'))done();else btn.textContent='Copy failed'}catch(e){btn.textContent='Copy failed'}t.remove()}}
 async function loadV3(){if(typeof window.refreshV3Beta==='function')return window.refreshV3Beta()}
-const performanceRefreshMs=60*1000;
+const performanceRefreshMs=10*1000;
 const performanceLastRun={simple:0,extended:0};
 function refreshPerformance(kind,fn){const now=Date.now();if(now-performanceLastRun[kind]<performanceRefreshMs)return;performanceLastRun[kind]=now;Promise.resolve().then(fn).catch(e=>{performanceLastRun[kind]=0;console.error('Performance refresh',e)})}
 function refreshPerformancePage(){refreshPerformance('simple',()=>loadSimplePerformance());if(typeof window.loadLiveExtended==='function')refreshPerformance('extended',()=>window.loadLiveExtended())}
@@ -611,15 +611,15 @@ async function forceRefreshPerformance(){
 let radarSharedCache=null,radarSharedPromise=null,radarSharedFetchedAt=0;
 async function getSharedRadarHistory(){
  const now=Date.now();
- if(radarSharedCache&&now-radarSharedFetchedAt<8000)return radarSharedCache;
+ if(radarSharedCache&&now-radarSharedFetchedAt<8000&&radarSharedCache._sourceBase===(window.marketDataBase||''))return radarSharedCache;
  if(radarSharedPromise)return radarSharedPromise;
  radarSharedPromise=(async()=>{
-  const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'spike_radar_history.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('Spike Radar history HTTP '+response.status);
   const data=await response.json();
   if(!Array.isArray(data.records))throw Error('Invalid Spike Radar history');
-  radarSharedCache=data;radarSharedFetchedAt=Date.now();
+  data._sourceBase=window.marketDataBase||'';radarSharedCache=data;radarSharedFetchedAt=Date.now();
   return data;
  })();
  try{return await radarSharedPromise}finally{radarSharedPromise=null}
@@ -882,8 +882,10 @@ setInterval(()=>{
  marketRefreshTicks++;
  load(); // every 10 seconds; load() guards overlapping requests
  if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta(); // keep Beta history in sync
- if(marketRefreshTicks%3===0){pollMarketFreshness();refreshPerformancePage()}
- if(marketRefreshTicks%30===0)loadV3();
+ pollMarketFreshness();refreshPerformancePage();
+  if(window.activeDashboardTab==='v3-daily'&&typeof loadV3Daily==='function')loadV3Daily();
+  if(window.activeDashboardTab==='home'&&typeof loadHomeTradingHours==='function')loadHomeTradingHours();
+ if(window.activeDashboardTab==='v3')loadV3();
 },10000);
 setInterval(updateDataAge,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){pollMarketFreshness();load()}});
@@ -979,15 +981,15 @@ setInterval(()=>{if(!document.hidden&&document.body.classList.contains('v3-daily
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&document.body.classList.contains('v3-daily-mode')&&typeof loadV3Daily==='function')loadV3Daily()});
 /* LIVE V3.1 BETA AI: same price-trend sparkline and risk badges as LIVE TOP 10. */
 (function(){
- const url='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+ const url=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
  const el=id=>document.getElementById(id);
  const safe=v=>String(v??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const pct=v=>v==null||!Number.isFinite(Number(v))?'—':(Number(v)>0?'+':'')+Number(v).toFixed(2)+'%';
  const fmtPrice=v=>v==null?'—':'$'+Number(v).toLocaleString('en-US',{maximumSignificantDigits:5});
  async function refresh(){const body=el('v3Rows'),status=el('v3Status');if(!body||!status)return;
- try{const r=await fetch(url+'live_v31.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const data=await r.json();const rows=Array.isArray(data.ranking)?data.ranking:[];
+ try{const r=await fetch((window.marketDataBase||url)+'live_v31.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const data=await r.json();const rows=Array.isArray(data.ranking)?data.ranking:[];
  const firstCallRisk=window.v31FirstCallRisk(data.observations);
- let history={};try{const h=await fetch(url+'history.json?t='+Date.now(),{cache:'no-store'});if(h.ok)history=await h.json()}catch(e){console.warn('V3 history unavailable',e)}
+ let history={};try{const h=await fetch((window.marketDataBase||url)+'history.json?t='+Date.now(),{cache:'no-store'});if(h.ok)history=await h.json()}catch(e){console.warn('V3 history unavailable',e)}
  const outlook=el('v31BuyOutlook');
  if(outlook){
   const assessments=rows.map(x=>{
@@ -1018,7 +1020,7 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&document.
  status.textContent='Updated: '+(data.generated_at_utc?new Date(data.generated_at_utc).toLocaleString('en-GB',{timeZone:'Europe/Warsaw'}):'unknown')+' · '+rows.length+' candidates · 2h trend chart uses verified same-pair history';
  }catch(err){status.textContent='V3.1 AI · Data feed pending ('+err.message+')';body.innerHTML='<tr><td colspan="10">V3.1 AI data pending — awaiting first successful model collection. Existing V3 results are not substituted.</td></tr>'}}
  window.refreshV3Beta=refresh;
- function init(){refresh();const tab=el('v3Tab');if(tab)tab.addEventListener('click',refresh);const dailyTab=el('v3DailyTab');if(dailyTab)dailyTab.addEventListener('click',loadV3Daily);setInterval(()=>{if(!document.hidden)refresh()},300000)}
+ function init(){refresh();const tab=el('v3Tab');if(tab)tab.addEventListener('click',refresh);const dailyTab=el('v3DailyTab');if(dailyTab)dailyTab.addEventListener('click',loadV3Daily);setInterval(()=>{if(!document.hidden&&window.activeDashboardTab==='v3')refresh()},10000)}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script><script>async function loadLiveExtended(){
