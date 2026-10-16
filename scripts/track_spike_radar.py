@@ -38,6 +38,9 @@ if not isinstance(saved, dict):
 if not isinstance(saved.get("records"), list):
     saved["records"] = []
 rows = saved["records"]
+# Explicit reset: discard Spike Radar alerts recorded on 16 Oct up to reset snapshot.
+RESET_CUTOFF_UTC = parse("2026-10-16T15:18:18.541098+00:00")
+rows[:] = [r for r in rows if not (r.get("day") == "2026-10-16" and (parse(r.get("first_alert_at_utc")) or RESET_CUTOFF_UTC) <= RESET_CUTOFF_UTC)]
 # Signal thresholds apply when NEW signals are registered, not retroactively.
 # Keep today's already-recorded observations, including those made under
 # earlier parameter versions; never erase their verified follow-up history.
