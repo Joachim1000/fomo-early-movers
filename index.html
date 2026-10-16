@@ -1189,7 +1189,7 @@ async function loadSpikeRadarBeta(){
   if(data.updated_at_utc)markTabData('spike-beta',data.updated_at_utc);
   if(status)status.textContent='Signal data updated: '+stamp+' Warsaw · '+selected.length+' of '+records.length+' signals pass BETA filter · '+verified.length+' measured · Hit rate: '+(verified.length?(100*wins/verified.length).toFixed(1)+'%':'N/A')+' · Avg 5m: '+(avg===null?'N/A':(avg>=0?'+':'')+avg.toFixed(2)+'%')+' before costs';
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const sorted=selected.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
+  const sorted=todays.slice().sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));
   historyTarget.dataset.loaded='true';
   if(historyTarget)historyTarget.innerHTML=sorted.slice(0,60).map(x=>{
    const validReturn=(price,reported)=>{const entry=Number(x.alert_price_usd),exit=Number(price);if(!Number.isFinite(entry)||entry<=0||price==null||!Number.isFinite(exit)||exit<=0)return null;const computed=(exit/entry-1)*100;return Number.isFinite(computed)?computed:null};
@@ -1202,7 +1202,7 @@ async function loadSpikeRadarBeta(){
    const tone=v=>v==null?'beta-pending':v>0?'beta-positive':v<0?'beta-negative':'beta-pending';
    const result=v=>v==null?'PENDING':v>0?'POSITIVE':v<0?'NEGATIVE':'FLAT';
    return '<tr><td data-mobile-label="Token"><b title="'+escape(x.mint||'')+'">'+escape(x.symbol)+'</b> <button class="copy-mint" type="button" data-mint="'+escape(x.mint||'')+'" onclick="copyMint(this)" title="Copy token address">Copy</button></td><td data-mobile-label="First alert">'+escape(alertDate)+' '+escape(when)+'</td><td data-mobile-label="5m volume">'+(x.volume_5m_usd==null?'—':'$'+Number(x.volume_5m_usd).toLocaleString('en-US',{maximumFractionDigits:0}))+'</td><td data-mobile-label="Buy acceleration">'+signed(x.buy_acceleration_pct)+'</td><td data-mobile-label="Volume acceleration">'+signed(x.volume_acceleration_pct)+'</td><td data-mobile-label="Alert price">'+money(x.alert_price_usd)+'</td><td data-mobile-label="5m price">'+(x.price_5m_usd!=null?money(x.price_5m_usd):'NOT DUE YET')+'</td><td data-mobile-label="5m return" class="'+tone(ret)+'">'+(ret==null?'NOT DUE YET':signed(ret))+'</td><td data-mobile-label="10m price">'+(x.price_10m_usd!=null?money(x.price_10m_usd):'NOT DUE YET')+'</td><td data-mobile-label="10m return" class="'+tone(ret10)+'">'+(ret10==null?'NOT DUE YET':signed(ret10))+'</td><td data-mobile-label="10m result">'+escape(x.status_10m||'PENDING')+'</td><td data-mobile-label="Result">'+escape(x.status||'PENDING')+'</td></tr>';
-  }).join('')||'<tr><td colspan="12">No V2 history yet.</td></tr>';
+  }).join('')||'<tr><td colspan="12">No V2 signals recorded today yet.</td></tr>';
  }catch(e){console.error('SPIKE RADAR V2 loading error',e);if(status)status.textContent='V2 analysis unavailable: '+e.message;if(historyTarget)historyTarget.innerHTML='<tr><td colspan="12">V2 data error: '+String(e.message).replace(/[<>&]/g,'')+'</td></tr>'}finally{spikeBetaLoadBusy=false}
 }
 </script><script>
