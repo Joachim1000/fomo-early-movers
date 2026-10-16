@@ -115765,9 +115765,53 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "CC5D6puFmcsnGaJh7kNXeAcRpL2SZzQfoQezvx45uKjt",
+      "pair_address": "FGXMnchTt8tQc8mEHgWiWhrUHHUHcMAzCvgaYuaCmghz",
+      "symbol": "WORLD",
+      "observed_at_utc": "2026-10-16T09:15:32.450566+00:00",
+      "entry_price_usd": 0.0003027,
+      "momentum_heuristic": 1.2,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 0.066,
+      "acceleration_pct_points": null,
+      "buys_5m": 5,
+      "sells_5m": 5,
+      "buy_sell_ratio": 1.0,
+      "liquidity_usd": 59535.58,
+      "volume_5m_usd": 278.24,
+      "v31_heuristic_score": 2.221,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump",
+      "pair_address": "GUBeopP5NoKWYYtg8qSg7npUBxiQGATVKaBdMaKozS9f",
+      "symbol": "PsyopAnime",
+      "observed_at_utc": "2026-10-16T09:15:32.450566+00:00",
+      "entry_price_usd": 0.03451,
+      "momentum_heuristic": 0.0,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 0.0,
+      "acceleration_pct_points": null,
+      "buys_5m": 0,
+      "sells_5m": 0,
+      "buy_sell_ratio": 0.0,
+      "liquidity_usd": 209410.39,
+      "volume_5m_usd": 0,
+      "v31_heuristic_score": -7.679,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-16T09:01:04.603871+00:00",
+  "generated_at_utc": "2026-10-16T09:15:32.450566+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -117984,6 +118028,14 @@
     },
     "0x87aE267002cD1eA0eC86Bf3601D4a8AD76A47777|0x9F9C4da6Efe5070042a7809839381ddB31BE4C3D": {
       "first_seen_at_utc": "2026-10-16T09:01:04.603871+00:00",
+      "first_call_risk": "HIGH"
+    },
+    "CC5D6puFmcsnGaJh7kNXeAcRpL2SZzQfoQezvx45uKjt|FGXMnchTt8tQc8mEHgWiWhrUHHUHcMAzCvgaYuaCmghz": {
+      "first_seen_at_utc": "2026-10-16T09:15:32.450566+00:00",
+      "first_call_risk": "ELEVATED"
+    },
+    "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump|GUBeopP5NoKWYYtg8qSg7npUBxiQGATVKaBdMaKozS9f": {
+      "first_seen_at_utc": "2026-10-16T09:15:32.450566+00:00",
       "first_call_risk": "HIGH"
     }
   }
