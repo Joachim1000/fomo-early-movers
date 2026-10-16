@@ -117057,9 +117057,31 @@
       "return_60m_pct": null,
       "v31_rank": 9,
       "predicted_10m_gain_probability_pct": null
+    },
+    {
+      "mint": "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump",
+      "pair_address": "FpyosQzp5ijfrxqqBVNm67rfam7VsbVNAm7PUf8Yvt1c",
+      "symbol": "PsyopAnime",
+      "observed_at_utc": "2026-10-16T10:15:36.206574+00:00",
+      "entry_price_usd": 0.00105,
+      "momentum_heuristic": 31.83,
+      "change_5m_pct": 0.575,
+      "change_10m_pct": 6.394,
+      "change_15m_pct": 11.512,
+      "acceleration_pct_points": -5.211,
+      "buys_5m": 107,
+      "sells_5m": 91,
+      "buy_sell_ratio": 1.176,
+      "liquidity_usd": 214183.38,
+      "volume_5m_usd": 14385.69,
+      "v31_heuristic_score": -8.237,
+      "eligible_for_ranking": true,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-16T10:01:53.035553+00:00",
+  "generated_at_utc": "2026-10-16T10:15:36.206574+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -119285,6 +119307,10 @@
     "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump|GUBeopP5NoKWYYtg8qSg7npUBxiQGATVKaBdMaKozS9f": {
       "first_seen_at_utc": "2026-10-16T09:15:32.450566+00:00",
       "first_call_risk": "HIGH"
+    },
+    "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump|FpyosQzp5ijfrxqqBVNm67rfam7VsbVNAm7PUf8Yvt1c": {
+      "first_seen_at_utc": "2026-10-16T10:15:36.206574+00:00",
+      "first_call_risk": "ELEVATED"
     }
   }
 }
