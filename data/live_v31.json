@@ -124607,7 +124607,7 @@
     "2026-10-16": {
       "selected_at_utc": "2026-10-16T05:11:31.068220+00:00",
       "selection_target_local": "06:00",
-      "status": "ACTIVE",
+      "status": "LOCKED",
       "selection_basis": "long_horizon_6h_momentum_and_liquidity",
       "candidates": [
         {
@@ -124631,7 +124631,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 102.67,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -3.132,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "CARDSccUMFKoPRZxt5vt3ksUbxEFEcnZ3H2pd3dKxYjp",
@@ -124654,7 +124661,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.2943,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -8.489,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -124677,7 +124691,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "LOW RELATIVE"
+          "first_call_risk": "LOW RELATIVE",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.1079,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -9.099,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "0xFe189E97832DA1573e4e4Ff034F4fFC3a15c7777",
@@ -124700,7 +124721,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.07758,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -3.771,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
@@ -124723,7 +124751,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "LOW RELATIVE"
+          "first_call_risk": "LOW RELATIVE",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.009144,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -12.161,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -124746,7 +124781,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.003538,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -25.327,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
@@ -124769,7 +124811,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.004288,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -32.769,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
@@ -124792,7 +124841,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.004222,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -31.539,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
@@ -124815,7 +124871,14 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "HIGH"
+          "first_call_risk": "HIGH",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.001593,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": -17.161,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         },
         {
           "mint": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
@@ -124838,9 +124901,18 @@
           "candidate_source": "DAILY_PROVISIONAL_WATCHLIST",
           "selection_confidence": "WATCH",
           "selection_reason": "Insufficient verified 6h history",
-          "first_call_risk": "ELEVATED"
+          "first_call_risk": "ELEVATED",
+          "observed_at_utc": "2026-10-16T21:30:00+00:00",
+          "last_price_usd": 0.002221,
+          "last_price_at_utc": "2026-10-16T19:10:27.187211+00:00",
+          "return_pct": 0.498,
+          "return_1h_pct": null,
+          "return_4h_pct": null,
+          "return_6h_pct": null
         }
-      ]
+      ],
+      "locked_at_utc": "2026-10-16T21:40:34.665868+00:00",
+      "evaluation_cutoff_utc": "2026-10-16T21:30:00+00:00"
     }
   },
   "first_calls": {
