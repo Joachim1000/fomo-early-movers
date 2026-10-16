@@ -24802,7 +24802,11 @@
       "observed_5m_at_utc": "2026-10-16T14:52:20.157526+00:00",
       "return_5m_pct": -9.36,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 7.964e-05,
+      "observed_10m_at_utc": "2026-10-16T14:58:25.769208+00:00",
+      "measurement_10m_delay_minutes": 12.09,
+      "return_10m_pct": -9.65
     },
     {
       "day": "2026-10-16",
@@ -24828,7 +24832,11 @@
       "observed_5m_at_utc": "2026-10-16T14:52:20.157526+00:00",
       "return_5m_pct": 0.69,
       "measurement_delay_minutes": 6.0,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.000704,
+      "observed_10m_at_utc": "2026-10-16T14:58:25.769208+00:00",
+      "measurement_10m_delay_minutes": 12.09,
+      "return_10m_pct": -12.86
     },
     {
       "day": "2026-10-16",
@@ -24875,6 +24883,32 @@
       "buy_acceleration_pct": 7.14,
       "volume_acceleration_pct": -59.43,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.001314,
+      "observed_5m_at_utc": "2026-10-16T14:58:25.769208+00:00",
+      "return_5m_pct": -4.85,
+      "measurement_delay_minutes": 6.09,
+      "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "wLZrRQk9XBynAJSRdeQgsQrVURXGdfo4ahb1oRBpump",
+      "pair_address": "5UvstFPqPsf9udazaiKW87i4TAWNihk81m5ESX8ZkgUJ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "CATCH",
+      "first_alert_at_utc": "2026-10-16T14:58:25.769208+00:00",
+      "alert_price_usd": 9.869e-05,
+      "initial_15m_change_pct": 3.45,
+      "initial_7m_change_pct": null,
+      "buys_5m": 21,
+      "sells_5m": 8,
+      "volume_5m_usd": 3095.55,
+      "liquidity_usd": 26725.82,
+      "estimated_100usd_buy_impact_pct": 0.74,
+      "buy_acceleration_pct": 2000.0,
+      "volume_acceleration_pct": 968.17,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -24882,7 +24916,7 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T14:56:19.080494+00:00",
+  "updated_at_utc": "2026-10-16T14:58:25.769208+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
