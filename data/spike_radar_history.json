@@ -24552,13 +24552,17 @@
       "return_2m_pct": -3.58,
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
-      "status_6m": "PENDING",
+      "status_6m": "MEASURED",
       "status_10m": "PENDING",
       "price_4m_usd": 0.004356,
       "observed_4m_at_utc": "2026-10-16T18:06:33.959211+00:00",
       "measurement_4m_delay_minutes": 5.47,
       "return_4m_pct": -3.14,
-      "measurement_delay_minutes": 5.47
+      "measurement_delay_minutes": 5.47,
+      "price_6m_usd": 0.004356,
+      "observed_6m_at_utc": "2026-10-16T18:08:21.176800+00:00",
+      "measurement_6m_delay_minutes": 7.26,
+      "return_6m_pct": -3.14
     },
     {
       "day": "2026-10-16",
@@ -24663,10 +24667,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "2jAq7KMy4eqxex1DQHo1nSybEv2yTY94dUDKmvZ2yUb3",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-16T18:08:21.176800+00:00",
+      "alert_price_usd": 0.004084,
+      "initial_15m_change_pct": 2.46,
+      "initial_7m_change_pct": null,
+      "buys_5m": 224,
+      "sells_5m": 133,
+      "volume_5m_usd": 27812.17,
+      "liquidity_usd": 343951.84,
+      "estimated_100usd_buy_impact_pct": 0.06,
+      "buy_acceleration_pct": -20.28,
+      "volume_acceleration_pct": 12.58,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T18:06:33.959211+00:00",
+  "updated_at_utc": "2026-10-16T18:08:21.176800+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
