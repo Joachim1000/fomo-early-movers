@@ -24,7 +24,7 @@ jobs:
           from zoneinfo import ZoneInfo
           import os
           now=datetime.now(ZoneInfo("Europe/Warsaw"))
-          enabled=(now.hour,now.minute)>=(23,30) and now.hour==23
+          enabled=((now.hour,now.minute)>=(23,30) and now.hour==23) or os.environ.get("GITHUB_EVENT_NAME")=="workflow_dispatch"
           with open(os.environ["GITHUB_OUTPUT"],"a") as f:
               f.write("enabled="+str(enabled).lower()+"\n")
           print("Close enabled:",enabled,"local time:",now.isoformat())
