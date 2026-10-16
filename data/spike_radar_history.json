@@ -24407,10 +24407,12 @@
       "buy_acceleration_pct": -15.55,
       "volume_acceleration_pct": 7.56,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.000712,
+      "observed_5m_at_utc": "2026-10-16T17:54:22.287515+00:00",
+      "return_5m_pct": -6.56,
+      "measurement_delay_minutes": 6.05,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -24435,10 +24437,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "G3NKPRK3BVrNDPLCbtG53SibytphwDqiTrnaiUq9pump",
+      "pair_address": "2kDUw5GUbiaPpZhzD8gTzLkn9pUqhmwKEAv5F4rc8Up7",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "ROADSTER",
+      "first_alert_at_utc": "2026-10-16T17:54:22.287515+00:00",
+      "alert_price_usd": 0.004087,
+      "initial_15m_change_pct": 7.75,
+      "initial_7m_change_pct": null,
+      "buys_5m": 481,
+      "sells_5m": 171,
+      "volume_5m_usd": 15045.6,
+      "liquidity_usd": 181995.62,
+      "estimated_100usd_buy_impact_pct": 0.11,
+      "buy_acceleration_pct": -11.9,
+      "volume_acceleration_pct": -0.09,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T17:52:19.759984+00:00",
+  "updated_at_utc": "2026-10-16T17:54:22.287515+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
