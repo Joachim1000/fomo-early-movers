@@ -943,7 +943,8 @@ async function loadV3Daily(){
   if(datePicker){
    const options=keys.slice().reverse().map(day=>'<option value="'+day+'">'+day+(portfolios[day]?.status==='LOCKED'?' · LOCKED':' · ACTIVE')+'</option>').join('');
    if(datePicker.innerHTML!==options)datePicker.innerHTML=options;
-   const preferred=priorSelection&&portfolios[priorSelection]?priorSelection:(keys.includes('2026-10-15')?'2026-10-15':keys.at(-1));
+   const latestLocked=keys.filter(day=>portfolios[day]?.status==='LOCKED').at(-1);
+   const preferred=priorSelection&&portfolios[priorSelection]?priorSelection:(latestLocked||keys.at(-1));
    if(preferred)datePicker.value=preferred;
    if(!datePicker.dataset.bound){datePicker.addEventListener('change',()=>loadV3Daily());datePicker.dataset.bound='true'}
   }
