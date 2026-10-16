@@ -2782,7 +2782,12 @@
       "price_5m_usd": 0.004746,
       "observed_5m_at_utc": "2026-10-16T07:52:18.954161+00:00",
       "return_5m_pct": -3.04,
-      "measurement_delay_minutes": 6.01
+      "measurement_delay_minutes": 6.01,
+      "price_10m_usd": 0.005402,
+      "observed_10m_at_utc": "2026-10-16T07:58:19.184286+00:00",
+      "measurement_10m_delay_minutes": 12.01,
+      "return_10m_pct": 10.36,
+      "status_10m": "MEASURED"
     },
     {
       "day": "2026-10-16",
@@ -2802,10 +2807,11 @@
       "volume_acceleration_pct": 745.65,
       "spike_v2_score": 84,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 7.418e-05,
+      "observed_5m_at_utc": "2026-10-16T07:58:19.184286+00:00",
+      "return_5m_pct": -3.4,
+      "measurement_delay_minutes": 6.0
     },
     {
       "day": "2026-10-16",
@@ -2829,13 +2835,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-16T07:58:19.184286+00:00",
+      "alert_price_usd": 0.004612,
+      "initial_15m_change_pct": 3.04,
+      "buys_5m": 18,
+      "sells_5m": 0,
+      "volume_5m_usd": 1926.99,
+      "liquidity_usd": 431622.14,
+      "buy_acceleration_pct": 20.0,
+      "volume_acceleration_pct": -35.24,
+      "spike_v2_score": 76,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
-    "0x14F6A94909C407854390Aa2d2462a3095D317777|0x223C585c50D4747653a57D577707B1EadBB2cFB0": true
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump|FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q": true
   },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T07:56:18.001000+00:00",
+  "updated_at_utc": "2026-10-16T07:58:19.184286+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
