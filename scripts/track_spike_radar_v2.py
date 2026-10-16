@@ -61,7 +61,7 @@ current = set()
 for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get("spike_v2_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
-    if not mint or not pair or not price or str(item.get("network", "")).lower() != "solana":
+    if not mint or not pair or not price or str(item.get("network", "")).lower() not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
         continue
     # Beta entry guard: avoid already-extended 15m momentum (>15%).
     # Missing/non-numeric changes are rejected rather than silently bypassing the guard.
