@@ -25191,13 +25191,37 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "5GDX5fJTQns4arM1J94wjxdA8KXFsV5qW46MLFpHpump",
+      "pair_address": "QVCymnis5qQJEJRZPgbEJnNKrQdNkhJtTFk7v1xqu9D",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "OMNI",
+      "first_alert_at_utc": "2026-10-16T11:00:54.045547+00:00",
+      "alert_price_usd": 0.000555,
+      "initial_15m_change_pct": 20.44,
+      "initial_7m_change_pct": 6.34,
+      "buys_5m": 11,
+      "sells_5m": 2,
+      "volume_5m_usd": 2357.41,
+      "liquidity_usd": 83913.07,
+      "estimated_100usd_buy_impact_pct": 0.24,
+      "buy_acceleration_pct": 1000.0,
+      "volume_acceleration_pct": 47142.69,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T10:58:17.904049+00:00",
+  "updated_at_utc": "2026-10-16T11:00:54.045547+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
