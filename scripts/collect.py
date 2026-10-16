@@ -345,15 +345,15 @@ for mint, pair in best.items():
     change_15m = (round(100 * (numeric(pair.get("priceUsd")) /
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
-    # Spike Radar V1: observed same-pair price approximately seven minutes ago.
-    # Use the oldest available observation in the 6–8 minute window.
-    seven_min_baselines = [p for p in recent_15m if
-                           360 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 480]
-    seven_min_baseline = min(seven_min_baselines, key=lambda p:
-                            abs((NOW - parse_time(p["timestamp"])).total_seconds() - 420)) if seven_min_baselines else None
-    change_7m = (round(100 * (numeric(pair.get("priceUsd")) /
-                  numeric(seven_min_baseline["price_usd"]) - 1), 2)
-                 if seven_min_baseline and numeric(seven_min_baseline["price_usd"]) > 0 else None)
+    # Spike Radar V1: observed same-pair price approximately five minutes ago.
+    # Select the closest observation in the 4–6 minute window.
+    five_min_baselines = [p for p in recent_15m if
+                          240 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 360]
+    five_min_baseline = min(five_min_baselines, key=lambda p:
+                            abs((NOW - parse_time(p["timestamp"])).total_seconds() - 300)) if five_min_baselines else None
+    change_5m = (round(100 * (numeric(pair.get("priceUsd")) /
+                  numeric(five_min_baseline["price_usd"]) - 1), 2)
+                 if five_min_baseline and numeric(five_min_baseline["price_usd"]) > 0 else None)
     # Early momentum: measured against the closest observed same-pair price
     # between 2 and 5 minutes old, never an inferred candle high.
     short_baselines = [p for p in recent_15m if
@@ -384,8 +384,8 @@ for mint, pair in best.items():
                   pair_age_hours is not None and pair_age_hours > 8 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
-                  volume >= 1000 and change_7m is not None and
-                  change_7m >= 5)
+                  volume >= 1000 and change_5m is not None and
+                  change_5m >= 4)
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
     pressure = buys / max(sells, 1)
     accelerating = prior_buys is not None and buys >= prior_buys * 1.2
