@@ -24927,13 +24927,37 @@
       "observed_10m_at_utc": "2026-10-16T09:42:19.815753+00:00",
       "measurement_10m_delay_minutes": 11.64,
       "return_10m_pct": -4.7
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0x7D0443CdDFc8E11AF105F4fE44Dd28c630237777",
+      "pair_address": "0x9E83Be1267E9A6D43bb7f3a8c0Dc3c092cCAe63E",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "DAWG",
+      "first_alert_at_utc": "2026-10-16T09:50:31.994980+00:00",
+      "alert_price_usd": 0.005128,
+      "initial_15m_change_pct": 8.6,
+      "initial_7m_change_pct": 8.3,
+      "buys_5m": 82,
+      "sells_5m": 27,
+      "volume_5m_usd": 8603.56,
+      "liquidity_usd": 234667.98,
+      "estimated_100usd_buy_impact_pct": 0.09,
+      "buy_acceleration_pct": 12.33,
+      "volume_acceleration_pct": 90.57,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T09:48:25.396981+00:00",
+  "updated_at_utc": "2026-10-16T09:50:31.994980+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
