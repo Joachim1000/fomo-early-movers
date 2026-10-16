@@ -24411,10 +24411,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump",
+      "pair_address": "GGM3WPy8Mtxx7AFvS1RsxbZTbnz9KK1HEG9MbFMyADA1",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "OWLDACITY",
+      "first_alert_at_utc": "2026-10-16T17:52:19.759984+00:00",
+      "alert_price_usd": 0.0002654,
+      "initial_15m_change_pct": 0.68,
+      "initial_7m_change_pct": null,
+      "buys_5m": 694,
+      "sells_5m": 69,
+      "volume_5m_usd": 3731.61,
+      "liquidity_usd": 48029.8,
+      "estimated_100usd_buy_impact_pct": 0.41,
+      "buy_acceleration_pct": 133.67,
+      "volume_acceleration_pct": -1.92,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T17:50:29.010400+00:00",
+  "updated_at_utc": "2026-10-16T17:52:19.759984+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
