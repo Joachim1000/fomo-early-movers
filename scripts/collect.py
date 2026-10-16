@@ -395,7 +395,7 @@ for mint, pair in best.items():
     fast_alert = (supported_radar_chain and radar_time_allowed and
                   True and
                    liquidity >= 5000 and
-                  buys >= 8 and buys >= 2 * max(sells, 1) and
+                  buys >= 8 and buys >= 1.7 * max(sells, 1) and
                   volume >= 1500 and liquidity >= 5000 and change_15m is not None and
                   0.5 <= change_15m <= 12 and
                   not (buy_acceleration is not None and buy_acceleration < 0 and
