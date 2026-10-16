@@ -3339,11 +3339,36 @@
       "measurement_10m_delay_minutes": 10.26,
       "return_10m_pct": -4.95,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump",
+      "pair_address": "GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Pepper",
+      "first_alert_at_utc": "2026-10-16T16:16:26.874029+00:00",
+      "alert_price_usd": 0.001185,
+      "initial_15m_change_pct": 4.22,
+      "buys_5m": 31,
+      "sells_5m": 6,
+      "volume_5m_usd": 1858.39,
+      "liquidity_usd": 114222.11,
+      "buy_acceleration_pct": 158.33,
+      "volume_acceleration_pct": 2.78,
+      "spike_v2_score": 85,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "9g4Pib6AM3oVdP9YA7ZcssAXAuhoUzkjR8w27doYpump|GKVfZiv4EUNViMRfUejEn5QJN29oXGCyk7FY2iUv3bGi": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T16:14:23.672626+00:00",
+  "updated_at_utc": "2026-10-16T16:16:26.874029+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
