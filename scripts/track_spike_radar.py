@@ -91,7 +91,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         vol = metric(item, "volume_5m_usd")
         prior_price = metric(previous, "alert_price_usd")
         renewed = ((accel is not None and prior_accel is not None and accel >= prior_accel + 10) or
-                   (vol is not None and prior_vol is not None and vol >= prior_vol * 1.25) or
+                   (vol is not None and prior_vol is not None and vol >= prior_vol * 1.10) or
                    (prior_price is not None and price >= prior_price * 1.02))
         if not renewed:
             continue
