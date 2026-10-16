@@ -46,7 +46,7 @@ if _snapshot is not None:
     _today = _snapshot.astimezone(ZoneInfo("Europe/Warsaw")).date().isoformat()
     rows[:] = [row for row in rows if row.get("day") != _today or
                ((isinstance(row.get("initial_7m_change_pct"), (int, float)) and
-                 3 <= row["initial_7m_change_pct"] <= 10) or
+                 row["initial_7m_change_pct"] >= 5) or
                 (row.get("initial_7m_change_pct") is None and
                  isinstance(row.get("initial_15m_change_pct"), (int, float)) and
                  3 <= row["initial_15m_change_pct"] <= 10))]
