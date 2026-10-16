@@ -24502,7 +24502,11 @@
       "observed_5m_at_utc": "2026-10-16T15:32:21.475820+00:00",
       "return_5m_pct": 4.88,
       "measurement_delay_minutes": 6.04,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001856,
+      "observed_10m_at_utc": "2026-10-16T15:36:29.883066+00:00",
+      "measurement_10m_delay_minutes": 10.18,
+      "return_10m_pct": 1.75
     },
     {
       "day": "2026-10-16",
@@ -24601,10 +24605,12 @@
       "buy_acceleration_pct": -3.7,
       "volume_acceleration_pct": -25.68,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 8.922e-05,
+      "observed_5m_at_utc": "2026-10-16T15:36:29.883066+00:00",
+      "return_5m_pct": 5.89,
+      "measurement_delay_minutes": 5.74,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -24653,10 +24659,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0x554AE941de6456751f9Db0E7AC9AC8fbf6497777",
+      "pair_address": "0xa794A9180e136c838CCa4B64eb501Daa3DbBa60F",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "特斯拉能飞",
+      "first_alert_at_utc": "2026-10-16T15:36:29.883066+00:00",
+      "alert_price_usd": 5.727e-05,
+      "initial_15m_change_pct": 3.0,
+      "initial_7m_change_pct": null,
+      "buys_5m": 83,
+      "sells_5m": 6,
+      "volume_5m_usd": 1573.19,
+      "liquidity_usd": 23812.02,
+      "estimated_100usd_buy_impact_pct": 0.83,
+      "buy_acceleration_pct": 5.06,
+      "volume_acceleration_pct": 71.49,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:34:29.802901+00:00",
+  "updated_at_utc": "2026-10-16T15:36:29.883066+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
