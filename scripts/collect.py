@@ -345,6 +345,15 @@ for mint, pair in best.items():
     change_15m = (round(100 * (numeric(pair.get("priceUsd")) /
                     numeric(baseline["price_usd"]) - 1), 2)
                   if baseline and numeric(baseline["price_usd"]) > 0 else None)
+    # Spike Radar V1: observed same-pair price approximately seven minutes ago.
+    # Use the oldest available observation in the 6–8 minute window.
+    seven_min_baselines = [p for p in recent_15m if
+                           360 <= (NOW - parse_time(p["timestamp"])).total_seconds() <= 480]
+    seven_min_baseline = min(seven_min_baselines, key=lambda p:
+                            abs((NOW - parse_time(p["timestamp"])).total_seconds() - 420)) if seven_min_baselines else None
+    change_7m = (round(100 * (numeric(pair.get("priceUsd")) /
+                  numeric(seven_min_baseline["price_usd"]) - 1), 2)
+                 if seven_min_baseline and numeric(seven_min_baseline["price_usd"]) > 0 else None)
     # Early momentum: measured against the closest observed same-pair price
     # between 2 and 5 minutes old, never an inferred candle high.
     short_baselines = [p for p in recent_15m if
@@ -375,8 +384,8 @@ for mint, pair in best.items():
                   pair_age_hours is not None and pair_age_hours > 8 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
-                  volume >= 1000 and change_15m is not None and
-                  3 <= change_15m <= 10)
+                  volume >= 1000 and change_7m is not None and
+                  3 <= change_7m <= 10)
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
     pressure = buys / max(sells, 1)
     accelerating = prior_buys is not None and buys >= prior_buys * 1.2
@@ -408,7 +417,7 @@ for mint, pair in best.items():
         "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
         "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and pair_age_hours is not None and pair_age_hours > 8 and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 3 else None,
-        "change_15m_pct": change_15m,
+        "change_15m_pct": change_15m, "change_7m_pct": change_7m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
         "symbol": (pair.get("baseToken") or {}).get("symbol"),
@@ -458,7 +467,7 @@ early_momentum_candidates = [x for x in candidates if x["early_momentum"]]
 early_momentum_candidates.sort(key=lambda x: (x["change_2_5m_pct"], x["momentum_heuristic"]), reverse=True)
 spike_v2_candidates = [x for x in candidates if x["spike_v2_alert"]]
 spike_v2_candidates.sort(key=lambda x: (x["spike_v2_score"], x["momentum_heuristic"]), reverse=True)
-early_alert_candidates.sort(key=lambda x: (x["change_15m_pct"], x["momentum_heuristic"]), reverse=True)
+early_alert_candidates.sort(key=lambda x: (x["change_7m_pct"], x["momentum_heuristic"]), reverse=True)
 eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
