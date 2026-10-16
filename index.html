@@ -691,7 +691,7 @@ function isWarsawTradingDaySignal(timestamp,day){
  const v=k=>parts.find(x=>x.type===k)?.value;
  const date=v('year')+'-'+v('month')+'-'+v('day');
  const minutes=Number(v('hour'))*60+Number(v('minute'));
- return date===day&&((minutes>=420&&minutes<660)||(minutes>=840&&minutes<960)||(minutes>=1200&&minutes<1320));
+ return date===day&&((minutes>=420&&minutes<600)||(minutes>=660&&minutes<960));
 }
 function warsawTradingDayNow(){
  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
