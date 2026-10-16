@@ -793,13 +793,13 @@ async function pollMarketFreshness(){
    // Fetch the immutable snapshot directly, even when the full dashboard is still busy.
    const snapshot=await fetch(base+'latest.json',{cache:'no-store',signal:ctrl.signal});
    if(snapshot.ok){const j=await snapshot.json(),ts=Date.parse(j.generated_at_utc||'');if(Number.isFinite(ts)&&(!Number.isFinite(snapshotTimestamp)||ts>snapshotTimestamp)){snapshotTimestamp=ts;lastTabSnapshot=j;updateDataAge();updateTabUpdateInfo()}}
-   if(!marketLoadBusy)load();
+   load();
    if(window.activeDashboardTab==='v3')loadV3();
    if(window.activeDashboardTab==='v3-daily')loadV3Daily();
    if(window.activeDashboardTab==='performance')refreshPerformancePage();
    if(window.activeDashboardTab==='home')loadHomeTradingHours();
     if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta();
-   if(typeof window.refreshV3Beta==='function')window.refreshV3Beta();
+   // V3 refresh is handled by the active-tab loader; avoid duplicate requests.
    
   }
  }catch(e){
@@ -814,7 +814,7 @@ async function pollMarketFreshness(){
     if(Number.isFinite(ts)&&(!Number.isFinite(snapshotTimestamp)||ts>snapshotTimestamp)){
      base=fallbackBase;window.marketDataBase=base;radarSharedCache=null;radarSharedFetchedAt=0;
      snapshotTimestamp=ts;lastTabSnapshot=j;updateDataAge();updateTabUpdateInfo();
-     if(!marketLoadBusy)load();
+     load();
      if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta();
     }
    }
@@ -930,8 +930,7 @@ async function checkBranchSnapshot(){
   if(!r.ok)return;
   const data=await r.json(),stamp=Date.parse(data.generated_at_utc||'');
   if(!Number.isFinite(stamp)||Number.isFinite(snapshotTimestamp)&&stamp<=snapshotTimestamp)return;
-  // Do not replace a commit-pinned snapshot with the slower moving branch CDN.
-  if(/\/[a-f0-9]{40}\/data\/$/.test(window.marketDataBase||''))return;
+  // The branch snapshot is newer: a pinned SHA must not block freshness updates.
   base='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   window.marketDataBase=base;radarSharedCache=null;radarSharedFetchedAt=0;
   snapshotTimestamp=stamp;lastTabSnapshot=data;updateDataAge();updateTabUpdateInfo();
