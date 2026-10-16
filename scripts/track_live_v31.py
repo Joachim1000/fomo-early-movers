@@ -193,7 +193,7 @@ daily=prior.setdefault("daily_portfolios",{})
 if not isinstance(daily,dict):
     daily={}
     prior["daily_portfolios"]=daily
-if day not in daily and local.hour>=6:
+if (day not in daily or (daily[day].get("status")=="ACTIVE" and not daily[day].get("candidates"))) and local.hour>=6:
     # Long-horizon LIVE V3.1: score 1h/2h/6h trends, persistent activity
     # and liquidity, not 5-minute spike acceleration or 10-minute ML labels.
     start=now-timedelta(hours=24)
