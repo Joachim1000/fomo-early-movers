@@ -386,7 +386,7 @@ for mint, pair in best.items():
                       change_2_5m is not None and 2 <= change_2_5m <= 25 and
                       prior_buys is not None and buys >= prior_buys * 1.2)
     # Radar supports every chain already accepted by the DEX/FOMO ingestion layer.
-    supported_radar_chain = fomo_key(mint, pair.get("chainId")) in fomo_mint_keys  # Match FOMO/DEX-verified networks, no separate hardcoded allowlist
+    supported_radar_chain = pair.get("chainId") in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche")  # V1 does not require FOMO verification
     buy_acceleration = (100 * (buys / prior_buys - 1)
                         if prior_buys is not None and prior_buys > 0 else None)
     strong_pressure = buys >= 1.5 * max(sells, 1)
@@ -394,7 +394,7 @@ for mint, pair in best.items():
     radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
     fast_alert = (supported_radar_chain and radar_time_allowed and
                   True and
-                   fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
+                   liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 3000 and liquidity >= 5000 and change_15m is not None and
                   0.5 <= change_15m <= 12 and
