@@ -292821,6 +292821,116 @@
       "status_color": "red",
       "call_type": "screening_status_not_buy_recommendation",
       "rank": 10
+    },
+    {
+      "mint": "0x7D0443CdDFc8E11AF105F4fE44Dd28c630237777",
+      "symbol": "DAWG",
+      "pair_address": "0x9E83Be1267E9A6D43bb7f3a8c0Dc3c092cCAe63E",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.005371,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 1
+    },
+    {
+      "mint": "0xd7ccd29b6Fd1464Edb425F24B01115556e737777",
+      "symbol": "sauce",
+      "pair_address": "0x08c96D501C699fAb7Ffce8A730a431393045EfC1",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.002459,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 2
+    },
+    {
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "symbol": "SI",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.02209,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 3
+    },
+    {
+      "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
+      "symbol": "HOTBOT",
+      "pair_address": "GLL3CzybpSCLZdoACf8QUM5YrKVwyA65kQ2RcTsJxxzV",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.005346,
+      "displayed_status": "WAIT",
+      "status_color": "yellow",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 4
+    },
+    {
+      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
+      "symbol": "SWOLF",
+      "pair_address": "6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.0009425,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 5
+    },
+    {
+      "mint": "ALDVtr9JeLjKH91fHFvLxFoyd7C6eLUxi9dUoN2FsWdD",
+      "symbol": "BUBBLE",
+      "pair_address": "9WCPXCe8Cs1sJPvk1Xc45Do8Naw286it8BHKWF7GUUaH",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.0008563,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 6
+    },
+    {
+      "mint": "0x4E67DB19044549fF420860834c91b45BaD298722",
+      "symbol": "ZC",
+      "pair_address": "0xf884f15815c943e08daebb0c8945d5b27cc7bfa4ed2880be1195048a9aad9f74",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.003201,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 7
+    },
+    {
+      "mint": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "symbol": "SAINDRA",
+      "pair_address": "9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.0004321,
+      "displayed_status": "NEGATIVE",
+      "status_color": "red",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 8
+    },
+    {
+      "mint": "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump",
+      "symbol": "Altai",
+      "pair_address": "DMEUT8UV5JX8G7jB7TP9XyfBUrP5z7p6VPLSE2WbbRHt",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 0.0003447,
+      "displayed_status": "POSITIVE",
+      "status_color": "green",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 9
+    },
+    {
+      "mint": "SAtoZGJkh4Eid9EQZYXWnCNVn5asZrWZLouBMX1SHi1",
+      "symbol": "Satoshi",
+      "pair_address": "7jTCpYho9RJhCn9ZyrLPjwGWkacGhJVdzL2cZni3UdUh",
+      "observed_at_utc": "2026-10-16T13:01:09.953057+00:00",
+      "observation_price_usd": 7.416e-05,
+      "displayed_status": "WAIT",
+      "status_color": "yellow",
+      "call_type": "screening_status_not_buy_recommendation",
+      "rank": 10
     }
   ]
 }
