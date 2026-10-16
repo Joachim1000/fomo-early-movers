@@ -24387,13 +24387,36 @@
       "return_5m_pct": 2.57,
       "measurement_delay_minutes": 6.04,
       "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "6vs4oxwMnHjoZzdQ7YVNTxjUivqoNjF6Dz8vaAe9pump",
+      "pair_address": "GV948PTjFgiZB3WgtArqge5VAcZJVdnHfK7JkywdYVuq",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "BANANA",
+      "first_alert_at_utc": "2026-10-16T05:06:21.929139+00:00",
+      "alert_price_usd": 9.694e-05,
+      "initial_15m_change_pct": 29.77,
+      "buys_5m": 47,
+      "sells_5m": 26,
+      "volume_5m_usd": 2820.99,
+      "liquidity_usd": 27594.91,
+      "estimated_100usd_buy_impact_pct": 0.72,
+      "buy_acceleration_pct": 30.56,
+      "volume_acceleration_pct": 26.34,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T05:04:16.312676+00:00",
+  "updated_at_utc": "2026-10-16T05:06:21.929139+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
