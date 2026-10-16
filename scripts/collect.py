@@ -194,13 +194,21 @@ for board_name, entries in [("trending", fomo.get("tokens", []))] + [
 # previously crowded out the tokens the user actually sees in the FOMO app.
 ordered_addresses = sorted(fomo_mints) + sorted(addresses - fomo_mints)
 ordered_addresses = ordered_addresses[:MAX_DISCOVERY_ADDRESSES]
-pairs = []
-for i in range(0, len(ordered_addresses), 20):
+# Independent DEX batches are I/O-bound: fetch concurrently instead of
+# waiting for each network round-trip. Keep a modest limit to avoid API overload.
+def dex_batch(start, tokens):
     try:
-        batch = ordered_addresses[i:i + 20]
-        pairs.extend(fetch("/latest/dex/tokens/" + ",".join(batch)).get("pairs") or [])
+        return start, fetch("/latest/dex/tokens/" + ",".join(tokens)).get("pairs") or [], None
     except Exception as exc:
-        errors.append(f"DEX batch {i}: {exc}")
+        return start, [], str(exc)
+
+pairs = []
+discovery_batches = [(i, ordered_addresses[i:i + 20]) for i in range(0, len(ordered_addresses), 20)]
+with ThreadPoolExecutor(max_workers=8) as pool:
+    for i, batch_pairs, error in pool.map(lambda item: dex_batch(*item), discovery_batches):
+        pairs.extend(batch_pairs)
+        if error:
+            errors.append(f"DEX batch {i}: {error}")
 
 best = {}
 for pair in pairs:
@@ -245,10 +253,13 @@ for record in recommendation_records:
 # Refresh previously tracked tokens independently of the discovery cap.
 tracked_mints = sorted(set(history) | set(recent_recommendations))
 tracked_pairs = {}
-for i in range(0, len(tracked_mints), 20):
-    try:
-        response = fetch("/latest/dex/tokens/" + ",".join(tracked_mints[i:i + 20]))
-        for pair in response.get("pairs") or []:
+tracked_batches = [(i, tracked_mints[i:i + 20]) for i in range(0, len(tracked_mints), 20)]
+with ThreadPoolExecutor(max_workers=8) as pool:
+    for i, batch_pairs, error in pool.map(lambda item: dex_batch(*item), tracked_batches):
+        if error:
+            errors.append(f"Tracked token batch {i}: {error}")
+            continue
+        for pair in batch_pairs:
             if pair.get("chainId") not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
                 continue
             mint = (pair.get("baseToken") or {}).get("address")
@@ -259,8 +270,6 @@ for i in range(0, len(tracked_mints), 20):
                 continue
             # Preserve every exact tracked pair, not just the highest-liquidity pair per mint.
             tracked_pairs[(mint, pair.get("pairAddress"))] = pair
-    except Exception as exc:
-        errors.append(f"Tracked token batch {i}: {exc}")
 
 # These are price-only observations, not new FOMO discovery candidates.
 for (mint, pair_address), pair in tracked_pairs.items():
