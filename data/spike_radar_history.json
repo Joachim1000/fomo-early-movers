@@ -24489,10 +24489,12 @@
       "buy_acceleration_pct": 14.29,
       "volume_acceleration_pct": 0.44,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001913,
+      "observed_5m_at_utc": "2026-10-16T15:32:21.475820+00:00",
+      "return_5m_pct": 4.88,
+      "measurement_delay_minutes": 6.04,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -24589,10 +24591,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "6VdcMnBTCj4tJVwtNdJZNzWeYmxzMnygVSzcfY35pump",
+      "pair_address": "9ecoN3C1yq4t4bws3LkDNvPCjA2Le51bA81y5B8uXcCw",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Irene",
+      "first_alert_at_utc": "2026-10-16T15:32:21.475820+00:00",
+      "alert_price_usd": 8.936e-05,
+      "initial_15m_change_pct": 36.41,
+      "initial_7m_change_pct": null,
+      "buys_5m": 40,
+      "sells_5m": 16,
+      "volume_5m_usd": 2255.46,
+      "liquidity_usd": 25467.26,
+      "estimated_100usd_buy_impact_pct": 0.78,
+      "buy_acceleration_pct": 48.15,
+      "volume_acceleration_pct": 37.65,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:30:45.662422+00:00",
+  "updated_at_utc": "2026-10-16T15:32:21.475820+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
