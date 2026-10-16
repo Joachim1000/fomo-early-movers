@@ -24412,11 +24412,39 @@
       "observed_5m_at_utc": "2026-10-16T16:24:23.006889+00:00",
       "return_5m_pct": 3.61,
       "measurement_delay_minutes": 5.88,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.001871,
+      "observed_10m_at_utc": "2026-10-16T16:30:52.854877+00:00",
+      "measurement_10m_delay_minutes": 12.38,
+      "return_10m_pct": -0.69
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-16T16:30:52.854877+00:00",
+      "alert_price_usd": 0.00396,
+      "initial_15m_change_pct": 4.62,
+      "initial_7m_change_pct": null,
+      "buys_5m": 19,
+      "sells_5m": 2,
+      "volume_5m_usd": 11964.65,
+      "liquidity_usd": 416903.62,
+      "estimated_100usd_buy_impact_pct": 0.05,
+      "buy_acceleration_pct": 58.33,
+      "volume_acceleration_pct": 62.91,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T16:28:27.502599+00:00",
+  "updated_at_utc": "2026-10-16T16:30:52.854877+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
