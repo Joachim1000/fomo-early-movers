@@ -38,18 +38,9 @@ if not isinstance(saved, dict):
 if not isinstance(saved.get("records"), list):
     saved["records"] = []
 rows = saved["records"]
-# Enforce the current production price window on today's history, including
-# stale signals reintroduced by overlapping workflow snapshots.
-# Closed days remain immutable.
-_snapshot = parse(latest.get("generated_at_utc"))
-if _snapshot is not None:
-    _today = _snapshot.astimezone(ZoneInfo("Europe/Warsaw")).date().isoformat()
-    rows[:] = [row for row in rows if row.get("day") != _today or
-               ((isinstance(row.get("initial_7m_change_pct"), (int, float)) and
-                 row["initial_7m_change_pct"] >= 5) or
-                (row.get("initial_7m_change_pct") is None and
-                 isinstance(row.get("initial_15m_change_pct"), (int, float)) and
-                 3 <= row["initial_15m_change_pct"] <= 10))]
+# Signal thresholds apply when NEW signals are registered, not retroactively.
+# Keep today's already-recorded observations, including those made under
+# earlier parameter versions; never erase their verified follow-up history.
 # Restore immutable closed-day values from the previous committed snapshot.
 # The tracker must not recalculate old signals from refreshed market history.
 # Existing closed-day rows are never mutated in this run.
