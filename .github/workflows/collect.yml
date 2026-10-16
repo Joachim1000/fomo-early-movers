@@ -165,6 +165,7 @@ jobs:
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
           if [ -f data/daily_snapshots.json ]; then git add data/daily_snapshots.json; fi
 
+          echo "PUBLISH_DIAGNOSTIC commit_step_started_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           if ! git diff --cached --quiet; then
             git commit -m "Update market snapshot"
             # Retry non-fast-forward pushes without overwriting concurrent signal history.
@@ -248,3 +249,20 @@ jobs:
               git commit -m "Reconcile concurrent market snapshots and preserve signal history"
             done
           fi
+
+      - name: Report published snapshot timing
+        if: steps.collection_window.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          latest = json.loads(Path("data/latest.json").read_text())
+          generated = datetime.fromisoformat(latest["generated_at_utc"].replace("Z", "+00:00"))
+          now = datetime.now(timezone.utc)
+          print(f"PUBLISH_DIAGNOSTIC generated_at_utc={generated.isoformat()}")
+          print(f"PUBLISH_DIAGNOSTIC workflow_finished_at_utc={now.isoformat()}")
+          print(f"PUBLISH_DIAGNOSTIC generation_to_workflow_end_seconds={(now-generated).total_seconds():.1f}")
+          print("PUBLISH_DIAGNOSTIC Note: browser/CDN propagation must be measured separately")
+          PY
