@@ -45,8 +45,8 @@ _snapshot = parse(latest.get("generated_at_utc"))
 if _snapshot is not None:
     _today = _snapshot.astimezone(ZoneInfo("Europe/Warsaw")).date().isoformat()
     rows[:] = [row for row in rows if row.get("day") != _today or
-               (isinstance(row.get("initial_15m_change_pct"), (int, float)) and
-                3 <= row["initial_15m_change_pct"] <= 10)]
+               (isinstance(row.get("initial_7m_change_pct"), (int, float)) and
+                3 <= row["initial_7m_change_pct"] <= 10)]
 # Restore immutable closed-day values from the previous committed snapshot.
 # The tracker must not recalculate old signals from refreshed market history.
 # Existing closed-day rows are never mutated in this run.
@@ -110,6 +110,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         "symbol": item.get("symbol") or mint[:8],
         "first_alert_at_utc": now.isoformat(), "alert_price_usd": price,
         "initial_15m_change_pct": item.get("change_15m_pct"),
+        "initial_7m_change_pct": item.get("change_7m_pct"),
         "buys_5m": item.get("buy_transactions_5m"),
         "sells_5m": item.get("sell_transactions_5m"),
         "volume_5m_usd": item.get("volume_5m_usd"),
