@@ -25312,7 +25312,11 @@
       "observed_5m_at_utc": "2026-10-16T17:28:26.109619+00:00",
       "return_5m_pct": 8.33,
       "measurement_delay_minutes": 6.09,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.0001959,
+      "observed_10m_at_utc": "2026-10-16T17:34:27.701898+00:00",
+      "measurement_10m_delay_minutes": 12.12,
+      "return_10m_pct": 7.4
     },
     {
       "day": "2026-10-16",
@@ -25338,7 +25342,11 @@
       "observed_5m_at_utc": "2026-10-16T17:28:26.109619+00:00",
       "return_5m_pct": -43.8,
       "measurement_delay_minutes": 6.09,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.000264,
+      "observed_10m_at_utc": "2026-10-16T17:34:27.701898+00:00",
+      "measurement_10m_delay_minutes": 12.12,
+      "return_10m_pct": -42.93
     },
     {
       "day": "2026-10-16",
@@ -25364,7 +25372,11 @@
       "observed_5m_at_utc": "2026-10-16T17:30:46.388545+00:00",
       "return_5m_pct": 0.19,
       "measurement_delay_minutes": 6.48,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 7.911e-05,
+      "observed_10m_at_utc": "2026-10-16T17:34:27.701898+00:00",
+      "measurement_10m_delay_minutes": 10.17,
+      "return_10m_pct": -4.63
     },
     {
       "day": "2026-10-16",
@@ -25437,10 +25449,12 @@
       "buy_acceleration_pct": 220.0,
       "volume_acceleration_pct": 132.26,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004317,
+      "observed_5m_at_utc": "2026-10-16T17:34:27.701898+00:00",
+      "return_5m_pct": 2.2,
+      "measurement_delay_minutes": 6.03,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -25516,7 +25530,7 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T17:32:19.579772+00:00",
+  "updated_at_utc": "2026-10-16T17:34:27.701898+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
