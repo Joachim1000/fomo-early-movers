@@ -25475,10 +25475,12 @@
       "buy_acceleration_pct": 27.27,
       "volume_acceleration_pct": 238.5,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 1.63e-05,
+      "observed_5m_at_utc": "2026-10-16T17:36:20.465197+00:00",
+      "return_5m_pct": -24.19,
+      "measurement_delay_minutes": 5.57,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -25499,10 +25501,12 @@
       "buy_acceleration_pct": 375.0,
       "volume_acceleration_pct": 20.54,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004264,
+      "observed_5m_at_utc": "2026-10-16T17:36:20.465197+00:00",
+      "return_5m_pct": 0.09,
+      "measurement_delay_minutes": 5.57,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -25527,10 +25531,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0xBEEA1D618e533a387D941F58a7d4c9b7bD377777",
+      "pair_address": "0x595d70977Dff3C841DF0bc0138Ce89f80C7C9423",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "牛来",
+      "first_alert_at_utc": "2026-10-16T17:36:20.465197+00:00",
+      "alert_price_usd": 0.06422,
+      "initial_15m_change_pct": 1.17,
+      "initial_7m_change_pct": null,
+      "buys_5m": 14,
+      "sells_5m": 0,
+      "volume_5m_usd": 2189.43,
+      "liquidity_usd": 1187581.66,
+      "estimated_100usd_buy_impact_pct": 0.02,
+      "buy_acceleration_pct": null,
+      "volume_acceleration_pct": 91507.95,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T17:34:27.701898+00:00",
+  "updated_at_utc": "2026-10-16T17:36:20.465197+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
