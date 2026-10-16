@@ -24481,10 +24481,12 @@
       "buy_acceleration_pct": 166.67,
       "volume_acceleration_pct": -17.86,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.004838,
+      "observed_5m_at_utc": "2026-10-16T05:15:30.640436+00:00",
+      "return_5m_pct": -0.25,
+      "measurement_delay_minutes": 5.11,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -24504,6 +24506,31 @@
       "buy_acceleration_pct": 1000.0,
       "volume_acceleration_pct": 1164.46,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 0.01047,
+      "observed_5m_at_utc": "2026-10-16T05:15:30.640436+00:00",
+      "return_5m_pct": -0.19,
+      "measurement_delay_minutes": 5.11,
+      "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "CC5D6puFmcsnGaJh7kNXeAcRpL2SZzQfoQezvx45uKjt",
+      "pair_address": "FGXMnchTt8tQc8mEHgWiWhrUHHUHcMAzCvgaYuaCmghz",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "WORLD",
+      "first_alert_at_utc": "2026-10-16T05:16:16.422542+00:00",
+      "alert_price_usd": 0.0005123,
+      "initial_15m_change_pct": 57.73,
+      "buys_5m": 278,
+      "sells_5m": 90,
+      "volume_5m_usd": 60123.04,
+      "liquidity_usd": 77803.61,
+      "estimated_100usd_buy_impact_pct": 0.26,
+      "buy_acceleration_pct": 107.46,
+      "volume_acceleration_pct": 327.96,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
@@ -24514,7 +24541,7 @@
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T05:14:16.242607+00:00",
+  "updated_at_utc": "2026-10-16T05:16:16.422542+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
