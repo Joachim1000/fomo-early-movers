@@ -2806,11 +2806,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0x14F6A94909C407854390Aa2d2462a3095D317777",
+      "pair_address": "0x223C585c50D4747653a57D577707B1EadBB2cFB0",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "旺柴",
+      "first_alert_at_utc": "2026-10-16T07:56:18.001000+00:00",
+      "alert_price_usd": 0.01265,
+      "initial_15m_change_pct": 4.98,
+      "buys_5m": 18,
+      "sells_5m": 9,
+      "volume_5m_usd": 8036.63,
+      "liquidity_usd": 447983.51,
+      "buy_acceleration_pct": 63.64,
+      "volume_acceleration_pct": 28.26,
+      "spike_v2_score": 80,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0x14F6A94909C407854390Aa2d2462a3095D317777|0x223C585c50D4747653a57D577707B1EadBB2cFB0": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T07:54:16.807169+00:00",
+  "updated_at_utc": "2026-10-16T07:56:18.001000+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
