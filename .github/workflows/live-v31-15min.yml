@@ -1,10 +1,12 @@
-name: 05 | LIVE V3.1 Market Updates (15 min)
+name: 05 | LIVE V3.1 Scheduled Updates (4 daily)
 
 on:
   workflow_dispatch:
   schedule:
-    # Every 15 minutes, UTC. Warsaw-local guard handles CET/CEST.
-    - cron: "*/15 4-22 * * *"
+    # 12:00, 18:00 and 23:30 Warsaw (06:00 is handled by daily-v31.yml).
+    # UTC alternatives for CET/CEST; local-time guard selects the right run.
+    - cron: "5 10,11,16,17 * * *"
+    - cron: "35 21,22 * * *"
 
 permissions:
   contents: write
@@ -27,7 +29,8 @@ jobs:
           from zoneinfo import ZoneInfo
           now=datetime.now(ZoneInfo("Europe/Warsaw"))
           minute=now.hour*60+now.minute
-          enabled=360<=minute<1410
+          # Modest delay tolerance for scheduled GitHub Actions runs.
+          enabled=any(start<=minute<start+30 for start in (720,1080,1410))
           with open(os.environ["GITHUB_OUTPUT"],"a") as f:
               f.write("enabled="+str(enabled).lower()+"\n")
           print("LIVE V3.1", "enabled" if enabled else "paused", now.isoformat())
@@ -79,6 +82,6 @@ jobs:
           git add data/latest.json data/history.json data/live_v31.json
           if [ -f data/fomo_cache.json ]; then git add data/fomo_cache.json; fi
           if ! git diff --cached --quiet; then
-            git commit -m "Update LIVE V3.1 market observations (15 min)"
+            git commit -m "Update LIVE V3.1 scheduled market observations"
             git push origin HEAD:market-data
           fi
