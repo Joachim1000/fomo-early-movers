@@ -3426,11 +3426,36 @@
       "measurement_10m_delay_minutes": 11.95,
       "return_10m_pct": 3.36,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg",
+      "pair_address": "G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "CYBERLEEK",
+      "first_alert_at_utc": "2026-10-16T17:14:19.378898+00:00",
+      "alert_price_usd": 0.002004,
+      "initial_15m_change_pct": 4.21,
+      "buys_5m": 25,
+      "sells_5m": 8,
+      "volume_5m_usd": 3577.84,
+      "liquidity_usd": 452844.03,
+      "buy_acceleration_pct": 177.78,
+      "volume_acceleration_pct": 48.21,
+      "spike_v2_score": 87,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg|G8kgi7aUpeX8EVR8VMkrth9SKEv5BietWC33UjAiiMGh": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T17:12:26.529777+00:00",
+  "updated_at_utc": "2026-10-16T17:14:19.378898+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
