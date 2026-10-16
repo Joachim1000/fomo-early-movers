@@ -24411,10 +24411,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "7GCMYJcykHZ3qJH3e5vQi4J9qAPdb3Xninkgk6sYpump",
+      "pair_address": "3d8vxMgHA44JnFa8cV3X58uzdV5HfHvLk7q5LHCJnvDG",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "LOOM",
+      "first_alert_at_utc": "2026-10-16T15:22:21.511456+00:00",
+      "alert_price_usd": 7.242e-05,
+      "initial_15m_change_pct": 39.35,
+      "initial_7m_change_pct": null,
+      "buys_5m": 29,
+      "sells_5m": 18,
+      "volume_5m_usd": 1972.01,
+      "liquidity_usd": 23875.78,
+      "estimated_100usd_buy_impact_pct": 0.83,
+      "buy_acceleration_pct": 11.54,
+      "volume_acceleration_pct": 42.0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:20:31.787467+00:00",
+  "updated_at_utc": "2026-10-16T15:22:21.511456+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
