@@ -846,8 +846,8 @@ if(!spikeHistoryError&&Array.isArray(spikeData.records)&&!spikeData.records.some
 if(spikeHistoryError)console.warn('Spike Radar history fetch failed',spikeHistoryError);
 const spikeRecords=canonicalRadarSignals(spikeData.records);const polandDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(l.generated_at_utc));const dayParts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(l.generated_at_utc));const part=k=>dayParts.find(x=>x.type===k).value;const spikeDay=part('year')+'-'+part('month')+'-'+part('day');const spikeToday=radarSignalsForDay(spikeData.records,spikeDay).sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));window.spikeRadarVisibleDay=spikeDay;window.spikeRadarVisibleCount=spikeToday.length;window.spikeRadarSourceTimestamp=radarSourceTimestamp(spikeData);const radarAsOf=Date.parse(spikeData.updated_at_utc||l.generated_at_utc||'');
 const radarFollowUpState=(x,minutes)=>{
- const value=minutes===5?x.return_5m_pct:x.return_10m_pct;
- const status=minutes===5?x.status:x.status_10m;
+ const value=x['return_'+minutes+'m_pct'];
+ const status=minutes===5?x.status:x['status_'+minutes+'m'];
  if(value!=null)return status==='DELAYED'?'DELAYED':'MEASURED';
  const at=Date.parse(x.first_alert_at_utc||'');
  if(!Number.isFinite(at)||!Number.isFinite(radarAsOf))return 'WAITING FOR DATA';
