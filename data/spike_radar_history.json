@@ -24652,11 +24652,15 @@
       "observed_5m_at_utc": "2026-10-16T16:58:27.373639+00:00",
       "return_5m_pct": -2.97,
       "measurement_delay_minutes": 6.11,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.1169,
+      "observed_10m_at_utc": "2026-10-16T17:02:24.612960+00:00",
+      "measurement_10m_delay_minutes": 10.06,
+      "return_10m_pct": -3.63
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T17:01:04.365113+00:00",
+  "updated_at_utc": "2026-10-16T17:02:24.612960+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
