@@ -24700,13 +24700,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "Diy4Q5aiNEcdn7CWhuwYtuoHtHD9rKBTHCa9hi4qpump",
+      "pair_address": "91TcJ2v9wFs11pkvyZkNTswC35cB1tUJXpkUgsGnRJcQ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "STREAM",
+      "first_alert_at_utc": "2026-10-16T05:56:16.541225+00:00",
+      "alert_price_usd": 0.0002022,
+      "initial_15m_change_pct": 5.64,
+      "buys_5m": 21,
+      "sells_5m": 14,
+      "volume_5m_usd": 3002.0,
+      "liquidity_usd": 40938.09,
+      "estimated_100usd_buy_impact_pct": 0.49,
+      "buy_acceleration_pct": 425.0,
+      "volume_acceleration_pct": 2447.52,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T05:54:17.622670+00:00",
+  "updated_at_utc": "2026-10-16T05:56:16.541225+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
