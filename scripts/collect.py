@@ -376,7 +376,7 @@ for mint, pair in best.items():
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_15m is not None and
-                  change_15m >= 3)
+                  3 <= change_15m <= 10)
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
     pressure = buys / max(sells, 1)
     accelerating = prior_buys is not None and buys >= prior_buys * 1.2
