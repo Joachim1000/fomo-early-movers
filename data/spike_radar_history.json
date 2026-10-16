@@ -24622,7 +24622,11 @@
       "observed_5m_at_utc": "2026-10-16T16:56:19.067312+00:00",
       "return_5m_pct": -3.56,
       "measurement_delay_minutes": 5.81,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 0.02157,
+      "observed_10m_at_utc": "2026-10-16T17:01:04.365113+00:00",
+      "measurement_10m_delay_minutes": 10.57,
+      "return_10m_pct": -1.51
     },
     {
       "day": "2026-10-16",
@@ -24652,7 +24656,7 @@
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T16:58:27.373639+00:00",
+  "updated_at_utc": "2026-10-16T17:01:04.365113+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
