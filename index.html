@@ -797,7 +797,24 @@ async function pollMarketFreshness(){
    if(typeof window.refreshV3Beta==='function')window.refreshV3Beta();
    
   }
- }catch(e){console.warn('Pinned market-data refresh unavailable; using current source',e)}finally{clearTimeout(timer);freshnessPollBusy=false}
+ }catch(e){
+  console.warn('Pinned market-data lookup unavailable; trying fresh branch snapshot',e);
+  // The unauthenticated GitHub API can rate-limit 10-second polling (60 requests/hour).
+  // Fall back to the moving market-data branch and accept it only if its snapshot is newer.
+  try{
+   const fallbackBase='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+   const response=await fetch(fallbackBase+'latest.json?t='+Date.now(),{cache:'no-store'});
+   if(response.ok){
+    const j=await response.json(),ts=Date.parse(j.generated_at_utc||'');
+    if(Number.isFinite(ts)&&(!Number.isFinite(snapshotTimestamp)||ts>snapshotTimestamp)){
+     base=fallbackBase;window.marketDataBase=base;radarSharedCache=null;radarSharedFetchedAt=0;
+     snapshotTimestamp=ts;lastTabSnapshot=j;updateDataAge();updateTabUpdateInfo();
+     if(!marketLoadBusy)load();
+     if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta();
+    }
+   }
+  }catch(fallbackError){console.warn('Branch snapshot fallback unavailable',fallbackError)}
+ }finally{clearTimeout(timer);freshnessPollBusy=false}
 }
 async function load(){if(marketLoadBusy)return;marketLoadBusy=true;try{if(!Number.isFinite(snapshotTimestamp))showCachedDashboard();const getJson=async(f,fallback,timeoutMs=3500)=>{const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeoutMs);try{const r=await fetch(base+f+'?t='+Date.now(),{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error(f+' HTTP '+r.status);return await r.json()}catch(e){if(fallback===undefined)throw e;console.warn(f+' unavailable; continuing with live snapshot',e);return fallback}finally{clearTimeout(timer)}};let l;try{l=await getJson('latest.json',undefined,6500)}catch(firstError){await new Promise(resolve=>setTimeout(resolve,600));l=await getJson('latest.json',undefined,9000)}const freshStamp=Date.parse(l.generated_at_utc||'');if(Number.isFinite(freshStamp)&&(!Number.isFinite(snapshotTimestamp)||freshStamp>=snapshotTimestamp)){snapshotTimestamp=freshStamp;lastTabSnapshot=l;markTabData('beta-daily',l.generated_at_utc);updateDataAge();updateTabUpdateInfo()}const [h,rec]=await Promise.all([getJson('history.json',{},10000),getJson('recommendations.json',{records:[]},3500)]);let spikeData,spikeHistoryError=null;
 try{spikeData=await getSharedRadarHistory()}catch(e){spikeHistoryError=e;console.warn('Spike Radar history fetch failed',e);spikeData={records:[]}}
@@ -882,9 +899,10 @@ let marketRefreshTicks=0;
 setInterval(()=>{
  if(document.hidden)return;
  marketRefreshTicks++;
+ pollMarketFreshness(); // resolve newest published commit before reading data
  load(); // every 10 seconds; load() guards overlapping requests
  if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta(); // keep Beta history in sync
- pollMarketFreshness();refreshPerformancePage();
+ refreshPerformancePage();
   if(window.activeDashboardTab==='v3-daily'&&typeof loadV3Daily==='function')loadV3Daily();
   if(window.activeDashboardTab==='home'&&typeof loadHomeTradingHours==='function')loadHomeTradingHours();
  if(window.activeDashboardTab==='v3')loadV3();
