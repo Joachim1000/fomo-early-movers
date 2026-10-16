@@ -24407,10 +24407,12 @@
       "buy_acceleration_pct": 66.67,
       "volume_acceleration_pct": -54.72,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.04119,
+      "observed_5m_at_utc": "2026-10-16T15:26:19.108628+00:00",
+      "return_5m_pct": 1.35,
+      "measurement_delay_minutes": 5.79,
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-16",
@@ -24459,10 +24461,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0x409f0Bcdc9A70565a71AF56Cb50b2a6688cB7777",
+      "pair_address": "0xeD76AF88Fd8C74bd287468348600c9643eFb7dcF",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "BIBI",
+      "first_alert_at_utc": "2026-10-16T15:26:19.108628+00:00",
+      "alert_price_usd": 0.001824,
+      "initial_15m_change_pct": 3.11,
+      "initial_7m_change_pct": null,
+      "buys_5m": 8,
+      "sells_5m": 1,
+      "volume_5m_usd": 1217.84,
+      "liquidity_usd": 132342.74,
+      "estimated_100usd_buy_impact_pct": 0.15,
+      "buy_acceleration_pct": 14.29,
+      "volume_acceleration_pct": 0.44,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:24:20.818618+00:00",
+  "updated_at_utc": "2026-10-16T15:26:19.108628+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
