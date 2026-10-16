@@ -50,12 +50,11 @@ for x in latest.get("eligible_4h_candidates",[]):
     # Beta risk gate: keep all observations for training but only rank qualified entries.
     # Rank viable candidates even when one historical price point is missing.
     # Missing features remain None in observations and never enter ML training.
+    # LIVE favors liquid, observable tokens; short-term trade bursts are not mandatory.
     eligible_for_ranking = (
-        (r5 is None or -5 <= r5 <= 15)
-        and (r15 is None or -8 <= r15 <= 25)
-        and (acceleration is None or acceleration >= -2)
-        and buys >= 8 and ratio >= 1.3
-        and liquidity >= 10000 and volume >= 1000
+        liquidity >= 25000 and volume >= 500
+        and (r15 is None or -15 <= r15 <= 40)
+        and (r5 is None or -12 <= r5 <= 25)
     )
     # Shadow heuristic only: not ML, no estimated win probabilities.
     score=(clamp((acceleration or 0)*3,-20,20)
@@ -134,9 +133,9 @@ stamp=latest["generated_at_utc"]
 for x in current:
     if not x.get('eligible_for_ranking'):continue
     f=features(x)
-    if trained and not f:continue
+    # Incomplete short-term candles do not disqualify a liquid LIVE candidate.
     score=None
-    if trained:
+    if trained and f is not None:
         standardized=[max(-5,min(5,(f[j]-means[j])/scales[j])) for j in range(len(FEATURES))]
         logit=max(-30,min(30,weights[0]+sum(a*b for a,b in zip(weights[1:],standardized))))
         score=round(100/(1+math.exp(-logit)),2)
@@ -149,8 +148,8 @@ for x in current:
 if len(ranking)<10:
     already={(x["mint"],x["pair_address"]) for x in ranking}
     extras=sorted((x for x in current if (x["mint"],x["pair_address"]) not in already
-                   and x["liquidity_usd"]>=5000 and x["volume_5m_usd"]>=500
-                   and x["buys_5m"]>=3 and x["buy_sell_ratio"]>=1),
+                   and x["liquidity_usd"]>=10000 and x["volume_5m_usd"]>=250
+                   and (x["change_15m_pct"] is None or -20 <= x["change_15m_pct"] <= 50)),
                   key=lambda x:x["v31_heuristic_score"],reverse=True)
     for x in extras[:10-len(ranking)]:
         ranking.append({"mint":x["mint"],"pair_address":x["pair_address"],"symbol":x.get("symbol"),
