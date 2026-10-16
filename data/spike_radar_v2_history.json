@@ -2933,11 +2933,36 @@
       "measurement_10m_delay_minutes": 11.23,
       "return_10m_pct": -0.93,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159",
+      "pair_address": "0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "BREW",
+      "first_alert_at_utc": "2026-10-16T10:10:26.222608+00:00",
+      "alert_price_usd": 0.006227,
+      "initial_15m_change_pct": 5.36,
+      "buys_5m": 16,
+      "sells_5m": 5,
+      "volume_5m_usd": 3539.48,
+      "liquidity_usd": 448084.93,
+      "buy_acceleration_pct": 700.0,
+      "volume_acceleration_pct": 575.28,
+      "spike_v2_score": 81,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0xfa6D9B504848606Eb9aeC04CCc161D169B3f2159|0x3eA3f9a7B7EDBfe0Ba3568BFc0f30Ba870B7553d": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T10:08:17.789184+00:00",
+  "updated_at_utc": "2026-10-16T10:10:26.222608+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
