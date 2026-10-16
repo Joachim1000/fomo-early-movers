@@ -3542,11 +3542,36 @@
       "measurement_10m_delay_minutes": 11.9,
       "return_10m_pct": -6.86,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
+      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "BORDR",
+      "first_alert_at_utc": "2026-10-16T18:06:33.959211+00:00",
+      "alert_price_usd": 0.004711,
+      "initial_15m_change_pct": 3.27,
+      "buys_5m": 16,
+      "sells_5m": 1,
+      "volume_5m_usd": 5810.36,
+      "liquidity_usd": 569477.68,
+      "buy_acceleration_pct": 45.45,
+      "volume_acceleration_pct": -25.76,
+      "spike_v2_score": 86,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr|FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T18:04:31.748209+00:00",
+  "updated_at_utc": "2026-10-16T18:06:33.959211+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
