@@ -417,7 +417,7 @@ for mint, pair in best.items():
         "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
         "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and pair_age_hours is not None and pair_age_hours > 8 and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 3 else None,
-        "change_15m_pct": change_15m, "change_7m_pct": change_7m,
+        "change_15m_pct": change_15m, "change_5m_pct": change_5m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
         "symbol": (pair.get("baseToken") or {}).get("symbol"),
@@ -467,7 +467,7 @@ early_momentum_candidates = [x for x in candidates if x["early_momentum"]]
 early_momentum_candidates.sort(key=lambda x: (x["change_2_5m_pct"], x["momentum_heuristic"]), reverse=True)
 spike_v2_candidates = [x for x in candidates if x["spike_v2_alert"]]
 spike_v2_candidates.sort(key=lambda x: (x["spike_v2_score"], x["momentum_heuristic"]), reverse=True)
-early_alert_candidates.sort(key=lambda x: (x["change_7m_pct"], x["momentum_heuristic"]), reverse=True)
+early_alert_candidates.sort(key=lambda x: (x["change_5m_pct"], x["momentum_heuristic"]), reverse=True)
 eligible_candidates = [x for x in candidates if x["history_4h_verified"] and x["fomo_board_verified"]]
 payload = {
     "generated_at_utc": NOW.isoformat(),
