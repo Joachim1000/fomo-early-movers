@@ -392,7 +392,7 @@ for mint, pair in best.items():
     fast_alert = (supported_radar_chain and radar_time_allowed and
                   pair_age_hours is not None and pair_age_hours > 2 and
                    fomo_key(mint, pair.get('chainId')) in fomo_mint_keys and liquidity >= 5000 and
-                  buys >= 8 and buys >= 2.0 * max(sells, 1) and
+                  buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1000 and change_5m is not None and
                   change_5m >= 4)
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
