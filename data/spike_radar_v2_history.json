@@ -2875,11 +2875,36 @@
       "return_10m_pct": 9.15,
       "status_10m": "DELAYED",
       "measurement_delay_minutes": 17.44
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump",
+      "pair_address": "FpyosQzp5ijfrxqqBVNm67rfam7VsbVNAm7PUf8Yvt1c",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "PsyopAnime",
+      "first_alert_at_utc": "2026-10-16T09:22:17.344701+00:00",
+      "alert_price_usd": 0.0009271,
+      "initial_15m_change_pct": 3.38,
+      "buys_5m": 39,
+      "sells_5m": 18,
+      "volume_5m_usd": 2888.16,
+      "liquidity_usd": 201966.38,
+      "buy_acceleration_pct": 56.0,
+      "volume_acceleration_pct": -40.98,
+      "spike_v2_score": 85,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "2nP9yKQNSGQy851iyawDvBkzkK2R2aqKArQCKc2gpump|FpyosQzp5ijfrxqqBVNm67rfam7VsbVNAm7PUf8Yvt1c": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T09:20:28.574082+00:00",
+  "updated_at_utc": "2026-10-16T09:22:17.344701+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
