@@ -46,7 +46,7 @@ rows = saved["records"]
 # This also cleans stale records restored by a concurrent workflow checkout.
 def radar_blocked(timestamp):
     at = parse(timestamp)
-    return at is not None and at.astimezone(ZoneInfo("Europe/Warsaw")).hour not in (7, 8, 9, 10, 14, 15, 20, 21)
+    return at is not None and at.astimezone(ZoneInfo("Europe/Warsaw")).hour not in (7, 8, 9, 10, 14, 15)
 
 # Historical records are immutable once their trading day has closed.
 # Midday restrictions apply to NEW signals only, not previously frozen history.
