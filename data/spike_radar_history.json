@@ -25093,7 +25093,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.004844,
       "observed_4m_at_utc": "2026-10-16T18:24:17.481945+00:00",
       "measurement_4m_delay_minutes": 5.6,
@@ -25102,7 +25102,11 @@
       "price_6m_usd": 0.004843,
       "observed_6m_at_utc": "2026-10-16T18:26:22.092383+00:00",
       "measurement_6m_delay_minutes": 7.68,
-      "return_6m_pct": 1.11
+      "return_6m_pct": 1.11,
+      "price_10m_usd": 0.004803,
+      "observed_10m_at_utc": "2026-10-16T18:31:18.396057+00:00",
+      "measurement_10m_delay_minutes": 12.62,
+      "return_10m_pct": 0.27
     },
     {
       "day": "2026-10-16",
@@ -25134,7 +25138,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.3108,
       "observed_4m_at_utc": "2026-10-16T18:24:17.481945+00:00",
       "measurement_4m_delay_minutes": 5.6,
@@ -25143,7 +25147,11 @@
       "price_6m_usd": 0.311,
       "observed_6m_at_utc": "2026-10-16T18:26:22.092383+00:00",
       "measurement_6m_delay_minutes": 7.68,
-      "return_6m_pct": 0.23
+      "return_6m_pct": 0.23,
+      "price_10m_usd": 0.311,
+      "observed_10m_at_utc": "2026-10-16T18:31:18.396057+00:00",
+      "measurement_10m_delay_minutes": 12.62,
+      "return_10m_pct": 0.23
     },
     {
       "day": "2026-10-16",
@@ -25175,7 +25183,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.004843,
       "observed_4m_at_utc": "2026-10-16T18:26:22.092383+00:00",
       "measurement_4m_delay_minutes": 5.88,
@@ -25184,7 +25192,11 @@
       "price_6m_usd": 0.004628,
       "observed_6m_at_utc": "2026-10-16T18:28:19.929788+00:00",
       "measurement_6m_delay_minutes": 7.84,
-      "return_6m_pct": -4.34
+      "return_6m_pct": -4.34,
+      "price_10m_usd": 0.004803,
+      "observed_10m_at_utc": "2026-10-16T18:31:18.396057+00:00",
+      "measurement_10m_delay_minutes": 10.82,
+      "return_10m_pct": -0.72
     },
     {
       "day": "2026-10-16",
@@ -25216,7 +25228,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.311,
       "observed_4m_at_utc": "2026-10-16T18:26:22.092383+00:00",
       "measurement_4m_delay_minutes": 5.88,
@@ -25225,11 +25237,39 @@
       "price_6m_usd": 0.3109,
       "observed_6m_at_utc": "2026-10-16T18:28:19.929788+00:00",
       "measurement_6m_delay_minutes": 7.84,
-      "return_6m_pct": 0.23
+      "return_6m_pct": 0.23,
+      "price_10m_usd": 0.311,
+      "observed_10m_at_utc": "2026-10-16T18:31:18.396057+00:00",
+      "measurement_10m_delay_minutes": 10.82,
+      "return_10m_pct": 0.26
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "D61pTaTqR93axxVvu7AX5TW6c3a4vhffPPMfCnsYpump",
+      "pair_address": "GGM3WPy8Mtxx7AFvS1RsxbZTbnz9KK1HEG9MbFMyADA1",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "OWLDACITY",
+      "first_alert_at_utc": "2026-10-16T18:31:18.396057+00:00",
+      "alert_price_usd": 0.0003051,
+      "initial_15m_change_pct": 4.77,
+      "initial_7m_change_pct": null,
+      "buys_5m": 443,
+      "sells_5m": 112,
+      "volume_5m_usd": 9893.14,
+      "liquidity_usd": 51681.17,
+      "estimated_100usd_buy_impact_pct": 0.39,
+      "buy_acceleration_pct": 78.63,
+      "volume_acceleration_pct": 134.51,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T18:28:19.929788+00:00",
+  "updated_at_utc": "2026-10-16T18:31:18.396057+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
