@@ -701,7 +701,7 @@ function warsawTradingDayNow(){
 async function loadSimplePerformance(){const lv=$('simpleLiveRows'),status=$('simplePerfStatus');const get=async file=>{try{const r=await fetch(base+file+'?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};let [beta,radar,rec,hist,v3]=await Promise.all([get('spike_radar_v2_history.json'),getSharedRadarHistory().catch(()=>null),get('recommendations.json'),get('history.json'),get('live_v31.json')]);
 const performanceCutoff=Date.now()-7*24*60*60*1000;
 // Apply the same schedule configured on Home to historical performance.
-let historyHoursConfig={blocked_hours:[0,1,2,3,4,5,6,10,11,12,13,16,17,18,19,20,21,22,23],blocked_intervals:[]};
+let historyHoursConfig={blocked_hours:[0,1,2,3,4,5,6,10,16,17,18,19,20,21,22,23],blocked_intervals:[]};
 try{const cfgResponse=await fetch('https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/main/config/collection_hours.json?t='+Date.now(),{cache:'no-store'});if(cfgResponse.ok)historyHoursConfig=await cfgResponse.json()}catch(e){console.warn('Performance trading hours config',e)}
 const allowedHistoryTime=timestamp=>{const ms=Date.parse(timestamp||'');if(!Number.isFinite(ms))return false;const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(ms));const get=k=>Number(parts.find(x=>x.type===k)?.value);const h=get('hour'),minute=get('minute'),m=h*60+minute;if((historyHoursConfig.blocked_hours||[]).includes(h))return false;for(const range of (historyHoursConfig.blocked_intervals||[])){const toM=t=>{const a=String(t).split(':').map(Number);return a[0]*60+a[1]};const start=toM(range.start),end=toM(range.end);if(start<=end?(m>=start&&m<end):(m>=start||m<end))return false}return true};
 const warsawSignalParts=t=>new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(t));
@@ -1121,12 +1121,12 @@ async function loadHomeTradingHours(force=false){
    const h=Number(hourFmt.format(t));
    if(h>=0&&h<24){groups[h].push(value);verifiedTotal++}
   }
-  let collectionConfig={blocked_hours:[0,1,2,3,4,5,6,11,12,13,16,17,18,19,22,23],blocked_intervals:[]};
+  let collectionConfig={blocked_hours:[0,1,2,3,4,5,6,10,16,17,18,19,20,21,22,23],blocked_intervals:[]};
   try{const cr=await fetch('https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/main/config/collection_hours.json?t='+Date.now(),{cache:'no-store'});if(cr.ok)collectionConfig=await cr.json()}catch(e){console.warn('Collection settings',e)}
   window.mxCollectionConfig=collectionConfig;
   const blockedHours=new Set(collectionConfig.blocked_hours||[]);
   // Signal-only pause: collection continues, but both radar models stop issuing new alerts.
-  const radarPausedHours=new Set([0,1,2,3,4,5,6,11,12,13,16,17,18,19,22,23]);
+  const radarPausedHours=new Set([0,1,2,3,4,5,6,10,16,17,18,19,20,21,22,23]);
   const minute=v=>{const x=String(v).split(':').map(Number);return x.length===2&&x.every(Number.isFinite)?x[0]*60+x[1]:null};
   const blockedAt=m=>blockedHours.has(Math.floor(m/60))||(collectionConfig.blocked_intervals||[]).some(x=>{const a=minute(x.start),b=minute(x.end);return a!=null&&b!=null&&(a<b?m>=a&&m<b:a>b?m>=a||m<b:true)});
   const partialHours=new Set();
@@ -1227,7 +1227,7 @@ async function loadSpikeRadarBeta(){
 </script><script>
 window.openCollectionSettings=function(){
  const prior=document.getElementById('mxCollectionSettings');if(prior){prior.remove();return}
- const config=window.mxCollectionConfig||{blocked_hours:[0,1,2,3,4,5,6,11,12,13,16,17,18,19,22,23],blocked_intervals:[]};
+ const config=window.mxCollectionConfig||{blocked_hours:[0,1,2,3,4,5,6,10,16,17,18,19,20,21,22,23],blocked_intervals:[]};
  const modal=document.createElement('div');modal.id='mxCollectionSettings';modal.className='collection-settings-modal';
  const panel=document.createElement('div');panel.className='collection-settings-panel';
  const heading=document.createElement('div');heading.className='collection-settings-heading';heading.innerHTML='<h2>COLLECTION SETTINGS</h2>';
