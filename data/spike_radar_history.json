@@ -24973,14 +24973,16 @@
       "buy_acceleration_pct": 2400.0,
       "volume_acceleration_pct": 14998.07,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.04278,
+      "observed_5m_at_utc": "2026-10-16T15:14:21.005660+00:00",
+      "return_5m_pct": 5.14,
+      "measurement_delay_minutes": 5.89,
+      "status_10m": "PENDING"
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T15:12:20.153396+00:00",
+  "updated_at_utc": "2026-10-16T15:14:21.005660+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
