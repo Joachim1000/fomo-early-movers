@@ -913,8 +913,10 @@ async function checkBranchSnapshot(){
   if(!r.ok)return;
   const data=await r.json(),stamp=Date.parse(data.generated_at_utc||'');
   if(!Number.isFinite(stamp)||Number.isFinite(snapshotTimestamp)&&stamp<=snapshotTimestamp)return;
+  // Do not replace a commit-pinned snapshot with the slower moving branch CDN.
+  if(/\/[a-f0-9]{40}\/data\/$/.test(window.marketDataBase||''))return;
   base='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
-  window.marketDataBase=base;marketCommitSha='';radarSharedCache=null;radarSharedFetchedAt=0;
+  window.marketDataBase=base;radarSharedCache=null;radarSharedFetchedAt=0;
   snapshotTimestamp=stamp;lastTabSnapshot=data;updateDataAge();updateTabUpdateInfo();
   load();
   if(window.activeDashboardTab==='v3')loadV3();
@@ -926,6 +928,9 @@ async function checkBranchSnapshot(){
 setInterval(checkBranchSnapshot,10000);
 // GitHub's unauthenticated commit API is limited to 60 requests/hour.
 setInterval(()=>{if(!document.hidden)pollMarketFreshness()},60000);
+// Performance receives an additional commit check midway through each minute.
+// Keep GitHub API requests below its unauthenticated 60/hour limit.
+setInterval(()=>{if(!document.hidden&&window.activeDashboardTab==='performance'&&Date.now()-marketCommitCheckedAt>=55000)pollMarketFreshness()},10000);
 setInterval(updateDataAge,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){pollMarketFreshness();checkBranchSnapshot()}});
 </script>
