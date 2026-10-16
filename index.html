@@ -828,7 +828,7 @@ async function fetchMarketJson(file,timeoutMs=6500){
  const root=window.marketDataBase||base;
  const key=root+'|'+file;
  const now=Date.now(),cached=marketJsonRequests.get(key);
- if(cached&&now-cached.at<60000)return cached.promise;
+ if(cached&&now-cached.at<(file==='spike_radar_history.json'?5000:60000))return cached.promise;
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeoutMs);
  const promise=fetch(root+file,{cache:'default',signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error(file+' HTTP '+r.status);return r.json()}).finally(()=>clearTimeout(timer));
  marketJsonRequests.set(key,{at:now,promise});
@@ -838,6 +838,8 @@ async function fetchMarketJson(file,timeoutMs=6500){
 }
 async function load(){if(marketLoadBusy){marketReloadPending=true;return}marketLoadBusy=true;try{if(!Number.isFinite(snapshotTimestamp))showCachedDashboard();const getJson=async(f,fallback,timeoutMs=3500)=>{const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeoutMs);try{const r=await fetch(base+f+'?t='+Date.now(),{cache:'no-store',signal:ctrl.signal});if(!r.ok)throw Error(f+' HTTP '+r.status);return await r.json()}catch(e){if(fallback===undefined)throw e;console.warn(f+' unavailable; continuing with live snapshot',e);return fallback}finally{clearTimeout(timer)}};let l;try{l=await getJson('latest.json',undefined,6500)}catch(firstError){await new Promise(resolve=>setTimeout(resolve,600));l=await getJson('latest.json',undefined,9000)}dashboardRefreshTimestamp=Date.now();updateDataAge();const freshStamp=Date.parse(l.generated_at_utc||'');if(Number.isFinite(freshStamp)&&(!Number.isFinite(snapshotTimestamp)||freshStamp>=snapshotTimestamp)){snapshotTimestamp=freshStamp;lastTabSnapshot=l;markTabData('beta-daily',l.generated_at_utc);updateDataAge();updateTabUpdateInfo()}const [h,rec,spikeResult]=await Promise.all([fetchMarketJson('history.json',10000).catch(()=>({})),fetchMarketJson('recommendations.json',3500).catch(()=>({records:[]})),getSharedRadarHistory().then(data=>({data,error:null}),error=>({data:{records:[]},error}))]);
 const spikeData=spikeResult.data,spikeHistoryError=spikeResult.error;
+// A reset must never leave previously rendered history visible when the source is empty.
+if(!spikeHistoryError&&Array.isArray(spikeData.records)&&!spikeData.records.some(x=>x.day===new Date().toLocaleDateString('en-CA',{timeZone:'Europe/Warsaw'}))){const historyEl=document.getElementById('spikeHistoryRows');if(historyEl)historyEl.innerHTML='<tr><td colspan="12">No Spike Radar signals recorded today since reset.</td></tr>';}
 if(spikeHistoryError)console.warn('Spike Radar history fetch failed',spikeHistoryError);
 const spikeRecords=canonicalRadarSignals(spikeData.records);const polandDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(l.generated_at_utc));const dayParts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(l.generated_at_utc));const part=k=>dayParts.find(x=>x.type===k).value;const spikeDay=part('year')+'-'+part('month')+'-'+part('day');const spikeToday=radarSignalsForDay(spikeData.records,spikeDay).sort((a,b)=>Date.parse(b.first_alert_at_utc)-Date.parse(a.first_alert_at_utc));window.spikeRadarVisibleDay=spikeDay;window.spikeRadarVisibleCount=spikeToday.length;window.spikeRadarSourceTimestamp=radarSourceTimestamp(spikeData);const radarAsOf=Date.parse(spikeData.updated_at_utc||l.generated_at_utc||'');
 const radarFollowUpState=(x,minutes)=>{
