@@ -26,6 +26,17 @@ if not isinstance(saved, dict):
 if not isinstance(saved.get("records"), list):
     saved["records"] = []
 rows = saved["records"]
+# One-day cleanup only: remove V2 signals from 20:00–20:59 Warsaw time on 2026-10-16.
+# Preserve every other date/hour, including older 20:00 signals.
+def excluded_oct16_20h(row):
+    at = parse(row.get("first_alert_at_utc"))
+    if at is None:
+        return False
+    local = at.astimezone(ZoneInfo("Europe/Warsaw"))
+    return local.date().isoformat() == "2026-10-16" and local.hour == 20
+
+rows[:] = [row for row in rows if not excluded_oct16_20h(row)]
+
 # Restore immutable closed-day values from the previous committed snapshot.
 # The tracker must not recalculate old signals from refreshed market history.
 # Existing closed-day rows are never mutated in this run.
