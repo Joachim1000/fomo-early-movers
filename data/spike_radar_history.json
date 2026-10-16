@@ -24653,13 +24653,37 @@
       "return_5m_pct": 1.06,
       "measurement_delay_minutes": 5.57,
       "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "EQcKUXfKugCghU5kLe8vTsF4EnZZZJ2rPXou2RqzTN11",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-16T07:40:26.818436+00:00",
+      "alert_price_usd": 0.006504,
+      "initial_15m_change_pct": 8.89,
+      "initial_7m_change_pct": 18.99,
+      "buys_5m": 41,
+      "sells_5m": 0,
+      "volume_5m_usd": 12209.4,
+      "liquidity_usd": 305006.0,
+      "estimated_100usd_buy_impact_pct": 0.07,
+      "buy_acceleration_pct": 4000.0,
+      "volume_acceleration_pct": 55599.82,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {
     "Gyk9Z93Ri2JUjqES9HTpc7pxCJTLD7vhBhEjBhyApump|FfMbxjYe1urzNehdTZGRMjwngxRUmLSc17Hq9rdRdhYo": true,
     "DvdmEnztCmXwBnAbedD48XVGZJSxq31zNvnyftXdpump|Bof2XL9zAbLZ15kzAXcXy39wDeZFgKwyvb3UVkv3FhsX": true
   },
-  "updated_at_utc": "2026-10-16T07:38:18.366437+00:00",
+  "updated_at_utc": "2026-10-16T07:40:26.818436+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
