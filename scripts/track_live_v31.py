@@ -255,6 +255,38 @@ if day not in daily and local.hour>=6:
                              "trend_2h_pct":r2,"trend_6h_pct":r6,
                              "active_hours_6h":hours_active})
             candidates[key]=(score,t,enriched)
+    # Diagnostic counts and conservative fallback when six-hour history is sparse.
+    print("Daily V3.1 long-horizon qualified:",len(candidates),
+          "current observations:",len(current),"stored observations:",len(rows))
+    if len(candidates)<10:
+        provisional={}
+        for obs in rows+current:
+            t=dt(obs.get("observed_at_utc"))
+            mint,pair=obs.get("mint"),obs.get("pair_address")
+            if not t or not mint or not pair or not now-timedelta(hours=2)<=t<=now:
+                continue
+            liquidity=num(obs.get("liquidity_usd")) or 0
+            volume=num(obs.get("volume_5m_usd")) or 0
+            ratio=num(obs.get("buy_sell_ratio")) or 0
+            if liquidity<10000 or volume<500 or ratio<1.0 or (num(obs.get("entry_price_usd")) or 0)<=0:
+                continue
+            key=(mint,pair)
+            if key in candidates:continue
+            score=round(10*clamp(math.log10(liquidity/10000+1),0,2)
+                        +5*clamp(math.log10(volume/500+1),0,2)
+                        +5*clamp(ratio-1,0,2),3)
+            enriched=dict(obs)
+            enriched.update({"long_horizon_score":score,"trend_1h_pct":None,
+                             "trend_2h_pct":None,"trend_6h_pct":None,
+                             "active_hours_6h":None,
+                             "selection_confidence":"WATCH",
+                             "selection_reason":"Insufficient verified 6h history"})
+            if key not in provisional or (score,t)>(provisional[key][0],provisional[key][1]):
+                provisional[key]=(score,t,enriched)
+        for key,value in sorted(provisional.items(),key=lambda kv:(kv[1][0],kv[1][1]),reverse=True):
+            if len(candidates)>=10:break
+            candidates[key]=value
+        print("Daily V3.1 with provisional WATCH candidates:",len(candidates))
     picks=sorted(candidates.values(),key=lambda z:(z[0],z[1]),reverse=True)[:10]
     def original_call(x):
         key=x["mint"]+"|"+x["pair_address"]
@@ -269,7 +301,7 @@ if day not in daily and local.hour>=6:
                   "v31_heuristic_score":score,"long_horizon_score":score,"trend_1h_pct":x.get("trend_1h_pct"),"trend_2h_pct":x.get("trend_2h_pct"),"trend_6h_pct":x.get("trend_6h_pct"),"active_hours_6h":x.get("active_hours_6h"),"v31_rank":i,
                   "buy_sell_ratio":x.get("buy_sell_ratio"),"buys_5m":x.get("buys_5m"),
                   "sells_5m":x.get("sells_5m"),"change_15m_pct":x.get("change_15m_pct"),
-                  "candidate_source":"DAILY_FIXED_SELECTION","first_call_risk":original_call(x)["first_call_risk"]} for i,(score,t,x) in enumerate(picks,1)]}
+                  "candidate_source":"DAILY_FIXED_SELECTION" if not x.get("selection_confidence") else "DAILY_PROVISIONAL_WATCHLIST","selection_confidence":x.get("selection_confidence","QUALIFIED"),"selection_reason":x.get("selection_reason"),"first_call_risk":original_call(x)["first_call_risk"]} for i,(score,t,x) in enumerate(picks,1)]}
 # Backfill older daily picks once using their fixed selection snapshot fields.
 # Existing saved values are immutable and never overwritten.
 for portfolio in daily.values():
