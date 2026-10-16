@@ -785,6 +785,7 @@ async function pollMarketFreshness(){
   if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Invalid commit hash');
   marketCommitCheckedAt=Date.now();
   if(sha!==marketCommitSha){
+   radarSharedCache=null;radarSharedFetchedAt=0;
    marketCommitSha=sha;
    base='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/'+sha+'/data/';
    window.marketDataBase=base;
@@ -792,6 +793,7 @@ async function pollMarketFreshness(){
    const snapshot=await fetch(base+'latest.json',{cache:'no-store',signal:ctrl.signal});
    if(snapshot.ok){const j=await snapshot.json(),ts=Date.parse(j.generated_at_utc||'');if(Number.isFinite(ts)&&(!Number.isFinite(snapshotTimestamp)||ts>snapshotTimestamp)){snapshotTimestamp=ts;lastTabSnapshot=j;updateDataAge();updateTabUpdateInfo()}}
    if(!marketLoadBusy)load();
+    if(window.activeDashboardTab==='spike-beta'&&typeof loadSpikeRadarBeta==='function')loadSpikeRadarBeta();
    if(typeof window.refreshV3Beta==='function')window.refreshV3Beta();
    
   }
@@ -1151,7 +1153,7 @@ async function loadSpikeRadarBeta(){
  if(!historyTarget)return;
  if(!historyTarget.dataset.loaded)historyTarget.innerHTML='<tr><td colspan="12">Updating V2 signals…</td></tr>';
  try{
-  const root='https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
+  const root=window.marketDataBase||'https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/market-data/data/';
   const response=await fetch(root+'spike_radar_v2_history.json?t='+Date.now(),{cache:'no-store'});
   if(!response.ok)throw Error('History HTTP '+response.status);
   const data=await response.json(),allRecords=Array.isArray(data.records)?data.records:[];
