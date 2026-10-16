@@ -833,7 +833,9 @@ async function fetchMarketJson(file,timeoutMs=6500){
  const now=Date.now(),cached=marketJsonRequests.get(key);
  if(cached&&now-cached.at<(file==='spike_radar_history.json'?5000:60000))return cached.promise;
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeoutMs);
- const promise=fetch(root+file,{cache:'default',signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error(file+' HTTP '+r.status);return r.json()}).finally(()=>clearTimeout(timer));
+ const liveHistory=file==='spike_radar_history.json'||file==='spike_radar_v2_history.json';
+ const url=root+file+(liveHistory?(root+file).includes('?')?'&':'?')+'refresh='+Math.floor(now/15000):'';
+ const promise=fetch(url,{cache:liveHistory?'no-store':'default',signal:ctrl.signal}).then(r=>{if(!r.ok)throw Error(file+' HTTP '+r.status);return r.json()}).finally(()=>clearTimeout(timer));
  marketJsonRequests.set(key,{at:now,promise});
  promise.catch(()=>{if(marketJsonRequests.get(key)?.promise===promise)marketJsonRequests.delete(key)});
  if(marketJsonRequests.size>30){for(const k of marketJsonRequests.keys()){if(k!==key)marketJsonRequests.delete(k);if(marketJsonRequests.size<=15)break}}
@@ -957,6 +959,9 @@ async function unifiedMarketPoll(){
  }finally{unifiedMarketPollBusy=false}
 }
 setInterval(unifiedMarketPoll,15000);
+// Refresh the active Spike Radar history independently of latest.json changes.
+let radarHistoryRefreshAt=0;
+setInterval(()=>{if(document.hidden||window.activeDashboardTab!=='spike'||Date.now()-radarHistoryRefreshAt<30000)return;radarHistoryRefreshAt=Date.now();radarSharedCache=null;radarSharedFetchedAt=0;load()},30000);
 setInterval(updateDataAge,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)unifiedMarketPoll()});
 </script>
