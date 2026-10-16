@@ -28,7 +28,7 @@ jobs:
           now=datetime.now(ZoneInfo('Europe/Warsaw'))
           minutes=now.hour*60+now.minute
           # Allow modest GitHub Actions scheduling delays; run at most once per day.
-          morning=360<=minutes<400
+          morning=(360<=minutes<400) or os.environ.get('GITHUB_EVENT_NAME')=='workflow_dispatch'
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write(f"morning={str(morning).lower()}\n")
           print('Warsaw time:',now.isoformat(),'morning:',morning)
@@ -62,9 +62,12 @@ jobs:
           data=json.load(open('data/live_v31.json'))
           today=datetime.now(ZoneInfo('Europe/Warsaw')).date().isoformat()
           portfolio=data.get('daily_portfolios',{}).get(today)
-          if not portfolio or not portfolio.get('candidates'):
-              raise SystemExit('No candidates selected for Warsaw day '+today)
-          print('Daily V3.1',today,len(portfolio['candidates']),'candidates')
+          if not portfolio:
+              raise SystemExit('Daily V3.1 portfolio was not generated for '+today)
+          count=len(portfolio.get('candidates',[]))
+          if not count:
+              print('WARNING: Daily V3.1 has zero qualified or WATCH candidates; saving diagnostic snapshot')
+          print('Daily V3.1',today,count,'candidates')
           PY
       - name: Commit daily data
         if: steps.window.outputs.morning == 'true'
