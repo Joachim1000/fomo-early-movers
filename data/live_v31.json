@@ -109735,9 +109735,75 @@
       "return_15m_pct": null,
       "return_30m_pct": null,
       "return_60m_pct": null
+    },
+    {
+      "mint": "2uwxxiD1PshoPrrSoNvttRD8Aa1nwxVDTFf4JK36pump",
+      "pair_address": "52BUWQK5UGgkmvobHjfxRK5ywzfCbttHRPXz4o13dpx3",
+      "symbol": "VICE",
+      "observed_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "entry_price_usd": 0.0001884,
+      "momentum_heuristic": 8.78,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 17.824,
+      "acceleration_pct_points": null,
+      "buys_5m": 5,
+      "sells_5m": 1,
+      "buy_sell_ratio": 5.0,
+      "liquidity_usd": 41221.33,
+      "volume_5m_usd": 621.62,
+      "v31_heuristic_score": 22.409,
+      "eligible_for_ranking": false,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "SAtoZGJkh4Eid9EQZYXWnCNVn5asZrWZLouBMX1SHi1",
+      "pair_address": "7jTCpYho9RJhCn9ZyrLPjwGWkacGhJVdzL2cZni3UdUh",
+      "symbol": "Satoshi",
+      "observed_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "entry_price_usd": 3.16e-05,
+      "momentum_heuristic": 6.55,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 4.119,
+      "acceleration_pct_points": null,
+      "buys_5m": 13,
+      "sells_5m": 5,
+      "buy_sell_ratio": 2.6,
+      "liquidity_usd": 14064.58,
+      "volume_5m_usd": 1400.4,
+      "v31_heuristic_score": 18.295,
+      "eligible_for_ranking": true,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
+    },
+    {
+      "mint": "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE",
+      "pair_address": "C7r9jXWiVYmBYR2Jj5YSLiEitUGJPjQXWeg7HPU8NwUk",
+      "symbol": "HOOKED",
+      "observed_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "entry_price_usd": 0.001736,
+      "momentum_heuristic": 4.03,
+      "change_5m_pct": null,
+      "change_10m_pct": null,
+      "change_15m_pct": 2.178,
+      "acceleration_pct_points": null,
+      "buys_5m": 10,
+      "sells_5m": 2,
+      "buy_sell_ratio": 5.0,
+      "liquidity_usd": 116609.6,
+      "volume_5m_usd": 1900.32,
+      "v31_heuristic_score": 23.346,
+      "eligible_for_ranking": true,
+      "return_15m_pct": null,
+      "return_30m_pct": null,
+      "return_60m_pct": null
     }
   ],
-  "generated_at_utc": "2026-10-16T04:00:55.852751+00:00",
+  "generated_at_utc": "2026-10-16T04:15:29.447875+00:00",
   "model": "L2_LOGISTIC_REGRESSION",
   "trained": true,
   "status": "TRAINED_INDEPENDENT",
@@ -111449,6 +111515,18 @@
     "ALDVtr9JeLjKH91fHFvLxFoyd7C6eLUxi9dUoN2FsWdD|9WCPXCe8Cs1sJPvk1Xc45Do8Naw286it8BHKWF7GUUaH": {
       "first_seen_at_utc": "2026-10-16T04:00:55.852751+00:00",
       "first_call_risk": "ELEVATED"
+    },
+    "2uwxxiD1PshoPrrSoNvttRD8Aa1nwxVDTFf4JK36pump|52BUWQK5UGgkmvobHjfxRK5ywzfCbttHRPXz4o13dpx3": {
+      "first_seen_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "first_call_risk": "LOW RELATIVE"
+    },
+    "SAtoZGJkh4Eid9EQZYXWnCNVn5asZrWZLouBMX1SHi1|7jTCpYho9RJhCn9ZyrLPjwGWkacGhJVdzL2cZni3UdUh": {
+      "first_seen_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "first_call_risk": "LOW RELATIVE"
+    },
+    "C1mBfBoDkwWfd6uTFZp62ARHLjeVp3bDpCDMfMZtPngE|C7r9jXWiVYmBYR2Jj5YSLiEitUGJPjQXWeg7HPU8NwUk": {
+      "first_seen_at_utc": "2026-10-16T04:15:29.447875+00:00",
+      "first_call_risk": "LOW RELATIVE"
     }
   }
 }
