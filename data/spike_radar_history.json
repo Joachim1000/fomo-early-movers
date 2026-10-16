@@ -24892,7 +24892,11 @@
       "observed_5m_at_utc": "2026-10-16T16:00:57.831243+00:00",
       "return_5m_pct": -14.53,
       "measurement_delay_minutes": 6.41,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 3.407e-05,
+      "observed_10m_at_utc": "2026-10-16T16:04:34.678439+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -15.5
     },
     {
       "day": "2026-10-16",
@@ -24918,7 +24922,11 @@
       "observed_5m_at_utc": "2026-10-16T16:00:57.831243+00:00",
       "return_5m_pct": -0.96,
       "measurement_delay_minutes": 6.41,
-      "status_10m": "PENDING"
+      "status_10m": "MEASURED",
+      "price_10m_usd": 134.38,
+      "observed_10m_at_utc": "2026-10-16T16:04:34.678439+00:00",
+      "measurement_10m_delay_minutes": 10.02,
+      "return_10m_pct": -1.02
     },
     {
       "day": "2026-10-16",
@@ -24969,10 +24977,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-16",
+      "mint": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "pair_address": "9hjKmterUjufRaYUrSTEHEYJZg83LQ52behux54LSeF6",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "SAINDRA",
+      "first_alert_at_utc": "2026-10-16T16:04:34.678439+00:00",
+      "alert_price_usd": 0.000349,
+      "initial_15m_change_pct": 4.52,
+      "initial_7m_change_pct": null,
+      "buys_5m": 19,
+      "sells_5m": 7,
+      "volume_5m_usd": 1435.93,
+      "liquidity_usd": 58944.15,
+      "estimated_100usd_buy_impact_pct": 0.34,
+      "buy_acceleration_pct": 280.0,
+      "volume_acceleration_pct": 1412.94,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-16T16:02:20.705916+00:00",
+  "updated_at_utc": "2026-10-16T16:04:34.678439+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
