@@ -78,21 +78,15 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
     if not mint or not pair or not price or str(item.get("network", "")).lower() not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
         continue
     # Repeat alerts need renewed evidence; no fixed time-based lockout.
-    previous = next((r for r in reversed(rows) if r.get("mint") == mint and r.get("pair_address") == pair), None)
+    previous = next((r for r in reversed(rows) if r.get("day") == day and r.get("mint") == mint and r.get("pair_address") == pair), None)
     if previous:
         def metric(row, key):
             try:
                 return float(row.get(key))
             except (TypeError, ValueError):
                 return None
-        prior_accel = metric(previous, "buy_acceleration_pct")
         accel = metric(item, "buy_acceleration_pct")
-        prior_vol = metric(previous, "volume_5m_usd")
-        vol = metric(item, "volume_5m_usd")
-        prior_price = metric(previous, "alert_price_usd")
-        renewed = ((accel is not None and prior_accel is not None and accel >= prior_accel + 10) or
-                   (vol is not None and prior_vol is not None and vol >= prior_vol * 1.10) or
-                   (prior_price is not None and price >= prior_price * 1.02))
+        renewed = accel is not None and accel >= 10
         if not renewed:
             continue
     key=(mint,pair,now.isoformat())
