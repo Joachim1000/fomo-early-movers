@@ -16,7 +16,8 @@ api_key = os.environ.get("FOMO_API_KEY")
 # Retrieve the maximum distinct tokens the FOMO API exposes. Stop if the API
 # ignores offset, returns an empty page, or repeats a page; never invent entries.
 FOMO_PAGE_LIMIT = 100
-FOMO_MAX_PAGES = 1
+FOMO_MAX_PAGES = 2
+FOMO_MAX_TOKENS_PER_BOARD = 150
 
 def fetch_fomo_board(board):
     if not api_key:
@@ -58,7 +59,9 @@ def fetch_fomo_board(board):
             seen.add(key)
             tokens.append(item)
             new += 1
-        if not batch or new == 0 or len(batch) < FOMO_PAGE_LIMIT:
+            if len(tokens) >= FOMO_MAX_TOKENS_PER_BOARD:
+                break
+        if len(tokens) >= FOMO_MAX_TOKENS_PER_BOARD or not batch or new == 0 or len(batch) < FOMO_PAGE_LIMIT:
             break
     return {
         "status": "ok", "board": board, "tokens": tokens,
