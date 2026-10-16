@@ -391,7 +391,7 @@ for mint, pair in best.items():
                         if prior_buys is not None and prior_buys > 0 else None)
     strong_pressure = buys >= 1.5 * max(sells, 1)
     strong_acceleration = buy_acceleration is not None and buy_acceleration >= 10
-    radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+    radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19)
     fast_alert = (supported_radar_chain and radar_time_allowed and
                   True and
                    liquidity >= 5000 and
