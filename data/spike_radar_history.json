@@ -27065,11 +27065,23 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.02014,
+      "observed_2m_at_utc": "2026-10-17T07:50:24.119741+00:00",
+      "measurement_2m_delay_minutes": 4.06,
+      "return_2m_pct": 1.0,
+      "status_2m": "MEASURED",
+      "price_4m_usd": 0.02014,
+      "observed_4m_at_utc": "2026-10-17T07:50:24.119741+00:00",
+      "measurement_4m_delay_minutes": 4.06,
+      "return_4m_pct": 1.0,
+      "status_4m": "MEASURED",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T07:48:18.465609+00:00",
+  "updated_at_utc": "2026-10-17T07:50:24.119741+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
