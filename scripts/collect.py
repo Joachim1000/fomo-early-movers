@@ -396,7 +396,7 @@ for mint, pair in best.items():
                   True and
                    liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
-                  volume >= 3000 and liquidity >= 5000 and change_15m is not None and
+                  volume >= 3000 and liquidity >= 5000 and volume / liquidity <= 0.30 and change_15m is not None and
                   1.2 <= change_15m <= 15 and
                   not (buy_acceleration is not None and buy_acceleration < 0 and
                        prior_volume is not None and prior_volume > 0 and volume < prior_volume * 0.70))
