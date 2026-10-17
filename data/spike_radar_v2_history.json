@@ -4523,11 +4523,36 @@
       "measurement_10m_delay_minutes": 12.07,
       "return_10m_pct": 1.36,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump",
+      "pair_address": "EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Normie",
+      "first_alert_at_utc": "2026-10-17T14:06:19.511916+00:00",
+      "alert_price_usd": 0.000911,
+      "initial_15m_change_pct": 3.18,
+      "buys_5m": 25,
+      "sells_5m": 9,
+      "volume_5m_usd": 1979.9,
+      "liquidity_usd": 96697.34,
+      "buy_acceleration_pct": 733.33,
+      "volume_acceleration_pct": 76.11,
+      "spike_v2_score": 79,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "DzMwArmdzPqcqgvyqAmTxy79XdA9NwK9mMteqWLJpump|EP9eirgAmjgKh7EM8vWtEKqJfTRrT1oNboUAR3PcSiLw": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T14:04:23.316034+00:00",
+  "updated_at_utc": "2026-10-17T14:06:19.511916+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
