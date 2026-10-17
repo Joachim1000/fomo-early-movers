@@ -29891,10 +29891,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "pair_address": "AfrddTGYwCVEQB1gxCAhR8i48o6qtxYqksdVkeLudEhg",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "STONK",
+      "first_alert_at_utc": "2026-10-17T11:04:17.379117+00:00",
+      "alert_price_usd": 0.1063,
+      "initial_15m_change_pct": 1.63,
+      "expected_4m_pct": 2.72,
+      "initial_7m_change_pct": null,
+      "buys_5m": 25,
+      "sells_5m": 0,
+      "volume_5m_usd": 11462.52,
+      "liquidity_usd": 2213450.94,
+      "estimated_100usd_buy_impact_pct": 0.01,
+      "buy_acceleration_pct": 733.33,
+      "volume_acceleration_pct": 366.83,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T11:02:18.903049+00:00",
+  "updated_at_utc": "2026-10-17T11:04:17.379117+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
