@@ -391,13 +391,13 @@ for mint, pair in best.items():
                         if prior_buys is not None and prior_buys > 0 else None)
     strong_pressure = buys >= 1.5 * max(sells, 1)
     strong_acceleration = buy_acceleration is not None and buy_acceleration >= 10
-    radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+    radar_time_allowed = NOW.astimezone(WARSAW).hour in (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)
     fast_alert = (supported_radar_chain and radar_time_allowed and
                   True and
                    liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1500 and liquidity >= 5000 and change_15m is not None and
-                  0.7 <= change_15m <= 12 and
+                  1.2 <= change_15m <= 12 and
                   not (buy_acceleration is not None and buy_acceleration < 0 and
                        prior_volume is not None and prior_volume > 0 and volume < prior_volume * 0.70))
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
@@ -430,7 +430,7 @@ for mint, pair in best.items():
         "buy_acceleration_pct": round(100 * (buys / prior_buys - 1), 2) if prior_buys is not None and prior_buys > 0 else None,
         "volume_acceleration_pct": round(100 * (volume / prior_volume - 1), 2) if prior_volume is not None and prior_volume > 0 else None,
         "spike_v2_alert": v2_alert, "spike_v2_score": v2_score,
-        "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and True and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 0.7 else None,
+        "spike_signal_tier": "STRONG SIGNAL" if fast_alert else "WATCH" if supported_radar_chain and radar_time_allowed and True and liquidity >= 5000 and volume >= 1000 and change_15m is not None and change_15m >= 1.2 else None,
         "change_15m_pct": change_15m, "change_5m_pct": change_5m,
         "early_alert_observation_count": len(recent_15m),
         "pair_address": pair.get("pairAddress"),
