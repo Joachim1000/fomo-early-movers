@@ -4784,11 +4784,36 @@
       "measurement_10m_delay_minutes": 11.85,
       "return_10m_pct": 9.83,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK",
+      "pair_address": "6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "SWOLF",
+      "first_alert_at_utc": "2026-10-17T16:04:22.069575+00:00",
+      "alert_price_usd": 0.0003527,
+      "initial_15m_change_pct": 5.47,
+      "buys_5m": 20,
+      "sells_5m": 7,
+      "volume_5m_usd": 4964.35,
+      "liquidity_usd": 59684.44,
+      "buy_acceleration_pct": 122.22,
+      "volume_acceleration_pct": 722.87,
+      "spike_v2_score": 88,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "HwJyyniKKDRLXxjRSzyLtpvxzqecqrhrbcSbKRm7STNK|6brAAmd965v3amhS6nFX2Fr6ytQC2dPY7M8XkxYRrsNn": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T16:02:19.077048+00:00",
+  "updated_at_utc": "2026-10-17T16:04:22.069575+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
