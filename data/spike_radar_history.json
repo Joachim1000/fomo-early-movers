@@ -30455,10 +30455,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pair_address": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "DOPE",
+      "first_alert_at_utc": "2026-10-17T11:42:18.782410+00:00",
+      "alert_price_usd": 0.003591,
+      "initial_15m_change_pct": 6.21,
+      "expected_4m_pct": 2.64,
+      "initial_7m_change_pct": null,
+      "buys_5m": 13,
+      "sells_5m": 0,
+      "volume_5m_usd": 3048.24,
+      "liquidity_usd": 396822.88,
+      "estimated_100usd_buy_impact_pct": 0.05,
+      "buy_acceleration_pct": 116.67,
+      "volume_acceleration_pct": 37.87,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T11:40:25.483313+00:00",
+  "updated_at_utc": "2026-10-17T11:42:18.782410+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
