@@ -28815,10 +28815,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "3XEqNHe3jHTRWAZCTHbb1UwpSfNbJL9oU1ErsM86pump",
+      "pair_address": "D6G4BRfHuGYsTkPCBkmuEqesND7gJuGzdCzeNicATtmy",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "MAKERS",
+      "first_alert_at_utc": "2026-10-17T09:52:18.511918+00:00",
+      "alert_price_usd": 0.0002306,
+      "initial_15m_change_pct": 10.07,
+      "initial_7m_change_pct": null,
+      "buys_5m": 143,
+      "sells_5m": 64,
+      "volume_5m_usd": 11114.89,
+      "liquidity_usd": 40802.13,
+      "estimated_100usd_buy_impact_pct": 0.49,
+      "buy_acceleration_pct": 57.14,
+      "volume_acceleration_pct": 126.49,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T09:50:24.933001+00:00",
+  "updated_at_utc": "2026-10-17T09:52:18.511918+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
