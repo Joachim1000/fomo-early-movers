@@ -3943,11 +3943,36 @@
       "measurement_10m_delay_minutes": 11.44,
       "return_10m_pct": 4.09,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "8hnMfF4XL717GVwzDmvqjJvULozKW6w7BhHFABjvHje4",
+      "pair_address": "GFKksyQkFs4ndLQ46MT9MHbda2iHvY39FjEaYU9ikAfU",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "simulator",
+      "first_alert_at_utc": "2026-10-17T09:36:17.950044+00:00",
+      "alert_price_usd": 0.001255,
+      "initial_15m_change_pct": 3.8,
+      "buys_5m": 28,
+      "sells_5m": 0,
+      "volume_5m_usd": 4480.5,
+      "liquidity_usd": 151546.36,
+      "buy_acceleration_pct": 133.33,
+      "volume_acceleration_pct": 303.06,
+      "spike_v2_score": 93,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "8hnMfF4XL717GVwzDmvqjJvULozKW6w7BhHFABjvHje4|GFKksyQkFs4ndLQ46MT9MHbda2iHvY39FjEaYU9ikAfU": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T09:34:20.518652+00:00",
+  "updated_at_utc": "2026-10-17T09:36:17.950044+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
