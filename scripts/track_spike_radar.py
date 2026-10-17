@@ -29,8 +29,8 @@ def estimate_buy_impact_pct(liquidity_usd, trade_usd=100):
     quote_reserve = liquidity / 2
     return round(100 * trade_usd / (quote_reserve + trade_usd), 2)
 
-def expected_5m_pct(item):
-    """Uncalibrated, point-in-time estimate; never substitute for measured returns."""
+def expected_4m_pct(item):
+    """Uncalibrated, point-in-time 4m estimate; never substitute for measured returns."""
     import math
     def metric(key):
         try:
@@ -123,7 +123,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         "symbol": item.get("symbol") or mint[:8],
         "first_alert_at_utc": now.isoformat(), "alert_price_usd": price,
         "initial_15m_change_pct": item.get("change_15m_pct"),
-        "expected_5m_pct": expected_5m_pct(item),
+        "expected_4m_pct": expected_4m_pct(item),
         "initial_7m_change_pct": item.get("change_7m_pct"),
         "buys_5m": item.get("buy_transactions_5m"),
         "sells_5m": item.get("sell_transactions_5m"),
