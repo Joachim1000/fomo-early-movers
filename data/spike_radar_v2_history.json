@@ -3850,12 +3850,42 @@
       "price_5m_usd": 0.004262,
       "observed_5m_at_utc": "2026-10-17T08:34:18.037960+00:00",
       "return_5m_pct": -2.11,
-      "measurement_delay_minutes": 6.02
+      "measurement_delay_minutes": 6.02,
+      "price_10m_usd": 0.004189,
+      "observed_10m_at_utc": "2026-10-17T08:38:20.062366+00:00",
+      "measurement_10m_delay_minutes": 10.05,
+      "return_10m_pct": -3.79,
+      "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx",
+      "pair_address": "CnHqem7jPbjA5p2xHBGPHQG7E9NkZWcQr9q6R9YWb7zf",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "ELON",
+      "first_alert_at_utc": "2026-10-17T08:38:20.062366+00:00",
+      "alert_price_usd": 0.0008127,
+      "initial_15m_change_pct": 6.03,
+      "buys_5m": 37,
+      "sells_5m": 16,
+      "volume_5m_usd": 2309.3,
+      "liquidity_usd": 87051.2,
+      "buy_acceleration_pct": 146.67,
+      "volume_acceleration_pct": -32.33,
+      "spike_v2_score": 84,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "B2GESkSErPjuCq6n4LcaJP5v2z1kJnw3xHVZnop2sZx|CnHqem7jPbjA5p2xHBGPHQG7E9NkZWcQr9q6R9YWb7zf": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T08:36:18.343122+00:00",
+  "updated_at_utc": "2026-10-17T08:38:20.062366+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
