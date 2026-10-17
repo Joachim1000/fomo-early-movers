@@ -3788,15 +3788,16 @@
       "volume_acceleration_pct": 236.65,
       "spike_v2_score": 81,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "status": "MEASURED",
+      "price_5m_usd": 0.001952,
+      "observed_5m_at_utc": "2026-10-17T08:20:25.385626+00:00",
+      "return_5m_pct": 2.52,
+      "measurement_delay_minutes": 6.11
     }
   ],
   "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T08:18:18.383764+00:00",
+  "updated_at_utc": "2026-10-17T08:20:25.385626+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
