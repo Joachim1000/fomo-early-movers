@@ -35072,10 +35072,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump",
+      "pair_address": "HMzvsEEmtzHhvZNw9uwbaG85HCTmFnkbhzUx16cy7ca3",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "CATE",
+      "first_alert_at_utc": "2026-10-17T17:52:21.266228+00:00",
+      "alert_price_usd": 0.07099,
+      "initial_15m_change_pct": 1.97,
+      "expected_4m_pct": 1.76,
+      "initial_7m_change_pct": null,
+      "buys_5m": 116,
+      "sells_5m": 28,
+      "volume_5m_usd": 10359.94,
+      "liquidity_usd": 3012132.54,
+      "estimated_100usd_buy_impact_pct": 0.01,
+      "buy_acceleration_pct": 141.67,
+      "volume_acceleration_pct": 96.73,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T17:50:24.873425+00:00",
+  "updated_at_utc": "2026-10-17T17:52:21.266228+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
