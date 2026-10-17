@@ -25486,7 +25486,15 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.0003669,
+      "observed_2m_at_utc": "2026-10-17T06:24:25.137929+00:00",
+      "measurement_2m_delay_minutes": 3.93,
+      "return_2m_pct": 1.52,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-17",
@@ -25511,10 +25519,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+      "pair_address": "FDamUzyiEA7Cq1VNiQcbhuHpfCmmcJfgA6DwQQ1hhLd2",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "GTA6",
+      "first_alert_at_utc": "2026-10-17T06:24:25.137929+00:00",
+      "alert_price_usd": 0.001537,
+      "initial_15m_change_pct": 10.89,
+      "initial_7m_change_pct": null,
+      "buys_5m": 10,
+      "sells_5m": 0,
+      "volume_5m_usd": 3344.74,
+      "liquidity_usd": 162186.77,
+      "estimated_100usd_buy_impact_pct": 0.12,
+      "buy_acceleration_pct": null,
+      "volume_acceleration_pct": null,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T06:22:26.671464+00:00",
+  "updated_at_utc": "2026-10-17T06:24:25.137929+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
