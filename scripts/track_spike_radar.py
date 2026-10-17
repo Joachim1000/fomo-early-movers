@@ -29,6 +29,28 @@ def estimate_buy_impact_pct(liquidity_usd, trade_usd=100):
     quote_reserve = liquidity / 2
     return round(100 * trade_usd / (quote_reserve + trade_usd), 2)
 
+def expected_5m_pct(item):
+    """Uncalibrated, point-in-time estimate; never substitute for measured returns."""
+    import math
+    def metric(key):
+        try:
+            value = item.get(key)
+            return float(value) if value is not None and value != "" else None
+        except (TypeError, ValueError):
+            return None
+    momentum = metric("change_15m_pct")
+    buys, sells = metric("buy_transactions_5m"), metric("sell_transactions_5m")
+    volume, liquidity = metric("volume_5m_usd"), metric("liquidity_usd")
+    accel = metric("buy_acceleration_pct")
+    if any(v is None or not math.isfinite(v) for v in (momentum, buys, sells, volume, liquidity)) or buys <= 0 or volume <= 0 or liquidity <= 0:
+        return None
+    pressure = buys / max(1, sells)
+    estimate = (0.14 * momentum + 0.55 * math.log(max(0.25, pressure))
+                + 0.28 * math.log(max(0.25, volume / 2500))
+                + 0.003 * max(-100, min(100, accel if accel is not None and math.isfinite(accel) else 0))
+                - 0.20 * max(0, momentum - 10))
+    return round(max(-5, min(8, estimate)), 2)
+
 latest = json.loads(Path("data/latest.json").read_text())
 history = json.loads(Path("data/history.json").read_text())
 path = Path("data/spike_radar_history.json")
@@ -101,6 +123,7 @@ for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get(
         "symbol": item.get("symbol") or mint[:8],
         "first_alert_at_utc": now.isoformat(), "alert_price_usd": price,
         "initial_15m_change_pct": item.get("change_15m_pct"),
+        "expected_5m_pct": expected_5m_pct(item),
         "initial_7m_change_pct": item.get("change_7m_pct"),
         "buys_5m": item.get("buy_transactions_5m"),
         "sells_5m": item.get("sell_transactions_5m"),
