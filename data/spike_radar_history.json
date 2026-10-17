@@ -31506,13 +31506,17 @@
       "measurement_2m_delay_minutes": 2.03,
       "return_2m_pct": 2.35,
       "status_2m": "MEASURED",
-      "status_4m": "PENDING",
+      "status_4m": "MEASURED",
       "status_6m": "PENDING",
-      "status_10m": "PENDING"
+      "status_10m": "PENDING",
+      "price_4m_usd": 0.001055,
+      "observed_4m_at_utc": "2026-10-17T13:10:28.994204+00:00",
+      "measurement_4m_delay_minutes": 4.19,
+      "return_4m_pct": 3.13
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T13:08:19.841565+00:00",
+  "updated_at_utc": "2026-10-17T13:10:28.994204+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
