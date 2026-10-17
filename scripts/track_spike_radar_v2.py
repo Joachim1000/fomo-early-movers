@@ -45,7 +45,7 @@ rows[:] = [row for row in rows if not excluded_oct16_20h(row)]
 # This also cleans stale records restored by a concurrent workflow checkout.
 def radar_blocked(timestamp):
     at = parse(timestamp)
-    return at is not None and at.astimezone(ZoneInfo("Europe/Warsaw")).hour not in (7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+    return at is not None and at.astimezone(ZoneInfo("Europe/Warsaw")).hour not in (6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
 
 # Historical records are immutable once their trading day has closed.
 # Midday restrictions apply to NEW signals only, not previously frozen history.
