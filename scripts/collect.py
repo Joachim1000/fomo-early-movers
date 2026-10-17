@@ -386,7 +386,7 @@ for mint, pair in best.items():
                       change_2_5m is not None and 2 <= change_2_5m <= 25 and
                       prior_buys is not None and buys >= prior_buys * 1.2)
     # Radar supports every chain already accepted by the DEX/FOMO ingestion layer.
-    supported_radar_chain = pair.get("chainId") in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche")  # V1 does not require FOMO verification
+    supported_radar_chain = pair.get("chainId") == "solana"  # Spike Radar V1 and V2: Solana only
     buy_acceleration = (100 * (buys / prior_buys - 1)
                         if prior_buys is not None and prior_buys > 0 else None)
     strong_pressure = buys >= 1.5 * max(sells, 1)
