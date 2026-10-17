@@ -643,7 +643,7 @@ function isWarsawBlockedSignal(timestamp){
  const ms=Date.parse(timestamp||'');
  if(!Number.isFinite(ms))return false;
  const hour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',hourCycle:'h23'}).format(new Date(ms)));
- return !([7,8,9,11,12,13,14,15,16,17,18,19,20,21].includes(hour));
+ return !([7,8,9,10,11,12,13,14,15,16,17,18,19,20,21].includes(hour));
 }
 function canonicalRadarSignals(records){
  const byId=new Map();
@@ -698,7 +698,7 @@ function isWarsawTradingDaySignal(timestamp,day){
  const v=k=>parts.find(x=>x.type===k)?.value;
  const date=v('year')+'-'+v('month')+'-'+v('day');
  const minutes=Number(v('hour'))*60+Number(v('minute'));
- return date===day&&((minutes>=420&&minutes<600)||(minutes>=660&&minutes<1320));
+ return date===day&&(minutes>=420&&minutes<1320);
 }
 function warsawTradingDayNow(){
  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
@@ -714,7 +714,7 @@ function isV2Oct16ExcludedHour(timestamp){
 async function loadSimplePerformance(){const lv=$('simpleLiveRows'),status=$('simplePerfStatus');const get=async file=>{try{const r=await fetch(base+file+'?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};let [beta,radar,rec,hist,v3]=await Promise.all([get('spike_radar_v2_history.json'),getSharedRadarHistory().catch(()=>null),get('recommendations.json'),get('history.json'),get('live_v31.json')]);
 const performanceCutoff=Date.now()-7*24*60*60*1000;
 // Apply the same schedule configured on Home to historical performance.
-let historyHoursConfig={blocked_hours:[0,1,2,3,4,5,6,10,20,21,22,23],blocked_intervals:[]};
+let historyHoursConfig={blocked_hours:[0,1,2,3,4,5,6,20,21,22,23],blocked_intervals:[]};
 try{const cfgResponse=await fetch('https://raw.githubusercontent.com/Joachim1000/fomo-early-movers/main/config/collection_hours.json?t='+Date.now(),{cache:'no-store'});if(cfgResponse.ok)historyHoursConfig=await cfgResponse.json()}catch(e){console.warn('Performance trading hours config',e)}
 const allowedHistoryTime=timestamp=>{const ms=Date.parse(timestamp||'');if(!Number.isFinite(ms))return false;const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(ms));const get=k=>Number(parts.find(x=>x.type===k)?.value);const h=get('hour'),minute=get('minute'),m=h*60+minute;if((historyHoursConfig.blocked_hours||[]).includes(h))return false;for(const range of (historyHoursConfig.blocked_intervals||[])){const toM=t=>{const a=String(t).split(':').map(Number);return a[0]*60+a[1]};const start=toM(range.start),end=toM(range.end);if(start<=end?(m>=start&&m<end):(m>=start||m<end))return false}return true};
 const warsawSignalParts=t=>new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(t));
