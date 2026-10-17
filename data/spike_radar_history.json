@@ -31830,7 +31830,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.001191,
       "observed_4m_at_utc": "2026-10-17T13:34:17.914431+00:00",
       "measurement_4m_delay_minutes": 5.94,
@@ -31839,7 +31839,11 @@
       "price_6m_usd": 0.001191,
       "observed_6m_at_utc": "2026-10-17T13:36:18.105897+00:00",
       "measurement_6m_delay_minutes": 7.95,
-      "return_6m_pct": -0.5
+      "return_6m_pct": -0.5,
+      "price_10m_usd": 0.001183,
+      "observed_10m_at_utc": "2026-10-17T13:40:25.552078+00:00",
+      "measurement_10m_delay_minutes": 12.07,
+      "return_10m_pct": -1.17
     },
     {
       "day": "2026-10-17",
@@ -31872,7 +31876,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.04978,
       "observed_4m_at_utc": "2026-10-17T13:34:17.914431+00:00",
       "measurement_4m_delay_minutes": 5.94,
@@ -31881,11 +31885,15 @@
       "price_6m_usd": 0.04825,
       "observed_6m_at_utc": "2026-10-17T13:36:18.105897+00:00",
       "measurement_6m_delay_minutes": 7.95,
-      "return_6m_pct": -3.03
+      "return_6m_pct": -3.03,
+      "price_10m_usd": 0.04711,
+      "observed_10m_at_utc": "2026-10-17T13:40:25.552078+00:00",
+      "measurement_10m_delay_minutes": 12.07,
+      "return_10m_pct": -5.33
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T13:38:18.064428+00:00",
+  "updated_at_utc": "2026-10-17T13:40:25.552078+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
