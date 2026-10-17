@@ -4262,11 +4262,36 @@
       "measurement_10m_delay_minutes": 10.07,
       "return_10m_pct": 5.33,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "2jAq7KMy4eqxex1DQHo1nSybEv2yTY94dUDKmvZ2yUb3",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-17T11:54:18.704222+00:00",
+      "alert_price_usd": 0.003015,
+      "initial_15m_change_pct": 3.64,
+      "buys_5m": 63,
+      "sells_5m": 18,
+      "volume_5m_usd": 8004.18,
+      "liquidity_usd": 258888.59,
+      "buy_acceleration_pct": 96.88,
+      "volume_acceleration_pct": 5.37,
+      "spike_v2_score": 100,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump|2jAq7KMy4eqxex1DQHo1nSybEv2yTY94dUDKmvZ2yUb3": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T11:52:18.422007+00:00",
+  "updated_at_utc": "2026-10-17T11:54:18.704222+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
