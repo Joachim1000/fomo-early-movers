@@ -397,7 +397,7 @@ for mint, pair in best.items():
                    liquidity >= 5000 and
                   buys >= 8 and buys >= 1.5 * max(sells, 1) and
                   volume >= 1500 and liquidity >= 5000 and change_15m is not None and
-                  1.2 <= change_15m <= 12 and
+                  1.2 <= change_15m <= 15 and
                   not (buy_acceleration is not None and buy_acceleration < 0 and
                        prior_volume is not None and prior_volume > 0 and volume < prior_volume * 0.70))
     # Spike Radar V2 shadow model: momentum, pressure, acceleration and exhaustion.
