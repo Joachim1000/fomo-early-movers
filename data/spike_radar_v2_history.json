@@ -3677,11 +3677,36 @@
       "observed_5m_at_utc": "2026-10-17T07:04:26.192542+00:00",
       "return_5m_pct": 2.18,
       "measurement_delay_minutes": 6.11
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "0x108876C3df3d893350e9B780563B3697aa3E7777",
+      "pair_address": "0x8650B97Cc260125119D8c6FBE7cCe69A2676eE49",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "bsc",
+      "symbol": "中国人能飞",
+      "first_alert_at_utc": "2026-10-17T07:08:17.310610+00:00",
+      "alert_price_usd": 0.002138,
+      "initial_15m_change_pct": 3.94,
+      "buys_5m": 20,
+      "sells_5m": 2,
+      "volume_5m_usd": 1667.92,
+      "liquidity_usd": 204871.18,
+      "buy_acceleration_pct": 81.82,
+      "volume_acceleration_pct": 6.69,
+      "spike_v2_score": 76,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "0x108876C3df3d893350e9B780563B3697aa3E7777|0x8650B97Cc260125119D8c6FBE7cCe69A2676eE49": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T07:06:18.469453+00:00",
+  "updated_at_utc": "2026-10-17T07:08:17.310610+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
