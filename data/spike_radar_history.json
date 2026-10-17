@@ -24782,12 +24782,16 @@
       "return_4m_pct": 5.9,
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "measurement_delay_minutes": 5.89,
       "price_6m_usd": 8.594e-05,
       "observed_6m_at_utc": "2026-10-17T05:34:18.427577+00:00",
       "measurement_6m_delay_minutes": 7.9,
-      "return_6m_pct": -5.26
+      "return_6m_pct": -5.26,
+      "price_10m_usd": 8.632e-05,
+      "observed_10m_at_utc": "2026-10-17T05:38:15.515406+00:00",
+      "measurement_10m_delay_minutes": 11.85,
+      "return_10m_pct": -4.84
     },
     {
       "day": "2026-10-17",
@@ -24818,13 +24822,17 @@
       "return_2m_pct": -5.32,
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
-      "status_6m": "PENDING",
+      "status_6m": "MEASURED",
       "status_10m": "PENDING",
       "price_4m_usd": 8.214e-05,
       "observed_4m_at_utc": "2026-10-17T05:36:17.729224+00:00",
       "measurement_4m_delay_minutes": 5.64,
       "return_4m_pct": -3.26,
-      "measurement_delay_minutes": 5.64
+      "measurement_delay_minutes": 5.64,
+      "price_6m_usd": 8.383e-05,
+      "observed_6m_at_utc": "2026-10-17T05:38:15.515406+00:00",
+      "measurement_6m_delay_minutes": 7.6,
+      "return_6m_pct": -1.27
     },
     {
       "day": "2026-10-17",
@@ -24845,10 +24853,10 @@
       "buy_acceleration_pct": 27.78,
       "volume_acceleration_pct": 20.71,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null,
+      "status": "MEASURED",
+      "price_5m_usd": 0.004021,
+      "observed_5m_at_utc": "2026-10-17T05:38:15.515406+00:00",
+      "return_5m_pct": -0.84,
       "price_2m_usd": 0.00403,
       "observed_2m_at_utc": "2026-10-17T05:34:18.427577+00:00",
       "measurement_2m_delay_minutes": 2.01,
@@ -24860,11 +24868,12 @@
       "price_4m_usd": 0.004024,
       "observed_4m_at_utc": "2026-10-17T05:36:17.729224+00:00",
       "measurement_4m_delay_minutes": 4.0,
-      "return_4m_pct": -0.76
+      "return_4m_pct": -0.76,
+      "measurement_delay_minutes": 5.96
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T05:36:17.729224+00:00",
+  "updated_at_utc": "2026-10-17T05:38:15.515406+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
