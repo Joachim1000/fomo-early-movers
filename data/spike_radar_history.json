@@ -26938,7 +26938,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.001175,
       "observed_4m_at_utc": "2026-10-17T07:40:34.856767+00:00",
       "measurement_4m_delay_minutes": 6.29,
@@ -26947,7 +26947,11 @@
       "price_6m_usd": 0.001175,
       "observed_6m_at_utc": "2026-10-17T07:40:34.856767+00:00",
       "measurement_6m_delay_minutes": 6.29,
-      "return_6m_pct": -10.17
+      "return_6m_pct": -10.17,
+      "price_10m_usd": 0.001051,
+      "observed_10m_at_utc": "2026-10-17T07:44:17.952923+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": -19.65
     },
     {
       "day": "2026-10-17",
@@ -26979,7 +26983,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.003737,
       "observed_4m_at_utc": "2026-10-17T07:40:34.856767+00:00",
       "measurement_4m_delay_minutes": 6.29,
@@ -26988,7 +26992,11 @@
       "price_6m_usd": 0.003737,
       "observed_6m_at_utc": "2026-10-17T07:40:34.856767+00:00",
       "measurement_6m_delay_minutes": 6.29,
-      "return_6m_pct": 3.03
+      "return_6m_pct": 3.03,
+      "price_10m_usd": 0.003728,
+      "observed_10m_at_utc": "2026-10-17T07:44:17.952923+00:00",
+      "measurement_10m_delay_minutes": 10.01,
+      "return_10m_pct": 2.78
     },
     {
       "day": "2026-10-17",
@@ -27023,13 +27031,17 @@
       "measurement_4m_delay_minutes": 4.28,
       "return_4m_pct": -3.18,
       "status_4m": "MEASURED",
-      "status_6m": "PENDING",
+      "status_6m": "MEASURED",
       "status_10m": "PENDING",
-      "measurement_delay_minutes": 5.99
+      "measurement_delay_minutes": 5.99,
+      "price_6m_usd": 0.0002761,
+      "observed_6m_at_utc": "2026-10-17T07:44:17.952923+00:00",
+      "measurement_6m_delay_minutes": 8.0,
+      "return_6m_pct": -8.42
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T07:42:17.868035+00:00",
+  "updated_at_utc": "2026-10-17T07:44:17.952923+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
