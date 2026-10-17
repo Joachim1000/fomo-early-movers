@@ -4836,11 +4836,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
+      "pair_address": "2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "VEIL",
+      "first_alert_at_utc": "2026-10-17T16:22:22.276649+00:00",
+      "alert_price_usd": 0.003246,
+      "initial_15m_change_pct": 5.6,
+      "buys_5m": 34,
+      "sells_5m": 0,
+      "volume_5m_usd": 3948.72,
+      "liquidity_usd": 174287.69,
+      "buy_acceleration_pct": 25.93,
+      "volume_acceleration_pct": -32.09,
+      "spike_v2_score": 95,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump|2LhZHygydAYPBoxxhW95mEvN1yndL1JpoScakULSxgWo": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T16:20:27.017184+00:00",
+  "updated_at_utc": "2026-10-17T16:22:22.276649+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
