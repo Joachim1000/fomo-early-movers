@@ -31940,10 +31940,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump",
+      "pair_address": "2YaGc2iYZt44B5zn5Tvk59APbAn51xGekzNQAPF2PGn1",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "swordcat",
+      "first_alert_at_utc": "2026-10-17T14:14:24.449391+00:00",
+      "alert_price_usd": 0.002307,
+      "initial_15m_change_pct": 8.82,
+      "expected_4m_pct": 3.15,
+      "initial_7m_change_pct": null,
+      "buys_5m": 15,
+      "sells_5m": 0,
+      "volume_5m_usd": 3890.43,
+      "liquidity_usd": 251481.14,
+      "estimated_100usd_buy_impact_pct": 0.08,
+      "buy_acceleration_pct": 150.0,
+      "volume_acceleration_pct": 2100.47,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T14:12:30.548947+00:00",
+  "updated_at_utc": "2026-10-17T14:14:24.449391+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
