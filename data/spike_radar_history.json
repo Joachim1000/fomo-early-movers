@@ -31600,7 +31600,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.04907,
       "observed_4m_at_utc": "2026-10-17T13:26:17.707397+00:00",
       "measurement_4m_delay_minutes": 5.83,
@@ -31609,7 +31609,11 @@
       "price_6m_usd": 0.04976,
       "observed_6m_at_utc": "2026-10-17T13:28:21.271461+00:00",
       "measurement_6m_delay_minutes": 7.89,
-      "return_6m_pct": 4.52
+      "return_6m_pct": 4.52,
+      "price_10m_usd": 0.04962,
+      "observed_10m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "measurement_10m_delay_minutes": 10.4,
+      "return_10m_pct": 4.22
     },
     {
       "day": "2026-10-17",
@@ -31715,10 +31719,10 @@
       "buy_acceleration_pct": 1100.0,
       "volume_acceleration_pct": 7144.12,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null,
+      "status": "MEASURED",
+      "price_5m_usd": 0.004053,
+      "observed_5m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "return_5m_pct": 0.2,
       "price_2m_usd": 0.004213,
       "observed_2m_at_utc": "2026-10-17T13:28:21.271461+00:00",
       "measurement_2m_delay_minutes": 4.0,
@@ -31729,8 +31733,13 @@
       "measurement_4m_delay_minutes": 4.0,
       "return_4m_pct": 4.15,
       "status_4m": "MEASURED",
-      "status_6m": "PENDING",
-      "status_10m": "PENDING"
+      "status_6m": "MEASURED",
+      "status_10m": "PENDING",
+      "measurement_delay_minutes": 6.51,
+      "price_6m_usd": 0.004053,
+      "observed_6m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "measurement_6m_delay_minutes": 6.51,
+      "return_6m_pct": 0.2
     },
     {
       "day": "2026-10-17",
@@ -31752,10 +31761,10 @@
       "buy_acceleration_pct": 11.11,
       "volume_acceleration_pct": -31.42,
       "measurement_minutes": 5,
-      "status": "PENDING",
-      "price_5m_usd": null,
-      "observed_5m_at_utc": null,
-      "return_5m_pct": null,
+      "status": "MEASURED",
+      "price_5m_usd": 0.04962,
+      "observed_5m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "return_5m_pct": 1.33,
       "price_2m_usd": 0.04976,
       "observed_2m_at_utc": "2026-10-17T13:28:21.271461+00:00",
       "measurement_2m_delay_minutes": 4.0,
@@ -31766,8 +31775,13 @@
       "measurement_4m_delay_minutes": 4.0,
       "return_4m_pct": 1.61,
       "status_4m": "MEASURED",
-      "status_6m": "PENDING",
-      "status_10m": "PENDING"
+      "status_6m": "MEASURED",
+      "status_10m": "PENDING",
+      "measurement_delay_minutes": 6.51,
+      "price_6m_usd": 0.04962,
+      "observed_6m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "measurement_6m_delay_minutes": 6.51,
+      "return_6m_pct": 1.33
     },
     {
       "day": "2026-10-17",
@@ -31792,7 +31806,15 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.001191,
+      "observed_2m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "measurement_2m_delay_minutes": 2.51,
+      "return_2m_pct": -0.5,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-17",
@@ -31817,11 +31839,19 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.04962,
+      "observed_2m_at_utc": "2026-10-17T13:30:51.846241+00:00",
+      "measurement_2m_delay_minutes": 2.51,
+      "return_2m_pct": -0.28,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T13:28:21.271461+00:00",
+  "updated_at_utc": "2026-10-17T13:30:51.846241+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
