@@ -3618,11 +3618,36 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "ADkd6izPxJtKueHAzKsDEnGRNEq5ERu1g3ses1wKpump",
+      "pair_address": "tNTHVH1Af6YXKidRVWvtyefkW2fBsrQ2AS4DyTULut7",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "DUO",
+      "first_alert_at_utc": "2026-10-17T06:52:25.764861+00:00",
+      "alert_price_usd": 0.0001458,
+      "initial_15m_change_pct": 4.82,
+      "buys_5m": 17,
+      "sells_5m": 3,
+      "volume_5m_usd": 1840.93,
+      "liquidity_usd": 35584.37,
+      "buy_acceleration_pct": 54.55,
+      "volume_acceleration_pct": 41.33,
+      "spike_v2_score": 75,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "ADkd6izPxJtKueHAzKsDEnGRNEq5ERu1g3ses1wKpump|tNTHVH1Af6YXKidRVWvtyefkW2fBsrQ2AS4DyTULut7": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T06:50:23.121404+00:00",
+  "updated_at_utc": "2026-10-17T06:52:25.764861+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
