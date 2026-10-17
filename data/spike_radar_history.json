@@ -32520,7 +32520,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.2867,
       "observed_4m_at_utc": "2026-10-17T14:48:18.097083+00:00",
       "measurement_4m_delay_minutes": 4.01,
@@ -32529,7 +32529,11 @@
       "price_6m_usd": 0.2884,
       "observed_6m_at_utc": "2026-10-17T14:50:28.093463+00:00",
       "measurement_6m_delay_minutes": 6.18,
-      "return_6m_pct": 0.73
+      "return_6m_pct": 0.73,
+      "price_10m_usd": 0.2964,
+      "observed_10m_at_utc": "2026-10-17T14:54:19.535827+00:00",
+      "measurement_10m_delay_minutes": 10.04,
+      "return_10m_pct": 3.53
     },
     {
       "day": "2026-10-17",
@@ -32681,10 +32685,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "1htv5Nzfdy44FJWAdTXZoACJW4BWbB2XwZC6SVopurp",
+      "pair_address": "6CWeZYjCrn2ZQEDjD7NKE38NiDN99H9wy48zBHyqbvPw",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Aloooong",
+      "first_alert_at_utc": "2026-10-17T14:54:19.535827+00:00",
+      "alert_price_usd": 0.0003466,
+      "initial_15m_change_pct": 5.13,
+      "expected_4m_pct": 2.12,
+      "initial_7m_change_pct": null,
+      "buys_5m": 354,
+      "sells_5m": 187,
+      "volume_5m_usd": 36673.42,
+      "liquidity_usd": 58332.87,
+      "estimated_100usd_buy_impact_pct": 0.34,
+      "buy_acceleration_pct": 543.64,
+      "volume_acceleration_pct": 211.72,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T14:52:22.484473+00:00",
+  "updated_at_utc": "2026-10-17T14:54:19.535827+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
