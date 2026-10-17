@@ -30221,10 +30221,35 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "CSNY4hZXihtpe4PdvfjuztKVr9JLcpJ3ZKkdKGxTZbdW",
+      "pair_address": "Bzx34q5C1krweA72mmRQFFYKCauvVAJwNdu4ZqzK1aLR",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "UP",
+      "first_alert_at_utc": "2026-10-17T11:22:17.498709+00:00",
+      "alert_price_usd": 2.073e-05,
+      "initial_15m_change_pct": 3.6,
+      "expected_4m_pct": 1.06,
+      "initial_7m_change_pct": null,
+      "buys_5m": 74,
+      "sells_5m": 37,
+      "volume_5m_usd": 4586.25,
+      "liquidity_usd": 10555.59,
+      "estimated_100usd_buy_impact_pct": 1.86,
+      "buy_acceleration_pct": 2.78,
+      "volume_acceleration_pct": -15.76,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T11:20:27.537641+00:00",
+  "updated_at_utc": "2026-10-17T11:22:17.498709+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
