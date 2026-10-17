@@ -100,7 +100,7 @@ added=0
 for item in ([] if day_closed or radar_blocked(now.isoformat()) else latest.get("early_alert_candidates", [])):
     mint, pair = item.get("mint"), item.get("pair_address")
     price = number(item.get("price_usd"))
-    if not mint or not pair or not price or str(item.get("network", "")).lower() not in ("solana", "ethereum", "base", "bsc", "arbitrum", "polygon", "optimism", "avalanche"):
+    if not mint or not pair or not price or str(item.get("network", "")).lower() != "solana":
         continue
     # Repeat alerts need renewed evidence; no fixed time-based lockout.
     previous = next((r for r in reversed(rows) if r.get("day") == day and r.get("mint") == mint and r.get("pair_address") == pair), None)
