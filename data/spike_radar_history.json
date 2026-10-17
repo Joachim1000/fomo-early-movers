@@ -32806,10 +32806,35 @@
       "observed_6m_at_utc": "2026-10-17T15:04:28.667205+00:00",
       "measurement_6m_delay_minutes": 6.15,
       "return_6m_pct": 11.05
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "DFMt2FyLpB6ekPNAzVErLXgpSnJ9CRf1VnxBAkTLpump",
+      "pair_address": "2jAq7KMy4eqxex1DQHo1nSybEv2yTY94dUDKmvZ2yUb3",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "FTR",
+      "first_alert_at_utc": "2026-10-17T15:06:17.950597+00:00",
+      "alert_price_usd": 0.002483,
+      "initial_15m_change_pct": 2.1,
+      "expected_4m_pct": 1.3,
+      "initial_7m_change_pct": null,
+      "buys_5m": 48,
+      "sells_5m": 27,
+      "volume_5m_usd": 10100.99,
+      "liquidity_usd": 244455.97,
+      "estimated_100usd_buy_impact_pct": 0.08,
+      "buy_acceleration_pct": 118.18,
+      "volume_acceleration_pct": 70.33,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T15:04:28.667205+00:00",
+  "updated_at_utc": "2026-10-17T15:06:17.950597+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
