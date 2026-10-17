@@ -34354,9 +34354,13 @@
       "measurement_2m_delay_minutes": 2.0,
       "return_2m_pct": 0.2,
       "status_2m": "MEASURED",
-      "status_4m": "PENDING",
+      "status_4m": "MEASURED",
       "status_6m": "PENDING",
-      "status_10m": "PENDING"
+      "status_10m": "PENDING",
+      "price_4m_usd": 0.06921,
+      "observed_4m_at_utc": "2026-10-17T17:20:27.160856+00:00",
+      "measurement_4m_delay_minutes": 4.12,
+      "return_4m_pct": 0.46
     },
     {
       "day": "2026-10-17",
@@ -34381,7 +34385,15 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.06921,
+      "observed_2m_at_utc": "2026-10-17T17:20:27.160856+00:00",
+      "measurement_2m_delay_minutes": 2.12,
+      "return_2m_pct": 0.26,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-17",
@@ -34406,11 +34418,44 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
+      "return_5m_pct": null,
+      "price_2m_usd": 0.0009343,
+      "observed_2m_at_utc": "2026-10-17T17:20:27.160856+00:00",
+      "measurement_2m_delay_minutes": 2.12,
+      "return_2m_pct": -1.13,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "pair_address": "AG1EhPjsBrkxQWkViuLXF6pQnHwfr9f9sdNneeoykcEJ",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "SI",
+      "first_alert_at_utc": "2026-10-17T17:20:27.160856+00:00",
+      "alert_price_usd": 0.0162,
+      "initial_15m_change_pct": 3.18,
+      "expected_4m_pct": 2.09,
+      "initial_7m_change_pct": null,
+      "buys_5m": 9,
+      "sells_5m": 0,
+      "volume_5m_usd": 4057.46,
+      "liquidity_usd": 757499.68,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 800.0,
+      "volume_acceleration_pct": -66.87,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T17:18:19.900582+00:00",
+  "updated_at_utc": "2026-10-17T17:20:27.160856+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
