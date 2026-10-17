@@ -4813,11 +4813,36 @@
       "measurement_10m_delay_minutes": 11.18,
       "return_10m_pct": 3.43,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8",
+      "pair_address": "4iVHkn5WhmGwrKb2fYFNPnTkqhwYTEEezvsju9YEBY76",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "ALLINU",
+      "first_alert_at_utc": "2026-10-17T16:18:19.751616+00:00",
+      "alert_price_usd": 0.00503,
+      "initial_15m_change_pct": 5.98,
+      "buys_5m": 33,
+      "sells_5m": 2,
+      "volume_5m_usd": 6538.31,
+      "liquidity_usd": 160750.47,
+      "buy_acceleration_pct": 266.67,
+      "volume_acceleration_pct": 1124.17,
+      "spike_v2_score": 99,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "4MMQY9bwkxxTtsK3W227Q5ABT6yFY8Pmn9Ze7wmAXKY8|4iVHkn5WhmGwrKb2fYFNPnTkqhwYTEEezvsju9YEBY76": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T16:16:18.828852+00:00",
+  "updated_at_utc": "2026-10-17T16:18:19.751616+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
