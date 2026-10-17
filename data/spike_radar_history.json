@@ -25588,7 +25588,7 @@
       "status_2m": "MEASURED",
       "status_4m": "MEASURED",
       "status_6m": "MEASURED",
-      "status_10m": "PENDING",
+      "status_10m": "MEASURED",
       "price_4m_usd": 0.0016,
       "observed_4m_at_utc": "2026-10-17T06:30:48.304456+00:00",
       "measurement_4m_delay_minutes": 6.39,
@@ -25597,7 +25597,11 @@
       "price_6m_usd": 0.0016,
       "observed_6m_at_utc": "2026-10-17T06:30:48.304456+00:00",
       "measurement_6m_delay_minutes": 6.39,
-      "return_6m_pct": 4.1
+      "return_6m_pct": 4.1,
+      "price_10m_usd": 0.001526,
+      "observed_10m_at_utc": "2026-10-17T06:36:15.909949+00:00",
+      "measurement_10m_delay_minutes": 11.85,
+      "return_10m_pct": -0.72
     },
     {
       "day": "2026-10-17",
@@ -25662,7 +25666,15 @@
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
-      "return_5m_pct": null
+      "return_5m_pct": null,
+      "price_2m_usd": 0.005326,
+      "observed_2m_at_utc": "2026-10-17T06:36:15.909949+00:00",
+      "measurement_2m_delay_minutes": 3.84,
+      "return_2m_pct": -5.13,
+      "status_2m": "MEASURED",
+      "status_4m": "PENDING",
+      "status_6m": "PENDING",
+      "status_10m": "PENDING"
     },
     {
       "day": "2026-10-17",
@@ -25711,10 +25723,34 @@
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair_address": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "CLAUDIA",
+      "first_alert_at_utc": "2026-10-17T06:36:15.909949+00:00",
+      "alert_price_usd": 0.005326,
+      "initial_15m_change_pct": 2.25,
+      "initial_7m_change_pct": null,
+      "buys_5m": 16,
+      "sells_5m": 4,
+      "volume_5m_usd": 8119.41,
+      "liquidity_usd": 357857.65,
+      "estimated_100usd_buy_impact_pct": 0.06,
+      "buy_acceleration_pct": 77.78,
+      "volume_acceleration_pct": 161.0,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T06:34:18.067860+00:00",
+  "updated_at_utc": "2026-10-17T06:36:15.909949+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
