@@ -3885,11 +3885,36 @@
       "measurement_10m_delay_minutes": 12.07,
       "return_10m_pct": -8.31,
       "status_10m": "MEASURED"
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "55A3VxMBfzw6uSe64zms5iMPw9k6kx9WzzusbCU6pump",
+      "pair_address": "H4wp14QGkt3YextGrQXDqF1c3EPZVMxufgGcUhxSRJN4",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Gato",
+      "first_alert_at_utc": "2026-10-17T08:54:19.509612+00:00",
+      "alert_price_usd": 8.733e-05,
+      "initial_15m_change_pct": 6.37,
+      "buys_5m": 20,
+      "sells_5m": 7,
+      "volume_5m_usd": 3096.31,
+      "liquidity_usd": 25465.4,
+      "buy_acceleration_pct": 100.0,
+      "volume_acceleration_pct": 233.67,
+      "spike_v2_score": 80,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "55A3VxMBfzw6uSe64zms5iMPw9k6kx9WzzusbCU6pump|H4wp14QGkt3YextGrQXDqF1c3EPZVMxufgGcUhxSRJN4": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T08:52:21.232973+00:00",
+  "updated_at_utc": "2026-10-17T08:54:19.509612+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
