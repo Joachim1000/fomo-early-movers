@@ -3904,15 +3904,41 @@
       "volume_acceleration_pct": 233.67,
       "spike_v2_score": 80,
       "measurement_minutes": 5,
+      "status": "MEASURED",
+      "price_5m_usd": 8.786e-05,
+      "observed_5m_at_utc": "2026-10-17T09:00:51.445981+00:00",
+      "return_5m_pct": 0.61,
+      "measurement_delay_minutes": 6.53
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "1htv5Nzfdy44FJWAdTXZoACJW4BWbB2XwZC6SVopurp",
+      "pair_address": "6CWeZYjCrn2ZQEDjD7NKE38NiDN99H9wy48zBHyqbvPw",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "Aloooong",
+      "first_alert_at_utc": "2026-10-17T09:00:51.445981+00:00",
+      "alert_price_usd": 0.0002957,
+      "initial_15m_change_pct": 4.78,
+      "buys_5m": 260,
+      "sells_5m": 61,
+      "volume_5m_usd": 11702.37,
+      "liquidity_usd": 53500.43,
+      "buy_acceleration_pct": 52.05,
+      "volume_acceleration_pct": 94.35,
+      "spike_v2_score": 100,
+      "measurement_minutes": 5,
       "status": "PENDING",
       "price_5m_usd": null,
       "observed_5m_at_utc": null,
       "return_5m_pct": null
     }
   ],
-  "active_alerts": {},
+  "active_alerts": {
+    "1htv5Nzfdy44FJWAdTXZoACJW4BWbB2XwZC6SVopurp|6CWeZYjCrn2ZQEDjD7NKE38NiDN99H9wy48zBHyqbvPw": true
+  },
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-17T08:58:17.717693+00:00",
+  "updated_at_utc": "2026-10-17T09:00:51.445981+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
