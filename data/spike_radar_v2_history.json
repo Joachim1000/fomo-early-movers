@@ -3545,64 +3545,6 @@
     },
     {
       "day": "2026-10-16",
-      "mint": "6Mix12LiHrQFojaQEnfPUC65Qkwd6X4Y5Qg93oFbordr",
-      "pair_address": "FTmwv748VxVVrRohjYzvdfyL4SXP3C6QTnHSem5QhewZ",
-      "signal_tier": "STRONG SIGNAL",
-      "network": "solana",
-      "symbol": "BORDR",
-      "first_alert_at_utc": "2026-10-16T18:06:33.959211+00:00",
-      "alert_price_usd": 0.004711,
-      "initial_15m_change_pct": 3.27,
-      "buys_5m": 16,
-      "sells_5m": 1,
-      "volume_5m_usd": 5810.36,
-      "liquidity_usd": 569477.68,
-      "buy_acceleration_pct": 45.45,
-      "volume_acceleration_pct": -25.76,
-      "spike_v2_score": 86,
-      "measurement_minutes": 5,
-      "status": "MEASURED",
-      "price_5m_usd": 0.004583,
-      "observed_5m_at_utc": "2026-10-16T18:12:28.135426+00:00",
-      "return_5m_pct": -2.72,
-      "measurement_delay_minutes": 5.9,
-      "price_10m_usd": 0.00479,
-      "observed_10m_at_utc": "2026-10-16T18:18:41.477507+00:00",
-      "measurement_10m_delay_minutes": 12.13,
-      "return_10m_pct": 1.68,
-      "status_10m": "MEASURED"
-    },
-    {
-      "day": "2026-10-16",
-      "mint": "ALDVtr9JeLjKH91fHFvLxFoyd7C6eLUxi9dUoN2FsWdD",
-      "pair_address": "7QT441W7TZzvzfL6FuQELDB2bjfyWuV54g4vhnUzJr8r",
-      "signal_tier": "STRONG SIGNAL",
-      "network": "solana",
-      "symbol": "BUBBLE",
-      "first_alert_at_utc": "2026-10-16T18:52:18.575598+00:00",
-      "alert_price_usd": 0.0005585,
-      "initial_15m_change_pct": 7.32,
-      "buys_5m": 37,
-      "sells_5m": 0,
-      "volume_5m_usd": 3762.29,
-      "liquidity_usd": 51667.54,
-      "buy_acceleration_pct": 362.5,
-      "volume_acceleration_pct": -21.38,
-      "spike_v2_score": 95,
-      "measurement_minutes": 5,
-      "status": "MEASURED",
-      "price_5m_usd": 0.000473,
-      "observed_5m_at_utc": "2026-10-16T18:58:19.905624+00:00",
-      "return_5m_pct": -15.31,
-      "measurement_delay_minutes": 6.02,
-      "price_10m_usd": 0.0005378,
-      "observed_10m_at_utc": "2026-10-16T19:02:21.218730+00:00",
-      "measurement_10m_delay_minutes": 10.04,
-      "return_10m_pct": -3.71,
-      "status_10m": "MEASURED"
-    },
-    {
-      "day": "2026-10-16",
       "mint": "8nnaeWCw8mUypcGAgbmSuzAT85uWx4UN12adDrMhXrGF",
       "pair_address": "6D4EWF22HfQamimKhX47tqiu9DVCkcxDMrmhnSvewKAo",
       "signal_tier": "STRONG SIGNAL",
@@ -3628,7 +3570,7 @@
   ],
   "active_alerts": {},
   "model": "spike_radar_v2",
-  "updated_at_utc": "2026-10-16T19:10:27.187211+00:00",
+  "updated_at_utc": "2026-10-17T05:01:00.046645+00:00",
   "closed_days": {
     "2026-10-14": {
       "locked": true,
@@ -3637,6 +3579,10 @@
     "2026-10-15": {
       "locked": true,
       "records": 39
+    },
+    "2026-10-16": {
+      "locked": true,
+      "records": 33
     }
   }
 }
