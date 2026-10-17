@@ -32856,10 +32856,35 @@
       "observed_10m_at_utc": "2026-10-17T15:18:18.382328+00:00",
       "measurement_10m_delay_minutes": 12.01,
       "return_10m_pct": 6.65
+    },
+    {
+      "day": "2026-10-17",
+      "mint": "HuAXPyDWDaMYFKuwQHpqL1oPnj93zdzWmtvFGzCeCUa7",
+      "pair_address": "4GWh5saKgzoukhhj4Rh3p5FmPU6yPuAexV6FaH5JQYfm",
+      "signal_tier": "STRONG SIGNAL",
+      "network": "solana",
+      "symbol": "MASK",
+      "first_alert_at_utc": "2026-10-17T15:24:19.513934+00:00",
+      "alert_price_usd": 0.04565,
+      "initial_15m_change_pct": 5.92,
+      "expected_4m_pct": 3.13,
+      "initial_7m_change_pct": null,
+      "buys_5m": 46,
+      "sells_5m": 3,
+      "volume_5m_usd": 14917.98,
+      "liquidity_usd": 787784.62,
+      "estimated_100usd_buy_impact_pct": 0.03,
+      "buy_acceleration_pct": 475.0,
+      "volume_acceleration_pct": 551.78,
+      "measurement_minutes": 5,
+      "status": "PENDING",
+      "price_5m_usd": null,
+      "observed_5m_at_utc": null,
+      "return_5m_pct": null
     }
   ],
   "active_alerts": {},
-  "updated_at_utc": "2026-10-17T15:22:19.302732+00:00",
+  "updated_at_utc": "2026-10-17T15:24:19.513934+00:00",
   "closed_days": {
     "2026-10-13": {
       "locked": true,
